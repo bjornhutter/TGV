@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TGV</title>
+    <link rel="stylesheet" type="text/css" href="css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <title>Tidskrift för genusvetenskap | TGV</title>
 </head>
 <body>
 
