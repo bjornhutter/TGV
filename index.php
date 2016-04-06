@@ -7,6 +7,6 @@
     <title>Tidskrift för genusvetenskap | TGV</title>
 </head>
 <body>
-<p>Hej !</p>
+<p>Hej hej !</p>
 </body>
 </html>
