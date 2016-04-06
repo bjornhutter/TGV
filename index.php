@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <title>Tidskrift för genusvetenskap | TGV</title>
 </head>
 <body>
-<p>hej</p>
 
 </body>
 </html>
