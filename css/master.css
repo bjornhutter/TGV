@@ -213,6 +213,41 @@ main {
 
 /*** ================= PRENUMERERA END =================== ***/
 
+/*** ================= SKICKA MANUS START =================== ***/
+
+.script-form-wrapper {
+    width: 100%;
+    display: block;
+}
+
+.script-form-inner-wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.script-form {
+    margin: 0 auto;
+    display: block;
+}
+
+.script-form-ul {
+
+}
+
+.script-form-li {
+
+}
+
+.script-form-input {
+
+}
+
+.script-form-input-submit {
+
+}
+
+
+/*** ================= SKICKA MANUS END =================== ***/
 
 
 
