@@ -249,6 +249,45 @@ main {
 
 /*** ================= SKICKA MANUS END =================== ***/
 
+/*** ================= KONTAKT START =================== ***/
+
+.contact-wrapper {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+.contact-info {
+    width: calc(100%/3 * 2);
+    display: block;
+    float: left;
+    height: 300px;
+    background: #dabf00;
+}
+
+.contact-info-ul {
+
+}
+
+.contact-info-li {
+
+}
+
+.contact-map {
+    width: calc(100%/3);
+    display: block;
+    float: left;
+    height: 300px;
+    background: #da2723;
+}
+
+.map {
+
+}
+
+
+/*** ================= KONTAKT END =================== ***/
 
 
 

@@ -15,8 +15,31 @@
 <header>
 
 </header>
-
 <?php include('includes/navigation.inc') ?>
+
+<main class="contact-wrapper">
+    <section class="contact-info">
+        <ul class="contact-info-ul">
+            <li class="contact-info-li">
+                <p>List objekt 1</p>
+            </li>
+            <li class="contact-info-li">
+                <p>List objekt 2</p>
+            </li>
+            <li class="contact-info-li">
+                <p>List objekt 3</p>
+            </li>
+            <li class="contact-info-li">
+                <p>List objekt 4</p>
+            </li>
+        </ul>
+    </section>
+    <section class="contact-map">
+        <div class="map">
+
+        </div>
+    </section>
+</main>
 
 <?php include('includes/footer.inc') ?>
 </body>
