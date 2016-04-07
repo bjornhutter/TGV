@@ -15,7 +15,6 @@
 <header>
 
 </header>
-
 <?php include('includes/navigation.inc') ?>
 
 <?php include('includes/footer.inc') ?>

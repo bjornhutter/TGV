@@ -68,6 +68,54 @@ footer {
 
 /*** ================= FOOTER END =================== ***/
 
+/*** ================= MAIN START =================== ***/
+
+main {
+
+}
+
+/*** ================= MAIN END =================== ***/
+
+/*** ================= RECENT ARTICLES START =================== ***/
+
+.recent-article-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #70bada;
+}
+
+.recent-article-main-title {
+    font-size: 3em;
+    color: #f4f4f4;
+    padding-top: 10px;
+    text-align: left;
+    padding-left: calc(10% - 39px);
+}
+
+.recent-article {
+    background: #da865a;
+    width: 20%;
+    margin: 20px 10px 20px 10px;
+    display: inline-block;
+    height: auto;
+
+}
+
+.recent-article-img {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.recent-article-title {
+
+}
+
+.recent-article-content {
+
+}
+
+/*** ================= RECENT ARTICLES END =================== ***/
 
 
 

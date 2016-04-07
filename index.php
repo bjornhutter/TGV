@@ -18,6 +18,33 @@
 
 <?php include('includes/navigation.inc') ?>
 
+<main>
+    <ul class="recent-article-wrapper">
+        <h1 class="recent-article-main-title">Senaste nummer</h1>
+        <li class="recent-article">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
+            <h1 class="recent-article-title">Här ligger en title</h1>
+            <p class="recent-article-content">Här ligger en hund begravd</p>
+        </li>
+        <li class="recent-article">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
+            <h1 class="recent-article-title">Här ligger en title</h1>
+            <p class="recent-article-content">Här ligger en hund begravd</p>
+        </li>
+        <li class="recent-article">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
+            <h1 class="recent-article-title">Här ligger en title</h1>
+            <p class="recent-article-content">Här ligger en hund begravd</p>
+        </li>
+        <li class="recent-article">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
+            <h1 class="recent-article-title">Här ligger en title</h1>
+            <p class="recent-article-content">Här ligger en hund begravd</p>
+        </li>
+    </ul>
+</main>
+
+
 <?php include('includes/footer.inc') ?>
 </body>
 </html>
