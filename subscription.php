@@ -12,9 +12,9 @@
 </head>
 <body>
 
-<!--Header Start-->
+<header>
 
-<!--Header End-->
+</header>
 
 <?php include('includes/navigation.inc') ?>
 
