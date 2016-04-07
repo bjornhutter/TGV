@@ -64,6 +64,7 @@ footer {
     background: #da82d7;
     padding: 20px 0;
     display: block;
+    float: left;
 }
 
 /*** ================= FOOTER END =================== ***/
@@ -99,6 +100,9 @@ main {
     margin: 20px 10px 20px 10px;
     display: inline-block;
     height: auto;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -129,7 +133,85 @@ main {
 
 /*** ================= CALL FOR PAPERS END =================== ***/
 
+/*** ================= OM OSS START =================== ***/
 
+.staff-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #70bada;
+}
+
+.staff-main-title {
+    font-size: 3em;
+    color: #f4f4f4;
+    padding-top: 10px;
+    text-align: left;
+    padding-left: calc(10% - 39px);
+}
+
+.staff {
+    background: #da865a;
+    width: 20%;
+    margin: 20px 10px 20px 10px;
+    display: inline-block;
+    height: auto;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.staff-img {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.staff-title {
+
+}
+
+.staff-content {
+
+}
+
+/*** ================= OM OSS END =================== ***/
+
+/*** ================= PRENUMERERA START =================== ***/
+
+.price-info-wrapper {
+    width: 80%;
+    display: block;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.subscription-price {
+    width: calc(100%/3);
+    display: block;
+    float: left;
+    height: 300px;
+    background: #ccda3b;
+}
+
+.subscription-info {
+    width: calc(100%/3 * 2);
+    display: block;
+    float: left;
+    height: 300px;
+    background: #666eda;
+}
+
+.retailers {
+    width: 100%;
+    height: 300px;
+    display: block;
+    background: #da3873;
+    float: left;
+}
+
+
+/*** ================= PRENUMERERA END =================== ***/
 
 
 

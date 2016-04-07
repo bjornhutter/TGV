@@ -17,6 +17,28 @@
 </header>
 <?php include('includes/navigation.inc') ?>
 
+<main>
+    <ul class="staff-wrapper">
+        <h1 class="staff-main-title">Om oss</h1>
+        <li class="staff">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
+            <h1 class="staff-title">Här ligger en title</h1>
+            <p class="staff-content">Här ligger en personal begravd</p>
+        </li>
+        <li class="staff">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
+            <h1 class="staff-title">Här ligger en title</h1>
+            <p class="staff-content">Här ligger en personal begravd</p>
+        </li>
+        <li class="staff">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
+            <h1 class="staff-title">Här ligger en title</h1>
+            <p class="staff-content">Här ligger en personal begravd</p>
+        </li>
+    </ul>
+</main>
+
+
 <?php include('includes/footer.inc') ?>
 </body>
 </html>
