@@ -1,0 +1,1 @@
+<footer>Tel 054-7001000 (vx) | tegeve@oru.se | För beställning/köp av tidigare nummer/artiklar –vänd er till ekonomitjanst@natverkstan.net</footer>
