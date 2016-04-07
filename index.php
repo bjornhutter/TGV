@@ -17,6 +17,23 @@
 </header>
 
 <?php include('includes/navigation.inc') ?>
+<section class="cfp">
+    <div>
+        <ul>
+            <li>
+                <p>Tema 1</p>
+            </li>
+            <li>
+                <p>Tema 2</p>
+            </li>
+            <li>
+                <p>Tema 3</p>
+            </li>
+        </ul>
+    </div>
+    <a href="send_script.php" class="send-script-button">Skicka in ditt manus!</a>
+</section>
+
 
 <main>
     <ul class="recent-article-wrapper">
