@@ -290,9 +290,28 @@ main {
 /*** ================= KONTAKT END =================== ***/
 
 
+/*** ================= TABS START =================== ***/
 
+#tabs {
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+}
 
+#tabs ol {
+    padding-left: 10px;
+}
 
+#tabs ol li {
+    list-style: decimal;
+    padding: 10px 0;
+}
+
+#tabs ol li p {
+
+}
+
+/*** ================= TABS END =================== ***/
 
 
 
