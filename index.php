@@ -15,7 +15,7 @@
 <header>
 
 </header>
-
+<?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation.inc') ?>
 <section class="cfp">
     <div>
