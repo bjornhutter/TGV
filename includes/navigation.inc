@@ -1,5 +1,5 @@
-<nav>
-    <ul>
+<nav class="nav">
+        <ul>
         <li>
             <a href="index.php">Hem</a>
         </li>
