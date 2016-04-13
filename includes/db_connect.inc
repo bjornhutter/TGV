@@ -1,12 +1,10 @@
 <?php
 $host = "localhost";
-$user = "root";
-//$dbName = "root";
-// $password = "";
+$user = "julnih132";
+$dbName = "julnih132";
+$password = "3boNzjyM9";
 
-$link = mysqli_connect($host, $user);
-if (!$link) {
-    die("Connection failed: " . mysqli_error($link));
-}/*else {
-    echo "Kunde connecta";
-}*/
+$link = mysqli_connect($host, $user, $password, $dbName);
+mysqli_query($link, "SET NAMES utf8");
+mysqli_query($link, "SET CHARACTER SET utf8");
+?>
