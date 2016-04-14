@@ -16,7 +16,6 @@
 
 </header>
 <?php include('includes/navigation.inc') ?>
-
 <main class="price-info-wrapper">
     <section class="subscription-price">
         <ul>
@@ -37,9 +36,26 @@
             </li>
         </ul>
     </section>
-    <section class="subscription-info">
-        <p>lkm lk mlak mdls  lakmsd aslkdm aasdl kmasd asdl kamsdl kasmdal ksdmalskdm alskdmalksdmalskdm</p>
-    </section>
+    <?php
+    include('includes/db_connect.inc');
+    $result = mysqli_query($link, "SELECT * FROM tgv_subscription_info") or die(mysqli_error());
+
+    echo '<section class="subscription-info">';
+    while ($row = mysqli_fetch_array($result)) {
+
+        $id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+
+        echo '<p>' . $title . '</p>';
+        echo '<p>' . $content . '</p>';
+
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="subscription_info_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+        echo '</section>';
+    }
+    ?>
     <section class="retailers">
         <button>HELO</button>
         <p>HELO</p>

@@ -16,11 +16,11 @@
 
 </header>
 <?php include('includes/navigation.inc') ?>
+<main class="contact-wrapper">
 <?php
 include('includes/db_connect.inc');
 $result = mysqli_query($link, "SELECT * FROM contact") or die(mysqli_error());
 
-echo '<main class="contact-wrapper">';
 echo '<section class="contact-info">';
 echo '<ul class="contact-info-ul">';
 while ($row = mysqli_fetch_array($result)) {
@@ -43,7 +43,6 @@ while ($row = mysqli_fetch_array($result)) {
     echo '</section>';
 }
 ?>
-</section>
 <section class="contact-map">
     <div class="map">
 
