@@ -9,7 +9,7 @@ if (isset($_POST['save'])) {
     $phone = $_POST['phone'];
     $email = $_POST['email'];
 
-    mysqli_query($link, "UPDATE contact SET title = '$title', adress = '$adress', phone = 'phone', email = '$email' WHERE id = '$id'");
+    mysqli_query($link, "UPDATE contact SET title = '$title', adress = '$adress', phone = '$phone', email = '$email' WHERE id = '$id'");
 }
 
 header("Location: contact.php");

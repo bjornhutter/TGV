@@ -36,9 +36,9 @@ while ($row = mysqli_fetch_array($result)) {
     echo '<li class="contact-info-li">' . $phone . '</li>';
     echo '<li class="contact-info-li">' . $email . '</li>';
 
-    if (isset($_SESSION['user'])) {
+    //if (isset($_SESSION['user'])) {
         echo '<p><a href="contact_edit.php?id=' . $id . '">Redigera</a></p>';
-    }
+    //}
     echo '</ul>';
     echo '</section>';
 }

@@ -34,13 +34,16 @@ $email = $row['email'];
 <form action="contact_edit_process.php" method="post">
     <ul>
         <li>
+            <textarea name="title" id="title"><?php echo $title ?></textarea>
+        </li>
+        <li>
             <textarea name="adress" id="adress"><?php echo $adress ?></textarea>
         </li>
         <li>
             <textarea name="phone" id="phone"><?php echo $phone ?></textarea>
         </li>
         <li>
-            <textarea name="mail" id="mail"><?php echo $mail ?></textarea>
+            <textarea name="email" id="email"><?php echo $email ?></textarea>
         </li>
         <li>
             <input type="submit" name="save" value="Spara ändringar">
