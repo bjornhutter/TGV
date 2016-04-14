@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<p>Lägg till redaktör</p>
+<p>Skriv nyhet</p>
 <form action="about_editors_process.php" method="post" enctype="multipart/form-data">
     <ul>
         <li>
@@ -26,8 +26,9 @@
             <input type="text" name="lname" id="lname" placeholder="Efternamn">
         </li>
         <li>
-            <textarea name="content" id="content" placeholder="Info om redaktör"></textarea>
+            <textarea name="content" id="content" placeholder=""></textarea>
         </li>
+
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Ladda upp" name="submit">
     </ul>
