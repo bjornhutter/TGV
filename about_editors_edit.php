@@ -46,6 +46,9 @@ $imgName = $row['image'];
         <li>
             <input type="submit" name="save" value="Spara ändringar">
         </li>
+        <li>
+            <input type="submit" name="delete" value="Radera inlägget" onClick="return confirm('Radera. Är du säker?')">
+        </li>
     </ul>
     <input type="hidden" value="<?php echo $id ?>" name="id">
 </form>
