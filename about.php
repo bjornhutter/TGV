@@ -31,7 +31,7 @@
             $imgName = $row['image'];
             
             echo '<li class="staff">';
-            echo '<img src="uploads'.$imgName.'">';
+            echo '<img src="uploads/'.$imgName.'">';
             echo '<h1 class="staff-title">' . $fname . ' ' . $lname . '</h1>';
             echo '<p class="staff-content">' . $content . '</p>';
             //if (isset($_SESSION['user'])) {
