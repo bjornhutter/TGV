@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" type="text/css" href="css/css-reset.css"> todo kommentera tillbaks när egen styling är nödvändigt-->
+    <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
     <title>Dashboard | Tidskrift för genusvetenskap</title>
@@ -13,8 +13,12 @@
 </head>
 <body>
 <?php // include('includes/db_connect.inc') ?>
+<header>
+    <h1>Admin Dashboard</h1>
+</header>
 <nav>
     <ul>
+        <!--todo ändra från anchors till buttons? -->
         <li>
             <a href="#" id="home-btn">Hem</a>
         </li>
@@ -32,12 +36,11 @@
         </li>
     </ul>
 </nav>
-<main id="main">
+<div class="main-outer-wrapper">
+    <main id="main">
 
-</main>
-
-
-
+    </main>
+</div>
 
 <script src="js/dashboard_ajax_load_html.js"></script>
 </body>

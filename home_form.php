@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form action="dashboard_process.php" method="post">
     <h1>Hem</h1>
     <h2>Redigera Call for papers</h2>
     <ul>
@@ -8,14 +8,14 @@
         </li>
         <li>
             <p>Beskrivning: </p>
-            <textarea name="cfpContent" title="Call For Papers Beskrivning"></textarea>
+            <textarea name="cfpContent" title="Call For Papers Beskrivning" rows="10"></textarea>
         </li>
         <li>
-            <input type="submit" name="homeSubmit" value="Spara Ändringar">
+            <input type="submit" name="cfpSubmit" value="Spara Ändringar">
         </li>
     </ul>
 </form>
-<form action="" method="post">
+<form action="dashboard_process.php" method="post">
     <h2>Redigera Nyhetsflöde</h2>
     <ul>
         <li>
@@ -24,14 +24,14 @@
         </li>
         <li>
             <p>Beskrivning: </p>
-            <textarea name="newsContent" title="Nyhetsflöde Beskrivning"></textarea>
+            <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
         </li>
         <li>
             <input type="submit" name="newsSubmit" value="Spara Ändringar">
         </li>
     </ul>
 </form>
-<form action="" method="post">
+<form action="dashboard_process.php" method="post">
     <h2>Redigera Senaste nummer</h2>
     <ul>
         <li>
@@ -40,7 +40,7 @@
         </li>
         <li>
             <p>Beskrivning: </p>
-            <textarea name="newNumberContent" title="Senaste Nummer Beskrivning"></textarea>
+            <textarea name="newNumberContent" title="Senaste Nummer Beskrivning" rows="10"></textarea>
         </li>
         <li>
             <input type="submit" name="newNumberSubmit" value="Spara Ändringar">

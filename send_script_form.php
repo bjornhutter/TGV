@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form action="dashboard_process.php" method="post">
     <h1>Skicka manus</h1>
     <h2>Redigera Riktlinjer</h2>
     <ul>
@@ -8,14 +8,14 @@
         </li>
         <li>
             <p>Beskrivning: </p>
-            <textarea name="guidelinesContent" title="Riktlinjer Beskrivning"></textarea>
+            <textarea name="guidelinesContent" title="Riktlinjer Beskrivning" rows="10"></textarea>
         </li>
         <li>
             <input type="submit" name="guidelinesSubmit" value="Spara Ändringar">
         </li>
     </ul>
 </form>
-<form action="" method="post">
+<form action="dashboard_process.php" method="post">
     <h2>Redigera Form</h2>
     <ul>
         <li>
@@ -24,14 +24,14 @@
         </li>
         <li>
             <p>Beskrivning: </p>
-            <textarea name="formContent" title="Form Beskrivning"></textarea>
+            <textarea name="formContent" title="Form Beskrivning" rows="10"></textarea>
         </li>
         <li>
             <input type="submit" name="formSubmit" value="Spara Ändringar">
         </li>
     </ul>
 </form>
-<form action="" method="post">
+<form action="dashboard_process.php" method="post">
     <h2>Redigera Rubriker</h2>
     <ul>
         <li>
@@ -40,14 +40,14 @@
         </li>
         <li>
             <p>Beskrivning: </p>
-            <textarea name="titlesContent" title="Rubriker Beskrivning"></textarea>
+            <textarea name="titlesContent" title="Rubriker Beskrivning" rows="10"></textarea>
         </li>
         <li>
             <input type="submit" name="titlesSubmit" value="Spara Ändringar">
         </li>
     </ul>
 </form>
-<form action="" method="post">
+<form action="dashboard_process.php" method="post">
     <h2>Redigera Citat</h2>
     <ul>
         <li>
@@ -56,14 +56,14 @@
         </li>
         <li>
             <p>Beskrivning: </p>
-            <textarea name="quoteContent" title="Citat Beskrivning"></textarea>
+            <textarea name="quoteContent" title="Citat Beskrivning" rows="10"></textarea>
         </li>
         <li>
             <input type="submit" name="quoteSubmit" value="Spara Ändringar">
         </li>
     </ul>
 </form>
-<form action="" method="post">
+<form action="dashboard_process.php" method="post">
     <h2>Redigera Referenser</h2>
     <ul>
         <li>
@@ -72,7 +72,7 @@
         </li>
         <li>
             <p>Beskrivning: </p>
-            <textarea name="refContent" title="Referenser Beskrivning"></textarea>
+            <textarea name="refContent" title="Referenser Beskrivning" rows="10"></textarea>
         </li>
         <li>
             <input type="submit" name="refSubmit" value="Spara Ändringar">
