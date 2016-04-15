@@ -61,3 +61,4 @@ mysqli_query($link, "INSERT INTO tgv_about_editors (fname, lname, content, image
 header('Location: about.php')
 
 ?>
+

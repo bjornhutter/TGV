@@ -4,9 +4,10 @@ include('includes/db_connect.inc');
 $id = $_POST['id'];
 
 if (isset($_POST['delete'])) {
-    $result = mysqli_query("SELECT * FROM tgv_about_editors WHERE id = '$id'");
+    $result = mysqli_query($link, "SELECT * FROM tgv_about_editors WHERE id = '$id'");
     $row = mysqli_fetch_array($result);
-    unlink("uploads/".$result);
+    $image = 'uploads/'.$row['image'];
+    unlink($image);
 
     mysqli_query($link, "DELETE FROM tgv_about_editors WHERE id = '$id'");
 }
