@@ -38,6 +38,7 @@
 </nav>
 <div class="main-outer-wrapper">
     <main id="main">
+        <!--todo ändra från ajax till vanliga .php sidor? -->
 
     </main>
 </div>

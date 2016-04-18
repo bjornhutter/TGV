@@ -26,7 +26,7 @@ if (isset($_POST['cfpSubmit'])) {
 
     //$title = htmlspecialchars($title); mysqli_real_escape_string($link, $title);
     //UPDATE istället för INSERT?
-    //mysqli_query($link, "INSERT INTO table_table (title, content) VALUES ('$title', '$content')") or die(mysqli_error($link));
+    //mysqli_query($link, "INSERT INTO prefix_table (title, content) VALUES ('$title', '$content')") or die(mysqli_error($link));
 
     echo "Mysqli query here! $title $content";
 }
