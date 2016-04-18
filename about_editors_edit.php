@@ -35,22 +35,22 @@ $imgName = $row['image'];
 <form action="about_editors_edit_process.php" method="post">
     <ul>
         <li>
-            <input type="text" name="aboutfname" id="aboutfname" value="<?php echo $fname ?>">
+            <input type="text" name="fname" id="fname" value="<?php echo $fname ?>">
         </li>
         <li>
-            <input type="text" name="aboutlname" id="aboutlname" value="<?php echo $lname ?>">
+            <input type="text" name="lname" id="lname" value="<?php echo $lname ?>">
         </li>
         <li>
-            <textarea name="aboutcontent" id="aboutcontent"><?php echo $content ?></textarea>
+            <textarea name="content" id="content"><?php echo $content ?></textarea>
         </li>
         <li>
             <input type="file" name="newfileToUpload" id="newfileToUpload">
         </li>
         <li>
-            <input type="submit" name="aboutsave" value="Spara ändringar">
+            <input type="submit" name="save" value="Spara ändringar">
         </li>
         <li>
-            <input type="submit" name="aboutdelete" value="Radera inlägget" onClick="return confirm('Radera. Är du säker?')">
+            <input type="submit" name="delete" value="Radera inlägget" onClick="return confirm('Radera. Är du säker?')">
         </li>
     </ul>
     <input type="hidden" value="<?php echo $id ?>" name="id">
