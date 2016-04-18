@@ -39,51 +39,36 @@
 <div class="main-outer-wrapper">
     <main id="main">
         <form action="dashboard_process.php" method="post">
-            <h1>Hem</h1>
-            <h2>Redigera Call for papers</h2>
+            <h1>Om oss</h1>
+            <h2>Redigera Info om TGV</h2>
             <ul>
                 <li>
                     <p>Titel: </p>
-                    <input type="text" name="cfpTitle" title="Call For Papers Titel">
+                    <input type="text" name="aboutTitle" title="Om oss Titel">
                 </li>
                 <li>
                     <p>Beskrivning: </p>
-                    <textarea name="cfpContent" title="Call For Papers Beskrivning" rows="10"></textarea>
+                    <textarea name="aboutContent" title="Om oss Beskrivning" rows="10"></textarea>
                 </li>
                 <li>
-                    <input type="submit" name="cfpSubmit" value="Spara Ändringar">
+                    <input type="submit" name="aboutSubmit" value="Spara Ändringar">
                 </li>
             </ul>
         </form>
         <form action="dashboard_process.php" method="post">
-            <h2>Redigera Nyhetsflöde</h2>
+            <h2>Redigera Om redaktionen</h2>
             <ul>
+                <!--todo göra så man kan lägga till eller ta bort personal, generera fälten från en databas? t.ex. namn, bild etc.-->
                 <li>
                     <p>Titel: </p>
-                    <input type="text" name="newsTitle" title="Nyhetsflöde Titel">
+                    <input type="text" name="staffTitle" title="Redaktion Titel">
                 </li>
                 <li>
                     <p>Beskrivning: </p>
-                    <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
+                    <textarea name="staffContent" title="Redaktion Beskrivning" rows="10"></textarea>
                 </li>
                 <li>
-                    <input type="submit" name="newsSubmit" value="Spara Ändringar">
-                </li>
-            </ul>
-        </form>
-        <form action="dashboard_process.php" method="post">
-            <h2>Redigera Senaste nummer</h2>
-            <ul>
-                <li>
-                    <p>Titel: </p>
-                    <input type="text" name="newNumberTitle" title="Senaste Nummer Titel">
-                </li>
-                <li>
-                    <p>Beskrivning: </p>
-                    <textarea name="newNumberContent" title="Senaste Nummer Beskrivning" rows="10"></textarea>
-                </li>
-                <li>
-                    <input type="submit" name="newNumberSubmit" value="Spara Ändringar">
+                    <input type="submit" name="staffSubmit" value="Spara Ändringar">
                 </li>
             </ul>
         </form>
