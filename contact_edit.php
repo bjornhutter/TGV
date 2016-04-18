@@ -34,19 +34,19 @@ $email = $row['email'];
 <form action="contact_edit_process.php" method="post">
     <ul>
         <li>
-            <textarea name="contacttitle" id="contacttitle"><?php echo $title ?></textarea>
+            <textarea name="title" id="title"><?php echo $title ?></textarea>
         </li>
         <li>
-            <textarea name="contactadress" id="contactadress"><?php echo $adress ?></textarea>
+            <textarea name="adress" id="adress"><?php echo $adress ?></textarea>
         </li>
         <li>
-            <textarea name="contactphone" id="contactphone"><?php echo $phone ?></textarea>
+            <textarea name="phone" id="phone"><?php echo $phone ?></textarea>
         </li>
         <li>
-            <textarea name="contactemail" id="contactemail"><?php echo $email ?></textarea>
+            <textarea name="email" id="email"><?php echo $email ?></textarea>
         </li>
         <li>
-            <input type="submit" name="contactsave" value="Spara ändringar">
+            <input type="submit" name="save" value="Spara ändringar">
         </li>
     </ul>
     <input type="hidden" value="<?php echo $id ?>" name="id">

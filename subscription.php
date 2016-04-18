@@ -22,21 +22,20 @@
     $result = mysqli_query($link, "SELECT * FROM tgv_subscription_price") or die(mysqli_error());
 
     echo '<section class="subscription-price">';
-    echo '<ul>';
     while ($row = mysqli_fetch_array($result)) {
 
         $id = $row['id'];
-        $item = $row['item'];
-        $price = $row['price'];
+        $title = $row['title'];
+        $content = $row['content'];
 
-        echo '<li><p>' . $item . ' ' . $price . '</p></li>';
+        echo '<p>' . $title . '</p>';
+        echo '<p>' . $content . '</p>';
 
         //if (isset($_SESSION['user'])) {
         echo '<p><a href="subscription_price_edit.php?id=' . $id . '">Redigera</a></p>';
         //}
     }
     ?>
-    </ul>
     </section>
     <?php
     $result = mysqli_query($link, "SELECT * FROM tgv_subscription_info") or die(mysqli_error());

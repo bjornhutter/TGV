@@ -10,8 +10,8 @@ $id = $_GET['id'];
 $result = mysqli_query($link, "SELECT * FROM tgv_subscription_price WHERE id = '$id'");
 $row = mysqli_fetch_array($result);
 
-$item = $row['item'];
-$price = $row['price'];
+$title = $row['title'];
+$content = $row['content'];
 ?>
 
 <!doctype html>
@@ -32,16 +32,16 @@ $price = $row['price'];
 <form action="subscription_price_edit_process.php" method="post">
     <ul>
         <li>
-            <textarea name="subpriceitem" id="subpriceitem"><?php echo $item ?></textarea>
+            <textarea name="title" id="title"><?php echo $title ?></textarea>
         </li>
         <li>
-            <textarea name="subpriceprice" id="subpriceprice"><?php echo $price ?></textarea>
+            <textarea name="content" id="content"><?php echo $content ?></textarea>
         </li>
         <li>
-            <input type="submit" name="subpricesave" value="Spara ändringar">
+            <input type="submit" name="save" value="Spara ändringar">
         </li>
         <li>
-            <input type="submit" name="subpricedelete" value="Radera" onClick="return confirm('Radera. Är du säker?')">
+            <input type="submit" name="delete" value="Radera" onClick="return confirm('Radera. Är du säker?')">
         </li>
     </ul>
     <input type="hidden" value="<?php echo $id ?>" name="id">
