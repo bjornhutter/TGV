@@ -29,7 +29,7 @@ $content = $row['content'];
 
 <body>
 <p>Redigera info om prenumeration</p>
-<form action="subscription_edit_process.php" method="post">
+<form action="subscription__info_edit_process.php" method="post">
     <ul>
         <li>
             <textarea name="title" id="title"><?php echo $title ?></textarea>
