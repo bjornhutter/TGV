@@ -16,28 +16,29 @@
 
 </header>
 <?php include('includes/navigation.inc') ?>
+<?php include('includes/db_connect.inc'); ?>
 <main class="price-info-wrapper">
-    <section class="subscription-price">
-        <ul>
-            <li>
-                <p>Pris 1</p>
-            </li>
-            <li>
-                <p>Pris 2</p>
-            </li>
-            <li>
-                <p>Pris 3</p>
-            </li>
-            <li>
-                <p>Pris 4</p>
-            </li>
-            <li>
-                <p>Pris 5</p>
-            </li>
-        </ul>
+    <?php
+    $result = mysqli_query($link, "SELECT * FROM tgv_subscription_price") or die(mysqli_error());
+
+    echo '<section class="subscription-price">';
+    echo '<ul>';
+    while ($row = mysqli_fetch_array($result)) {
+
+        $id = $row['id'];
+        $item = $row['item'];
+        $price = $row['price'];
+
+        echo '<li><p>' . $item . ' ' . $price . '</p></li>';
+
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="subscription_price_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+    }
+    ?>
+    </ul>
     </section>
     <?php
-    include('includes/db_connect.inc');
     $result = mysqli_query($link, "SELECT * FROM tgv_subscription_info") or die(mysqli_error());
 
     echo '<section class="subscription-info">';
@@ -53,9 +54,9 @@
         //if (isset($_SESSION['user'])) {
         echo '<p><a href="subscription_info_edit.php?id=' . $id . '">Redigera</a></p>';
         //}
-        echo '</section>';
     }
     ?>
+    </section>
     <section class="retailers">
         <button>HELO</button>
         <p>HELO</p>

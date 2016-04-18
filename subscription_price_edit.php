@@ -7,11 +7,11 @@ if (!isset($_GET['id'])) {
 
 include('includes/db_connect.inc');
 $id = $_GET['id'];
-$result = mysqli_query($link, "SELECT * FROM tgv_subscription_info WHERE id = '$id'");
+$result = mysqli_query($link, "SELECT * FROM tgv_subscription_price WHERE id = '$id'");
 $row = mysqli_fetch_array($result);
 
-$title = $row['title'];
-$content = $row['content'];
+$item = $row['item'];
+$price = $row['price'];
 ?>
 
 <!doctype html>
@@ -28,17 +28,20 @@ $content = $row['content'];
 </head>
 
 <body>
-<p>Redigera info om prenumeration</p>
-<form action="subscription_info_edit_process.php" method="post">
+<p>Redigera prenumerationspriser</p>
+<form action="subscription_price_edit_process.php" method="post">
     <ul>
         <li>
-            <textarea name="title" id="title"><?php echo $title ?></textarea>
+            <textarea name="item" id="item"><?php echo $item ?></textarea>
         </li>
         <li>
-            <textarea name="content" id="content"><?php echo $content ?></textarea>
+            <textarea name="price" id="price"><?php echo $price ?></textarea>
         </li>
         <li>
             <input type="submit" name="save" value="Spara ändringar">
+        </li>
+        <li>
+            <input type="submit" name="delete" value="Radera" onClick="return confirm('Radera. Är du säker?')">
         </li>
     </ul>
     <input type="hidden" value="<?php echo $id ?>" name="id">
