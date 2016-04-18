@@ -32,16 +32,16 @@ $price = $row['price'];
 <form action="subscription_price_edit_process.php" method="post">
     <ul>
         <li>
-            <textarea name="item" id="item"><?php echo $item ?></textarea>
+            <textarea name="subpriceitem" id="subpriceitem"><?php echo $item ?></textarea>
         </li>
         <li>
-            <textarea name="price" id="price"><?php echo $price ?></textarea>
+            <textarea name="subpriceprice" id="subpriceprice"><?php echo $price ?></textarea>
         </li>
         <li>
-            <input type="submit" name="save" value="Spara ändringar">
+            <input type="submit" name="subpricesave" value="Spara ändringar">
         </li>
         <li>
-            <input type="submit" name="delete" value="Radera" onClick="return confirm('Radera. Är du säker?')">
+            <input type="submit" name="subpricedelete" value="Radera" onClick="return confirm('Radera. Är du säker?')">
         </li>
     </ul>
     <input type="hidden" value="<?php echo $id ?>" name="id">

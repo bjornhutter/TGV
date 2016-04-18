@@ -32,13 +32,13 @@ $content = $row['content'];
 <form action="subscription_info_edit_process.php" method="post">
     <ul>
         <li>
-            <textarea name="title" id="title"><?php echo $title ?></textarea>
+            <textarea name="subinfotitle" id="subinfotitle"><?php echo $title ?></textarea>
         </li>
         <li>
-            <textarea name="content" id="content"><?php echo $content ?></textarea>
+            <textarea name="subinfocontent" id="subinfocontent"><?php echo $content ?></textarea>
         </li>
         <li>
-            <input type="submit" name="save" value="Spara ändringar">
+            <input type="submit" name="subinfosave" value="Spara ändringar">
         </li>
     </ul>
     <input type="hidden" value="<?php echo $id ?>" name="id">
