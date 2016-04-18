@@ -17,7 +17,11 @@
 </header>
 <?php include('includes/navigation.inc') ?>
 
-<main>
+<main class="script-wrapper">
+    <section class="script-info">
+        <h1 class="script-info-main-title">Anvisningar för artikelskribenter</h1>
+        <p>Tidskrift för genusvetenskap(TGV) kommer ut med fyra nummer per år. En förutsättning för publicering i TGV är att artikeln inte redan är publicerad av annan tidskrift eller annat förlag. För tidskriften intressanta artikelförslag referee-granskas. Om en artikel samtidigt är under bedömning någon annanstans bör detta tydligt anges.</p>
+    </section>
     <section id="tabs">
         <ul>
             <li>

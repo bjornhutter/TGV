@@ -215,6 +215,22 @@ main {
 
 /*** ================= SKICKA MANUS START =================== ***/
 
+.script-wrapper {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.script-info {
+    width: 100%;
+    display: block;
+    background: #da3873;
+}
+
+.script-info-main-title {
+
+}
+
 .script-form-wrapper {
     width: 100%;
     display: block;
