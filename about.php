@@ -18,6 +18,24 @@
 <?php include('includes/navigation.inc') ?>
 
 <main>
+    <section class="about-staff">
+        <h1 class="about-staff-main-title">TGV:s redaktion</h1>
+        <ul>
+            <li>
+                <p>Redaktörer: Sofia Strid och Lena Grip</p>
+            </li>
+            <li>
+                <p>Redaktionssekreterare och recensionsansvarig: Line Holth</p>
+            </li>
+            <li>
+                <p>Redaktionsråd: Malin Ah-king, Signe Bremer, Gunnel Karlsson, Elin Kvist, Anna Lundberg, Ulla Manns, Caroline Wamala</p>
+            </li>
+            <li>
+                <p>Ansvarig utgivare: Ulf Mellström. E-post: ulf.mellstrom@kau.se.</p>
+            </li>
+        </ul>
+    </section>
+    <!--kanske lägga till section för staff här under? -->
     <ul class="staff-wrapper">
         <h1 class="staff-main-title">Om oss</h1>
         <li class="staff">
