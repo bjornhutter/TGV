@@ -231,6 +231,20 @@ main {
 
 }
 
+.script-reviewers {
+    width: 50%;
+    display: block;
+    float: left;
+    background: #70bada;
+}
+
+.script-examiner {
+    width: 50%;
+    display: block;
+    float: left;
+    background: #6677da;
+}
+
 .script-form-wrapper {
     width: 100%;
     display: block;

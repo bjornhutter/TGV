@@ -20,7 +20,10 @@
 <main class="script-wrapper">
     <section class="script-info">
         <h1 class="script-info-main-title">Anvisningar för artikelskribenter</h1>
-        <p>Tidskrift för genusvetenskap(TGV) kommer ut med fyra nummer per år. En förutsättning för publicering i TGV är att artikeln inte redan är publicerad av annan tidskrift eller annat förlag. För tidskriften intressanta artikelförslag referee-granskas. Om en artikel samtidigt är under bedömning någon annanstans bör detta tydligt anges.</p>
+        <p>Tidskrift för genusvetenskap(TGV) kommer ut med fyra nummer per år. En förutsättning för publicering i TGV är
+            att artikeln inte redan är publicerad av annan tidskrift eller annat förlag. För tidskriften intressanta
+            artikelförslag referee-granskas. Om en artikel samtidigt är under bedömning någon annanstans bör detta
+            tydligt anges.</p>
     </section>
     <section id="tabs">
         <ul>
@@ -201,6 +204,49 @@
                 </li>
             </ol>
         </div>
+    </section>
+    <section class="script-reviewers">
+        <p>En recension i Tidskrift för genusvetenskap ska föra ett vetenskapligt resonemang kring den recenserade boken. Den ska vara problematiserande, inte refererande. Tonen får gärna vara personlig och essäistisk, men med bibehållen vetenskaplig skärpa.
+
+            Eftersom tidskriften är tvärvetenskaplig måste texten kunna förstås av läsare utanför det egna forskningsområdet. Du bör därför undvika utpräglad fackterminologi. Förklara genom upplysande tillägg eller använd mer allmänspråkliga synonymer.
+            När du recenserar en antologi bör du koncentrera din framställning kring något genomgripande problem eller tema i boken, istället för att kort beskriva alla bidragen. Detsamma gäller för övrigt även monografier där du bör undvika en kronologisk genomgång kapitel för kapitel.
+
+            En recension får normalt omfatta 5 000 till 7 000 tecken. Varje recension inleds med en rubrik som innehåller fullständiga uppgifter om verket. Författarnamnet ska stå först, därefter titel, förlag och sist årtal.
+
+            Exempel:
+
+            Catrine Brödje
+            Ett annat tiotal. En studie i Anna Lenah Elgströms tiotalsprosa, akad. avh.
+            Gondolin 1998
+
+            Titlar på böcker, tidskrifter, tidningar eller filmer ska kursiveras. Rubriker på artiklar eller kapitel sätts inom citationstecken.
+
+            Inga litteraturlistor eller noter i recensioner. Hänvisar du till andra verk i din recension kan du använda följande modell:
+            … som Judith Butler visat i sin bok Gender Trouble (1990:145).
+
+            Förkortningar ska undvikas.
+
+            Texten ska vara så ren som möjligt. Det innebär:
+            Inga onödiga formateringar, inga indrag, rubriker och mellanrubriker utan onödiga versaler, kursiveringar och fet stil, inga fotnoter (använd kommandot ”infoga slutkommentar” om du arbetar i Word, ”slutnot” i Word Perfect).
+
+            Slutversion av en text levereras som bifogat dokument via e-post. Filformatet bör helst vara MS Word. Den som inte har tillgång till Word sparar texten som ”Endast text” (*.txt) eller i RTF-format (*.rtf).</p>
+    </section>
+    <section class="script-examiner">
+        <p>Tidskrift för genusvetenskap tillämpar kollegial granskning (peer review) med två anonyma granskare. Granskningen mynnar ut i en rekommendation att publicera eller inte publicera. I båda fallen uppmanas du som kollegial granskare att bidra med konstruktiva synpunkter som kan förbättra artikeln.
+
+            Manuskript som ej bedöms möjliga att publicera ska åtföljas av en tydlig motivering av varför och av ett framhållande av de förtjänster som finns, så att författaren kan ha nytta av granskningen. Manuskript som bedöms möjliga att publicera, givet revideringar, ska åtföljas av konkreta synpunkter och nödvändiga revideringar. Manus som bedöms som möjliga att publicera i aktuellt skick ska åtföljas av förslag på förbättringar. Granskarnas synpunkter förmedlas skriftligt och anonymt till författaren via redaktörerna, som gör en summering av granskningarna. Om granskarnas synpunkter inte konvergerar gör redaktörerna en rangordning av åtgärder, för att underlätta för författarna att förhålla sig till granskningarna.
+
+            Följande aspekter bör ingå i granskningen:
+            Vilka är artikelns förtjänster och svagheter?
+            På vilket sätt är artikeln intressant för TGV?
+            Hur beaktas det nationella och internationella forskningsläget? Finns det ytterliagre litteratur som författaren borde förhålla sig till?
+            Hur fungerar dispositionen? Är artikeln väl strukturerad?
+            Är teorin fruktbar?
+            Är metoden adekvat?
+            Hur fungerar samspelet mellan teori, metod, resultat och slutsatser?
+            Är argumentationen väl genomförd?
+            Språk och akribi
+            Är artikeln publiceringsbar? (Ja, Ja med föreslagna revideringar, Nej inte alls)</p>
     </section>
 </main>
 
