@@ -225,22 +225,24 @@
     }
     ?>
     </section>
-    <section class="script-examiner">
-        <p>Tidskrift för genusvetenskap tillämpar kollegial granskning (peer review) med två anonyma granskare. Granskningen mynnar ut i en rekommendation att publicera eller inte publicera. I båda fallen uppmanas du som kollegial granskare att bidra med konstruktiva synpunkter som kan förbättra artikeln.
+    <?php
+    $result = mysqli_query($link, "SELECT * FROM tgv_script_examiner") or die(mysqli_error());
 
-            Manuskript som ej bedöms möjliga att publicera ska åtföljas av en tydlig motivering av varför och av ett framhållande av de förtjänster som finns, så att författaren kan ha nytta av granskningen. Manuskript som bedöms möjliga att publicera, givet revideringar, ska åtföljas av konkreta synpunkter och nödvändiga revideringar. Manus som bedöms som möjliga att publicera i aktuellt skick ska åtföljas av förslag på förbättringar. Granskarnas synpunkter förmedlas skriftligt och anonymt till författaren via redaktörerna, som gör en summering av granskningarna. Om granskarnas synpunkter inte konvergerar gör redaktörerna en rangordning av åtgärder, för att underlätta för författarna att förhålla sig till granskningarna.
+    echo '<section class="script-examiner">';
+    while ($row = mysqli_fetch_array($result)) {
 
-            Följande aspekter bör ingå i granskningen:
-            Vilka är artikelns förtjänster och svagheter?
-            På vilket sätt är artikeln intressant för TGV?
-            Hur beaktas det nationella och internationella forskningsläget? Finns det ytterliagre litteratur som författaren borde förhålla sig till?
-            Hur fungerar dispositionen? Är artikeln väl strukturerad?
-            Är teorin fruktbar?
-            Är metoden adekvat?
-            Hur fungerar samspelet mellan teori, metod, resultat och slutsatser?
-            Är argumentationen väl genomförd?
-            Språk och akribi
-            Är artikeln publiceringsbar? (Ja, Ja med föreslagna revideringar, Nej inte alls)</p>
+        $id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+
+        echo '<h1 class="script-examiner-main-title">' . $title . '</h1>';
+        echo '<p>' . $content . '</p>';
+
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="script_examiner_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+    }
+    ?>
     </section>
 </main>
 
