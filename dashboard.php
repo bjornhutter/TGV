@@ -1,3 +1,4 @@
+<?php require('includes/auth.inc'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +34,9 @@
         </li>
         <li>
             <a href="dashboard_contact.php" id="contact-btn">Kontakt</a>
+        </li>
+        <li>
+            <a href="logout.php" id="logout-btn">Logga ut</a>
         </li>
     </ul>
 </nav>

@@ -89,13 +89,13 @@ form ul li p {
 }
 
 form input {
-    width: 100%;
-    height: 50px;
+    /*width: 100%;
+    height: 50px;*/
 }
 
 form textarea {
-    width: 100%;
-    max-width: 100%;
+    /*width: 100%;
+    max-width: 100%;*/
 }
 
 /*** ================= MAIN END =================== ***/
