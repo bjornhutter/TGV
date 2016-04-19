@@ -16,24 +16,27 @@
 
 </header>
 <?php include('includes/navigation.inc') ?>
+<?php include('includes/db_connect.inc') ?>
 
 <main>
-    <section class="about-staff">
-        <h1 class="about-staff-main-title">TGV:s redaktion</h1>
-        <ul>
-            <li>
-                <p>Redaktörer: Sofia Strid och Lena Grip</p>
-            </li>
-            <li>
-                <p>Redaktionssekreterare och recensionsansvarig: Line Holth</p>
-            </li>
-            <li>
-                <p>Redaktionsråd: Malin Ah-king, Signe Bremer, Gunnel Karlsson, Elin Kvist, Anna Lundberg, Ulla Manns, Caroline Wamala</p>
-            </li>
-            <li>
-                <p>Ansvarig utgivare: Ulf Mellström. E-post: ulf.mellstrom@kau.se.</p>
-            </li>
-        </ul>
+    <?php
+    $result = mysqli_query($link, "SELECT * FROM tgv_about_staff") or die(mysqli_error());
+
+    echo '<section class="about-staff">';
+    while ($row = mysqli_fetch_array($result)) {
+
+        $id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+
+        echo '<h1 class="about-staff-main-title">' . $title . '</h1>';
+        echo '<p>' . $content . '</p>';
+
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="about_staff_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+    }
+    ?>
     </section>
     <!--kanske lägga till section för staff här under? -->
     <ul class="staff-wrapper">
