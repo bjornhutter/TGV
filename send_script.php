@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
+<?php include('includes/db_connect.inc') ?>
 
 <header>
 
@@ -205,31 +206,24 @@
             </ol>
         </div>
     </section>
-    <section class="script-reviewers">
-        <p>En recension i Tidskrift för genusvetenskap ska föra ett vetenskapligt resonemang kring den recenserade boken. Den ska vara problematiserande, inte refererande. Tonen får gärna vara personlig och essäistisk, men med bibehållen vetenskaplig skärpa.
+    <?php
+    $result = mysqli_query($link, "SELECT * FROM tgv_script_reviewers") or die(mysqli_error());
 
-            Eftersom tidskriften är tvärvetenskaplig måste texten kunna förstås av läsare utanför det egna forskningsområdet. Du bör därför undvika utpräglad fackterminologi. Förklara genom upplysande tillägg eller använd mer allmänspråkliga synonymer.
-            När du recenserar en antologi bör du koncentrera din framställning kring något genomgripande problem eller tema i boken, istället för att kort beskriva alla bidragen. Detsamma gäller för övrigt även monografier där du bör undvika en kronologisk genomgång kapitel för kapitel.
+    echo '<section class="script-reviewers">';
+    while ($row = mysqli_fetch_array($result)) {
 
-            En recension får normalt omfatta 5 000 till 7 000 tecken. Varje recension inleds med en rubrik som innehåller fullständiga uppgifter om verket. Författarnamnet ska stå först, därefter titel, förlag och sist årtal.
+        $id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
 
-            Exempel:
+        echo '<h1 class="script-reviewers-main-title">' . $title . '</h1>';
+        echo '<p>' . $content . '</p>';
 
-            Catrine Brödje
-            Ett annat tiotal. En studie i Anna Lenah Elgströms tiotalsprosa, akad. avh.
-            Gondolin 1998
-
-            Titlar på böcker, tidskrifter, tidningar eller filmer ska kursiveras. Rubriker på artiklar eller kapitel sätts inom citationstecken.
-
-            Inga litteraturlistor eller noter i recensioner. Hänvisar du till andra verk i din recension kan du använda följande modell:
-            … som Judith Butler visat i sin bok Gender Trouble (1990:145).
-
-            Förkortningar ska undvikas.
-
-            Texten ska vara så ren som möjligt. Det innebär:
-            Inga onödiga formateringar, inga indrag, rubriker och mellanrubriker utan onödiga versaler, kursiveringar och fet stil, inga fotnoter (använd kommandot ”infoga slutkommentar” om du arbetar i Word, ”slutnot” i Word Perfect).
-
-            Slutversion av en text levereras som bifogat dokument via e-post. Filformatet bör helst vara MS Word. Den som inte har tillgång till Word sparar texten som ”Endast text” (*.txt) eller i RTF-format (*.rtf).</p>
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="script_reviewers_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+    }
+    ?>
     </section>
     <section class="script-examiner">
         <p>Tidskrift för genusvetenskap tillämpar kollegial granskning (peer review) med två anonyma granskare. Granskningen mynnar ut i en rekommendation att publicera eller inte publicera. I båda fallen uppmanas du som kollegial granskare att bidra med konstruktiva synpunkter som kan förbättra artikeln.
