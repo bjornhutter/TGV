@@ -248,6 +248,7 @@ main {
 .script-form-wrapper {
     width: 100%;
     display: block;
+    float: left;
 }
 
 .script-form-inner-wrapper {
