@@ -33,7 +33,7 @@
     <a href="send_script.php" class="send-script-button">Skicka in ditt manus!</a>
 </section>
 <section class="news-feed">
-    <h1>Nyheter</h1>
+    <h1 class="news-main-title">Nyheter</h1>
 
     <?php
 
@@ -50,8 +50,8 @@
         $id = $row ['id'];
 
         echo '<div class="news-post">';
-        echo '<h2 class="news-title">' . $title . '</h2>';
         echo '<p class="news-date">' . $date . '</p>';
+        echo '<h2 class="news-title">' . $title . '</h2>';
         echo '<p class="news-content">' . nl2br($content) . '</p>';
 
         echo '<a href="" >Redigera inlägg<!-- skickas till dashboard? --></a>';
