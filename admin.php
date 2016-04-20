@@ -1,5 +1,10 @@
 <?php
 session_start();
+$userCorrect = "";
+$userErr = "";
+$passwordErr = "";
+$userErrField = "";
+$passwordErrField = "";
 
 if (isset($_POST['login_submit'])) {
 
@@ -20,34 +25,31 @@ if (isset($_POST['login_submit'])) {
             header('Location: dashboard.php');
 
         } else {
-            echo "Fel lösenord";
+            $userCorrect = "$user";
+            $passwordErr = "Fel lösenord";
+            $passwordErrField = "* Fel lösenord";
+            echo '<style type="text/css">
+            #password {
+                border: 1px solid rgba(255, 35, 50, 1);
+                -webkit-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
+                -moz-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
+                box-shadow: 0 0 2px rgba(255, 35, 50, 1);
+            }
+            </style>';
         }
 
     } else {
-        echo "Fel användarnamn";
-    }
-
-
-
-
-    /*$result = mysqli_query($link, "SELECT * FROM ui_users WHERE email = '$email'");
-
-    if (mysqli_num_rows($result) > 0) {
-
-        $row = mysqli_fetch_array($result);
-
-        if ($pw == $row['pw'] && $email == $row['email']) {
-
-            $_SESSION['email'] = $email;
-            header('Location: index.php');
-        } else {
-            echo '<p>Wrong Password</p>';
+        $userErr = "Fel användarnamn";
+        $userErrField = "* Fel användarnamn";
+        echo '<style type="text/css">
+        #user {
+            border: 1px solid rgba(255, 35, 50, 1);
+            -webkit-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
+            -moz-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
+            box-shadow: 0 0 2px rgba(255, 35, 50, 1);
         }
-
-    } else {
-        echo '<p>Wrong Email</p>';
+        </style>';
     }
-    */
 
 }
 
@@ -57,35 +59,37 @@ if (isset($_POST['login_submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" type="text/css" href="css/css-reset.css">-->
+    <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="css/dashboard.css">-->
-    <title>Admin Login | Tidskrift för genusvetenskap</title>
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <title>Admin Inloggning | Tidskrift för genusvetenskap</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="plugins/noty-2.3.8/js/noty/packaged/jquery.noty.packaged.min.js"></script>
 </head>
-<body>
-<header>
-    <h1>Admin Login</h1>
-</header>
-<main>
-    <form action="" method="post">
-        <ul>
-            <li>
-                <p>Användarnamn: </p>
-                <input type="text" name="user" title="Användarnamn" class="login-input-text" required>
-            </li>
-            <li>
-                <p>Lösenord: </p>
-                <input type="password" name="password" title="Lösenord" class="login-input-password" required>
-            </li>
-            <li>
-                <input type="submit" name="login_submit" value="Logga in" class="login-input-submit">
-            </li>
-        </ul>
-    </form>
+<body class="admin-body">
+<main class="admin-main">
+    <div class="login-form-wrapper">
+        <form action="" method="post" class="login-form">
+            <h1 class="login-title">Admin Inloggning</h1>
+            <ul class="login-ul">
+                <li class="login-li">
+                    <input type="text" id="user" name="user" title="Användarnamn" class="login-input-text"
+                           placeholder="Användarnamn" value="<?php echo $userCorrect ?>" required><span
+                        class="error-field"><?php echo $userErrField ?></span>
+                </li>
+                <li class="login-li">
+                    <input type="password" id="password" name="password" title="Lösenord" class="login-input-password"
+                           placeholder="Lösenord" required><span
+                        class="error-field"><?php echo $passwordErrField ?></span>
+                </li>
+                <li class="login-li-submit">
+                    <input type="submit" name="login_submit" value="Logga in" class="login-input-submit">
+                </li>
+            </ul>
+        </form>
+    </div>
 </main>
-
 </body>
 </html>
