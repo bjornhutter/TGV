@@ -142,13 +142,32 @@ main {
     float:right;
     margin: 0 10px;
     overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.news-feed-container {
 }
 
 .news-main-title {
     font-size: 1.4em;
     margin-bottom: 10px;
 }
-/*** ================= NEWSFEED START =================== ***/
+
+.news-date {
+    font-size: 0.6em;
+}
+
+.news-title {
+    font-size:1.1em;
+    margin: 5px 0;
+
+}
+
+.news-content {
+    font-size:0.9em;
+}
+
+/*** ================= NEWSFEED END =================== ***/
 
 
 /*** ================= OM OSS START =================== ***/
