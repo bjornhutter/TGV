@@ -137,9 +137,17 @@ main {
 
 .news-feed {
     width:250px;
-    float:left;
+    height:750px;
+    display: block;
+    float:right;
+    margin: 0 10px;
+    overflow-y: auto;
 }
 
+.news-main-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
 /*** ================= NEWSFEED START =================== ***/
 
 
