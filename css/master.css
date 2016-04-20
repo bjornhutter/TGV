@@ -138,10 +138,10 @@ main {
 .news-feed {
     width:250px;
     height:750px;
-    background: #da865a;
+    background: #fff;
     display: block;
     float:right;
-    margin: 0 10px;
+    padding: 10px;
     overflow-y: auto;
     overflow-x: hidden;
 }
