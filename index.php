@@ -40,6 +40,8 @@
     $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC") or die (mysqli_error($link));
 
     echo '<div class="news-post-container>';
+    echo '<h1>Nyheter</h1>';
+
     while ($row = mysqli_fetch_array($result)) {
         $title = $row['title'];
         $content = $row ['content'];
@@ -47,10 +49,9 @@
         $id = $row ['id'];
 
         echo '<div class="news-post">';
-        echo '<h1>Nyheter</h1>';
-        echo '<h2>' . $title . '</h2>';
-        echo '<p>' . nl2br($content) . '</p>';
-        echo '<p>' . $date . '</p>';
+        echo '<h2 class="news-title">' . $title . '</h2>';
+        echo '<p class="news-date">' . $date . '</p>';
+        echo '<p class="news-content">' . nl2br($content) . '</p>';
 
         echo '<a href="" >Redigera inlägg<!-- skickas till dashboard? --></a>';
         echo '<hr>';
