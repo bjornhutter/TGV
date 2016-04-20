@@ -1,5 +1,5 @@
 body {
-
+    background: #70bada;
 }
 
 /*** ================= HEADER START =================== ***/
@@ -72,7 +72,15 @@ footer {
 /*** ================= MAIN START =================== ***/
 
 main {
+    display: inline-block;
+    width: 80%;
+    float: left;
+}
 
+aside {
+    display: inline-block;
+    width: 20%;
+    float: left;
 }
 
 /*** ================= MAIN END =================== ***/
@@ -83,7 +91,6 @@ main {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background: #70bada;
 }
 
 .recent-article-main-title {
@@ -123,11 +130,14 @@ main {
 
 /*** ================= CALL FOR PAPERS START =================== ***/
 
-.cfp {
-    width:250px;
+.cfp,
+.news-feed {
     background: #fff;
-    display:block;
-    float:left;
+    margin: 20px 0;
+    padding: 10px;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .send-script-button {
@@ -139,12 +149,7 @@ main {
 /*** ================= NEWSFEED START =================== ***/
 
 .news-feed {
-    width:250px;
-    height:750px;
-    background: #fff;
-    display: block;
-    float:right;
-    padding: 10px;
+    height: 750px;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -163,20 +168,19 @@ main {
 }
 
 .news-title {
-    font-size:1.1em;
+    font-size: 1.1em;
     margin: 5px 0;
 
 }
 
 .news-content {
-    font-size:0.9em;
+    font-size: 0.9em;
 }
 
 .news-post {
 }
 
 /*** ================= NEWSFEED END =================== ***/
-
 
 /*** ================= OM OSS START =================== ***/
 
@@ -232,7 +236,7 @@ main {
 }
 
 .subscription-price {
-    width: calc(100%/3);
+    width: calc(100% / 3);
     display: block;
     float: left;
     height: 300px;
@@ -240,7 +244,7 @@ main {
 }
 
 .subscription-info {
-    width: calc(100%/3 * 2);
+    width: calc(100% / 3 * 2);
     display: block;
     float: left;
     height: 300px;
@@ -254,7 +258,6 @@ main {
     background: #da3873;
     float: left;
 }
-
 
 /*** ================= PRENUMERERA END =================== ***/
 
@@ -291,7 +294,6 @@ main {
 
 }
 
-
 /*** ================= SKICKA MANUS END =================== ***/
 
 /*** ================= KONTAKT START =================== ***/
@@ -304,7 +306,7 @@ main {
 }
 
 .contact-info {
-    width: calc(100%/3 * 2);
+    width: calc(100% / 3 * 2);
     display: block;
     float: left;
     height: 300px;
@@ -320,7 +322,7 @@ main {
 }
 
 .contact-map {
-    width: calc(100%/3);
+    width: calc(100% / 3);
     display: block;
     float: left;
     height: 300px;
@@ -331,9 +333,7 @@ main {
 
 }
 
-
 /*** ================= KONTAKT END =================== ***/
-
 
 /*** ================= TABS START =================== ***/
 
