@@ -33,15 +33,16 @@
     <a href="send_script.php" class="send-script-button">Skicka in ditt manus!</a>
 </section>
 <section class="news-feed">
+    <h1>Nyheter</h1>
+
     <?php
+
     include ('includes/db_connect.inc');
 
 
     $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC") or die (mysqli_error($link));
 
     echo '<div class="news-post-container>';
-    echo '<h1>Nyheter</h1>';
-
     while ($row = mysqli_fetch_array($result)) {
         $title = $row['title'];
         $content = $row ['content'];
