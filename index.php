@@ -15,7 +15,6 @@
 <header>
 
 </header>
-<?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation.inc') ?>
 <section class="cfp">
     <div>
@@ -38,7 +37,7 @@
     include ('includes/db_connect.inc');
 
 
-    $result = mysqli_query($link, "SELECT * FROM tgv_newsfeed ORDER BY date DESC") or die (mysqli_error($link));
+    $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC") or die (mysqli_error($link));
 
     echo '<div class="news-post-container>';
     while ($row = mysqli_fetch_array($result)) {
