@@ -124,7 +124,10 @@ main {
 /*** ================= CALL FOR PAPERS START =================== ***/
 
 .cfp {
-
+    width:250px;
+    background: #fff;
+    display:block;
+    float:left;
 }
 
 .send-script-button {
