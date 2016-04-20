@@ -138,6 +138,7 @@ main {
 .news-feed {
     width:250px;
     height:750px;
+    background: #da865a;
     display: block;
     float:right;
     margin: 0 10px;
