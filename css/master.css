@@ -156,6 +156,7 @@ main {
 
 .news-date {
     font-size: 0.6em;
+    padding-top: 30px;
 }
 
 .news-title {
@@ -166,6 +167,9 @@ main {
 
 .news-content {
     font-size:0.9em;
+}
+
+.news-post {
 }
 
 /*** ================= NEWSFEED END =================== ***/
