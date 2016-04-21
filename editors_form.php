@@ -28,9 +28,12 @@
         <li>
             <textarea name="content" id="content" placeholder=""></textarea>
         </li>
-
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Ladda upp" name="submit">
+        <li>
+            <input type="file" name="fileToUpload" id="fileToUpload">
+        </li>
+        <li>
+            <input type="submit" value="Ladda upp" name="submit">
+        </li>
     </ul>
 </form>
 </body>
