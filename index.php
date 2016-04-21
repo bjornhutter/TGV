@@ -17,7 +17,7 @@
 </header>
 <?php include('includes/navigation.inc') ?>
 
-<main>
+<main class="index-main">
     <ul class="recent-article-wrapper">
         <h1 class="recent-article-main-title">Senaste nummer</h1>
         <li class="recent-article">
@@ -42,7 +42,7 @@
         </li>
     </ul>
 </main>
-<aside>
+<aside class="index-aside">
     <section class="cfp">
         <div>
             <ul>
