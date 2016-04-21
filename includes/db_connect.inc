@@ -32,10 +32,19 @@
  */
 
 // FUNKAR INTE FÖR ATT VI HAR SIDAN PÅ OFCOURSE??
-$host = "localhost";
+$host = "tgv-206503.mysql.binero.se";
 $user = "206503_wt85915";
 $password = "xYGP7t6SUF~m22s";
 $dbName = "206503-tgv";
+
+
+// SNUBBEN I NEPALS GAMLA DATABAS
+//$host = "tegeve-206503.mysql.binero.se";
+//$user = "206503_yb37596";
+//$password = "59q8T1L96f9u6Bq";
+//$dbName = "206503-tegeve";
+
+
 
 
 $link = mysqli_connect($host, $user, $password, $dbName);
