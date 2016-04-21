@@ -69,15 +69,15 @@ footer {
 
 /*** ================= FOOTER END =================== ***/
 
-/*** ================= MAIN START =================== ***/
+/*** ================= INDEX MAIN START =================== ***/
 
-main {
+.index-main {
     display: inline-block;
     width: 80%;
     float: left;
 }
 
-aside {
+.index-aside {
     display: inline-block;
     width: 20%;
     float: left;
