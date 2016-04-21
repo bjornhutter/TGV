@@ -44,7 +44,7 @@ $imgName = $row['image'];
             <textarea name="content" id="content"><?php echo $content ?></textarea>
         </li>
         <li>
-            <input type="file" name="newfileToUpload" id="newfileToUpload">
+            <input type="file" name="fileToUpload" id="fileToUpload">
         </li>
         <li>
             <input type="submit" name="save" value="Spara ändringar">
