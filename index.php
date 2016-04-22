@@ -9,33 +9,16 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/stickynav.js"></script>
 </head>
 <body>
 
 <header>
 
 </header>
-<?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation.inc') ?>
-<section class="cfp">
-    <div>
-        <ul>
-            <li>
-                <p>Tema 1</p>
-            </li>
-            <li>
-                <p>Tema 2</p>
-            </li>
-            <li>
-                <p>Tema 3</p>
-            </li>
-        </ul>
-    </div>
-    <a href="send_script.php" class="send-script-button">Skicka in ditt manus!</a>
-</section>
 
-
-<main>
+<main class="index-main">
     <ul class="recent-article-wrapper">
         <h1 class="recent-article-main-title">Senaste nummer</h1>
         <li class="recent-article">
@@ -60,7 +43,54 @@
         </li>
     </ul>
 </main>
+<aside class="index-aside">
+    <section class="cfp">
+        <div>
+            <ul>
+                <li>
+                    <p>Tema 1</p>
+                </li>
+                <li>
+                    <p>Tema 2</p>
+                </li>
+                <li>
+                    <p>Tema 3</p>
+                </li>
+            </ul>
+        </div>
+        <a href="send_script.php" class="send-script-button">Skicka in ditt manus!</a>
+    </section>
+    <section class="news-feed">
+        <h1 class="news-main-title">Nyheter</h1>
 
+        <?php
+
+        include ('includes/db_connect.inc');
+
+
+        $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC") or die (mysqli_error($link));
+
+        echo '<div class="news-post-container>';
+        while ($row = mysqli_fetch_array($result)) {
+            $title = $row['title'];
+            $content = $row ['content'];
+            $date = $row ['date'];
+            $id = $row ['id'];
+
+            echo '<div class="news-post">';
+            echo '<p class="news-date">' . $date . '</p>';
+            echo '<h2 class="news-title">' . $title . '</h2>';
+            echo '<p class="news-content">' . nl2br($content) . '</p>';
+
+            echo '<a href="" >Redigera inlägg<!-- skickas till dashboard? --></a>';
+            echo '<hr>';
+            echo '</div>';
+        }
+        echo '</div>';
+
+        ?>
+    </section>
+</aside>
 
 <?php include('includes/footer.inc') ?>
 </body>

@@ -1,5 +1,5 @@
 body {
-
+    background: #70bada;
 }
 
 /*** ================= HEADER START =================== ***/
@@ -54,6 +54,22 @@ nav ul li a:active {
 
 }
 
+.nav-placeholder {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    z-index: 500;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    -webkit-transform: translateZ(0);
+}
+
 /*** ================= NAVIGATION END =================== ***/
 
 /*** ================= FOOTER START =================== ***/
@@ -69,10 +85,18 @@ footer {
 
 /*** ================= FOOTER END =================== ***/
 
-/*** ================= MAIN START =================== ***/
+/*** ================= INDEX MAIN START =================== ***/
 
-main {
+.index-main {
+    display: inline-block;
+    width: 80%;
+    float: left;
+}
 
+.index-aside {
+    display: inline-block;
+    width: 20%;
+    float: left;
 }
 
 /*** ================= MAIN END =================== ***/
@@ -83,7 +107,6 @@ main {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background: #70bada;
 }
 
 .recent-article-main-title {
@@ -123,8 +146,14 @@ main {
 
 /*** ================= CALL FOR PAPERS START =================== ***/
 
-.cfp {
-
+.cfp,
+.news-feed {
+    background: #fff;
+    margin: 20px 0;
+    padding: 10px;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .send-script-button {
@@ -132,6 +161,42 @@ main {
 }
 
 /*** ================= CALL FOR PAPERS END =================== ***/
+
+/*** ================= NEWSFEED START =================== ***/
+
+.news-feed {
+    height: 750px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.news-feed-container {
+}
+
+.news-main-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    font-size: 0.6em;
+    padding-top: 30px;
+}
+
+.news-title {
+    font-size: 1.1em;
+    margin: 5px 0;
+
+}
+
+.news-content {
+    font-size: 0.9em;
+}
+
+.news-post {
+}
+
+/*** ================= NEWSFEED END =================== ***/
 
 /*** ================= OM OSS START =================== ***/
 
@@ -187,7 +252,7 @@ main {
 }
 
 .subscription-price {
-    width: calc(100%/3);
+    width: calc(100% / 3);
     display: block;
     float: left;
     height: 300px;
@@ -195,7 +260,7 @@ main {
 }
 
 .subscription-info {
-    width: calc(100%/3 * 2);
+    width: calc(100% / 3 * 2);
     display: block;
     float: left;
     height: 300px;
@@ -209,7 +274,6 @@ main {
     background: #da3873;
     float: left;
 }
-
 
 /*** ================= PRENUMERERA END =================== ***/
 
@@ -246,7 +310,6 @@ main {
 
 }
 
-
 /*** ================= SKICKA MANUS END =================== ***/
 
 /*** ================= KONTAKT START =================== ***/
@@ -259,7 +322,7 @@ main {
 }
 
 .contact-info {
-    width: calc(100%/3 * 2);
+    width: calc(100% / 3 * 2);
     display: block;
     float: left;
     height: 300px;
@@ -275,7 +338,7 @@ main {
 }
 
 .contact-map {
-    width: calc(100%/3);
+    width: calc(100% / 3);
     display: block;
     float: left;
     height: 300px;
@@ -286,9 +349,7 @@ main {
 
 }
 
-
 /*** ================= KONTAKT END =================== ***/
-
 
 /*** ================= TABS START =================== ***/
 
