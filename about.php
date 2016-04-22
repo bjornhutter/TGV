@@ -16,8 +16,29 @@
 
 </header>
 <?php include('includes/navigation.inc') ?>
+<?php include('includes/db_connect.inc') ?>
 
 <main>
+    <?php
+    $result = mysqli_query($link, "SELECT * FROM tgv_about_staff") or die(mysqli_error());
+
+    echo '<section class="about-staff">';
+    while ($row = mysqli_fetch_array($result)) {
+
+        $id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+
+        echo '<h1 class="about-staff-main-title">' . $title . '</h1>';
+        echo '<p>' . $content . '</p>';
+
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="about_staff_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+    }
+    ?>
+    </section>
+    <!--kanske lägga till section för staff här under? -->
     <ul class="staff-wrapper">
         <h1 class="staff-main-title">Om oss</h1>
         <li class="staff">

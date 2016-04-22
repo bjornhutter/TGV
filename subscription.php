@@ -16,29 +16,45 @@
 
 </header>
 <?php include('includes/navigation.inc') ?>
-
+<?php include('includes/db_connect.inc'); ?>
 <main class="price-info-wrapper">
-    <section class="subscription-price">
-        <ul>
-            <li>
-                <p>Pris 1</p>
-            </li>
-            <li>
-                <p>Pris 2</p>
-            </li>
-            <li>
-                <p>Pris 3</p>
-            </li>
-            <li>
-                <p>Pris 4</p>
-            </li>
-            <li>
-                <p>Pris 5</p>
-            </li>
-        </ul>
+    <?php
+    $result = mysqli_query($link, "SELECT * FROM tgv_subscription_price") or die(mysqli_error());
+
+    echo '<section class="subscription-price">';
+    while ($row = mysqli_fetch_array($result)) {
+
+        $id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+
+        echo '<p>' . $title . '</p>';
+        echo '<p>' . $content . '</p>';
+
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="subscription_price_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+    }
+    ?>
     </section>
-    <section class="subscription-info">
-        <p>lkm lk mlak mdls  lakmsd aslkdm aasdl kmasd asdl kamsdl kasmdal ksdmalskdm alskdmalksdmalskdm</p>
+    <?php
+    $result = mysqli_query($link, "SELECT * FROM tgv_subscription_info") or die(mysqli_error());
+
+    echo '<section class="subscription-info">';
+    while ($row = mysqli_fetch_array($result)) {
+
+        $id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+
+        echo '<p>' . $title . '</p>';
+        echo '<p>' . $content . '</p>';
+
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="subscription_info_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+    }
+    ?>
     </section>
     <section class="retailers">
         <button>HELO</button>

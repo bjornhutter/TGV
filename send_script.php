@@ -11,13 +11,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
+<?php include('includes/db_connect.inc') ?>
 
 <header>
 
 </header>
 <?php include('includes/navigation.inc') ?>
 
-<main>
+<main class="script-wrapper">
+    <section class="script-info">
+        <h1 class="script-info-main-title">Anvisningar för artikelskribenter</h1>
+        <p>Tidskrift för genusvetenskap(TGV) kommer ut med fyra nummer per år. En förutsättning för publicering i TGV är
+            att artikeln inte redan är publicerad av annan tidskrift eller annat förlag. För tidskriften intressanta
+            artikelförslag referee-granskas. Om en artikel samtidigt är under bedömning någon annanstans bör detta
+            tydligt anges.</p>
+    </section>
     <section id="tabs">
         <ul>
             <li>
@@ -197,6 +205,44 @@
                 </li>
             </ol>
         </div>
+    </section>
+    <?php
+    $result = mysqli_query($link, "SELECT * FROM tgv_script_reviewers") or die(mysqli_error());
+
+    echo '<section class="script-reviewers">';
+    while ($row = mysqli_fetch_array($result)) {
+
+        $id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+
+        echo '<h1 class="script-reviewers-main-title">' . $title . '</h1>';
+        echo '<p>' . $content . '</p>';
+
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="script_reviewers_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+    }
+    ?>
+    </section>
+    <?php
+    $result = mysqli_query($link, "SELECT * FROM tgv_script_examiner") or die(mysqli_error());
+
+    echo '<section class="script-examiner">';
+    while ($row = mysqli_fetch_array($result)) {
+
+        $id = $row['id'];
+        $title = $row['title'];
+        $content = $row['content'];
+
+        echo '<h1 class="script-examiner-main-title">' . $title . '</h1>';
+        echo '<p>' . $content . '</p>';
+
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="script_examiner_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+    }
+    ?>
     </section>
 </main>
 
