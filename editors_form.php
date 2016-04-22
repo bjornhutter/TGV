@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<p>Skriv nyhet</p>
+<p>Lägg till redaktör</p>
 <form action="about_editors_process.php" method="post" enctype="multipart/form-data">
     <ul>
         <li>
