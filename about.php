@@ -37,7 +37,6 @@
             //if (isset($_SESSION['user'])) {
             echo '<p><a href="about_editors_edit.php?id=' . $id . '">Redigera</a></p>';
             //}
-            echo '</div>';
             echo '</li>';
         }
         ?>
