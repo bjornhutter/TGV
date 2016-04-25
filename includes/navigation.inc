@@ -10,7 +10,7 @@
             <a href="subscription.php">Prenumerera</a>
         </li>
         <li>
-            <a href="http://ojs.ub.gu.se/ojs/index.php/tgv">Tidigare nummer</a>
+            <a href="http://ojs.ub.gu.se/ojs/index.php/tgv" target="_blank">Tidigare nummer</a>
         </li>
         <li>
             <a href="send_script.php">Skicka manus</a>
