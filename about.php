@@ -16,31 +16,35 @@
 
 </header>
 <?php include('includes/navigation.inc') ?>
-<?php include('includes/db_connect.inc') ?>
 
 <main>
     <?php
-    $result = mysqli_query($link, "SELECT * FROM tgv_about_staff") or die(mysqli_error());
+    include('includes/db_connect.inc');
+
+    $aboutResult = mysqli_query($link, "SELECT * FROM tgv_about") or die(mysqli_error($link));
 
     echo '<section class="about-staff">';
-    while ($row = mysqli_fetch_array($result)) {
+    while ($aboutRow = mysqli_fetch_array($aboutResult)) {
 
-        $id = $row['id'];
-        $title = $row['title'];
-        $content = $row['content'];
+        $aboutId = $aboutRow['id'];
+        $aboutTitle = $aboutRow['title'];
+        $aboutContent = $aboutRow['content'];
 
-        echo '<h1 class="about-staff-main-title">' . $title . '</h1>';
-        echo '<p>' . $content . '</p>';
+        echo '<h1 class="about-staff-main-title">' . $aboutTitle . '</h1>';
+        echo '<p>' . $aboutContent . '</p>';
 
         //if (isset($_SESSION['user'])) {
-        echo '<p><a href="about_staff_edit.php?id=' . $id . '">Redigera</a></p>';
+        //echo '<p><a href="about_staff_edit.php?id=' . $aboutId . '">Redigera</a></p>';
+
+        echo '<p><a href="dashboard_about.php">Redigera</a></p>';
+
         //}
+        echo '</section>';
     }
     ?>
-    </section>
     <!--kanske lägga till section för staff här under? -->
+    <h1 class="staff-main-title">Om oss</h1>
     <ul class="staff-wrapper">
-        <h1 class="staff-main-title">Om oss</h1>
         <li class="staff">
             <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
             <h1 class="staff-title">Här ligger en title</h1>

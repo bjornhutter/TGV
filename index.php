@@ -19,8 +19,8 @@
 <?php include('includes/navigation.inc') ?>
 
 <main class="index-main">
+    <h1 class="recent-article-main-title">Senaste nummer</h1>
     <ul class="recent-article-wrapper">
-        <h1 class="recent-article-main-title">Senaste nummer</h1>
         <li class="recent-article">
             <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
             <h1 class="recent-article-title">Här ligger en title</h1>
@@ -65,7 +65,7 @@
 
         <?php
 
-        include ('includes/db_connect.inc');
+        include('includes/db_connect.inc');
 
 
         $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC") or die (mysqli_error($link));
@@ -82,7 +82,7 @@
             echo '<h2 class="news-title">' . $title . '</h2>';
             echo '<p class="news-content">' . nl2br($content) . '</p>';
 
-            echo '<a href="" >Redigera inlägg<!-- skickas till dashboard? --></a>';
+            echo '<p><a href="dashboard.php">Redigera</a></p>';
             echo '<hr>';
             echo '</div>';
         }

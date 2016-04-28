@@ -17,37 +17,42 @@
 </header>
 <?php include('includes/navigation.inc') ?>
 <main class="contact-wrapper">
-<?php
-include('includes/db_connect.inc');
-$result = mysqli_query($link, "SELECT * FROM contact") or die(mysqli_error());
+    <?php
+    include('includes/db_connect.inc');
+    $contactResult = mysqli_query($link, "SELECT * FROM tgv_contact") or die(mysqli_error($link));
 
-echo '<section class="contact-info">';
-echo '<ul class="contact-info-ul">';
-while ($row = mysqli_fetch_array($result)) {
+    echo '<section class="contact-info">';
+    echo '<ul class="contact-info-ul">';
+    $contactRow = mysqli_fetch_array($contactResult);
 
-    $id = $row['id'];
-    $title = $row['title'];
-    $adress = $row['adress'];
-    $phone = $row['phone'];
-    $email = $row['email'];
+    $contactId = $contactRow['id'];
+    $contactTitle = $contactRow['title'];
+    $contactAddress = $contactRow['address'];
+    $contactPhone = $contactRow['phone'];
+    $contactEmail = $contactRow['email'];
 
-    echo '<p>' . $title . '</p>';
-    echo '<li class="contact-info-li">' . $adress . '</li>';
-    echo '<li class="contact-info-li">' . $phone . '</li>';
-    echo '<li class="contact-info-li">' . $email . '</li>';
+    echo '<p>' . $contactTitle . '</p>';
+    echo '<li class="contact-info-li">' . $contactAddress . '</li>';
+    echo '<li class="contact-info-li">' . $contactPhone . '</li>';
+    echo '<li class="contact-info-li">' . $contactEmail . '</li>';
 
     //if (isset($_SESSION['user'])) {
-        echo '<p><a href="contact_edit.php?id=' . $id . '">Redigera</a></p>';
+
+    //Behöver inte GET ID
+    //echo '<p><a href="contact_edit.php?id=' . $contactId . '">Redigera</a></p>';
+
+    echo '<p><a href="dashboard_contact.php">Redigera</a></p>';
+
     //}
     echo '</ul>';
     echo '</section>';
-}
-?>
-<section class="contact-map">
-    <div class="map">
 
-    </div>
-</section>
+    ?>
+    <section class="contact-map">
+        <div class="map">
+
+        </div>
+    </section>
 </main>
 
 <?php include('includes/footer.inc') ?>

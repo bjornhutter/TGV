@@ -84,19 +84,118 @@ main {
 }
 
 form ul li p {
-    /*
+
     text-align: left;
-    */
+
 }
 
 form input {
-    /*width: 100%;
-    height: 50px;*/
+    width: 100%;
+    height: 50px;
 }
 
 form textarea {
-    /*width: 100%;
-    max-width: 100%;*/
+    width: 100%;
+    max-width: 100%;
+}
+
+.logout-inactive {
+    background: #ff2332;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.logout {
+    background: #33ff5a;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+
+}
+
+#logout-inactive {
+
+}
+
+#logout {
+
+}
+
+.old-content {
+    padding: 10px;
+    text-align: left;
+}
+
+.new-content {
+    padding: 10px;
+    text-align: left;
+}
+
+.new-title {
+    text-align: left;
+}
+
+.old-title {
+    text-align: left;
+}
+
+.old-container {
+    width: 50%;
+    height: 100vh;
+    display: block;
+    float: left;
+    background: #ff5a5b;
+}
+
+.new-container {
+    width: 50%;
+    height: 100vh;
+    display: block;
+    float: left;
+    background: #33ff5a;
+}
+
+.update-success-main {
+    width: 100%;
+}
+
+.main-outer-wrapper-update-success {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+.revert-changes {
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 1.125em;
+    font-weight: 600;
+    color: #f4f4f4;
+    background: #ff5a5b;
+    border: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);*/
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: background 200ms;
+    -moz-transition: background 200ms;
+    -ms-transition: background 200ms;
+    -o-transition: background 200ms;
+    transition: background 200ms;
+
+}
+
+.revert-changes:hover {
+    background: #ff8987;
 }
 
 /*** ================= MAIN END =================== ***/

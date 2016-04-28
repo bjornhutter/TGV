@@ -1,3 +1,4 @@
+<?php require('includes/auth.inc'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,30 +13,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
-<?php // include('includes/db_connect.inc') ?>
+<?php
+
+include('includes/db_connect.inc');
+
+/*
+ * Prislista
+ */
+$priceResult = mysqli_query($link, "SELECT * FROM tgv_price") or die(mysqli_error($link));
+
+$priceRow = mysqli_fetch_array($priceResult);
+
+$priceId = $priceRow['id'];
+$priceTitle = $priceRow['title'];
+$priceContent = $priceRow['content'];
+
+$_SESSION['priceTitle'] = $priceTitle;
+$_SESSION['priceContent'] = $priceContent;
+
+/*
+ * Subinfo
+ */
+$subInfoResult = mysqli_query($link, "SELECT * FROM tgv_subscription_info") or die(mysqli_error($link));
+
+$subInfoRow = mysqli_fetch_array($subInfoResult);
+
+$subInfoId = $subInfoRow['id'];
+$subInfoTitle = $subInfoRow['title'];
+$subInfoContent = $subInfoRow['content'];
+
+$_SESSION['subInfoTitle'] = $subInfoTitle;
+$_SESSION['subInfoContent'] = $subInfoContent;
+?>
 <header>
     <h1>Admin Dashboard</h1>
 </header>
-<nav>
-    <ul>
-        <!--todo ändra från anchors till buttons? -->
-        <li>
-            <a href="dashboard.php" id="home-btn">Hem</a>
-        </li>
-        <li>
-            <a href="dashboard_about.php" id="about-btn">Om oss</a>
-        </li>
-        <li>
-            <a href="dashboard_subscription.php" id="subscription-btn">Prenumerera</a>
-        </li>
-        <li>
-            <a href="dashboard_send_script.php" id="send-script-btn">Skicka manus</a>
-        </li>
-        <li>
-            <a href="dashboard_contact.php" id="contact-btn">Kontakt</a>
-        </li>
-    </ul>
-</nav>
+<?php include('includes/dashboard_nav.inc') ?>
 <div class="main-outer-wrapper">
     <main id="main">
         <form action="dashboard_process.php" method="post">
@@ -44,11 +57,12 @@
             <ul>
                 <li>
                     <p>Titel: </p>
-                    <input type="text" name="priceTitle" title="Prislista Titel">
+                    <input type="text" name="priceTitle" title="Prislista Titel" value="<?php echo $priceTitle; ?>">
                 </li>
                 <li>
                     <p>Beskrivning: </p>
-                    <textarea name="priceContent" title="Prislista Beskrivning" rows="10"></textarea>
+                    <textarea name="priceContent" title="Prislista Beskrivning"
+                              rows="10"><?php echo $priceContent; ?></textarea>
                 </li>
                 <li>
                     <input type="submit" name="priceSubmit" value="Spara Ändringar">
@@ -60,15 +74,16 @@
             <ul>
                 <li>
                     <p>Titel: </p>
-                    <input type="text" name="subscriptionInfoTitle" title="Prenumereringsinfo Titel">
+                    <input type="text" name="subInfoTitle" title="Prenumereringsinfo Titel"
+                           value="<?php echo $subInfoTitle; ?>">
                 </li>
                 <li>
                     <p>Beskrivning: </p>
-                    <textarea name="subscriptionInfoContent" title="Prenumereringsinfo Beskrivning"
-                              rows="10"></textarea>
+                    <textarea name="subInfoContent" title="Prenumereringsinfo Beskrivning"
+                              rows="10"><?php echo $subInfoContent; ?></textarea>
                 </li>
                 <li>
-                    <input type="submit" name="subscriptionInfoSubmit" value="Spara Ändringar">
+                    <input type="submit" name="subInfoSubmit" value="Spara Ändringar">
                 </li>
             </ul>
         </form>

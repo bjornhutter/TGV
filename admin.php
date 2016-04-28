@@ -5,22 +5,58 @@ $userErr = "";
 $passwordErr = "";
 $userErrField = "";
 $passwordErrField = "";
+/*
+ * FUNKTION FÖR ATT GENERERA INLOGGNINGSUPPGIFTER
+ *
+ *
 
+$user = 'admin';
+$password = 'wDD7qC11xO4P6R';
+
+function generate_hash($password, $cost = 11)
+{
+
+    $salt = substr(base64_encode(openssl_random_pseudo_bytes(17)), 0, 22);
+
+    $salt = str_replace("+", ".", $salt);
+
+    $param = '$' . implode('$', array("2y", str_pad($cost, 2, "0", STR_PAD_LEFT), $salt));
+
+    return crypt($password, $param);
+}
+
+$password_hash = generate_hash($password);
+
+require ('includes/db_connect.inc');
+
+mysqli_query($link, "INSERT INTO tgv_admin (user, password) VALUES ('$user', '$password_hash')") or die(mysqli_error($link));
+
+
+echo "Tillagt i databasen";
+
+*/
 if (isset($_POST['login_submit'])) {
 
-    //include('includes/db_connect.inc');
+    include('includes/db_connect.inc');
 
     $user = $_POST['user'];
     $password = $_POST['password'];
 
-    $dbUser = "admin";
-    $dbPassword = "admin123";
+    $user = mysqli_real_escape_string($link, $user);
+    $password = mysqli_real_escape_string($link, $password);
 
-    if ($user == $dbUser) {
+    $result = mysqli_query($link, "SELECT * FROM tgv_admin WHERE user = '$user'");
 
-        if ($user == $dbUser && $password == $dbPassword) {
+    if (mysqli_num_rows($result) > 0) {
+
+        $row = mysqli_fetch_array($result);
+
+        $hash = $row['password'];
+
+        if (password_verify($password, $hash) && $user == $row['user']) {
 
             $_SESSION['user'] = $user;
+            $_SESSION['timeout'] = time();
 
             header('Location: dashboard.php');
 
@@ -35,6 +71,12 @@ if (isset($_POST['login_submit'])) {
                 -moz-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
                 box-shadow: 0 0 2px rgba(255, 35, 50, 1);
             }
+            #logout {
+                display: none;
+            }
+            #logout-inactive {
+                display: none;
+            }
             </style>';
         }
 
@@ -48,11 +90,18 @@ if (isset($_POST['login_submit'])) {
             -moz-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
             box-shadow: 0 0 2px rgba(255, 35, 50, 1);
         }
+        #logout {
+            display: none;
+        }
+        #logout-inactive {
+            display: none;
+        }
         </style>';
     }
-
+    /*
+     * PHP VERSION = 5.6.18
+     */
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,10 +115,16 @@ if (isset($_POST['login_submit'])) {
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="plugins/noty-2.3.8/js/noty/packaged/jquery.noty.packaged.min.js"></script>
 </head>
 <body class="admin-body">
 <main class="admin-main">
+    <?php
+    if (($_GET['logout']) == 1) {
+        echo "<div class='logout-inactive' id='logout-inactive'>Du har blivit utloggad för att du var inaktiv i 20 minuter.</div>";
+    } elseif (($_GET['logout']) == 2) {
+        echo "<div class='logout' id='logout'>Du har loggats ut.</div>";
+    }
+    ?>
     <div class="login-form-wrapper">
         <form action="" method="post" class="login-form">
             <h1 class="login-title">Admin Inloggning</h1>
@@ -91,5 +146,6 @@ if (isset($_POST['login_submit'])) {
         </form>
     </div>
 </main>
+<script src="js/hide_notification.js"></script>
 </body>
 </html>

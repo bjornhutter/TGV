@@ -19,43 +19,49 @@
 <?php include('includes/db_connect.inc'); ?>
 <main class="price-info-wrapper">
     <?php
-    $result = mysqli_query($link, "SELECT * FROM tgv_subscription_price") or die(mysqli_error());
+    $priceResult = mysqli_query($link, "SELECT * FROM tgv_price") or die(mysqli_error($link));
 
     echo '<section class="subscription-price">';
-    while ($row = mysqli_fetch_array($result)) {
+    while ($priceRow = mysqli_fetch_array($priceResult)) {
 
-        $id = $row['id'];
-        $title = $row['title'];
-        $content = $row['content'];
+        $priceId = $priceRow['id'];
+        $priceTitle = $priceRow['title'];
+        $priceContent = $priceRow['content'];
 
-        echo '<p>' . $title . '</p>';
-        echo '<p>' . $content . '</p>';
+        echo '<p>' . $priceTitle . '</p>';
+        echo '<p>' . $priceContent . '</p>';
 
         //if (isset($_SESSION['user'])) {
-        echo '<p><a href="subscription_price_edit.php?id=' . $id . '">Redigera</a></p>';
+        //echo '<p><a href="subscription_price_edit.php?id=' . $id . '">Redigera</a></p>';
+
+        echo '<p><a href="dashboard_subscription.php">Redigera</a></p>';
+
+        echo '</section>';
         //}
     }
     ?>
-    </section>
     <?php
-    $result = mysqli_query($link, "SELECT * FROM tgv_subscription_info") or die(mysqli_error());
+    $subInfoResult = mysqli_query($link, "SELECT * FROM tgv_subscription_info") or die(mysqli_error($link));
 
     echo '<section class="subscription-info">';
-    while ($row = mysqli_fetch_array($result)) {
+    while ($subInfoRow = mysqli_fetch_array($subInfoResult)) {
 
-        $id = $row['id'];
-        $title = $row['title'];
-        $content = $row['content'];
+        $subInfoId = $subInfoRow['id'];
+        $subInfoTitle = $subInfoRow['title'];
+        $subInfoContent = $subInfoRow['content'];
 
-        echo '<p>' . $title . '</p>';
-        echo '<p>' . $content . '</p>';
+        echo '<p>' . $subInfoTitle . '</p>';
+        echo '<p>' . $subInfoContent . '</p>';
 
         //if (isset($_SESSION['user'])) {
-        echo '<p><a href="subscription_info_edit.php?id=' . $id . '">Redigera</a></p>';
+        //echo '<p><a href="subscription_info_edit.php?id=' . $id . '">Redigera</a></p>';
+        echo '<p><a href="dashboard_subscription.php">Redigera</a></p>';
         //}
+
+        echo '</section>';
+
     }
     ?>
-    </section>
     <section class="retailers">
         <button>HELO</button>
         <p>HELO</p>

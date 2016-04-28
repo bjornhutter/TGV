@@ -1,3 +1,4 @@
+<?php require('includes/auth.inc'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,30 +13,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
-<?php // include('includes/db_connect.inc') ?>
+<?php
+
+include('includes/db_connect.inc');
+
+/*
+ * Info om TGV
+ */
+$aboutResult = mysqli_query($link, "SELECT * FROM tgv_about") or die(mysqli_error($link));
+
+$aboutRow = mysqli_fetch_array($aboutResult);
+
+$aboutId = $aboutRow['id'];
+$aboutTitle = $aboutRow['title'];
+$aboutContent = $aboutRow['content'];
+
+$_SESSION['aboutTitle'] = $aboutTitle;
+$_SESSION['aboutContent'] = $aboutContent;
+?>
 <header>
     <h1>Admin Dashboard</h1>
 </header>
-<nav>
-    <ul>
-        <!--todo ändra från anchors till buttons? -->
-        <li>
-            <a href="dashboard.php" id="home-btn">Hem</a>
-        </li>
-        <li>
-            <a href="dashboard_about.php" id="about-btn">Om oss</a>
-        </li>
-        <li>
-            <a href="dashboard_subscription.php" id="subscription-btn">Prenumerera</a>
-        </li>
-        <li>
-            <a href="dashboard_send_script.php" id="send-script-btn">Skicka manus</a>
-        </li>
-        <li>
-            <a href="dashboard_contact.php" id="contact-btn">Kontakt</a>
-        </li>
-    </ul>
-</nav>
+<?php include('includes/dashboard_nav.inc') ?>
 <div class="main-outer-wrapper">
     <main id="main">
         <form action="dashboard_process.php" method="post">
@@ -44,11 +43,12 @@
             <ul>
                 <li>
                     <p>Titel: </p>
-                    <input type="text" name="aboutTitle" title="Om oss Titel">
+                    <input type="text" name="aboutTitle" title="Om oss Titel" value="<?php echo $aboutTitle; ?>">
                 </li>
                 <li>
                     <p>Beskrivning: </p>
-                    <textarea name="aboutContent" title="Om oss Beskrivning" rows="10"></textarea>
+                    <textarea name="aboutContent" title="Om oss Beskrivning"
+                              rows="10"><?php echo $aboutContent; ?></textarea>
                 </li>
                 <li>
                     <input type="submit" name="aboutSubmit" value="Spara Ändringar">

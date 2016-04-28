@@ -10,4 +10,4 @@ session_start();
 session_unset();
 $_SESSION = array();
 session_destroy();
-header('Location: admin.php');
+header('Location: admin.php?logout=2');

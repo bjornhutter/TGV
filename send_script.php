@@ -26,26 +26,85 @@
             artikelförslag referee-granskas. Om en artikel samtidigt är under bedömning någon annanstans bör detta
             tydligt anges.</p>
     </section>
+    <?php
+
+    /*
+     * GENERELLA RIKTLINJER
+     */
+    $guidelinesResult = mysqli_query($link, "SELECT * FROM tgv_guidelines") or die(mysqli_error($link));
+
+    $guidelinesRow = mysqli_fetch_array($guidelinesResult);
+
+    $guidelinesId = $guidelinesRow['id'];
+    $guidelinesTitle = $guidelinesRow['title'];
+    $guidelinesContent = $guidelinesRow['content'];
+
+    /*
+     * FORM
+     */
+    $formResult = mysqli_query($link, "SELECT * FROM tgv_form") or die(mysqli_error($link));
+
+    $formRow = mysqli_fetch_array($formResult);
+
+    $formId = $formRow['id'];
+    $formTitle = $formRow['title'];
+    $formContent = $formRow['content'];
+
+    /*
+     * Rubriker
+     */
+    $titlesResult = mysqli_query($link, "SELECT * FROM tgv_titles") or die(mysqli_error($link));
+
+    $titlesRow = mysqli_fetch_array($titlesResult);
+
+    $titlesId = $titlesRow['id'];
+    $titlesTitle = $titlesRow['title'];
+    $titlesContent = $titlesRow['content'];
+
+    /*
+     * Citat
+     */
+    $quotesResult = mysqli_query($link, "SELECT * FROM tgv_quotes") or die(mysqli_error($link));
+
+    $quotesRow = mysqli_fetch_array($quotesResult);
+
+    $quotesId = $quotesRow['id'];
+    $quotesTitle = $quotesRow['title'];
+    $quotesContent = $quotesRow['content'];
+
+    /*
+     * Referenser
+     */
+    $refResult = mysqli_query($link, "SELECT * FROM tgv_ref") or die(mysqli_error($link));
+
+    $refRow = mysqli_fetch_array($refResult);
+
+    $refId = $refRow['id'];
+    $refTitle = $refRow['title'];
+    $refContent = $refRow['content'];
+
+
+    ?>
     <section id="tabs">
         <ul>
             <li>
-                <a href="#tabs-1">Generella riktlinjer</a>
+                <a href="#tabs-1"><?php echo $guidelinesTitle; ?></a>
             </li>
             <li>
-                <a href="#tabs-2">Form</a>
+                <a href="#tabs-2"><?php echo $formTitle; ?></a>
             </li>
             <li>
-                <a href="#tabs-3">Rubriker</a>
+                <a href="#tabs-3"><?php echo $titlesTitle; ?></a>
             </li>
             <li>
-                <a href="#tabs-4">Citat</a>
+                <a href="#tabs-4"><?php echo $quotesTitle; ?></a>
             </li>
             <li>
-                <a href="#tabs-5">Referenser</a>
+                <a href="#tabs-5"><?php echo $refTitle; ?></a>
             </li>
         </ul>
         <div id="tabs-1">
-            <ol>
+            <!--<ol>
                 <li>
                     <p>Sänd in ditt manuskript till tidskriftens redaktion.</p>
                 </li>
@@ -83,10 +142,22 @@
                 <li>
                     <p>Bilder som bifogas ska vara högupplösta, det vill säga 300dpi.</p>
                 </li>
-            </ol>
+            </ol>-->
+
+            <?php
+
+            /*
+             * @TODO TO HTML OR NOT TO HTML?
+             *
+             */
+
+            echo $guidelinesContent;
+            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+
+            ?>
         </div>
         <div id="tabs-2">
-            <ol>
+            <!--<ol>
                 <li>
                     <p>Det fullständiga manuskriptet ska skrivas med 1.5 radavstånd, Times New Roman storlek 12.</p>
                 </li>
@@ -115,10 +186,18 @@
                         inga onödiga formateringar
                         inga indrag (bortsett från vid citat, se nedan).</p>
                 </li>
-            </ol>
+            </ol>-->
+
+            <?php
+
+            echo $formContent;
+            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+
+            ?>
+
         </div>
         <div id="tabs-3">
-            <ol>
+            <!--<ol>
                 <li>
                     <p>Rubriker och underrubriker skrivs med fet stil och vänsterjusteras.</p>
                 </li>
@@ -135,10 +214,16 @@
                     <p>Brödtexten ska inte inledas med en mellanrubrik (”Inledning”).
                         Det ska se ut så här på sidan:</p>
                 </li>
-            </ol>
+            </ol>-->
+            <?php
+
+            echo $titlesContent;
+            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+
+            ?>
         </div>
         <div id="tabs-4">
-            <ol>
+            <!--<ol>
                 <li>
                     <p>Citat skrivs med samma typsnitt, storlek och form som övrig text.</p>
                 </li>
@@ -151,10 +236,17 @@
                         stil, inga citationstecken, inget kursivt. Vid citatets slut skrivs referensen efter punkt.
                         (Åsberg 2009: 23) Mellan citatet och fortsättningen av texten ska det vara en blankrad.</p>
                 </li>
-            </ol>
+            </ol>-->
+
+            <?php
+
+            echo $quotesContent;
+            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+
+            ?>
         </div>
         <div id="tabs-5">
-            <ol>
+            <!--<ol>
                 <li>
                     <p>Använd Harvardsystemet för referenser i texten (observera kronologisk ordning):
                         (Verloo 2011: 24).
@@ -203,47 +295,58 @@
                         jämställdhet. Vinnova rapport VR 2009:16. www.vinnova.se/upload/EPiStorePDF/vr-09-16.pdf [4
                         januari 2014].</p>
                 </li>
-            </ol>
+            </ol>-->
+            <?php
+
+            echo $refContent;
+            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+
+            ?>
         </div>
     </section>
     <?php
-    $result = mysqli_query($link, "SELECT * FROM tgv_script_reviewers") or die(mysqli_error());
+    $scriptRevResult = mysqli_query($link, "SELECT * FROM tgv_script_reviewers") or die(mysqli_error($link));
 
     echo '<section class="script-reviewers">';
-    while ($row = mysqli_fetch_array($result)) {
+    while ($scriptRevRow = mysqli_fetch_array($scriptRevResult)) {
 
-        $id = $row['id'];
-        $title = $row['title'];
-        $content = $row['content'];
+        $scriptRevId = $scriptRevRow['id'];
+        $scriptRevTitle = $scriptRevRow['title'];
+        $scriptRevContent = $scriptRevRow['content'];
 
-        echo '<h1 class="script-reviewers-main-title">' . $title . '</h1>';
-        echo '<p>' . $content . '</p>';
+        echo '<h1 class="script-reviewers-main-title">' . $scriptRevTitle . '</h1>';
+        echo '<p>' . $scriptRevContent . '</p>';
 
         //if (isset($_SESSION['user'])) {
-        echo '<p><a href="script_reviewers_edit.php?id=' . $id . '">Redigera</a></p>';
+        //echo '<p><a href="script_reviewers_edit.php?id=' . $scriptRevId . '">Redigera</a></p>';
+
+        echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+
         //}
+        echo '</section>';
     }
     ?>
-    </section>
     <?php
-    $result = mysqli_query($link, "SELECT * FROM tgv_script_examiner") or die(mysqli_error());
+    $scriptExaminerResult = mysqli_query($link, "SELECT * FROM tgv_script_examiners") or die(mysqli_error($link));
 
     echo '<section class="script-examiner">';
-    while ($row = mysqli_fetch_array($result)) {
+    while ($scriptExaminerRow = mysqli_fetch_array($scriptExaminerResult)) {
 
-        $id = $row['id'];
-        $title = $row['title'];
-        $content = $row['content'];
+        $scriptExaminerId = $scriptExaminerRow['id'];
+        $scriptExaminerTitle = $scriptExaminerRow['title'];
+        $scriptExaminerContent = $scriptExaminerRow['content'];
 
-        echo '<h1 class="script-examiner-main-title">' . $title . '</h1>';
-        echo '<p>' . $content . '</p>';
+        echo '<h1 class="script-examiner-main-title">' . $scriptExaminerTitle . '</h1>';
+        echo '<p>' . nl2br($scriptExaminerContent) . '</p>';
 
         //if (isset($_SESSION['user'])) {
-        echo '<p><a href="script_examiner_edit.php?id=' . $id . '">Redigera</a></p>';
+        //echo '<p><a href="script_examiner_edit.php?id=' . $scriptExaminerId . '">Redigera</a></p>';
+        echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
         //}
+
+        echo '</section>';
     }
     ?>
-    </section>
 </main>
 
 <section class="script-form-wrapper">
