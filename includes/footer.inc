@@ -14,7 +14,9 @@ echo '<footer>';
 echo '<p>' . $footerTitle . '<p/>';
 echo '<p>' . $footerContent . '<p/>';
 if (isset($_SESSION['user'])) {
-    echo '<p><a href="dashboard_contact.php">Redigera</a></p>';
+    echo '<p><a href="dashboard_contact.php" target="_blank">Redigera</a></p>';
+} else {
+    echo '<p><a href="admin.php" target="_blank">Admin Inlogg</a></p>';
 }
 echo '</footer>';
 ?>
