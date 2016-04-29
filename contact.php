@@ -36,14 +36,14 @@
     echo '<li class="contact-info-li">' . $contactPhone . '</li>';
     echo '<li class="contact-info-li">' . $contactEmail . '</li>';
 
-    //if (isset($_SESSION['user'])) {
+    if (isset($_SESSION['user'])) {
 
     //Behöver inte GET ID
     //echo '<p><a href="contact_edit.php?id=' . $contactId . '">Redigera</a></p>';
 
     echo '<p><a href="dashboard_contact.php">Redigera</a></p>';
 
-    //}
+    }
     echo '</ul>';
     echo '</section>';
 

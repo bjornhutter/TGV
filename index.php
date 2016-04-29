@@ -81,10 +81,13 @@
             echo '<p class="news-date">' . $date . '</p>';
             echo '<h2 class="news-title">' . $title . '</h2>';
             echo '<p class="news-content">' . nl2br($content) . '</p>';
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard.php">Redigera</a></p>';
+            }
 
-            echo '<p><a href="dashboard.php">Redigera</a></p>';
             echo '<hr>';
             echo '</div>';
+
         }
         echo '</div>';
 

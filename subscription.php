@@ -33,9 +33,9 @@
 
         //if (isset($_SESSION['user'])) {
         //echo '<p><a href="subscription_price_edit.php?id=' . $id . '">Redigera</a></p>';
-
-        echo '<p><a href="dashboard_subscription.php">Redigera</a></p>';
-
+        if (isset($_SESSION['user'])) {
+            echo '<p><a href="dashboard_subscription.php">Redigera</a></p>';
+        }
         echo '</section>';
         //}
     }
@@ -53,10 +53,10 @@
         echo '<p>' . $subInfoTitle . '</p>';
         echo '<p>' . $subInfoContent . '</p>';
 
-        //if (isset($_SESSION['user'])) {
-        //echo '<p><a href="subscription_info_edit.php?id=' . $id . '">Redigera</a></p>';
-        echo '<p><a href="dashboard_subscription.php">Redigera</a></p>';
-        //}
+        if (isset($_SESSION['user'])) {
+            //echo '<p><a href="subscription_info_edit.php?id=' . $id . '">Redigera</a></p>';
+            echo '<p><a href="dashboard_subscription.php">Redigera</a></p>';
+        }
 
         echo '</section>';
 

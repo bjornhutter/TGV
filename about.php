@@ -33,12 +33,12 @@
         echo '<h1 class="about-staff-main-title">' . $aboutTitle . '</h1>';
         echo '<p>' . $aboutContent . '</p>';
 
-        //if (isset($_SESSION['user'])) {
-        //echo '<p><a href="about_staff_edit.php?id=' . $aboutId . '">Redigera</a></p>';
+        if (isset($_SESSION['user'])) {
+            //echo '<p><a href="about_staff_edit.php?id=' . $aboutId . '">Redigera</a></p>';
 
-        echo '<p><a href="dashboard_about.php">Redigera</a></p>';
+            echo '<p><a href="dashboard_about.php">Redigera</a></p>';
 
-        //}
+        }
         echo '</section>';
     }
     ?>

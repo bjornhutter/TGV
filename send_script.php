@@ -152,8 +152,9 @@
              */
 
             echo $guidelinesContent;
-            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
-
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            }
             ?>
         </div>
         <div id="tabs-2">
@@ -191,8 +192,9 @@
             <?php
 
             echo $formContent;
-            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
-
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            }
             ?>
 
         </div>
@@ -218,8 +220,9 @@
             <?php
 
             echo $titlesContent;
-            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
-
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            }
             ?>
         </div>
         <div id="tabs-4">
@@ -241,8 +244,9 @@
             <?php
 
             echo $quotesContent;
-            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
-
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            }
             ?>
         </div>
         <div id="tabs-5">
@@ -299,8 +303,9 @@
             <?php
 
             echo $refContent;
-            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
-
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            }
             ?>
         </div>
     </section>
@@ -339,10 +344,10 @@
         echo '<h1 class="script-examiner-main-title">' . $scriptExaminerTitle . '</h1>';
         echo '<p>' . nl2br($scriptExaminerContent) . '</p>';
 
-        //if (isset($_SESSION['user'])) {
-        //echo '<p><a href="script_examiner_edit.php?id=' . $scriptExaminerId . '">Redigera</a></p>';
-        echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
-        //}
+        if (isset($_SESSION['user'])) {
+            //echo '<p><a href="script_examiner_edit.php?id=' . $scriptExaminerId . '">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+        }
 
         echo '</section>';
     }
