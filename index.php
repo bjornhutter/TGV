@@ -99,7 +99,7 @@ if (!isset($_SESSION)) {
         ?>
     </section>
 </aside>
-
+<!--@todo Footer funkar inte pga det som finns i asiden-->
 <?php include('includes/footer.inc') ?>
 </body>
 </html>
