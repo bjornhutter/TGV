@@ -16,8 +16,27 @@ if (!isset($_SESSION)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="scripts/stickynav.js"></script>
     <script src="js/active_nav.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script>
+        var myLatLng = new google.maps.LatLng(59.406517, 13.582419);
+        function initialize() {
+            var map = new google.maps.Map(document.getElementById("map"),
+                {
+                    zoom: 13,
+                    center: myLatLng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+
+            var marker = new google.maps.Marker(
+                {
+                    position: myLatLng,
+                    map: map,
+                    title: 'TGV'
+                });
+        }
+    </script>
 </head>
-<body>
+<body onload="initialize()" onunload="GUnload()">
 
 <header>
 
@@ -54,10 +73,9 @@ if (!isset($_SESSION)) {
     echo '</ul>';
     echo '</section>';
 
-    ?>
-    <section class="contact-map">
-        <div class="map">
-
+?>
+<section class="contact-map">
+    <div id="map">
         </div>
     </section>
 </main>
