@@ -51,7 +51,7 @@ if (isset($_POST['newsSubmit'])) {
 
     //header('Location: update_home_complete.php');
 
-    //@todo HUR SKA DENNA FUNGERA?
+    //@todo HUR SKA DENNA FUNGERA LIMIT 5, ny sida för alla nyhetsinlägg?
 
 }
 

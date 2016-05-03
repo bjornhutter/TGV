@@ -327,12 +327,12 @@ if (!isset($_SESSION)) {
         echo '<h1 class="script-reviewers-main-title">' . $scriptRevTitle . '</h1>';
         echo '<p>' . $scriptRevContent . '</p>';
 
-        //if (isset($_SESSION['user'])) {
-        //echo '<p><a href="script_reviewers_edit.php?id=' . $scriptRevId . '">Redigera</a></p>';
+        if (isset($_SESSION['user'])) {
+            //echo '<p><a href="script_reviewers_edit.php?id=' . $scriptRevId . '">Redigera</a></p>';
 
-        echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
 
-        //}
+        }
         echo '</section>';
     }
     ?>
