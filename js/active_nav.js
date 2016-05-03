@@ -1,8 +1,13 @@
-$(function() {
-    var pgurl = window.location.href.substr(window.location.href
-            .lastIndexOf("/")+1);
-    $("nav ul li a").each(function(){
-        if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
-            $(this).addClass("active");
-    })
+jQuery(document).ready(function($){
+    // Get current path and find target link
+    var path = window.location.pathname.split("/").pop();
+
+    // Account for home page with empty path
+    if ( path == '' ) {
+        path = 'index.php';
+    }
+
+    var target = $('nav a[href="'+path+'"]');
+    // Add active class to target link
+    target.addClass('active');
 });
