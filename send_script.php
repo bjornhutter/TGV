@@ -202,7 +202,7 @@
 
 <section class="script-form-wrapper">
     <div class="script-form-inner-wrapper">
-        <form action="" method="post" class="script-form">
+        <form action="send_script_process.php" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">
                     <p>Förnamn: </p>
@@ -214,7 +214,7 @@
                 </li>
                 <li class="script-form-li">
                     <p>Din emailaddress: </p>
-                    <input type="email" name="email" title="Email" placeholder="Din Email" class="script-form-input"
+                    <input type="text" name="from" title="Email" placeholder="Din Email" class="script-form-input"
                            required>
                 </li>
                 <li class="script-form-li">
@@ -227,7 +227,7 @@
                               class="script-form-input"></textarea>
                 </li>
                 <li class="script-form-li">
-                    <input type="file" name="attachFile" class="scripts-form-input-attach">
+                    <input type="file" name="attachFile" class="scripts-form-input-attach" required>
                 </li>
                 <li class="script-form-li">
                     <input type="submit" name="submit" value="Skicka Manus" class="script-form-input-submit">
