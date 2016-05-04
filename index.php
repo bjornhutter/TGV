@@ -48,7 +48,7 @@
             $imgName = $row['image'];
 
             echo '<li class="recent-article">';
-            echo '<img src="uploads/' . $imgName . '">';
+            echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
             echo '<p class="recent-article-content">' . $content . '</p>';
             //if (isset($_SESSION['user'])) {
