@@ -82,7 +82,7 @@
             echo '<h2 class="news-title">' . $title . '</h2>';
             echo '<p class="news-content">' . nl2br($content) . '</p>';
 
-            echo '<a href="" >Redigera inlägg<!-- skickas till dashboard? --></a>';
+            echo '<a href="http://tegeve.se/newsite/tgv/admin.php" >Redigera inlägg</a>';
             echo '<hr>';
             echo '</div>';
         }
