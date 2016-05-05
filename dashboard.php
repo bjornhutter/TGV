@@ -12,6 +12,7 @@
               href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <!--<script src="js/stickynav.js"></script>-->
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
         <script>tinymce.init({ selector:'textarea' });</script>
     </head>
@@ -25,8 +26,8 @@
             <?php include('includes/dashboard_nav.inc') ?>
             <div class="main-outer-wrapper">
                 <main id="main">
-                    <form action="dashboard_process.php" method="post">
-                        <h1>Hem</h1>
+                    <h1>Hem</h1>
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Call for papers</h2>
                         <ul>
                             <li>
@@ -38,11 +39,11 @@
                                 <textarea name="cfpContent" title="Call For Papers Beskrivning" rows="10"></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="cfpSubmit" value="Spara Ändringar">
+                                <input type="submit" name="cfpSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
-                    <form action="dashboard_process.php" method="post">
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Nyhetsflöde</h2>
                         <ul>
                             <li>
@@ -54,11 +55,11 @@
                                 <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="newsSubmit" value="Spara Ändringar">
+                                <input type="submit" name="newsSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
-                    <form action="dashboard_process.php" method="post">
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Senaste nummer</h2>
                         <ul>
                             <li>
@@ -71,7 +72,7 @@
                                           rows="10"></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="newNumberSubmit" value="Spara Ändringar">
+                                <input type="submit" name="newNumberSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>

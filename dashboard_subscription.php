@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({ selector:'textarea' });</script>
+        <script>tinymce.init({selector: 'textarea'});</script>
     </head>
     <body>
     <?php
@@ -57,8 +57,8 @@
             <?php include('includes/dashboard_nav.inc') ?>
             <div class="main-outer-wrapper">
                 <main id="main">
-                    <form action="dashboard_process.php" method="post">
-                        <h1>Prenumerera</h1>
+                    <h1>Prenumerera</h1>
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Prislista</h2>
                         <ul>
                             <li>
@@ -72,11 +72,11 @@
                               rows="10"><?php echo $priceContent; ?></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="priceSubmit" value="Spara Ändringar">
+                                <input type="submit" name="priceSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
-                    <form action="dashboard_process.php" method="post">
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Prenumereringsinfo</h2>
                         <ul>
                             <li>
@@ -90,7 +90,7 @@
                               rows="10"><?php echo $subInfoContent; ?></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="subInfoSubmit" value="Spara Ändringar">
+                                <input type="submit" name="subInfoSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>

@@ -1,3 +1,7 @@
+body {
+    background: #f1f1f1;
+}
+
 header {
 
 }
@@ -82,23 +86,23 @@ h2 {
 }
 
 #site-wrapper.show-nav #site-canvas {
-    -moz-transform: translateX(300px);
-    -ms-transform: translateX(300px);
-    -o-transform: translateX(300px);
-    -webkit-transform: translateX(300px);
-    transform: translateX(300px);
+    -moz-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    -o-transform: translateX(250px);
+    -webkit-transform: translateX(250px);
+    transform: translateX(250px);
 
-    -moz-transform: translateZ(0) translateX(300px);
-    -ms-transform: translateZ(0) translateX(300px);
-    -o-transform: translateZ(0) translateX(300px);
-    -webkit-transform: translateZ(0) translateX(300px);
-    transform: translateZ(0) translateX(300px);
+    -moz-transform: translateZ(0) translateX(250px);
+    -ms-transform: translateZ(0) translateX(250px);
+    -o-transform: translateZ(0) translateX(250px);
+    -webkit-transform: translateZ(0) translateX(250px);
+    transform: translateZ(0) translateX(250px);
 
-    -moz-transform: translate3d(300px, 0, 0);
-    -ms-transform: translate3d(300px, 0, 0);
-    -o-transform: translate3d(300px, 0, 0);
-    -webkit-transform: translate3d(300px, 0, 0);
-    transform: translate3d(300px, 0, 0);
+    -moz-transform: translate3d(250px, 0, 0);
+    -ms-transform: translate3d(250px, 0, 0);
+    -o-transform: translate3d(250px, 0, 0);
+    -webkit-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0);
 }
 
 .toggle-nav {
@@ -110,14 +114,14 @@ h2 {
 
 nav {
     width: 20%;
-    max-width: 300px;
+    max-width: 250px;
     /*height: 200vh; temporär fix för när skicka manus forms flyttar sig till vänster */
     height: 200vh;
     display: block;
     float: left;
     position: absolute;
     top: 0;
-    left: -300px;
+    left: -250px;
 }
 
 nav ul {
@@ -128,11 +132,19 @@ nav ul li {
     display: block;
     background: #027b9a;
     opacity: 1;
+    /*
+     * Med eller utan transitions
+     *
     -webkit-transition: opacity 100ms;
     -moz-transition: opacity 100ms;
     -ms-transition: opacity 100ms;
     -o-transition: opacity 100ms;
-    transition: opacity 100ms;
+    transition: opacity 100ms;*/
+    -webkit-transition: opacity;
+    -moz-transition: opacity;
+    -ms-transition: opacity;
+    -o-transition: opacity;
+    transition: opacity;
 }
 
 nav ul li:hover {
@@ -210,8 +222,17 @@ nav ul li:nth-child(6) {
 }
 
 nav ul li:nth-child(7) {
-    background: #027b9a url('../img/icons/exit_white.svg') no-repeat center left 10px;
+    background: #027b9a url('../img/icons/exit_white.svg') no-repeat center left 12px;
     background-size: 1.5em;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    -webkit-transform: translateZ(0);
 }
 
 /*** ================= NAVIGATION END =================== ***/
@@ -219,7 +240,7 @@ nav ul li:nth-child(7) {
 /*** ================= MAIN START =================== ***/
 
 .main-outer-wrapper {
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -228,6 +249,25 @@ main {
     display: block;
     float: left;
     text-align: center;
+}
+
+form {
+
+}
+
+.dashboard-form {
+    width: calc(50% - 80px);
+    display: inline-block;
+    float: left;
+    background: #ffffff;
+    padding: 20px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 20px 20px 20px 20px;
 }
 
 form ul li p {
@@ -244,6 +284,37 @@ form input {
 form textarea {
     width: 100%;
     max-width: 100%;
+}
+
+.form-input-submit {
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 1.125em;
+    font-weight: 600;
+    color: #f4f4f4;
+    background: #027b9a;
+    border: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+    padding: 0;
+    opacity: 1;
+    /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);*/
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: background 200ms;
+    -moz-transition: background 200ms;
+    -ms-transition: background 200ms;
+    -o-transition: background 200ms;
+    transition: background 200ms;
+}
+
+.form-input-submit:hover {
+    background: #0295af;
 }
 
 .logout-inactive {
@@ -517,4 +588,5 @@ em {
 ul {
     /* list-style: none; */
 }
+
 /*** ================= WYSIWYG END =================== ***/

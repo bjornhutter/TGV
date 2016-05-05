@@ -127,8 +127,8 @@
             <?php include('includes/dashboard_nav.inc') ?>
             <div class="main-outer-wrapper">
                 <main id="main">
-                    <form action="dashboard_process.php" method="post">
-                        <h1>Skicka manus</h1>
+                    <h1>Skicka manus</h1>
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Riktlinjer</h2>
                         <ul>
                             <li>
@@ -142,11 +142,11 @@
                               rows="10"><?php echo $guidelinesContent; ?></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="guidelinesSubmit" value="Spara Ändringar">
+                                <input type="submit" name="guidelinesSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
-                    <form action="dashboard_process.php" method="post">
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Form</h2>
                         <ul>
                             <li>
@@ -160,11 +160,11 @@
                               rows="10"><?php echo $formContent; ?></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="formSubmit" value="Spara Ändringar">
+                                <input type="submit" name="formSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
-                    <form action="dashboard_process.php" method="post">
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Rubriker</h2>
                         <ul>
                             <li>
@@ -178,11 +178,11 @@
                               rows="10"><?php echo $titlesContent; ?></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="titlesSubmit" value="Spara Ändringar">
+                                <input type="submit" name="titlesSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
-                    <form action="dashboard_process.php" method="post">
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Citat</h2>
                         <ul>
                             <li>
@@ -196,11 +196,11 @@
                               rows="10"><?php echo $quotesContent; ?></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="quotesSubmit" value="Spara Ändringar">
+                                <input type="submit" name="quotesSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
-                    <form action="dashboard_process.php" method="post">
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Referenser</h2>
                         <ul>
                             <li>
@@ -214,11 +214,11 @@
                               rows="10"><?php echo $refContent; ?></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="refSubmit" value="Spara Ändringar">
+                                <input type="submit" name="refSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
-                    <form action="dashboard_process.php" method="post">
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Anvisningar för recensenter</h2>
                         <ul>
                             <li>
@@ -232,11 +232,11 @@
                               rows="10"><?php echo $scriptRevContent; ?></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="scriptRevSubmit" value="Spara Ändringar">
+                                <input type="submit" name="scriptRevSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
-                    <form action="dashboard_process.php" method="post">
+                    <form action="dashboard_process.php" method="post" class="dashboard-form">
                         <h2>Redigera Anvisningar för granskare</h2>
                         <ul>
                             <li>
@@ -250,7 +250,7 @@
                               rows="10"><?php echo $scriptExaminerContent; ?></textarea>
                             </li>
                             <li>
-                                <input type="submit" name="scriptExaminerSubmit" value="Spara Ändringar">
+                                <input type="submit" name="scriptExaminerSubmit" value="Spara Ändringar" class="form-input-submit">
                             </li>
                         </ul>
                     </form>
