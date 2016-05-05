@@ -427,6 +427,21 @@ footer {
 
 /*** ================= TABS END =================== ***/
 
+/*** ================= WYSIWYG START =================== ***/
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+ul {
+    /* list-style: none; */
+}
+/*** ================= WYSIWYG END =================== ***/
+
+
 
 
 
