@@ -1,5 +1,5 @@
 <?php
-include('includes/db_connect.inc');
+/*include('includes/db_connect.inc');
 
 if (isset($_POST['submit'])) {
     $to = "test@tegeve.se";
@@ -20,4 +20,4 @@ if (isset($_POST['submit'])) {
     } else {
         $emailErr = "Invalid email format";
     }
-}
+}*/
