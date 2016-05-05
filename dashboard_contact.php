@@ -52,62 +52,67 @@
     $_SESSION['footerContent'] = $footerContent;
 
     ?>
-    <header>
-        <h1>Admin Dashboard</h1>
-    </header>
-    <?php include('includes/dashboard_nav.inc') ?>
-    <div class="main-outer-wrapper">
-        <main id="main">
-            <form action="dashboard_process.php" method="post">
-                <h1>Kontakt</h1>
-                <h2>Redigera Kontaktuppgifter</h2>
-                <ul>
-                    <li>
-                        <p>Titel: </p>
-                        <input type="text" name="contactTitle" title="Kontaktuppgifter Titel"
-                               value="<?php echo $contactTitle; ?>">
-                    </li>
-                    <li>
-                        <p>Address: </p>
-                        <input type="text" name="contactAddress" title="Kontaktuppgifter Adress"
-                               value="<?php echo $contactAddress; ?>">
-                    </li>
-                    <li>
-                        <p>Telefon: </p>
-                        <input type="text" name="contactPhone" title="Kontaktuppgifter Telefon"
-                               value="<?php echo $contactPhone; ?>">
-                    </li>
-                    <li>
-                        <p>Email: </p>
-                        <input type="text" name="contactEmail" title="Kontaktuppgifter Email"
-                               value="<?php echo $contactEmail; ?>">
-                    </li>
-                    <li>
-                        <input type="submit" name="contactSubmit" value="Spara Ändringar">
-                    </li>
-                </ul>
-            </form>
-            <form action="dashboard_process.php" method="post">
-                <h2>Redigera Footer</h2>
-                <ul>
-                    <li>
-                        <p>Titel: </p>
-                        <input type="text" name="footerTitle" title="Footer Titel" value="<?php echo $footerTitle; ?>">
-                    </li>
-                    <li>
-                        <p>Beskrivning: </p>
+    <div id="site-wrapper">
+        <div id="site-canvas">
+            <header class="admin-header">
+                <h1 class="header-title">Admin Dashboard</h1>
+                <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
+            </header>
+            <?php include('includes/dashboard_nav.inc') ?>
+            <div class="main-outer-wrapper">
+                <main id="main">
+                    <form action="dashboard_process.php" method="post">
+                        <h1>Kontakt</h1>
+                        <h2>Redigera Kontaktuppgifter</h2>
+                        <ul>
+                            <li>
+                                <p>Titel: </p>
+                                <input type="text" name="contactTitle" title="Kontaktuppgifter Titel"
+                                       value="<?php echo $contactTitle; ?>">
+                            </li>
+                            <li>
+                                <p>Address: </p>
+                                <input type="text" name="contactAddress" title="Kontaktuppgifter Adress"
+                                       value="<?php echo $contactAddress; ?>">
+                            </li>
+                            <li>
+                                <p>Telefon: </p>
+                                <input type="text" name="contactPhone" title="Kontaktuppgifter Telefon"
+                                       value="<?php echo $contactPhone; ?>">
+                            </li>
+                            <li>
+                                <p>Email: </p>
+                                <input type="text" name="contactEmail" title="Kontaktuppgifter Email"
+                                       value="<?php echo $contactEmail; ?>">
+                            </li>
+                            <li>
+                                <input type="submit" name="contactSubmit" value="Spara Ändringar">
+                            </li>
+                        </ul>
+                    </form>
+                    <form action="dashboard_process.php" method="post">
+                        <h2>Redigera Footer</h2>
+                        <ul>
+                            <li>
+                                <p>Titel: </p>
+                                <input type="text" name="footerTitle" title="Footer Titel"
+                                       value="<?php echo $footerTitle; ?>">
+                            </li>
+                            <li>
+                                <p>Beskrivning: </p>
                     <textarea name="footerContent" title="Footer Beskrivning"
                               rows="10"><?php echo $footerContent; ?></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" name="footerSubmit" value="Spara Ändringar">
-                    </li>
-                </ul>
-            </form>
-        </main>
+                            </li>
+                            <li>
+                                <input type="submit" name="footerSubmit" value="Spara Ändringar">
+                            </li>
+                        </ul>
+                    </form>
+                </main>
+            </div>
+        </div>
     </div>
-
-    <!--todo ta bort om vi inte behöver ajax <script src="js/dashboard_ajax_load_html.js"></script>-->
+    <script src="js/toggle_nav.js"></script>
     </body>
     </html>
 <?php ob_end_flush(); ?>

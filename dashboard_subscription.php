@@ -46,52 +46,57 @@
     $_SESSION['subInfoTitle'] = $subInfoTitle;
     $_SESSION['subInfoContent'] = $subInfoContent;
     ?>
-    <header>
-        <h1>Admin Dashboard</h1>
-    </header>
-    <?php include('includes/dashboard_nav.inc') ?>
-    <div class="main-outer-wrapper">
-        <main id="main">
-            <form action="dashboard_process.php" method="post">
-                <h1>Prenumerera</h1>
-                <h2>Redigera Prislista</h2>
-                <ul>
-                    <li>
-                        <p>Titel: </p>
-                        <input type="text" name="priceTitle" title="Prislista Titel" value="<?php echo $priceTitle; ?>">
-                    </li>
-                    <li>
-                        <p>Beskrivning: </p>
+    <div id="site-wrapper">
+        <div id="site-canvas">
+            <header class="admin-header">
+                <h1 class="header-title">Admin Dashboard</h1>
+                <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
+            </header>
+            <?php include('includes/dashboard_nav.inc') ?>
+            <div class="main-outer-wrapper">
+                <main id="main">
+                    <form action="dashboard_process.php" method="post">
+                        <h1>Prenumerera</h1>
+                        <h2>Redigera Prislista</h2>
+                        <ul>
+                            <li>
+                                <p>Titel: </p>
+                                <input type="text" name="priceTitle" title="Prislista Titel"
+                                       value="<?php echo $priceTitle; ?>">
+                            </li>
+                            <li>
+                                <p>Beskrivning: </p>
                     <textarea name="priceContent" title="Prislista Beskrivning"
                               rows="10"><?php echo $priceContent; ?></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" name="priceSubmit" value="Spara Ändringar">
-                    </li>
-                </ul>
-            </form>
-            <form action="dashboard_process.php" method="post">
-                <h2>Redigera Prenumereringsinfo</h2>
-                <ul>
-                    <li>
-                        <p>Titel: </p>
-                        <input type="text" name="subInfoTitle" title="Prenumereringsinfo Titel"
-                               value="<?php echo $subInfoTitle; ?>">
-                    </li>
-                    <li>
-                        <p>Beskrivning: </p>
+                            </li>
+                            <li>
+                                <input type="submit" name="priceSubmit" value="Spara Ändringar">
+                            </li>
+                        </ul>
+                    </form>
+                    <form action="dashboard_process.php" method="post">
+                        <h2>Redigera Prenumereringsinfo</h2>
+                        <ul>
+                            <li>
+                                <p>Titel: </p>
+                                <input type="text" name="subInfoTitle" title="Prenumereringsinfo Titel"
+                                       value="<?php echo $subInfoTitle; ?>">
+                            </li>
+                            <li>
+                                <p>Beskrivning: </p>
                     <textarea name="subInfoContent" title="Prenumereringsinfo Beskrivning"
                               rows="10"><?php echo $subInfoContent; ?></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" name="subInfoSubmit" value="Spara Ändringar">
-                    </li>
-                </ul>
-            </form>
-        </main>
+                            </li>
+                            <li>
+                                <input type="submit" name="subInfoSubmit" value="Spara Ändringar">
+                            </li>
+                        </ul>
+                    </form>
+                </main>
+            </div>
+        </div>
     </div>
-
-    <!--todo ta bort om vi inte behöver ajax <script src="js/dashboard_ajax_load_html.js"></script>-->
+    <script src="js/toggle_nav.js"></script>
     </body>
     </html>
 <?php ob_end_flush(); ?>
