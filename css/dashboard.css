@@ -217,6 +217,10 @@ nav ul li:nth-child(7) {
     background-size: 1.5em;
 }
 
+.active {
+    background: #000000;
+}
+
 /*** ================= NAVIGATION END =================== ***/
 
 /*** ================= MAIN START =================== ***/
