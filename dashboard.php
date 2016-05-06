@@ -1,4 +1,4 @@
-<?php require('includes/auth.inc'); ?>
+<?php // require('includes/auth.inc'); ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -14,6 +14,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
         <script>tinymce.init({ selector:'textarea' });</script>
+        <script src="js/active_nav.js"></script>
     </head>
     <body>
     <div id="site-wrapper">
