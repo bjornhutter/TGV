@@ -360,7 +360,13 @@ nav ul li:nth-child(7):hover {
 }
 
 .active {
-    background: #000000;
+    background: rgba(0, 0, 0, 0.3);
+    color: #bbbbbb;
+}
+
+.active:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: #bbbbbb;
 }
 
 /*** ================= NAVIGATION END =================== ***/
