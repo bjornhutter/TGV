@@ -13,7 +13,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({selector: 'textarea'});</script>
+        <script>tinymce.init({ selector:'textarea' });</script>
+        <script src="js/active_dashnav.js"></script>
     </head>
     <body>
     <?php
