@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({ selector:'textarea' });</script>
+        <script>tinymce.init({selector: 'textarea'});</script>
     </head>
     <body>
     <?php
@@ -60,57 +60,61 @@
                 <h1 class="header-title">Admin Dashboard</h1>
                 <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
             </header>
-            <?php include('includes/dashboard_nav.inc') ?>
-            <div class="main-outer-wrapper">
-                <main id="main">
-                    <h1>Kontakt</h1>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Kontaktuppgifter</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="contactTitle" title="Kontaktuppgifter Titel"
-                                       value="<?php echo $contactTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Address: </p>
-                                <input type="text" name="contactAddress" title="Kontaktuppgifter Adress"
-                                       value="<?php echo $contactAddress; ?>">
-                            </li>
-                            <li>
-                                <p>Telefon: </p>
-                                <input type="text" name="contactPhone" title="Kontaktuppgifter Telefon"
-                                       value="<?php echo $contactPhone; ?>">
-                            </li>
-                            <li>
-                                <p>Email: </p>
-                                <input type="text" name="contactEmail" title="Kontaktuppgifter Email"
-                                       value="<?php echo $contactEmail; ?>">
-                            </li>
-                            <li>
-                                <input type="submit" name="contactSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Footer</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="footerTitle" title="Footer Titel"
-                                       value="<?php echo $footerTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+            <div class="nav-main-wrapper">
+                <?php include('includes/dashboard_nav.inc') ?>
+                <div class="main-outer-wrapper">
+                    <main id="main">
+                        <h1 class="dashboard-title">Kontakt</h1>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Kontaktuppgifter</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="contactTitle" title="Kontaktuppgifter Titel"
+                                           value="<?php echo $contactTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Address: </p>
+                                    <input type="text" name="contactAddress" title="Kontaktuppgifter Adress"
+                                           value="<?php echo $contactAddress; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Telefon: </p>
+                                    <input type="text" name="contactPhone" title="Kontaktuppgifter Telefon"
+                                           value="<?php echo $contactPhone; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Email: </p>
+                                    <input type="text" name="contactEmail" title="Kontaktuppgifter Email"
+                                           value="<?php echo $contactEmail; ?>">
+                                </li>
+                                <li>
+                                    <input type="submit" name="contactSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Footer</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="footerTitle" title="Footer Titel"
+                                           value="<?php echo $footerTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="footerContent" title="Footer Beskrivning"
                               rows="10"><?php echo $footerContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="footerSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                </main>
+                                </li>
+                                <li>
+                                    <input type="submit" name="footerSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                    </main>
+                </div>
             </div>
         </div>
     </div>

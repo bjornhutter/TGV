@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li class="menu-li">
-                <p class="menu-title">Meny</p>
+                <p class="menu-li-title">Meny</p>
             </li>
             <li>
                 <a href="dashboard.php" id="home-btn">Hem</a>

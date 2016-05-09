@@ -40,48 +40,50 @@
                 <h1 class="header-title">Admin Dashboard</h1>
                 <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
             </header>
-            <?php include('includes/dashboard_nav.inc') ?>
-            <div class="main-outer-wrapper">
-                <main id="main">
-                    <h1>Om oss</h1>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Info om TGV</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="aboutTitle" title="Om oss Titel"
-                                       value="<?php echo $aboutTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+            <div class="nav-main-wrapper">
+                <?php include('includes/dashboard_nav.inc') ?>
+                <div class="main-outer-wrapper">
+                    <main id="main">
+                        <h1 class="dashboard-title">Om oss</h1>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Info om TGV</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="aboutTitle" title="Om oss Titel"
+                                           value="<?php echo $aboutTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="aboutContent" title="Om oss Beskrivning"
                               rows="10"><?php echo $aboutContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="aboutSubmit" value="Spara Ändringar"
-                                       class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Om redaktionen</h2>
-                        <ul>
-                            <!--todo göra så man kan lägga till eller ta bort personal, generera fälten från en databas? t.ex. namn, bild etc.-->
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="staffTitle" title="Redaktion Titel">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
-                                <textarea name="staffContent" title="Redaktion Beskrivning" rows="10"></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="staffSubmit" value="Spara Ändringar"
-                                       class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                </main>
+                                </li>
+                                <li>
+                                    <input type="submit" name="aboutSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Om redaktionen</h2>
+                            <ul>
+                                <!--todo göra så man kan lägga till eller ta bort personal, generera fälten från en databas? t.ex. namn, bild etc.-->
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="staffTitle" title="Redaktion Titel">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
+                                    <textarea name="staffContent" title="Redaktion Beskrivning" rows="10"></textarea>
+                                </li>
+                                <li>
+                                    <input type="submit" name="staffSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                    </main>
+                </div>
             </div>
         </div>
     </div>

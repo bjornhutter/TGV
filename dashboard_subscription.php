@@ -54,47 +54,51 @@
                 <h1 class="header-title">Admin Dashboard</h1>
                 <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
             </header>
-            <?php include('includes/dashboard_nav.inc') ?>
-            <div class="main-outer-wrapper">
-                <main id="main">
-                    <h1>Prenumerera</h1>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Prislista</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="priceTitle" title="Prislista Titel"
-                                       value="<?php echo $priceTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+            <div class="nav-main-wrapper">
+                <?php include('includes/dashboard_nav.inc') ?>
+                <div class="main-outer-wrapper">
+                    <main id="main">
+                        <h1 class="dashboard-title">Prenumerera</h1>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Prislista</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="priceTitle" title="Prislista Titel"
+                                           value="<?php echo $priceTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="priceContent" title="Prislista Beskrivning"
                               rows="10"><?php echo $priceContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="priceSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Prenumereringsinfo</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="subInfoTitle" title="Prenumereringsinfo Titel"
-                                       value="<?php echo $subInfoTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+                                </li>
+                                <li>
+                                    <input type="submit" name="priceSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Prenumereringsinfo</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="subInfoTitle" title="Prenumereringsinfo Titel"
+                                           value="<?php echo $subInfoTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="subInfoContent" title="Prenumereringsinfo Beskrivning"
                               rows="10"><?php echo $subInfoContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="subInfoSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                </main>
+                                </li>
+                                <li>
+                                    <input type="submit" name="subInfoSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                    </main>
+                </div>
             </div>
         </div>
     </div>

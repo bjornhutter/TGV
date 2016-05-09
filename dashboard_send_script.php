@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({ selector:'textarea' });</script>
+        <script>tinymce.init({selector: 'textarea'});</script>
     </head>
     <body>
     <?php
@@ -124,137 +124,146 @@
                 <h1 class="header-title">Admin Dashboard</h1>
                 <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
             </header>
-            <?php include('includes/dashboard_nav.inc') ?>
-            <div class="main-outer-wrapper">
-                <main id="main">
-                    <h1>Skicka manus</h1>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Riktlinjer</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="guidelinesTitle" title="Riktlinjer Titel"
-                                       value="<?php echo $guidelinesTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+            <div class="nav-main-wrapper">
+                <?php include('includes/dashboard_nav.inc') ?>
+                <div class="main-outer-wrapper">
+                    <main id="main">
+                        <h1 class="dashboard-title">Skicka manus</h1>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Riktlinjer</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="guidelinesTitle" title="Riktlinjer Titel"
+                                           value="<?php echo $guidelinesTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="guidelinesContent" title="Riktlinjer Beskrivning"
                               rows="10"><?php echo $guidelinesContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="guidelinesSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Form</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="formTitle" title="Form Titel"
-                                       value="<?php echo $formTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+                                </li>
+                                <li>
+                                    <input type="submit" name="guidelinesSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Form</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="formTitle" title="Form Titel"
+                                           value="<?php echo $formTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="formContent" title="Form Beskrivning"
                               rows="10"><?php echo $formContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="formSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Rubriker</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="titlesTitle" title="Rubriker Titel"
-                                       value="<?php echo $titlesTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+                                </li>
+                                <li>
+                                    <input type="submit" name="formSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Rubriker</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="titlesTitle" title="Rubriker Titel"
+                                           value="<?php echo $titlesTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="titlesContent" title="Rubriker Beskrivning"
                               rows="10"><?php echo $titlesContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="titlesSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Citat</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="quotesTitle" title="Citat Titel"
-                                       value="<?php echo $quotesTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+                                </li>
+                                <li>
+                                    <input type="submit" name="titlesSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Citat</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="quotesTitle" title="Citat Titel"
+                                           value="<?php echo $quotesTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="quotesContent" title="Citat Beskrivning"
                               rows="10"><?php echo $quotesContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="quotesSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Referenser</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="refTitle" title="Referenser Titel"
-                                       value="<?php echo $refTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+                                </li>
+                                <li>
+                                    <input type="submit" name="quotesSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Referenser</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="refTitle" title="Referenser Titel"
+                                           value="<?php echo $refTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="refContent" title="Referenser Beskrivning"
                               rows="10"><?php echo $refContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="refSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Anvisningar för recensenter</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="scriptRevTitle" title="Referenser Titel"
-                                       value="<?php echo $scriptRevTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+                                </li>
+                                <li>
+                                    <input type="submit" name="refSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Anvisningar för recensenter</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="scriptRevTitle" title="Referenser Titel"
+                                           value="<?php echo $scriptRevTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="scriptRevContent" title="Referenser Beskrivning"
                               rows="10"><?php echo $scriptRevContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="scriptRevSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                    <form action="dashboard_process.php" method="post" class="dashboard-form">
-                        <h2>Redigera Anvisningar för granskare</h2>
-                        <ul>
-                            <li>
-                                <p>Titel: </p>
-                                <input type="text" name="scriptExaminerTitle" title="Referenser Titel"
-                                       value="<?php echo $scriptExaminerTitle; ?>">
-                            </li>
-                            <li>
-                                <p>Beskrivning: </p>
+                                </li>
+                                <li>
+                                    <input type="submit" name="scriptRevSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Anvisningar för granskare</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="scriptExaminerTitle" title="Referenser Titel"
+                                           value="<?php echo $scriptExaminerTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="scriptExaminerContent" title="Referenser Beskrivning"
                               rows="10"><?php echo $scriptExaminerContent; ?></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" name="scriptExaminerSubmit" value="Spara Ändringar" class="form-input-submit">
-                            </li>
-                        </ul>
-                    </form>
-                </main>
+                                </li>
+                                <li>
+                                    <input type="submit" name="scriptExaminerSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                    </main>
+                </div>
             </div>
         </div>
     </div>
