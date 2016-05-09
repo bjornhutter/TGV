@@ -46,6 +46,7 @@ $imgName = $row['image'];
             <textarea name="content" id="content"><?php echo $content ?></textarea>
         </li>
         <li>
+            <p>Ladda upp en ny bild (välj ingen fil, om du önskar ha kvar samma): </p>
             <input type="file" name="newfileToUpload" id="newfileToUpload">
         </li>
         <li>

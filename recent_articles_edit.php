@@ -33,7 +33,7 @@ $imgName = $row['image'];
 
 <body>
 <p>Redigera senaste nummer</p>
-<form action="recent_articles_edit_process.php" method="post">
+<form action="recent_articles_edit_process.php" method="post"  enctype="multipart/form-data">
     <ul>
         <li>
             <input type="text" name="title" id="title" value="<?php echo $title ?>">
@@ -42,7 +42,8 @@ $imgName = $row['image'];
             <textarea name="content" id="content"><?php echo $content ?></textarea>
         </li>
         <li>
-            <input type="file" name="fileToUpload" id="fileToUpload">
+            <p>Ladda upp en ny bild (välj ingen fil, om du önskar ha kvar samma): </p>
+            <input type="file" name="newfileToUpload" id="newfileToUpload">
         </li>
         <li>
             <input type="submit" name="save" value="Spara ändringar">

@@ -35,15 +35,15 @@ if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpe
 // Split the filename at every dot, take the last part and put it in $ext, (this will be the file extension)
 $splits = explode(".", $target_file);
 $index = count($splits) - 1;
-$ext  = '.'.$splits[$index];
+$ext = '.' . $splits[$index];
 
-// Changes filename to an 8-digit number, if file exists it adds 1 to the number until the filename is unique
+/* To get away from any pesky non-standard character problems, weird or duplicate filenames I swap the filename for an 8-digit number. The loop will check if an image of that name exists and add 1 to the number until the filename is unique. */
 $new_filename_basenumber = 10000000;
-$new_filename = $new_filename_basenumber.$ext;
+$new_filename = $new_filename_basenumber . $ext;
 
 while (file_exists("uploads/$new_filename")) {
     $new_filename_basenumber++;
-    $new_filename = $new_filename_basenumber.$ext;
+    $new_filename = $new_filename_basenumber . $ext;
 }
 
 // Move the file to the server and give it the generated name.
@@ -54,11 +54,7 @@ if ($uploadOk == 0) {
     echo "Din fil blev ej uppladdad.";
 // if everything is ok, try to upload file
 } else {
-    // if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    //     echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
     chmod("uploads/$new_filename", 0755);
-
-    //$imgName = basename($_FILES["fileToUpload"]["name"]);
 
     $title = $_POST['title'];
     $content = $_POST['content'];
@@ -66,7 +62,6 @@ if ($uploadOk == 0) {
     mysqli_query($link, "INSERT INTO tgv_recent_articles (fname, lname, content, image) VALUES ('$fname', '$lname', '$content', '$new_filename')") or die(mysqli_error());
 
 }
-// }
 
 header('Location: index.php')
 

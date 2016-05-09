@@ -28,7 +28,7 @@
             <input type="text" name="lname" id="lname" placeholder="Efternamn">
         </li>
         <li>
-            <textarea name="content" id="content" placeholder=""></textarea>
+            <textarea name="content" id="content" placeholder="Information om redaktör"></textarea>
         </li>
         <li>
             <input type="file" name="fileToUpload" id="fileToUpload">
