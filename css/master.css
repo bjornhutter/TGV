@@ -1,14 +1,56 @@
 body {
+    background: #f3f3f3;
+}
 
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    line-height: 150%;
 }
 
 /*** ================= HEADER START =================== ***/
 
 header {
     width: 100%;
-    height: 450px;
+    height: 500px;
     display: block;
     background: #aed4da;
+}
+
+.header-homepage {
+    background: url(../img/header_homepage.jpg) no-repeat center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    margin-top: -2%;
+}
+
+.header-logo {
+    background: #e07929;
+    width: 43%;
+    margin-top: 6%;
+    position: absolute;
+    padding: 1% 3%;
+}
+
+.header-logo-main-title {
+    color: #FFFFFF;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header-welcome {
+    width: 43%;
+    margin-top: 11%;
+    position: absolute;
+    padding: 1% 3%;
+}
+
+.header-welcome-text {
+    color: #FFF;
+    font-family: 'open sans', sans-serif;
+    font-size: 1.2em;
 }
 
 /*** ================= HEADER END =================== ***/
@@ -18,7 +60,7 @@ header {
 nav {
     width: 100%;
     display: block;
-    background: #6677da;
+    background: #252525;
 }
 
 nav ul {
@@ -30,11 +72,13 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
     text-decoration: none;
     padding: 20px;
     display: block;
     white-space: nowrap;
-    color: #000;
+    color: #FFFFFF;
     -webkit-transition: color 200ms;
     -moz-transition: color 200ms;
     -ms-transition: color 200ms;
@@ -43,7 +87,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #32da00;
+    color: #000000;
+    background: #e07929;
 }
 
 nav ul li a:visited {
@@ -70,6 +115,11 @@ nav ul li a:active {
     -webkit-transform: translateZ(0);
 }
 
+.active {
+    background: rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+}
+
 /*** ================= NAVIGATION END =================== ***/
 
 /*** ================= FOOTER START =================== ***/
@@ -77,18 +127,29 @@ nav ul li a:active {
 footer {
     width: 100%;
     text-align: center;
-    background: #da82d7;
+    background: #252525;
     padding: 20px 0;
     display: block;
     float: left;
+    color: #FFF;
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*** ================= FOOTER END =================== ***/
 
-/*** ================= MAIN START =================== ***/
+/*** ================= INDEX MAIN START =================== ***/
 
-main {
+.index-main {
+    display: inline-block;
+    width: 80%;
+    float: left;
+}
 
+.index-aside {
+    display: inline-block;
+    width: 20%;
+    float: left;
 }
 
 /*** ================= MAIN END =================== ***/
@@ -99,19 +160,19 @@ main {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background: #70bada;
 }
 
 .recent-article-main-title {
-    font-size: 3em;
-    color: #f4f4f4;
+    font-size: 2em;
+    color: #000000;
     padding-top: 10px;
     text-align: left;
-    padding-left: calc(10% - 39px);
+    padding-left: calc(10% - 37px);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .recent-article {
-    background: #da865a;
+    background: #FFFFFF;
     width: 20%;
     margin: 20px 10px 20px 10px;
     display: inline-block;
@@ -119,7 +180,9 @@ main {
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
+    padding: 0 0 1% 0;
+    text-align: left;
+    vertical-align: top;
 }
 
 .recent-article-img {
@@ -128,19 +191,44 @@ main {
 }
 
 .recent-article-title {
-
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 5% 2% 5%;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin: 6% 0 0 0;
 }
 
+/* Kolla vad som är bäst att göra med detta + för index, pga tinyMCE avslutar denna content och sätter in sin egen p istället, dvs den nedanför */
 .recent-article-content {
+    font-family: 'Open Sans', sans-serif;
+    padding: 2% 5% 2% 5%;
+    font-size: 0.8em;
+    margin: 4% 0 0 0;
+}
 
+.recent-article p {
+    font-family: 'Open Sans', sans-serif;
+    padding: 2% 5% 2% 5%;
+    font-size: 0.8em;
+    margin: 4% 0 0 0;
+    line-height: 150%;
 }
 
 /*** ================= RECENT ARTICLES END =================== ***/
 
 /*** ================= CALL FOR PAPERS START =================== ***/
 
-.cfp {
-
+.cfp,
+.news-feed {
+    background: #fff;
+    margin: 20px 0;
+    padding: 10px;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .send-script-button {
@@ -149,41 +237,81 @@ main {
 
 /*** ================= CALL FOR PAPERS END =================== ***/
 
-/*** ================= OM OSS START =================== ***/
+/*** ================= NEWSFEED START =================== ***/
 
-.about-staff {
+.news-feed {
+    height: 750px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.news-feed-container {
+}
+
+.news-main-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    font-size: 0.6em;
+    padding-top: 30px;
+}
+
+.news-title {
+    font-size: 1.1em;
+    margin: 5px 0;
 
 }
 
-.about-staff-main-title {
+.news-content {
+    font-size: 0.9em;
+}
 
+.news-post {
+}
+
+/*** ================= NEWSFEED END =================== ***/
+
+/*** ================= OM OSS START =================== ***/
+
+.about-staff {
+    width: 74%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.about-staff-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: #000000;
+    text-align: left;
 }
 
 .staff-wrapper {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background: #70bada;
+    background: #FFF;
+    padding: 20px 0 20px 0;
 }
 
 .staff-main-title {
-    font-size: 3em;
-    color: #f4f4f4;
-    padding-top: 10px;
+    font-size: 2em;
+    color: #000000;
     text-align: left;
-    padding-left: calc(10% - 39px);
+    padding-left: calc(13% + 1px);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .staff {
-    background: #da865a;
-    width: 20%;
-    margin: 20px 10px 20px 10px;
+    background: #FFFFFF;
+    width: 22%;
+    margin: 20px 25px 0px 25px;
     display: inline-block;
     height: auto;
-    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
+    text-align: left;
+    vertical-align: top;
 }
 
 .staff-img {
@@ -192,11 +320,27 @@ main {
 }
 
 .staff-title {
-
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin: 6% 0 0 0;
 }
 
+/* Kolla vad som är bäst att göra med detta + för index, pga tinyMCE avslutar denna content och sätter in sin egen p istället, dvs den nedanför */
 .staff-content {
+    font-family: 'Open Sans', sans-serif;
+    padding: 2% 5% 2% 5%;
+    font-size: 0.8em;
+    margin: 4% 0 0 0;
+}
 
+.staff p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    line-height: 150%;
 }
 
 /*** ================= OM OSS END =================== ***/
@@ -226,14 +370,6 @@ main {
     background: #666eda;
 }
 
-.retailers {
-    width: 100%;
-    height: 300px;
-    display: block;
-    background: #da3873;
-    float: left;
-}
-
 /*** ================= PRENUMERERA END =================== ***/
 
 /*** ================= SKICKA MANUS START =================== ***/
@@ -251,7 +387,7 @@ main {
 }
 
 .script-info-main-title {
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 .script-reviewers {
@@ -262,7 +398,7 @@ main {
 }
 
 .script-reviewers-main-title {
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 .script-examiner {
@@ -273,7 +409,7 @@ main {
 }
 
 .script-examiner-main-title {
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 .script-form-wrapper {
@@ -313,18 +449,27 @@ main {
 /*** ================= KONTAKT START =================== ***/
 
 .contact-wrapper {
-    width: 80%;
-    height: 300px;
+    width: 100%;
+    height: 200px;
     margin: 0 auto;
     display: block;
+    padding: 20px 0;
+}
+
+.contact-info-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: #000000;
+    text-align: left;
 }
 
 .contact-info {
-    width: calc(100% / 3 * 2);
+    width: calc(80% / 3 * 2);
     display: block;
     float: left;
-    height: 300px;
-    background: #dabf00;
+    height: 200px;
+    background: #f3f3f3;
+    margin: 0 0 0 10%;
 }
 
 .contact-info-ul {
@@ -332,24 +477,34 @@ main {
 }
 
 .contact-info-li {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 150%;
+}
 
+.contact-social-media {
+    width: calc(80% / 3);
+    display: block;
+    float: left;
+    height: 200px;
+    background: #f3f3f3;
+    margin: 0 10% 0 0;
+    padding: 10px 0 0 0;
 }
 
 .contact-map {
-    width: calc(100% / 3);
+    width: 100%;
     display: block;
     float: left;
-    height: 300px;
-    background: #da2723;
+    height: 400px;
+    background: #f3f3f3;
 }
 
 #map {
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 
 /*** ================= KONTAKT END =================== ***/
-
 
 /*** ================= TABS START =================== ***/
 
@@ -374,15 +529,16 @@ main {
 
 /*** ================= TABS END =================== ***/
 
+/*** ================= WYSIWYG START =================== ***/
+strong {
+    font-weight: bold;
+}
 
+em {
+    font-style: italic;
+}
 
-
-
-
-
-
-
-
-
-
-
+ul {
+    /* list-style: none; */
+}
+/*** ================= WYSIWYG END =================== ***/
