@@ -43,6 +43,8 @@
 
 <main>
     <ul class="recent-article-wrapper">
+<!--        Fixa något med diven under, nu finns den för att man ska kunna länka tillbaka från läsmer-->
+        <div id="recent"></div> 
         <h1 class="recent-article-main-title">Senaste nummer</h1>
         <?php
         include('includes/db_connect.inc');
@@ -57,6 +59,7 @@
             echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
             echo '<p class="recent-article-content">' . $content . '</p>';
+            echo '<a class="recent-articles-btn" href="articles_read_more.php?id='.$id.'">Läs mer</a>';
             //if (isset($_SESSION['user'])) {
             echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
             //}

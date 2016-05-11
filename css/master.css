@@ -255,6 +255,51 @@ footer a:hover{
     line-height: 150%;
 }
 
+.recent-article-more {
+    background: #FFFFFF;
+    width: 50%;
+    margin: 20px 10px 20px 10px;
+    display: inline-block;
+    height: auto;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 1% 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.recent-article-more-title {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 5% 2% 5%;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin: 4% 0 0 0;
+}
+
+.recent-article-more p {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0% 5% 2% 5%;
+    font-size: 0.8em;
+    margin: 0% 0 0 0;
+    line-height: 150%;
+}
+
+.article-more-back {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 0 0 5%;
+    font-size: 0.8em;
+    color: #e07929;
+}
+
+
+.article-more-back:hover {
+    color: #000;
+}
+
 /*** ================= RECENT ARTICLES END =================== ***/
 
 /*** ================= CALL FOR PAPERS START =================== ***/
