@@ -401,12 +401,26 @@ footer a:hover{
     background: #ccda3b;
 }
 
+.subscription-price-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+}
+
 .subscription-info {
     width: calc(100% / 3 * 2);
     display: block;
     float: left;
     height: 300px;
     background: #666eda;
+}
+
+.subscription-info-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
 }
 
 /*** ================= PRENUMERERA END =================== ***/

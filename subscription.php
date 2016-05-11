@@ -30,7 +30,7 @@
         $title = $row['title'];
         $content = $row['content'];
 
-        echo '<p>' . $title . '</p>';
+        echo '<h1 class="subscription-price-main-title">' . $title . '</h1>';
         echo '<p>' . $content . '</p>';
 
         //if (isset($_SESSION['user'])) {
@@ -49,7 +49,7 @@
         $title = $row['title'];
         $content = $row['content'];
 
-        echo '<p>' . $title . '</p>';
+        echo '<h1 class="subscription-info-main-title">' . $title . '</h1>';
         echo '<p>' . $content . '</p>';
 
         //if (isset($_SESSION['user'])) {

@@ -38,7 +38,6 @@
 <body onload="initialize()" onunload="GUnload()">
 
 <header>
-
 </header>
 <?php include('includes/navigation.inc') ?>
 <main class="contact-wrapper">
