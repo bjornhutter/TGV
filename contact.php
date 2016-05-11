@@ -56,7 +56,7 @@ while ($row = mysqli_fetch_array($result)) {
     $phone = $row['phone'];
     $email = $row['email'];
 
-    echo '<p>' . $title . '</p>';
+    echo '<h1 class="contact-info-main-title">' . $title . '</h1>';
     echo '<li class="contact-info-li">' . $adress . '</li>';
     echo '<li class="contact-info-li">' . $phone . '</li>';
     echo '<li class="contact-info-li">' . $email . '</li>';
@@ -68,6 +68,9 @@ while ($row = mysqli_fetch_array($result)) {
     echo '</section>';
 }
 ?>
+    <section class="contact-social-media">
+        <p>Någon info om t.ex. sociala medier eller liknande</p>
+    </section>
 <section class="contact-map">
     <div id="map">
 

@@ -458,7 +458,7 @@ footer {
 
 .contact-info-main-title {
     font-family: 'Open Sans', sans-serif;
-    font-size: 2em;
+    font-size: 1.6em;
     color: #000000;
     text-align: left;
 }
@@ -488,7 +488,7 @@ footer {
     height: 200px;
     background: #f3f3f3;
     margin: 0 10% 0 0;
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
 }
 
 .contact-map {
