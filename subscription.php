@@ -58,10 +58,6 @@
     }
     ?>
     </section>
-    <section class="retailers">
-        <button>HELO</button>
-        <p>HELO</p>
-    </section>
 </main>
 
 <?php include('includes/footer.inc') ?>
