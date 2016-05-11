@@ -55,6 +55,9 @@ $imgName = $row['image'];
         echo '<a class="article-more-back" href="index.php#recent">Tillbaka</a>';
         echo '<h1 class="recent-article-more-title">' . $title . '</h1>';
         echo '<p class="recent-article-content">' . $content . '</p>';
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
         echo '</li>';
         ?>
     </ul>
