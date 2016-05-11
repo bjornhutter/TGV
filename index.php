@@ -14,8 +14,13 @@
 </head>
 <body>
 
-<header>
-
+<header class="header-homepage">
+    <div class="header-logo">
+        <h1 class="header-logo-main-title">Tidsskrift för genusvetenskap</h1>
+    </div>
+    <div class="header-welcome">
+        <h2 class="header-welcome-text">Någon liten fin välkomstext eller info om TGV</h2>
+    </div>
 </header>
 <?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation.inc') ?>
