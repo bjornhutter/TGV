@@ -32,7 +32,8 @@
                 });
         }
     </script>
-
+    <script src="js/active_nav.js"></script>
+    <script src="js/stickynav.js"></script>
 </head>
 <body onload="initialize()" onunload="GUnload()">
 
