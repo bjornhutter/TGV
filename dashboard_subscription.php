@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({ selector:'textarea' });</script>
+        <script>tinymce.init({selector: 'textarea'});</script>
         <script src="js/active_dashnav.js"></script>
     </head>
     <body>
@@ -49,17 +49,20 @@
     $_SESSION['subInfoTitle'] = $subInfoTitle;
     $_SESSION['subInfoContent'] = $subInfoContent;
     ?>
+    <header class="admin-header">
+        <h1 class="header-title">Admin Dashboard</h1>
+        <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
+    </header>
     <div id="site-wrapper">
         <div id="site-canvas">
-            <header class="admin-header">
-                <h1 class="header-title">Admin Dashboard</h1>
-                <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
-            </header>
             <div class="nav-main-wrapper">
                 <?php include('includes/dashboard_nav.inc') ?>
+                <div class="overview-wrapper">
+                    <h1 class="dashboard-title">Prenumerera</h1>
+                    <a href="subscription.php" class="go-back-link" target="_blank">Gå till Prenumerera</a>
+                </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
-                        <h1 class="dashboard-title">Prenumerera</h1>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
                             <h2 class="dashboard-sub-title">Redigera Prislista</h2>
                             <ul>

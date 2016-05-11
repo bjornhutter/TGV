@@ -10,6 +10,10 @@ header {
 p {
     text-align: left;
     padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
+    line-height: 1.15;
+    background: #f1f1f1;
 }
 
 .admin-header {
@@ -19,7 +23,7 @@ p {
 
 .header-title {
     font-size: 2em;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding: 10px;
     text-align: center;
     color: #f4f4f4;
@@ -35,7 +39,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.414em;
     padding: 10px;
 }
 
@@ -137,7 +141,7 @@ nav {
     position: absolute;
     top: 0;
     left: -250px;
-    background: #027b9a;
+    /*background: #027b9a;*/
 }
 
 nav ul {
@@ -147,7 +151,7 @@ nav ul {
 
 nav ul li {
     display: block;
-    background: #027b9a;
+    /*background: #027b9a;*/
     /*opacity: 1;*/
     /*
      * Med eller utan transitions
@@ -176,7 +180,7 @@ nav ul li:hover {
     white-space: nowrap;
     color: #f4f4f4;
     font-size: 2em;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     padding: 10px;
     text-align: center;
     background: #252525;
@@ -190,6 +194,7 @@ nav ul li:hover {
 .menu-li-title {
     text-align: center;
     padding-left: 0;
+    background: #252525;
 }
 
 nav ul li a {
@@ -413,25 +418,59 @@ form {
     margin: 20px 20px 20px 20px;
 }
 
+.overview-wrapper {
+    width: 100%;
+    background: #ffffff;
+    padding: 20px 0 10px calc(10% + 20px);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.go-back-link {
+    text-decoration: underline;
+    color: #027b9a;
+    padding-left: 2px;
+    /*font-family: 'Open Sans', sans-serif;*/
+
+}
+
+.go-back-link:visited {
+    color: #027b9a;
+}
+
 .dashboard-title {
     font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    padding: 0 0 10px 0;
+    /*color: #f4f4f4;*/
 }
 
 .dashboard-sub-title {
     font-size: 1.75em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .dashboard-first-form-title {
-    font-size: 1.25em;
+    font-size: 1em;
     padding-bottom: 5px;
     padding-left: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background: #ffffff;
 }
 
 .dashboard-form-title {
-    font-size: 1.25em;
+    font-size: 1em;
     padding-top: 10px;
     padding-bottom: 5px;
     padding-left: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background: #ffffff;
 }
 
 form ul li p {
@@ -454,9 +493,9 @@ form textarea {
     width: 100%;
     height: 60px;
     cursor: pointer;
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-size: 1.125em;
-    font-weight: 600;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     color: #f4f4f4;
     background: #027b9a;
     border: none;
@@ -482,14 +521,14 @@ form textarea {
 }
 
 .logout-inactive {
-    background: #ff2332;
+    background: #fa4650;
     padding: 10px;
     display: block;
     cursor: pointer;
 }
 
 .logout {
-    background: #33ff5a;
+    background: #44e865;
     padding: 10px;
     display: block;
     cursor: pointer;
@@ -505,13 +544,15 @@ form textarea {
 }
 
 .old-content {
-    padding: 10px;
+    /*padding: 10px;
     text-align: left;
+    font-size: 1em;*/
 }
 
 .new-content {
-    padding: 10px;
+    /*padding: 10px;
     text-align: left;
+    font-size: 1em;*/
 }
 
 .new-title {
@@ -523,23 +564,72 @@ form textarea {
 }
 
 .old-container {
-    width: 50%;
-    height: 100vh;
+    width: calc(50% - 40px);
+    height: auto;
     display: block;
     float: left;
-    background: #ff5a5b;
+    background: #ffffff;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 20px;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 80px;/*Fix for bottom padding without revert-changes button */
 }
 
 .new-container {
-    width: 50%;
-    height: 100vh;
+    width: calc(50% - 40px);
+    height: auto;
     display: block;
     float: left;
-    background: #33ff5a;
+    background: #ffffff;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.old-container-header {
+    background: #fa4650;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    color: #f4f4f4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.new-container-header {
+    background: #44e865;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    color: #f4f4f4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .update-success-main {
     width: 100%;
+    margin: 0 auto;
+    display: block;
+    float: none;
+}
+
+.update-success-header {
+    background: #027b9a;
+}
+
+.update-success-header-title {
+    padding: 10px;
+    text-align: center;
+    color: #f4f4f4;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .main-outer-wrapper-update-success {
@@ -552,16 +642,16 @@ form textarea {
     width: 140px;
     height: 40px;
     cursor: pointer;
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-size: 1.125em;
-    font-weight: 600;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     color: #f4f4f4;
-    background: #ff5a5b;
+    background: #fa4650;
     border: none;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0;
+    margin: 20px 0;
     padding: 0;
     opacity: 1;
     /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);*/
@@ -577,7 +667,7 @@ form textarea {
 }
 
 .revert-changes:hover {
-    background: #ff8987;
+    background: #ff7277;
 }
 
 /*** ================= MAIN END =================== ***/
@@ -607,10 +697,10 @@ form textarea {
 }
 
 .login-title {
-    font-size: 2.5em;
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-weight: 600;
-    text-align: left;
+    font-size: 2.125em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
     padding: 20px 0 10px 0;
     color: #f4f4f4;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
@@ -642,8 +732,9 @@ form textarea {
     width: 100%;
     height: 40px;
     padding-left: 35px;
-    font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     color: #f4f4f4;
     background: rgba(0, 0, 0, 0.5) url('../img/icons/user_grey.svg') no-repeat 10px;
     background-size: 1em;
@@ -678,8 +769,9 @@ form textarea {
     width: 100%;
     height: 40px;
     padding-left: 35px;
-    font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     color: #f4f4f4;
     background: rgba(0, 0, 0, 0.5) url('../img/icons/key_grey.svg') no-repeat 10px;
     background-size: 0.9em;
@@ -706,9 +798,9 @@ form textarea {
     width: 100%;
     height: 40px;
     cursor: pointer;
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-size: 1.125em;
-    font-weight: 600;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     color: #f4f4f4;
     background: #027b9a;
     border: none;
