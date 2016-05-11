@@ -60,7 +60,6 @@ if ($uploadOk == 0) {
     $content = $_POST['content'];
 
     mysqli_query($link, "INSERT INTO tgv_recent_articles (title, content, image) VALUES ('$title', '$content', '$new_filename')") or die(mysqli_error());
-
 }
 
 header('Location: index.php')
