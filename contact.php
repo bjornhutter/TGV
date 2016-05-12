@@ -20,6 +20,7 @@
                 {
                     styles: styleArray,
                     zoom: 13,
+                    scrollwheel: false,
                     center: myLatLng,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 });
@@ -67,8 +68,9 @@ while ($row = mysqli_fetch_array($result)) {
     echo '</section>';
 }
 ?>
-    <section class="contact-social-media">
-        <p>Någon info om t.ex. sociala medier eller liknande</p>
+    <section class="contact-more-info">
+        <p>Vill du beställa/köpa tidigare nummer/artiklar? Vänd dig till ekonomitjanst@natverkstan.net. Du kan också läsa mer om våra nummer och prenumeration <a href="subscription.php">här</a>.</p>
+        <p>Följ oss även på <a href="https://www.facebook.com/tidskriftforgenusvetenskap/?fref=ts">Facebook!</a></p>
     </section>
 <section class="contact-map">
     <div id="map">

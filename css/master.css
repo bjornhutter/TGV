@@ -147,7 +147,7 @@ footer {
 }
 
 .footer-block-about {
-    width: 20%;
+    width: 22%;
 }
 
 .footer-title {
@@ -581,7 +581,7 @@ footer a:hover{
     line-height: 150%;
 }
 
-.contact-social-media {
+.contact-more-info {
     width: calc(80% / 3);
     display: block;
     float: left;

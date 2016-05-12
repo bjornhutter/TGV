@@ -1,8 +1,7 @@
 <footer>
     <div class="footer-block-about">
         <h2 class="footer-title">Om TGV</h2>
-        <p>Maecenas malesuada at justo eu dignissim. Vivamus dapibus bibendum magna ac tempor. Cras lacinia sodales
-            ligula. Aenean maximus purus massa, at tempor neque porta ut. </p>
+        <p>Tidskrift för genusvetenskap är det nya namnet på tidigare Kvinnovetenskaplig tidskrift, som startades 1980 i Lund. TGV är Nordens största referee-granskade tidskrift för aktuell tvärvetenskaplig genusforskning. </p>
     </div>
     <div class="footer-block">
         <h2 class="footer-title">Site map</h2>

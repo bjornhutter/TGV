@@ -24,7 +24,7 @@ if (!isset($_GET['id'])) {
 <?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation.inc') ?>
 <main>
-    <ul class="recent-article-wrapper">
+    <section class="recent-article-wrapper">
         <?php
         include('includes/db_connect.inc');
         $id = $_GET['id'];
@@ -36,25 +36,24 @@ if (!isset($_GET['id'])) {
         $featured = $row['featured'];
         $imgName = $row['image'];
 
-        echo '<li class="recent-article">';
+        echo '<div class="recent-article">';
         echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
-        echo '</li>';
-        echo '<li class="recent-article-more">';
+        echo '<h2 class="recent-article-more-title">I detta nummer</h2>';
+        echo '<p class="recent-article-content">' . $featured . '</p>';
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+        echo '</div>';
+        echo '<div class="recent-article-more">';
         echo '<a class="article-more-back" href="index.php#recent">Tillbaka</a>';
         echo '<h1 class="recent-article-more-title">' . $title . '</h1>';
         echo '<p class="recent-article-content">' . $content . '</p>';
         //if (isset($_SESSION['user'])) {
         echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
         //}
-        echo '</li>';
-        echo '<li class="recent-article-more">';
-        echo '<p class="recent-article-content">' . $featured . '</p>';
-        //if (isset($_SESSION['user'])) {
-        echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
-        //}
-        echo '</li>';
+        echo '</div>';
         ?>
-    </ul>
+    </section>
 </main>
 
 
