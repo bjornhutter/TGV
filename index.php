@@ -59,7 +59,7 @@
             echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
             echo '<p class="recent-article-content">' . $content . '...</p>';
-            echo '<a class="recent-articles-btn" href="articles_read_more.php?id='.$id.'">Läs mer</a>';
+            echo '<a class="recent-article-btn" href="articles_read_more.php?id='.$id.'">Läs mer</a>';
             //if (isset($_SESSION['user'])) {
             echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
             //}
