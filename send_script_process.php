@@ -21,3 +21,27 @@ if (isset($_POST['submit'])) {
         $emailErr = "Invalid email format";
     }
 }*/
+/*require_once 'libs/phpmailer/PHP MailerAutoload.php';
+require_once 'libs/phpmailer/class.phpmailer.php';
+$m = new PHPMailer();
+
+$m->isSMTP();
+$m->SMTPAuth = true;
+$m->SMTPDebug = 2;
+
+$m->Host = 'smpt.tegeve.se';
+$m->Username = 'test@tegeve.se';
+$m->Password = 'password123';
+$m->SMPTSecure = 'ssl';
+$m->Port = 587;
+
+$m->From = 'arvid.f.johansson@gmail.com';
+$m->FromName = 'tegeve';
+//$m->addReplyTo('test@tegeve.se', 'Reply address');
+
+$m->Subject = $_POST['topic'];
+$m->Body = $_POST['message'];
+$m->AltBody = $_POST['message']; 
+//$m->AddAttachment($_FILES['attachFile']['tmp_name'], $_FILES['attachFile']['tmp_name']);
+var_dump($m->send());*/
+
