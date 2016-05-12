@@ -444,17 +444,15 @@ footer a:hover{
 .price-info-wrapper {
     width: 80%;
     display: block;
-    height: 300px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 40px 0 0 0;
 }
 
 .subscription-price {
-    width: calc(100% / 3);
+    width: calc(40% - 4%);
     display: block;
     float: left;
-    height: 300px;
-    background: #ccda3b;
+    padding: 0 0 40px 4%;
 }
 
 .subscription-price-main-title {
@@ -465,11 +463,10 @@ footer a:hover{
 }
 
 .subscription-info {
-    width: calc(100% / 3 * 2);
+    width: calc(60% - 4%);
     display: block;
     float: left;
-    height: 300px;
-    background: #666eda;
+    padding: 0 4% 40px 0;
 }
 
 .subscription-info-main-title {
