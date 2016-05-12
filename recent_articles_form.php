@@ -28,6 +28,9 @@
             <textarea name="content" id="content" placeholder="Info om det nya numret"></textarea>
         </li>
         <li>
+            <textarea name="featured" id="featured" placeholder="Info om innehåll i detta nummer"></textarea>
+        </li>
+        <li>
             <input type="file" name="fileToUpload" id="fileToUpload">
         </li>
         <li>

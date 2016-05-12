@@ -4,19 +4,7 @@
 if (!isset($_GET['id'])) {
     header("Location: index.php");
 }
-
-include('includes/db_connect.inc');
-$id = $_GET['id'];
-$result = mysqli_query($link, "SELECT * FROM tgv_recent_articles WHERE id = '$id'");
-$row = mysqli_fetch_array($result);
-
-$title = $row['title'];
-$content = $row['content'];
-$imgName = $row['image'];
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,20 +21,20 @@ $imgName = $row['image'];
 </head>
 <body>
 
-<!--<header class="header-homepage">
-    <div class="header-logo">
-        <h1 class="header-logo-main-title">Tidsskrift för genusvetenskap</h1>
-    </div>
-    <div class="header-welcome">
-        <h2 class="header-welcome-text">Någon liten fin välkomstext eller info om TGV</h2>
-    </div>
-</header>-->
 <?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation.inc') ?>
 <main>
     <ul class="recent-article-wrapper">
         <?php
         include('includes/db_connect.inc');
+        $id = $_GET['id'];
+        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles WHERE id = '$id'");
+        $row = mysqli_fetch_array($result);
+
+        $title = $row['title'];
+        $content = $row['content'];
+        $featured = $row['featured'];
+        $imgName = $row['image'];
 
         echo '<li class="recent-article">';
         echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
@@ -55,6 +43,12 @@ $imgName = $row['image'];
         echo '<a class="article-more-back" href="index.php#recent">Tillbaka</a>';
         echo '<h1 class="recent-article-more-title">' . $title . '</h1>';
         echo '<p class="recent-article-content">' . $content . '</p>';
+        //if (isset($_SESSION['user'])) {
+        echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
+        //}
+        echo '</li>';
+        echo '<li class="recent-article-more">';
+        echo '<p class="recent-article-content">' . $featured . '</p>';
         //if (isset($_SESSION['user'])) {
         echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
         //}
