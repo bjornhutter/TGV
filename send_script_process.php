@@ -11,7 +11,8 @@ $mailer = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance($_POST['message'])
     ->setFrom(array($_POST['from']))
     ->setTo(array('test@tegeve.se'))
-    ->setBody($_POST['message']);
+    ->setBody($_POST['message'])
+    ->attach(Swift_Attachment::fromPath('emailTest.txt'));
 
 $result = $mailer->send($message);
     
