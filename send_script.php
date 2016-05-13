@@ -218,10 +218,6 @@
                            required>
                 </li>
                 <li class="script-form-li">
-                    <p>Ämne: </p>
-                    <input type="text" name="subject" title="Ämne" placeholder="Ämne" class="script-form-input" required>
-                </li>
-                <li class="script-form-li">
                     <p>Meddelande: </p>
                     <textarea name="emailMessage" title="Meddelande" rows="10" cols="50"
                               class="script-form-input"></textarea>
