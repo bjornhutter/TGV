@@ -25,7 +25,7 @@
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Kontakt</h1>
-                    <a href='dashboard_contact.php' class='go-back-link'>Ta mig tillbaks till dashboarden!</a>
+                    <a href='dashboard_contact.php' class='go-back-link'>Ta mig tillbaka till dashboarden!</a>
                     <a href="contact.php" class="go-back-link" target="_blank">Gå till Kontakt</a>
                 </div>
                 <div class="main-outer-wrapper-update-success">
