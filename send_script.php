@@ -226,10 +226,16 @@
                               class="script-form-input"></textarea>
                 </li>
                 <li class="script-form-li">
-                    <input type="file" name="attachFile" class="script-form-input-attach" required>
+                    <label class="script-form-input-attach">
+                        <input type="file" name="attachFile" hidden required>
+                        <span>Välj fil</span>
+                    </label>
                 </li>
                 <li class="script-form-li">
-                    <input type="submit" name="submit" value="Skicka Manus" class="script-form-input-submit">
+                    <label  class="script-form-input-submit">
+                        <input type="submit" name="submit" hidden>
+                        <span>Skicka</span>
+                    </label>
                 </li>
 
             </ul>
