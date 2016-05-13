@@ -1,5 +1,5 @@
 body {
-    background: #70bada;
+    background: #f4f4f4;
 }
 
 /*** ================= HEADER START =================== ***/
@@ -295,11 +295,14 @@ footer {
 }
 
 .script-form-ul {
-
+    background: #f6f6f6;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .script-form-li {
-
+    padding: 10px 0;
 }
 
 .script-form-input {
