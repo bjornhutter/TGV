@@ -294,6 +294,9 @@ footer {
     display: block;
 }
 
+.script-form-title {
+    font-size: 1.5em;
+}
 .script-form-ul {
     background: #f6f6f6;
     padding: 20px 0;
