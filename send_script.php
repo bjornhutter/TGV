@@ -202,7 +202,7 @@
 
 <section class="script-form-wrapper">
     <div class="script-form-inner-wrapper">
-        <form action="send_script_process.php" method="post" class="script-form">
+        <form enctype="multipart/form-data" action="send_script_process.php" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">
                     <p>Förnamn: </p>
