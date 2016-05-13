@@ -226,7 +226,7 @@
                               class="script-form-input"></textarea>
                 </li>
                 <li class="script-form-li">
-                    <input type="file" name="attachFile" class="scripts-form-input-attach" required>
+                    <input type="file" name="attachFile" class="script-form-input-attach" required>
                 </li>
                 <li class="script-form-li">
                     <input type="submit" name="submit" value="Skicka Manus" class="script-form-input-submit">
