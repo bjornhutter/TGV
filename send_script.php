@@ -203,8 +203,10 @@
 <section class="script-form-wrapper">
     <div class="script-form-inner-wrapper">
         <form enctype="multipart/form-data" action="send_script_process.php" method="post" class="script-form">
-            <h2 class="script-form-title">Skicka manus till TGV</h2>
             <ul class="script-form-ul">
+                <li class="script-form-title">
+                    <h2>Skicka manus till TGV</h2>
+                </li>
                 <li class="script-form-li">
                     <p>Förnamn: </p>
                     <input type="text" name="fname" placeholder="Förnamn" class="script-form-input" required>
