@@ -481,42 +481,54 @@ footer a:hover{
 /*** ================= SKICKA MANUS START =================== ***/
 
 .script-wrapper {
-    width: 80%;
+    width: 100%;
     display: block;
     margin: 0 auto;
     padding: 40px 0;
 }
 
 .script-info {
-    width: 100%;
+    width: 50%;
     display: block;
-    background: #da3873;
+    background: #F3F3F3;
+    padding: 0 0% 40px 0%;
+    margin: 0 auto;
 }
 
 .script-info-main-title {
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
 }
 
 .script-reviewers {
-    width: 50%;
+    width: 35%;
     display: block;
     float: left;
-    background: #70bada;
+    background: #F3F3F3;
+    padding: 40px 5% 40px 10%
 }
 
 .script-reviewers-main-title {
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
 }
 
 .script-examiner {
-    width: 50%;
+    width: 35%;
     display: block;
     float: left;
-    background: #6677da;
+    padding: 40px 10% 40px 5%;
 }
 
 .script-examiner-main-title {
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
 }
 
 .script-form-wrapper {
@@ -545,11 +557,27 @@ footer a:hover{
 }
 
 .script-form-input {
-
+    width: 100%;
 }
 
 .script-form-input-submit {
+    width: 100%;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #FFF;
+    background: #027b9a;
+    border: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+    padding: 10px 0;
+}
 
+.script-form-input-submit:hover {
+    background: #0295af;
 }
 
 /*** ================= SKICKA MANUS END =================== ***/
@@ -619,7 +647,7 @@ footer a:hover{
 #tabs {
     width: 50%;
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
 #tabs ol {

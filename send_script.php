@@ -275,7 +275,7 @@
                               class="script-form-input"></textarea>
                 </li>
                 <li class="script-form-li">
-                    <input type="submit" name="submit" value="Skicka Manus" class="script-form-input-submit">
+                    <input type="submit" name="submit" value="Skicka manus" class="script-form-input-submit">
                 </li>
                 <!--LÄGG TILL BIFOGA FIL FÖR MANUS -->
             </ul>
