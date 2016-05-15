@@ -42,7 +42,7 @@
     </section>
     <!--kanske lägga till section för staff här under? -->
     <ul class="staff-wrapper">
-        <h1 class="staff-main-title">Om oss</h1>
+        <h1 class="staff-main-title">Om redaktionen</h1>
         <?php
         include('includes/db_connect.inc');
         $result = mysqli_query($link, "SELECT * FROM tgv_about_editors") or die(mysqli_error($link));
