@@ -18,10 +18,13 @@ if (isset($_POST['submit'])) {
     $message = Swift_Message::newInstance()
         ->setFrom(array($from => $fname . " " . $lname))
         ->setTo(array('test@tegeve.se'))
+        //->setCc()   recipients -- receive a copy of the message (optional)
+        //->setBcc()  recipients -- hidden from other recipients (optional)
         ->setSubject('Manus från ' . $fname . " " . $lname)
-        ->setBody($emailMessage)
+        ->setBody($emailMessage, 'text/html', 'iso-8859-1')
         //->attach(Swift_Attachment::fromPath('emailTest.txt'))  lokal fil
-        ->attach($attachment);
+        ->attach($attachment)
+    ;
 
     //restrict file type, size
 
