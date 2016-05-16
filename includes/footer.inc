@@ -27,10 +27,31 @@
         <p><a href="../send_script.php">Skicka manus</a></p>
     </div>
     <div class="footer-block">
-        <h2 class="footer-title">Kontakt</h2>
-        <p>054-7001000</p>
-        <p>tegeve@oru.se</p>
-        <p>Universitetsgatan 2</p>
-        <p>651 88 Karlstad</p>
+        <?php
+        include('includes/db_connect.inc');
+        $contactResult = mysqli_query($link, "SELECT * FROM tgv_contact") or die(mysqli_error($link));
+        $contactRow = mysqli_fetch_array($contactResult);
+
+        $contactId = $contactRow['id'];
+        $contactTitle = $contactRow['title'];
+        $contactAddress = $contactRow['address'];
+        $contactPhone = $contactRow['phone'];
+        $contactEmail = $contactRow['email'];
+
+        echo '<h2 class="footer-title">' . $contactTitle . '</h2>';
+        echo '<p>' . $contactPhone . '</p>';
+        echo '<p>' . $contactEmail . '</p>';
+        echo '<p>' . $contactAddress . '</p>';
+
+
+        if (isset($_SESSION['user'])) {
+
+            //Behöver inte GET ID
+            //echo '<p><a href="contact_edit.php?id=' . $contactId . '">Redigera</a></p>';
+
+            echo '<p><a href="dashboard_contact.php">Redigera</a></p>';
+
+        }
+        ?>
     </div>
 </footer> 
