@@ -5,4 +5,3 @@ jQuery(document).ready(function ($) {
     }
     var target = $('nav a[href="' + path + '"]');
     target.addClass('active');
-});

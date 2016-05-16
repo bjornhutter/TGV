@@ -1,7 +1,23 @@
 <footer>
     <div class="footer-block-about">
-        <h2 class="footer-title">Om TGV</h2>
-        <p>Tidskrift för genusvetenskap är det nya namnet på tidigare Kvinnovetenskaplig tidskrift, som startades 1980 i Lund. TGV är Nordens största referee-granskade tidskrift för aktuell tvärvetenskaplig genusforskning. </p>
+        <?php
+
+        include('db_connect.inc');
+
+        $footerResult = mysqli_query($link, "SELECT * FROM tgv_footer") or die(mysqli_error($link));
+
+        $footerRow = mysqli_fetch_array($footerResult);
+
+        $footerId = $footerRow['id'];
+        $footerTitle = $footerRow['title'];
+        $footerContent = $footerRow['content'];
+
+        echo '<h2 class="footer-title">' . $footerTitle . '</h2>';
+        echo '<p>' . $footerContent . '<p/>';
+        if (isset($_SESSION['user'])) {
+            echo '<p><a href="dashboard_contact.php" target="_blank">Redigera</a></p>';
+        }
+        ?>
     </div>
     <div class="footer-block">
         <h2 class="footer-title">Site map</h2>

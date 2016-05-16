@@ -1,3 +1,8 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +14,8 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/stickynav.js"></script>
+    <script src="js/active_nav.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script>
         function initialize() {
@@ -33,8 +40,6 @@
                 });
         }
     </script>
-    <script src="js/active_nav.js"></script>
-    <script src="js/stickynav.js"></script>
 </head>
 <body onload="initialize()" onunload="GUnload()">
 
@@ -42,31 +47,37 @@
 </header>
 <?php include('includes/navigation.inc') ?>
 <main class="contact-wrapper">
-<?php
-include('includes/db_connect.inc');
-$result = mysqli_query($link, "SELECT * FROM contact") or die(mysqli_error());
+    <?php
+    include('includes/db_connect.inc');
+    $contactResult = mysqli_query($link, "SELECT * FROM tgv_contact") or die(mysqli_error($link));
 
-echo '<section class="contact-info">';
-echo '<ul class="contact-info-ul">';
-while ($row = mysqli_fetch_array($result)) {
+    echo '<section class="contact-info">';
+    echo '<ul class="contact-info-ul">';
+    $contactRow = mysqli_fetch_array($contactResult);
 
-    $id = $row['id'];
-    $title = $row['title'];
-    $adress = $row['adress'];
-    $phone = $row['phone'];
-    $email = $row['email'];
+    $contactId = $contactRow['id'];
+    $contactTitle = $contactRow['title'];
+    $contactAddress = $contactRow['address'];
+    $contactPhone = $contactRow['phone'];
+    $contactEmail = $contactRow['email'];
+    
+    echo '<h1 class="contact-info-main-title">' . $contactTitle . '</h1>';
+    echo '<li class="contact-info-li">' . $contactAddress . '</li>';
+    echo '<li class="contact-info-li">' . $contactPhone . '</li>';
+    echo '<li class="contact-info-li">' . $contactEmail . '</li>';
 
-    echo '<h1 class="contact-info-main-title">' . $title . '</h1>';
-    echo '<li class="contact-info-li">' . $adress . '</li>';
-    echo '<li class="contact-info-li">' . $phone . '</li>';
-    echo '<li class="contact-info-li">' . $email . '</li>';
 
-    //if (isset($_SESSION['user'])) {
-        echo '<p><a href="contact_edit.php?id=' . $id . '">Redigera</a></p>';
-    //}
+    if (isset($_SESSION['user'])) {
+
+    //Behöver inte GET ID
+    //echo '<p><a href="contact_edit.php?id=' . $contactId . '">Redigera</a></p>';
+
+    echo '<p><a href="dashboard_contact.php">Redigera</a></p>';
+
+    }
     echo '</ul>';
     echo '</section>';
-}
+
 ?>
     <section class="contact-more-info">
         <p>Vill du beställa/köpa tidigare nummer/artiklar? Vänd dig till ekonomitjanst@natverkstan.net. Du kan också läsa mer om våra nummer och prenumeration <a href="subscription.php">här</a>.</p>
@@ -74,9 +85,8 @@ while ($row = mysqli_fetch_array($result)) {
     </section>
 <section class="contact-map">
     <div id="map">
-
-    </div>
-</section>
+        </div>
+    </section>
 </main>
 
 <?php include('includes/footer.inc') ?>

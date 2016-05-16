@@ -1,3 +1,8 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,32 +27,14 @@
         <h2 class="header-welcome-text">Någon liten fin välkomstext eller info om TGV</h2>
     </div>
 </header>
-<?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation.inc') ?>
-<section class="cfp">
-    <div>
-        <ul>
-            <li>
-                <p>Tema 1</p>
-            </li>
-            <li>
-                <p>Tema 2</p>
-            </li>
-            <li>
-                <p>Tema 3</p>
-            </li>
-        </ul>
-    </div>
-    <a href="send_script.php" class="send-script-button">Skicka in ditt manus!</a>
-</section>
-
 <main>
     <ul class="recent-article-wrapper">
 <!--        Fixa något med diven under, nu finns den för att man ska kunna länka tillbaka från läsmer-->
         <div id="recent"></div> 
         <h1 class="recent-article-main-title">Senaste nummer</h1>
-        <?php
-       include('includes/db_connect.inc');
+       <!-- <?php
+/*       include('includes/db_connect.inc');
         $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles ORDER BY date DESC") or die(mysqli_error());
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
@@ -64,11 +51,61 @@
             //}
             echo '</li>';
         }
-        ?>
-    </ul>
+        */?>
+    </ul>-->
 </main>
+<aside class="index-aside">
+    <section class="cfp">
+        <div>
+            <ul>
+                <li>
+                    <p>Tema 1</p>
+                </li>
+                <li>
+                    <p>Tema 2</p>
+                </li>
+                <li>
+                    <p>Tema 3</p>
+                </li>
+            </ul>
+        </div>
+        <a href="send_script.php" class="send-script-button">Skicka in ditt manus!</a>
+    </section>
+    <section class="news-feed">
+        <h1 class="news-main-title">Nyheter</h1>
+
+        <?php
+
+        include('includes/db_connect.inc');
 
 
+        $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC") or die (mysqli_error($link));
+
+        echo '<div class="news-post-container>';
+        while ($row = mysqli_fetch_array($result)) {
+            $title = $row['title'];
+            $content = $row ['content'];
+            $date = $row ['date'];
+            $id = $row ['id'];
+
+            echo '<div class="news-post">';
+            echo '<p class="news-date">' . $date . '</p>';
+            echo '<h2 class="news-title">' . $title . '</h2>';
+            echo '<p class="news-content">' . nl2br($content) . '</p>';
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard.php">Redigera</a></p>';
+            }
+
+            echo '<hr>';
+            echo '</div>';
+
+        }
+        echo '</div>';
+
+        ?>
+    </section>
+</aside>
+<!--@todo Footer funkar inte pga det som finns i asiden-->
 <?php include('includes/footer.inc') ?>
 </body>
 </html>
