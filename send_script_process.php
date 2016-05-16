@@ -8,7 +8,8 @@ if (isset($_POST['submit'])) {
 
     $transport = Swift_SmtpTransport::newInstance()
         ->setHost('smtp.tegeve.se')
-        ->setPort(587)/*->setEncryption('ssl')*/
+        ->setPort(587)
+        //->setEncryption('ssl')
     ;  //varför ssl inte funkar/ om det behövs
 
     $mailer = Swift_Mailer::newInstance($transport);
@@ -17,18 +18,13 @@ if (isset($_POST['submit'])) {
 
     $message = Swift_Message::newInstance()
         ->setFrom(array($from => $fname . " " . $lname))
-        ->setTo(array('test@tegeve.se'))
-        //->setCc()   recipients -- receive a copy of the message (optional)
-        //->setBcc()  recipients -- hidden from other recipients (optional)
+        ->setTo(array('test@tegeve.se'))  //lägg till fler adresser
         ->setSubject('Manus från ' . $fname . " " . $lname)
         ->setBody($emailMessage, 'text/html')
         ->setMaxLineLength(78)
         //->attach(Swift_Attachment::fromPath('emailTest.txt'))  lokal fil
         ->attach($attachment)
     ;
-
-    //restrict file type, size
-
 
     $result = $mailer->send($message);
 }
