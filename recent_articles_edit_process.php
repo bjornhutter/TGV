@@ -11,10 +11,6 @@ if (isset($_POST['delete'])) {
 
     mysqli_query($link, "DELETE FROM tgv_recent_articles WHERE id = '$id'");
 } elseif (isset($_POST['save'])) {
-    $result = mysqli_query($link, "SELECT image FROM tgv_recent_articles WHERE id = '$id'");
-    $row = mysqli_fetch_array($result);
-    $image = 'uploads/' . $row['image'];
-    unlink($image);
 
     // Process för bilden
     $temp_filename = $_FILES["newfileToUpload"]["tmp_name"];
@@ -27,7 +23,10 @@ if (isset($_POST['delete'])) {
     if (isset($_POST["save"])) {
         $check = getimagesize($_FILES["newfileToUpload"]["tmp_name"]);
         if ($check !== false) {
-            echo "File is an image - " . $check["mime"] . ".";
+            $result = mysqli_query($link, "SELECT image FROM tgv_recent_articles WHERE id = '$id'");
+            $row = mysqli_fetch_array($result);
+            $image = 'uploads/' . $row['image'];
+            unlink($image);
             $uploadOk = 1;
         } else {
             echo "File is not an image.";
