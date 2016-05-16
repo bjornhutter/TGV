@@ -20,9 +20,6 @@ if (!isset($_SESSION)) {
 <body>
 <?php include('includes/db_connect.inc') ?>
 
-<header>
-
-</header>
 <?php include('includes/navigation.inc') ?>
 
 <main class="script-wrapper">

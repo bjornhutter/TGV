@@ -20,9 +20,6 @@ if (!isset($_SESSION)) {
 </head>
 <body>
 
-<header>
-
-</header>
 <?php include('includes/navigation.inc') ?>
 
 <main>

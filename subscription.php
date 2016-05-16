@@ -19,9 +19,6 @@ if (!isset($_SESSION)) {
 </head>
 <body>
 
-<header>
-
-</header>
 <?php include('includes/navigation.inc') ?>
 <?php include('includes/db_connect.inc'); ?>
 <main class="price-info-wrapper">
