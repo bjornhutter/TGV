@@ -4,6 +4,7 @@ if (isset($_POST['submit'])) {
     $from = $_POST['from'];
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
+    $emailMessage = $_POST['emailMessage'];
 
     $transport = Swift_SmtpTransport::newInstance()
         ->setHost('smtp.tegeve.se')
@@ -19,11 +20,14 @@ if (isset($_POST['submit'])) {
         ->setFrom(array($from => $fname . " " . $lname))
         ->setTo(array('test@tegeve.se'))
         ->setSubject('Manus från ' . $fname . " " . $lname)
-        ->setBody($_POST['message'])
+        ->setBody($emailMessage)
         //->attach(Swift_Attachment::fromPath('emailTest.txt'))  lokal fil
         ->attach($attachment)
     ;
 
+    //restrict file type, size
+    
+    
     $result = $mailer
         ->send($message);
 }
