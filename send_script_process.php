@@ -7,7 +7,8 @@ if (isset($_POST['submit'])) {
 
     $transport = Swift_SmtpTransport::newInstance()
         ->setHost('smtp.tegeve.se')
-        ->setPort(587)/*->setEncryption('ssl')*/
+        ->setPort(587)
+        /*->setEncryption('ssl')*/
     ;  //varför ssl inte funkar/ om det behövs
 
     $mailer = Swift_Mailer::newInstance($transport);
@@ -17,7 +18,10 @@ if (isset($_POST['submit'])) {
         ->setTo(array('test@tegeve.se'))
         ->setSubject('Manus från ' . $fname . " " . $lname)
         ->setBody($_POST['message'])
-        ->attach(Swift_Attachment::fromPath('emailTest.txt'));
+        ->attach(Swift_Attachment::fromPath('emailTest.txt'))
+        //->attach(Swift_Attachment::fromPath($_FILES['attachFile']['tmp_name']))  temporär fil från bifoga
+        //->setFilename($_FILES['attachFile']['name'])
+    ;
 
     $result = $mailer->send($message);
 }
