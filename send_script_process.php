@@ -21,7 +21,8 @@ if (isset($_POST['submit'])) {
         //->setCc()   recipients -- receive a copy of the message (optional)
         //->setBcc()  recipients -- hidden from other recipients (optional)
         ->setSubject('Manus från ' . $fname . " " . $lname)
-        ->setBody($emailMessage, 'text/html', 'iso-8859-1')
+        ->setBody($emailMessage, 'text/html')
+        ->setMaxLineLength(78)
         //->attach(Swift_Attachment::fromPath('emailTest.txt'))  lokal fil
         ->attach($attachment)
     ;
