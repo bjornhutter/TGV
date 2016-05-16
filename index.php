@@ -48,7 +48,7 @@
         <h1 class="recent-article-main-title">Senaste nummer</h1>
         <?php
        include('includes/db_connect.inc');
-        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error());
+        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles ORDER BY date DESC") or die(mysqli_error());
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $title = $row['title'];
