@@ -8,6 +8,21 @@ p {
     line-height: 150%;
 }
 
+
+.edit {
+    background: #027b9a;
+    text-decoration: none;
+    color: #fff !important;
+    padding: 4px 9px;
+    margin: 2px 0;
+    position: absolute;
+}
+
+.edit:hover {
+    background: #0295af;
+    color: #FFF;
+    text-decoration: none;
+}
 /*** ================= HEADER START =================== ***/
 
 header {
@@ -563,7 +578,7 @@ footer a:hover {
 }
 
 .script-form-li {
-
+    margin: 1% 0 2% 0;
 }
 
 .script-form-input {
@@ -571,6 +586,9 @@ footer a:hover {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     font-family: 'open sans', sans-serif;
+    background: #f3f3f3;
+    border: none;
+    padding: 1% 2%;
 }
 
 .script-form-input-submit {
@@ -594,7 +612,7 @@ footer a:hover {
 }
 
 .scripts-form-input-attach {
-    margin: 1% 0;
+    margin: 1% 0 0 0;
     font-family: 'open sans', sans-serif;
 }
 

@@ -157,7 +157,7 @@ if (!isset($_SESSION)) {
 
             echo $guidelinesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
         </div>
@@ -197,7 +197,7 @@ if (!isset($_SESSION)) {
 
             echo $formContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
 
@@ -225,7 +225,7 @@ if (!isset($_SESSION)) {
 
             echo $titlesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
         </div>
@@ -249,7 +249,7 @@ if (!isset($_SESSION)) {
 
             echo $quotesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
         </div>
@@ -308,7 +308,7 @@ if (!isset($_SESSION)) {
 
             echo $refContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
         </div>
@@ -329,7 +329,7 @@ if (!isset($_SESSION)) {
         if (isset($_SESSION['user'])) {
             //echo '<p><a href="script_reviewers_edit.php?id=' . $scriptRevId . '">Redigera</a></p>';
 
-            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
 
         }
         echo '</section>';
@@ -350,7 +350,7 @@ if (!isset($_SESSION)) {
 
         if (isset($_SESSION['user'])) {
             //echo '<p><a href="script_examiner_edit.php?id=' . $scriptExaminerId . '">Redigera</a></p>';
-            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
         }
 
         echo '</section>';
@@ -385,7 +385,7 @@ if (!isset($_SESSION)) {
                 </li>
                 <li class="script-form-li">
                     <p>Meddelande: </p>
-                    <textarea name="message" title="Meddelande" rows="10" cols="50"
+                    <textarea name="message" title="Meddelande" rows="7" cols="50"
                               class="script-form-input"></textarea>
                 </li>
                 <li class="script-form-li">

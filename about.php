@@ -41,7 +41,7 @@ if (!isset($_SESSION)) {
         if (isset($_SESSION['user'])) {
             //echo '<p><a href="about_staff_edit.php?id=' . $aboutId . '">Redigera</a></p>';
 
-            echo '<p><a href="dashboard_about.php">Redigera</a></p>';
+            echo '<p><a href="dashboard_about.php" class="edit">Redigera</a></p>';
 
         }
         echo '</section>';
@@ -65,7 +65,7 @@ if (!isset($_SESSION)) {
             echo '<h1 class="staff-title">' . $fname . ' ' . $lname . '</h1>';
             echo '<p class="staff-content">' . $content . '</p>';
             //if (isset($_SESSION['user'])) {
-            echo '<p><a href="about_editors_edit.php?id=' . $id . '">Redigera</a></p>';
+            echo '<p><a href="about_editors_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
             //}
             echo '</li>';
         }
