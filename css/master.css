@@ -138,6 +138,9 @@ footer {
     -webkit-flex-wrap: wrap;
     justify-content: center;
     -webkit-justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-block {
@@ -207,6 +210,7 @@ footer a:hover{
     text-align: left;
     padding-left: calc(10% - 37px);
     font-family: 'Open Sans', sans-serif;
+    margin: 0 0 10px 0;
 }
 
 .recent-article {
@@ -347,7 +351,7 @@ footer a:hover{
     font-size: 1.5em;
     color: #000000;
     text-align: left;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
 }
 
 .news-date {
@@ -383,6 +387,7 @@ footer a:hover{
     font-size: 2em;
     color: #000000;
     text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .staff-wrapper {
@@ -399,6 +404,7 @@ footer a:hover{
     text-align: left;
     padding-left: calc(13% + 1px);
     font-family: 'Open Sans', sans-serif;
+    margin: 0 0 10px 0;
 }
 
 .staff {
@@ -463,6 +469,7 @@ footer a:hover{
     font-size: 1.5em;
     color: #000000;
     text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .subscription-info {
@@ -477,6 +484,7 @@ footer a:hover{
     font-size: 1.5em;
     color: #000000;
     text-align: left;
+    margin: 0 0 10px 0;
 }
 
 /*** ================= PRENUMERERA END =================== ***/
@@ -503,6 +511,7 @@ footer a:hover{
     font-size: 1.5em;
     color: #000000;
     text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .script-reviewers {
@@ -517,6 +526,7 @@ footer a:hover{
     font-size: 1.5em;
     color: #000000;
     text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .script-examiner {
@@ -531,6 +541,7 @@ footer a:hover{
     font-size: 1.5em;
     color: #000000;
     text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .script-form-wrapper {
@@ -588,6 +599,7 @@ footer a:hover{
     font-size: 1.5em;
     color: #000000;
     text-align: left;
+    margin: 0 0 10px 0;
 }
 
 /*** ================= SKICKA MANUS END =================== ***/
@@ -607,6 +619,7 @@ footer a:hover{
     font-size: 1.6em;
     color: #000000;
     text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .contact-info {
