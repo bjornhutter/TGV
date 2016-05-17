@@ -53,40 +53,40 @@ if (!isset($_SESSION)) {
     <!--kanske lägga till section för staff här under? -->
     <h1 class="staff-main-title">Om oss</h1>
     <ul class="staff-wrapper">
-<!--
-        <li class="staff">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
-            <h1 class="staff-title">Här ligger en title</h1>
-            <p class="staff-content">Här ligger en personal begravd</p>
-        </li>
-        <li class="staff">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
-            <h1 class="staff-title">Här ligger en title</h1>
-            <p class="staff-content">Här ligger en personal begravd</p>
-        </li>
-        <li class="staff">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
-            <h1 class="staff-title">Här ligger en title</h1>
-            <p class="staff-content">Här ligger en personal begravd</p>
-        </li>
--->
-        <h1 class="staff-main-title">Om oss</h1>
+        <!--
+                <li class="staff">
+                    <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
+                    <h1 class="staff-title">Här ligger en title</h1>
+                    <p class="staff-content">Här ligger en personal begravd</p>
+                </li>
+                <li class="staff">
+                    <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
+                    <h1 class="staff-title">Här ligger en title</h1>
+                    <p class="staff-content">Här ligger en personal begravd</p>
+                </li>
+                <li class="staff">
+                    <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
+                    <h1 class="staff-title">Här ligger en title</h1>
+                    <p class="staff-content">Här ligger en personal begravd</p>
+                </li>
+
+        <h1 class="staff-main-title">Om oss</h1>-->
         <?php
         include('includes/db_connect.inc');
-        $result = mysqli_query($link, "SELECT * FROM tgv_about_editors") or die(mysqli_error($link));
-        while ($row = mysqli_fetch_array($result)) {
-            $id = $row['id'];
-            $content = $row['content'];
-            $fname = $row['fname'];
-            $lname = $row['lname'];
-            $imgName = $row['image'];
-            
+        $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
+        while ($staffRow = mysqli_fetch_array($staffResult)) {
+            $staffId = $staffRow['id'];
+            $staffContent = $staffRow['content'];
+            $staffFname = $staffRow['fname'];
+            $staffLname = $staffRow['lname'];
+            $staffImgName = $staffRow['image'];
+
             echo '<li class="staff">';
-            echo '<img src="uploads/'.$imgName.'" class="staff-img">';
-            echo '<h1 class="staff-title">' . $fname . ' ' . $lname . '</h1>';
-            echo '<p class="staff-content">' . $content . '</p>';
+            echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
+            echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+            echo '<p class="staff-content">' . $staffContent . '</p>';
             //if (isset($_SESSION['user'])) {
-            echo '<p><a href="about_editors_edit.php?id=' . $id . '">Redigera</a></p>';
+            echo '<p><a href="about_editors_edit.php?id=' . $staffId . '">Redigera</a></p>';
             //}
             echo '</li>';
         }

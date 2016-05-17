@@ -56,7 +56,7 @@
                 <div class="main-outer-wrapper">
                     <main id="main">
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Info om TGV</h2>
+                            <h2 class="dashboard-sub-title">Info om TGV</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -74,10 +74,9 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <!--<form action="dashboard_process.php" method="post" class="dashboard-form">
                             <h2 class="dashboard-sub-title">Redigera Om redaktionen</h2>
                             <ul>
-                                <!--todo göra så man kan lägga till eller ta bort personal, generera fälten från en databas? t.ex. namn, bild etc.-->
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
                                     <input type="text" name="staffTitle" title="Redaktion Titel">
@@ -91,13 +90,66 @@
                                            class="form-input-submit">
                                 </li>
                             </ul>
-                        </form>
+                        </form>-->
+                        <div class="dashboard-form">
+                            <!--todo gör responsive så att bilderna inte blir jättesmå (om vi väljer att ha det såhär) -->
+                            <h2 class="dashboard-sub-title">Om redaktionen</h2>
+                            <ul class="staff-wrapper">
+                                <?php
+                                include('includes/db_connect.inc');
+                                $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
+                                while ($staffRow = mysqli_fetch_array($staffResult)) {
+                                    $staffId = $staffRow['id'];
+                                    $staffContent = $staffRow['content'];
+                                    $staffFname = $staffRow['fname'];
+                                    $staffLname = $staffRow['lname'];
+                                    $staffImgName = $staffRow['image'];
+
+                                    echo '<li class="staff">';
+                                    echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
+                                    echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+                                    echo '<p class="staff-content">' . $staffContent . '</p>';
+                                    //if (isset($_SESSION['user'])) {
+                                    echo '<p><a href="about_editors_edit.php?id=' . $staffId . '">Redigera</a></p>';
+                                    //}
+                                    echo '</li>';
+                                }
+                                ?>
+                            </ul>
+                            <h2 id="add-toggle" class="add-toggle-icon-plus">Lägg till redaktör</h2>
+                            <form action="about_editors_process.php" method="post" enctype="multipart/form-data" id="add-staff">
+                                <ul>
+                                    <li>
+                                        <p class="dashboard-first-form-title">Förnamn: </p>
+                                        <input type="text" name="fname" id="fname" title="Förnamn" required>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">Efternamn: </p>
+                                        <input type="text" name="lname" id="lname" title="Efternamn" required>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">Beskrivning: </p>
+                                        <textarea name="content" id="content"
+                                                  title="Beskrivning"></textarea>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">Bild: </p>
+                                        <input type="file" name="fileToUpload" id="fileToUpload" required>
+                                    </li>
+                                    <li>
+                                        <input type="submit" value="Lägg till redaktör" name="addStaffSubmit"
+                                               class="form-input-submit">
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
                     </main>
                 </div>
             </div>
         </div>
     </div>
     <script src="js/toggle_nav.js"></script>
+    <script src="js/add_toggle.js"></script>
     </body>
     </html>
 <?php ob_end_flush(); ?>

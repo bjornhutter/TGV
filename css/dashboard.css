@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.414em;
+    font-size: 1.25em;
     padding: 10px;
 }
 
@@ -678,6 +678,79 @@ form textarea {
 
 .revert-changes:hover {
     background: #ff7277;
+}
+
+.about-staff {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.about-staff-main-title {
+
+}
+
+.staff-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /*background: #70bada;*/
+}
+
+.staff-main-title {
+    font-size: 3em;
+    color: #f4f4f4;
+    padding-top: 10px;
+    text-align: left;
+    /*padding-left: calc(10% - 39px);*/
+}
+
+.staff {
+    background: #da865a;
+    width: calc(100%/3);
+    /*margin: 20px 10px 20px 10px;*/
+    display: inline-block;
+    height: auto;
+    /*-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);*/
+
+}
+
+.staff-img {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.staff-title {
+
+}
+
+.staff-content {
+
+}
+
+#add-toggle {
+    cursor: pointer;
+    font-size: 1.25em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.add-toggle-icon-plus {
+    background: url('../img/icons/plus_blue.svg') no-repeat center left 10px;
+    background-size: 1em;
+}
+
+#add-staff {
+    display: none;
+}
+
+.add-active {
+    background: url('../img/icons/minus_blue.svg') no-repeat center left 10px;
+    background-size: 1em;
 }
 
 /*** ================= MAIN END =================== ***/
