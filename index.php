@@ -24,6 +24,7 @@ if (!isset($_SESSION)) {
 </header>
 <?php include('includes/navigation.inc') ?>
 
+<!--
 <main class="index-main">
     <h1 class="recent-article-main-title">Senaste nummer</h1>
     <ul class="recent-article-wrapper">
@@ -47,6 +48,29 @@ if (!isset($_SESSION)) {
             <h1 class="recent-article-title">Här ligger en title</h1>
             <p class="recent-article-content">Här ligger en hund begravd</p>
         </li>
+-->
+<main>
+    <ul class="recent-article-wrapper">
+        <h1 class="recent-article-main-title">Senaste nummer</h1>
+        <?php
+        include('includes/db_connect.inc');
+        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error($link));
+        while ($row = mysqli_fetch_array($result)) {
+            $id = $row['id'];
+            $title = $row['title'];
+            $content = $row['content'];
+            $imgName = $row['image'];
+
+            echo '<li class="recent-article">';
+            echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
+            echo '<h1 class="recent-article-title">' . $title . '</h1>';
+            echo '<p class="recent-article-content">' . $content . '</p>';
+            //if (isset($_SESSION['user'])) {
+            echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
+            //}
+            echo '</li>';
+        }
+        ?>
     </ul>
 </main>
 <aside class="index-aside">

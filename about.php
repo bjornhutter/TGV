@@ -53,6 +53,7 @@ if (!isset($_SESSION)) {
     <!--kanske lägga till section för staff här under? -->
     <h1 class="staff-main-title">Om oss</h1>
     <ul class="staff-wrapper">
+<!--
         <li class="staff">
             <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
             <h1 class="staff-title">Här ligger en title</h1>
@@ -68,6 +69,28 @@ if (!isset($_SESSION)) {
             <h1 class="staff-title">Här ligger en title</h1>
             <p class="staff-content">Här ligger en personal begravd</p>
         </li>
+-->
+        <h1 class="staff-main-title">Om oss</h1>
+        <?php
+        include('includes/db_connect.inc');
+        $result = mysqli_query($link, "SELECT * FROM tgv_about_editors") or die(mysqli_error($link));
+        while ($row = mysqli_fetch_array($result)) {
+            $id = $row['id'];
+            $content = $row['content'];
+            $fname = $row['fname'];
+            $lname = $row['lname'];
+            $imgName = $row['image'];
+            
+            echo '<li class="staff">';
+            echo '<img src="uploads/'.$imgName.'" class="staff-img">';
+            echo '<h1 class="staff-title">' . $fname . ' ' . $lname . '</h1>';
+            echo '<p class="staff-content">' . $content . '</p>';
+            //if (isset($_SESSION['user'])) {
+            echo '<p><a href="about_editors_edit.php?id=' . $id . '">Redigera</a></p>';
+            //}
+            echo '</li>';
+        }
+        ?>
     </ul>
 </main>
 
