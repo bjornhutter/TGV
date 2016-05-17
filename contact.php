@@ -76,10 +76,24 @@ if (!isset($_SESSION)) {
     echo '</section>';
 
 ?>
-    <section class="contact-more-info">
-        <p>Vill du beställa/köpa tidigare nummer/artiklar? Vänd dig till ekonomitjanst@natverkstan.net. Du kan också läsa mer om våra nummer och prenumeration <a href="subscription.php">här</a>.</p>
-        <p>Följ oss även på <a href="https://www.facebook.com/tidskriftforgenusvetenskap/?fref=ts">Facebook!</a></p>
-    </section>
+    <?php
+    include('includes/db_connect.inc');
+    $contactInfoResult = mysqli_query($link, "SELECT * FROM tgv_contact_info") or die(mysqli_error($link));
+
+    echo ' <section class="contact-more-info">';
+    $contactInfoRow = mysqli_fetch_array($contactInfoResult);
+
+    $contactInfoId = $contactInfoRow['id'];
+    $contactInfoContent = $contactInfoRow['content'];
+
+    echo '<p>' . $contactInfoContent . '</p>';
+
+    if (isset($_SESSION['user'])) {
+        echo '<p><a href="dashboard_contact.php">Redigera</a></p>';
+    }
+    echo '</section>';
+
+    ?>
 <section class="contact-map">
     <div id="map">
         </div>
