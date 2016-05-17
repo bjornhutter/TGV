@@ -506,11 +506,10 @@ footer a:hover{
 }
 
 .script-reviewers {
-    width: 35%;
+    width: 50%;
     display: block;
-    float: left;
-    background: #F3F3F3;
-    padding: 40px 5% 40px 10%
+    background: #FFF;
+    padding: 40px 25% 40px 25%;
 }
 
 .script-reviewers-main-title {
@@ -521,10 +520,10 @@ footer a:hover{
 }
 
 .script-examiner {
-    width: 35%;
+    width: 50%;
     display: block;
-    float: left;
-    padding: 40px 10% 40px 5%;
+    background: #f3f3f3;
+    padding: 40px 25% 40px 25%;
 }
 
 .script-examiner-main-title {
@@ -539,6 +538,7 @@ footer a:hover{
     display: block;
     float: left;
     padding: 40px 0;
+    background: #FFF;
 }
 
 .script-form-inner-wrapper {
@@ -581,6 +581,13 @@ footer a:hover{
 
 .script-form-input-submit:hover {
     background: #0295af;
+}
+
+.send-script-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
 }
 
 /*** ================= SKICKA MANUS END =================== ***/
@@ -651,7 +658,7 @@ footer a:hover{
 #tabs {
     width: 50%;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 40px;
 }
 
 #tabs ol {

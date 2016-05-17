@@ -360,6 +360,7 @@ if (!isset($_SESSION)) {
 
 <section class="script-form-wrapper">
     <div class="script-form-inner-wrapper">
+        <h1 class="send-script-main-title">Skicka in manus</h1>
         <form action="" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">
@@ -380,13 +381,15 @@ if (!isset($_SESSION)) {
                     <input type="text" name="topic" title="Ämne" placeholder="Ämne" class="script-form-input" required>
                 </li>
                 <li class="script-form-li">
+                    <input type="file" name="attachFile" class="scripts-form-input-attach">
+                </li>
+                <li class="script-form-li">
                     <p>Meddelande: </p>
                     <textarea name="message" title="Meddelande" rows="10" cols="50"
                               class="script-form-input"></textarea>
                 </li>
                 <li class="script-form-li">
                     <input type="submit" name="submit" value="Skicka manus" class="script-form-input-submit">
-                    <input type="file" name="attachFile" class="scripts-form-input-attach">
                 </li>
             </ul>
         </form>
