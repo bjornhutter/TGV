@@ -35,8 +35,24 @@
                         include('includes/db_connect.inc');
 
                         /*
-                             * GENERELLA RIKTLINJER
-                             */
+                         * ANVISNINGAR FÖR ARTIKELSKRIBENTER
+                         */
+
+                        $writerGuidelinesResult = mysqli_query($link, "SELECT * FROM tgv_writer_guidelines") or die(mysqli_error($link));
+
+                        $writerGuidelinesRow = mysqli_fetch_array($writerGuidelinesResult);
+
+                        $writerGuidelinesId = $writerGuidelinesRow['id'];
+                        $writerGuidelinesTitle = $writerGuidelinesRow['title'];
+                        $writerGuidelinesContent = $writerGuidelinesRow['content'];
+
+                        $oldWriterGuidelinesTitle = $_SESSION['writerGuidelinesTitle'];
+                        $oldWriterGuidelinesContent = $_SESSION['writerGuidelinesContent'];
+
+
+                        /*
+                         * GENERELLA RIKTLINJER
+                         */
                         $guidelinesResult = mysqli_query($link, "SELECT * FROM tgv_guidelines") or die(mysqli_error($link));
 
                         $guidelinesRow = mysqli_fetch_array($guidelinesResult);
@@ -154,6 +170,9 @@
                         } elseif (($_GET['update']) == 7) {
                             echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Anvisningar för granskare</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldScriptExaminerTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldScriptExaminerContent</p></div>";
                             echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Anvisningar för granskare</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$scriptExaminerTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$scriptExaminerContent</p>";
+                        } elseif (($_GET['update']) == 8) {
+                            echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Anvisningar för artikelskribenter</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldWriterGuidelinesTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldWriterGuidelinesContent</p></div>";
+                            echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Anvisningar för artikelskribenter</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$writerGuidelinesTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$writerGuidelinesContent</p>";
                         }
 
 
@@ -180,6 +199,10 @@
                                    value="<?php echo $oldScriptExaminerTitle ?>">
                             <input type="hidden" name="oldScriptExaminerContent"
                                    value="<?php echo $oldScriptExaminerContent ?>">
+                            <input type="hidden" name="oldWriterGuidelinesTitle"
+                                   value="<?php echo $oldWriterGuidelinesTitle ?>">
+                            <input type="hidden" name="oldWriterGuidelinesContent"
+                                   value="<?php echo $oldWriterGuidelinesContent ?>">
                             <?php
                             if (($_GET['update']) == 1) {
                                 echo '<input class="revert-changes" type="submit" name="revertGuidelinesSubmit" value="Ångra ändringar"
@@ -201,6 +224,9 @@
                    onclick="if(!confirm(\'Detta återställer dina nya ändringar till de gamla igen. Är du säker på att du vill ångra dina nya ändringar?\')) return false">';
                             } elseif (($_GET['update']) == 7) {
                                 echo '<input class="revert-changes" type="submit" name="revertScriptExaminerSubmit" value="Ångra ändringar"
+                   onclick="if(!confirm(\'Detta återställer dina nya ändringar till de gamla igen. Är du säker på att du vill ångra dina nya ändringar?\')) return false">';
+                            } elseif (($_GET['update']) == 8) {
+                                echo '<input class="revert-changes" type="submit" name="revertWriterGuidelinesSubmit" value="Ångra ändringar"
                    onclick="if(!confirm(\'Detta återställer dina nya ändringar till de gamla igen. Är du säker på att du vill ångra dina nya ändringar?\')) return false">';
                             } else {
                                 header('Location: dashboard_send_script.php');

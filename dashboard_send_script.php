@@ -19,15 +19,34 @@
                 toolbar: 'undo redo | bold italic | bullist numlist',
                 menubar: 'file edit view'
             });
-        </script>        <script src="js/active_dashnav.js"></script>
+        </script>
+        <script src="js/active_dashnav.js"></script>
     </head>
     <body>
     <?php
     include('includes/db_connect.inc');
 
     /*
-         * GENERELLA RIKTLINJER
-         */
+     * ANVISNINGAR FÖR ARTIKELSKRIBENTER
+     */
+
+    $writerGuidelinesResult = mysqli_query($link, "SELECT * FROM tgv_writer_guidelines") or die(mysqli_error($link));
+
+    $writerGuidelinesRow = mysqli_fetch_array($writerGuidelinesResult);
+
+    $writerGuidelinesId = $writerGuidelinesRow['id'];
+
+    $writerGuidelinesTitle = $writerGuidelinesRow['title'];
+
+    $writerGuidelinesContent = $writerGuidelinesRow['content'];
+
+    $_SESSION['writerGuidelinesTitle'] = $writerGuidelinesTitle;
+
+    $_SESSION['writerGuidelinesContent'] = $writerGuidelinesContent;
+
+    /*
+     * GENERELLA RIKTLINJER
+     */
     $guidelinesResult = mysqli_query($link, "SELECT * FROM tgv_guidelines") or die(mysqli_error($link));
 
     $guidelinesRow = mysqli_fetch_array($guidelinesResult);
@@ -134,10 +153,30 @@
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Skicka manus</h1>
-                    <a href="send_script.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Skicka manus</a>
+                    <a href="send_script.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till
+                        Skicka manus</a>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Anvisningar för artikelskribenter</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="writerGuidelinesTitle" title="Anvisningar för artikelskribenter Titel"
+                                           value="<?php echo $writerGuidelinesTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
+                    <textarea name="writerGuidelinesContent" title="Anvisningar för artikelskribenter Beskrivning"
+                              rows="10"><?php echo $writerGuidelinesContent; ?></textarea>
+                                </li>
+                                <li>
+                                    <input type="submit" name="writerGuidelinesSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
                             <h2 class="dashboard-sub-title">Redigera Riktlinjer</h2>
                             <ul>

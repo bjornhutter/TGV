@@ -491,6 +491,44 @@ if (isset($_POST['revertScriptExaminerSubmit'])) {
 }
 
 /*
+ * ANVISNINGAR FÖR ARTIKELSKRIBENTER
+ */
+if (isset($_POST['writerGuidelinesSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    $title = $_POST['writerGuidelinesTitle'];
+    $content = $_POST['writerGuidelinesContent'];
+
+    $title = mysqli_real_escape_string($link, $title);
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_writer_guidelines SET title = '$title', content = '$content' WHERE id = '1'");
+
+    header('Location: update_send_script_complete.php?update=8');
+
+}
+/*
+ * ÅNGRA
+ * ANVISNINGAR FÖR ARTIKELSKRIBENTER
+ */
+if (isset($_POST['revertWriterGuidelinesSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    $title = $_POST['oldWriterGuidelinesTitle'];
+    $content = $_POST['oldWriterGuidelinesContent'];
+
+    $title = mysqli_real_escape_string($link, $title);
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_writer_guidelines SET title = '$title', content = '$content' WHERE id = '1'");
+
+    header('Location: update_send_script_complete.php?update=8');
+
+}
+
+/*
  * KONTAKTUPPGIFTER
  */
 if (isset($_POST['contactSubmit'])) {
