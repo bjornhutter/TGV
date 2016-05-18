@@ -16,10 +16,14 @@
         <script>
             tinymce.init({
                 selector: 'textarea',
-                toolbar: 'undo redo | bold italic | bullist numlist',
-                menubar: 'file edit view'
+                /*toolbar: 'undo redo | bold italic | bullist numlist | link',
+                menubar: 'file edit view insert',
+                plugins: "link"*/
+                toolbar: 'undo redo | bold italic | bullist numlist code',
+                menubar: 'file edit view tools',
+                plugins: "code"
             });
-        </script>
+        </script><!--todo ta bort code eller inte -->
         <script src="js/active_dashnav.js"></script>
     </head>
     <body>

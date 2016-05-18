@@ -6,15 +6,7 @@ header {
 
 }
 
-/*** Fix for WYSIWYG paragraph ***/
-p {
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1em;
-    line-height: 1.15;
-    background: #f1f1f1;
-}
+
 
 .admin-header {
     background: #027b9a;
@@ -379,7 +371,8 @@ nav ul li:nth-child(7):hover {
 /*** ================= MAIN START =================== ***/
 
 .nav-main-wrapper {
-    background: url("https://static.pexels.com/photos/1780/landscape-nature-clouds-cloudy.jpg") no-repeat center top;
+    /*background: url("https://static.pexels.com/photos/1780/landscape-nature-clouds-cloudy.jpg") no-repeat center top;*/
+    background: #f1f1f1;
 
     /*background: url("https://static.pexels.com/photos/24293/pexels-photo-24293.jpg") no-repeat center top;*/
 
@@ -424,9 +417,14 @@ form {
     margin: 20px 20px 20px 20px;
 }
 
+.dashboard-form ul {
+    list-style: none;
+
+}
+
 .overview-wrapper {
     width: 100%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 1);
     color: #000;
     padding: 10px 0 10px calc(10% + 20px);
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -604,6 +602,11 @@ form textarea {
 }
 
 .old-container-header {
+    /*background: #fa4650;*/
+
+}
+
+.old-container-header h1 {
     background: #fa4650;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
@@ -612,7 +615,14 @@ form textarea {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.new-container-header {
+.new-container-header h2, .old-container-header h2 {
+    /*background: #44e865;*/
+    font-size: 1.75em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.new-container-header h1 {
     background: #44e865;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
@@ -620,7 +630,6 @@ form textarea {
     color: #f4f4f4;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-
 .update-success-main {
     width: 100%;
     margin: 0 auto;
@@ -788,11 +797,11 @@ form textarea {
 }
 
 .login-form {
-
 }
 
 .login-ul {
-
+    list-style: none;
+    background: none;
 }
 
 .login-li {
@@ -924,6 +933,23 @@ em {
 
 ul {
     /* list-style: none; */
+    background: #f1f1f1;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+p {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
+    line-height: 1.15;
+    background: #f1f1f1;
 }
 
 /*** ================= WYSIWYG END =================== ***/

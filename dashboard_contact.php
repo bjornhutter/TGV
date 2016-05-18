@@ -19,7 +19,8 @@
                 toolbar: 'undo redo | bold italic | bullist numlist',
                 menubar: 'file edit view'
             });
-        </script>        <script src="js/active_dashnav.js"></script>
+        </script>
+        <script src="js/active_dashnav.js"></script>
     </head>
     <body>
     <?php
@@ -70,7 +71,8 @@
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Kontakt</h1>
-                    <a href="contact.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Kontakt</a>
+                    <a href="contact.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till
+                        Kontakt</a>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
@@ -84,8 +86,8 @@
                                 </li>
                                 <li>
                                     <p class="dashboard-form-title">Address: </p>
-                                    <input type="text" name="contactAddress" title="Kontaktuppgifter Adress"
-                                           value="<?php echo $contactAddress; ?>">
+                                    <textarea name="contactAddress"
+                                              title="Kontaktuppgifter Adress"><?php echo $contactAddress; ?></textarea>
                                 </li>
                                 <li>
                                     <p class="dashboard-form-title">Telefon: </p>
