@@ -24,18 +24,18 @@ if (!isset($_SESSION)) {
         <h1 class="header-logo-main-title">Tidsskrift för genusvetenskap</h1>
     </div>
     <div class="header-welcome">
-        <h2 class="header-welcome-text">Någon liten fin välkomstext eller info om TGV</h2>
+        <h2 class="header-welcome-text">Välkommen till Nordens största referee-granskade tidskrift för aktuell tvärvetenskaplig genusforskning!</h2>
     </div>
 </header>
 <?php include('includes/navigation.inc') ?>
-<main>
+<main class="index-main">
     <ul class="recent-article-wrapper">
 <!--        Fixa något med diven under, nu finns den för att man ska kunna länka tillbaka från läsmer-->
         <div id="recent"></div> 
         <h1 class="recent-article-main-title">Senaste nummer</h1>
-       <!-- <?php
-/*       include('includes/db_connect.inc');
-        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles ORDER BY date DESC") or die(mysqli_error());
+        <?php
+       include('includes/db_connect.inc');
+        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error());
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $title = $row['title'];
@@ -47,12 +47,12 @@ if (!isset($_SESSION)) {
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
             echo '<p class="recent-article-content">' . $content . '... <a class="recent-article-btn" href="articles_read_more.php?id='.$id.'">[Läs mer]</a></p>';
             //if (isset($_SESSION['user'])) {
-            echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
+            echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
             //}
             echo '</li>';
         }
-        */?>
-    </ul>-->
+        ?>
+    </ul>
 </main>
 <aside class="index-aside">
     <section class="cfp">

@@ -52,7 +52,7 @@ if (!isset($_SESSION)) {
         <h1 class="staff-main-title">Om redaktionen</h1>
         <?php
         include('includes/db_connect.inc');
-        $result = mysqli_query($link, "SELECT * FROM tgv_about_editors") or die(mysqli_error($link));
+        $result = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $content = $row['content'];
