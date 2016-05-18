@@ -744,7 +744,9 @@ form textarea {
     background-size: 1em;
 }
 
-#add-staff {
+#add-staff,
+#add-article
+{
     display: none;
 }
 

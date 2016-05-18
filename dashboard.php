@@ -54,7 +54,7 @@
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Hem</h1>
-                    <a href="index.php" class="go-back-link" target="_blank">Gå till Hem</a>
+                    <a href="index.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Hem</a>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
@@ -63,7 +63,8 @@
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
-                                    <input type="text" name="cfpTitle" title="Call For Papers Titel" value="<?php echo $cfpTitle ?>">
+                                    <input type="text" name="cfpTitle" title="Call For Papers Titel"
+                                           value="<?php echo $cfpTitle ?>">
                                 </li>
                                 <li>
                                     <p class="dashboard-form-title">Beskrivning: </p>
@@ -93,7 +94,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <!--<form action="dashboard_process.php" method="post" class="dashboard-form">
                             <h2 class="dashboard-sub-title">Redigera Senaste nummer</h2>
                             <ul>
                                 <li>
@@ -110,13 +111,62 @@
                                            class="form-input-submit">
                                 </li>
                             </ul>
-                        </form>
+                        </form>-->
+                        <div class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Senaste nummer</h2>
+                            <ul class="recent-article-wrapper">
+                                <!--<h1 class="recent-article-main-title">Senaste nummer</h1>-->
+                                <?php
+                                include('includes/db_connect.inc');
+                                $recentArticlesResult = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error($link));
+                                while ($recentArticlesRow = mysqli_fetch_array($recentArticlesResult)) {
+                                    $recentArticlesId = $recentArticlesRow['id'];
+                                    $recentArticlesTitle = $recentArticlesRow['title'];
+                                    $recentArticlesContent = $recentArticlesRow['content'];
+                                    $recentArticlesImgName = $recentArticlesRow['image'];
+
+                                    echo '<li class="recent-article">';
+                                    echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
+                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
+                                    echo '<p class="recent-article-content">' . $recentArticlesContent . '</p>';
+                                    //if (isset($_SESSION['user'])) {
+                                    echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
+                                    //}
+                                    echo '</li>';
+                                }
+                                ?>
+                            </ul>
+                            <h2 id="add-toggle" class="add-toggle-icon-plus">Lägg till nummer</h2>
+                            <form action="recent_articles_process.php" method="post" enctype="multipart/form-data" id="add-article">
+                                <ul>
+                                    <li>
+                                        <p class="dashboard-first-form-title">Titel: </p>
+                                        <input type="text" name="title" id="title" title="Senaste nummer titel"
+                                               required>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">Beskrivning: </p>
+                                    <textarea name="content" id="content"
+                                              title="Senaste nummer beskrivning"></textarea>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">Bild: </p>
+                                        <input type="file" name="fileToUpload" id="fileToUpload" required>
+                                    </li>
+                                    <li>
+                                        <input type="submit" value="Lägg till nummer" name="submit"
+                                               class="form-input-submit">
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
                     </main>
                 </div>
             </div>
         </div>
     </div>
     <script src="js/toggle_nav.js"></script>
+    <script src="js/add_toggle.js"></script>
     </body>
     </html>
 <?php ob_end_flush(); ?>

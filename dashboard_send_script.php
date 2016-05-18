@@ -134,7 +134,7 @@
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Skicka manus</h1>
-                    <a href="send_script.php" class="go-back-link" target="_blank">Gå till Skicka manus</a>
+                    <a href="send_script.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Skicka manus</a>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">

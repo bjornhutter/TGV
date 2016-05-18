@@ -64,7 +64,7 @@
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Prenumerera</h1>
-                    <a href="subscription.php" class="go-back-link" target="_blank">Gå till Prenumerera</a>
+                    <a href="subscription.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Prenumerera</a>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">

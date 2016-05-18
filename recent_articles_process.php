@@ -59,10 +59,10 @@ if ($uploadOk == 0) {
     $title = $_POST['title'];
     $content = $_POST['content'];
 
-    mysqli_query($link, "INSERT INTO tgv_recent_articles (title, content, image) VALUES ('$title', '$content', '$new_filename')") or die(mysqli_error());
+    mysqli_query($link, "INSERT INTO tgv_recent_articles (title, content, image) VALUES ('$title', '$content', '$new_filename')") or die(mysqli_error($link));
 }
 
-header('Location: index.php')
+header('Location: dashboard.php')
 
 ?>
 

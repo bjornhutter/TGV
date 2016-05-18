@@ -70,7 +70,7 @@
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Kontakt</h1>
-                    <a href="contact.php" class="go-back-link" target="_blank">Gå till Kontakt</a>
+                    <a href="contact.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Kontakt</a>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">

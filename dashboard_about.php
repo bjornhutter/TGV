@@ -51,7 +51,7 @@
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Om oss</h1>
-                    <a href="about.php" class="go-back-link" target="_blank">Gå till Om oss</a>
+                    <a href="about.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Om oss</a>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">

@@ -4,7 +4,7 @@
 $(document).ready(function () {
 
     $("#add-toggle").click(function () {
-        $("#add-staff").stop(true, true).slideToggle(400);
+        $("#add-staff, #add-article").stop(true, true).slideToggle(400);
 
 
     });
