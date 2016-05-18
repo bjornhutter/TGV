@@ -544,7 +544,7 @@ footer a:hover {
     width: 50%;
     display: block;
     background: #f3f3f3;
-    padding: 40px 25% 40px 25%;
+    padding: 40px 25% 0px 25%;
 }
 
 .script-examiner-main-title {
@@ -694,6 +694,11 @@ footer a:hover {
     width: 50%;
     display: block;
     margin: 0 auto 40px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    border-radius: 0;
+    padding: 0;
 }
 
 #tabs ol {
@@ -708,6 +713,18 @@ footer a:hover {
 #tabs ol li p {
 
 }
+
+.ui-tabs .ui-tabs-nav .ui-corner-top, .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-radius: 0 !important;
+    border: none;
+}
+
+.ui-widget-header {
+    background: #cccccc !important;
+    color: #222222 !important;
+    border: 0px solid !important;
+}
+
 
 /*** ================= TABS END =================== ***/
 
