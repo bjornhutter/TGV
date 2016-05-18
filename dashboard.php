@@ -26,6 +26,24 @@
         <script src="js/active_dashnav.js"></script>
     </head>
     <body>
+    <?php
+
+    include('includes/db_connect.inc');
+
+    /*
+     * Info om TGV
+     */
+    $cfpResult = mysqli_query($link, "SELECT * FROM tgv_cfp") or die(mysqli_error($link));
+
+    $cfpRow = mysqli_fetch_array($cfpResult);
+
+    $cfpId = $cfpRow['id'];
+    $cfpTitle = $cfpRow['title'];
+    $cfpContent = $cfpRow['content'];
+
+    $_SESSION['cfpTitle'] = $cfpTitle;
+    $_SESSION['cfpContent'] = $cfpContent;
+    ?>
     <header class="admin-header">
         <h1 class="header-title">Admin Dashboard</h1>
         <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
@@ -45,12 +63,12 @@
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
-                                    <input type="text" name="cfpTitle" title="Call For Papers Titel">
+                                    <input type="text" name="cfpTitle" title="Call For Papers Titel" value="<?php echo $cfpTitle ?>">
                                 </li>
                                 <li>
                                     <p class="dashboard-form-title">Beskrivning: </p>
                                     <textarea name="cfpContent" title="Call For Papers Beskrivning"
-                                              rows="10"></textarea>
+                                              rows="10"><?php echo $cfpContent ?></textarea>
                                 </li>
                                 <li>
                                     <input type="submit" name="cfpSubmit" value="Spara Ändringar"

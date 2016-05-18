@@ -27,11 +27,30 @@ if (isset($_POST['cfpSubmit'])) {
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
 
-    echo "Mysqli query here! $title $content";
+    mysqli_query($link, "UPDATE tgv_cfp SET title = '$title', content = '$content' WHERE id = '1'");
 
-    //header('Location: update_home_complete.php');
+    header('Location: update_home_complete.php?update=1');
 
-    //@todo HUR SKA DENNA FUNGERA?
+}
+
+/*
+ * ÅNGRA
+ * CALL FOR PAPERS
+ */
+if (isset($_POST['revertCfpSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    $title = $_POST['oldCfpTitle'];
+    $content = $_POST['oldCfpContent'];
+
+    $title = mysqli_real_escape_string($link, $title);
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_cfp SET title = '$title', content = '$content' WHERE id = '1'");
+
+    header('Location: update_home_complete.php?update=1');
+
 }
 
 /*
