@@ -250,27 +250,6 @@ nav ul li:nth-child(2):hover {
 }
 
 nav ul li:nth-child(3) {
-    background: #252525 url('../img/icons/users_grey.svg') no-repeat center left 10px;
-    background-size: 1.5em;
-    -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-    -moz-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-    position: relative;
-    -webkit-transition: border ease 200ms;
-    -moz-transition: border ease 200ms;
-    -ms-transition: border ease 200ms;
-    -o-transition: border ease 200ms;
-    transition: border ease 200ms;
-}
-
-nav ul li:nth-child(3):hover {
-    background: url('../img/icons/users_white.svg') no-repeat center left 10px;
-    background-size: 1.5em;
-    border-left: 10px solid #027b9a;
-
-}
-
-nav ul li:nth-child(4) {
     background: #252525 url('../img/icons/books_grey.svg') no-repeat center left 10px;
     background-size: 1.5em;
     -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -284,14 +263,14 @@ nav ul li:nth-child(4) {
     transition: border ease 200ms;
 }
 
-nav ul li:nth-child(4):hover {
+nav ul li:nth-child(3):hover {
     background: url('../img/icons/books_white.svg') no-repeat center left 10px;
     background-size: 1.5em;
     border-left: 10px solid #027b9a;
 
 }
 
-nav ul li:nth-child(5) {
+nav ul li:nth-child(4) {
     background: #252525 url('../img/icons/envelop_grey.svg') no-repeat center left 10px;
     background-size: 1.5em;
     -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -305,8 +284,29 @@ nav ul li:nth-child(5) {
     transition: border ease 200ms;
 }
 
-nav ul li:nth-child(5):hover {
+nav ul li:nth-child(4):hover {
     background: url('../img/icons/envelop_white.svg') no-repeat center left 10px;
+    background-size: 1.5em;
+    border-left: 10px solid #027b9a;
+
+}
+
+nav ul li:nth-child(5) {
+    background: #252525 url('../img/icons/users_grey.svg') no-repeat center left 10px;
+    background-size: 1.5em;
+    -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    -webkit-transition: border ease 200ms;
+    -moz-transition: border ease 200ms;
+    -ms-transition: border ease 200ms;
+    -o-transition: border ease 200ms;
+    transition: border ease 200ms;
+}
+
+nav ul li:nth-child(5):hover {
+    background: url('../img/icons/users_white.svg') no-repeat center left 10px;
     background-size: 1.5em;
     border-left: 10px solid #027b9a;
 
@@ -381,10 +381,7 @@ nav ul li:nth-child(7):hover {
 .nav-main-wrapper {
     background: url("https://static.pexels.com/photos/1780/landscape-nature-clouds-cloudy.jpg") no-repeat center top;
 
-
     /*background: url("https://static.pexels.com/photos/24293/pexels-photo-24293.jpg") no-repeat center top;*/
-
-
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -707,7 +704,7 @@ form textarea {
 
 .staff {
     background: #da865a;
-    width: calc(100%/3);
+    width: calc(100% / 3);
     /*margin: 20px 10px 20px 10px;*/
     display: inline-block;
     height: auto;
@@ -745,8 +742,7 @@ form textarea {
 }
 
 #add-staff,
-#add-article
-{
+#add-article {
     display: none;
 }
 
