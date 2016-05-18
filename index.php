@@ -35,7 +35,7 @@ if (!isset($_SESSION)) {
         <h1 class="recent-article-main-title">Senaste nummer</h1>
         <?php
        include('includes/db_connect.inc');
-        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error());
+        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles LIMIT 3") or die(mysqli_error());
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $title = $row['title'];
@@ -46,9 +46,10 @@ if (!isset($_SESSION)) {
             echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
             echo '<p class="recent-article-content">' . $content . '... <a class="recent-article-btn" href="articles_read_more.php?id='.$id.'">[Läs mer]</a></p>';
-            //if (isset($_SESSION['user'])) {
+            //FIXA RÄTT LÄNK FÖR REDIGERING
+            if (isset($_SESSION['user'])) {
             echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
-            //}
+            }
             echo '</li>';
         }
         ?>
@@ -79,7 +80,7 @@ if (!isset($_SESSION)) {
         include('includes/db_connect.inc');
 
 
-        $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC") or die (mysqli_error($link));
+        $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC LIMIT 5") or die (mysqli_error($link));
 
         echo '<div class="news-post-container>';
         while ($row = mysqli_fetch_array($result)) {
@@ -96,7 +97,7 @@ if (!isset($_SESSION)) {
                 echo '<p><a href="dashboard.php">Redigera</a></p>';
             }
 
-            echo '<hr>';
+            echo '<hr class="hr-news">';
             echo '</div>';
 
         }

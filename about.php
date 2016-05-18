@@ -64,9 +64,10 @@ if (!isset($_SESSION)) {
             echo '<img src="uploads/'.$imgName.'" class="staff-img">';
             echo '<h1 class="staff-title">' . $fname . ' ' . $lname . '</h1>';
             echo '<p class="staff-content">' . $content . '</p>';
-            //if (isset($_SESSION['user'])) {
+            // Lägg in rätt redigera-länk till dashboarden hrä sen
+            if (isset($_SESSION['user'])) {
             echo '<p><a href="about_editors_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
-            //}
+            }
             echo '</li>';
         }
         ?>

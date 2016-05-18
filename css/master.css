@@ -221,14 +221,14 @@ footer a:hover {
     color: #000000;
     padding-top: 10px;
     text-align: left;
-    padding-left: calc(10% - 37px);
+    padding-left: 10.5%;
     font-family: 'Open Sans', sans-serif;
     margin: 0 0 10px 0;
 }
 
 .recent-article {
     background: #FFFFFF;
-    width: 20%;
+    width: 25%;
     margin: 20px 10px 20px 10px;
     display: inline-block;
     height: auto;
@@ -311,9 +311,9 @@ footer a:hover {
 
 .recent-article-more p {
     font-family: 'Open Sans', sans-serif;
-    padding: 0% 5% 2% 5%;
+    padding: 0 5% 2% 5%;
     font-size: 0.8em;
-    margin: 0% 0 0 0;
+    margin: 0 0 0 0;
     line-height: 150%;
 }
 
@@ -351,12 +351,13 @@ footer a:hover {
 /*** ================= NEWSFEED START =================== ***/
 
 .news-feed {
-    height: 750px;
+    height: 550px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
-.news-feed-container {
+.news-post-container {
+
 }
 
 .news-main-title {
@@ -364,25 +365,35 @@ footer a:hover {
     font-size: 1.5em;
     color: #000000;
     text-align: left;
-    margin: 0 0 10px 0;
+    margin: 10px 0 20px 0;
 }
 
 .news-date {
-    font-size: 0.6em;
+    font-size: 0.7em;
+    margin: 5px 0 0 0;
 }
 
 .news-title {
-    font-size: 1.2em;
+    font-size: 1em;
     display: block;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
+    margin: 0 0 5px 0
 }
 
 .news-content {
     font-size: 0.8em;
+    margin: 3px 0 10px 0;
 }
 
 .news-post {
+}
+
+.hr-news {
+    background: #e07929;
+    height: 2px;
+    margin: 20px 0 20px 0;
+    border: none;
 }
 
 /*** ================= NEWSFEED END =================== ***/
