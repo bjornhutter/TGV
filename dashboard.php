@@ -59,7 +59,7 @@
                 <div class="main-outer-wrapper">
                     <main id="main">
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Call for papers</h2>
+                            <h2 class="dashboard-sub-title">Call for papers</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -72,13 +72,13 @@
                                               rows="10"><?php echo $cfpContent ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="cfpSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="cfpSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Nyhetsflöde</h2>
+                            <h2 class="dashboard-sub-title">Nyhetsflöde</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -89,7 +89,7 @@
                                     <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="newsSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="newsSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>

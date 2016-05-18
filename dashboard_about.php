@@ -69,7 +69,7 @@
                               rows="10"><?php echo $aboutContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="aboutSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="aboutSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>

@@ -172,13 +172,13 @@
                               rows="10"><?php echo $writerGuidelinesContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="writerGuidelinesSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="writerGuidelinesSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Riktlinjer</h2>
+                            <h2 class="dashboard-sub-title">Riktlinjer</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -191,13 +191,13 @@
                               rows="10"><?php echo $guidelinesContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="guidelinesSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="guidelinesSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Form</h2>
+                            <h2 class="dashboard-sub-title">Form</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -210,13 +210,13 @@
                               rows="10"><?php echo $formContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="formSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="formSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Rubriker</h2>
+                            <h2 class="dashboard-sub-title">Rubriker</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -229,13 +229,13 @@
                               rows="10"><?php echo $titlesContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="titlesSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="titlesSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Citat</h2>
+                            <h2 class="dashboard-sub-title">Citat</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -248,13 +248,13 @@
                               rows="10"><?php echo $quotesContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="quotesSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="quotesSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Referenser</h2>
+                            <h2 class="dashboard-sub-title">Referenser</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -267,13 +267,13 @@
                               rows="10"><?php echo $refContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="refSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="refSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Anvisningar för recensenter</h2>
+                            <h2 class="dashboard-sub-title">Anvisningar för recensenter</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -286,13 +286,13 @@
                               rows="10"><?php echo $scriptRevContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="scriptRevSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="scriptRevSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Anvisningar för granskare</h2>
+                            <h2 class="dashboard-sub-title">Anvisningar för granskare</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -305,7 +305,7 @@
                               rows="10"><?php echo $scriptExaminerContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="scriptExaminerSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="scriptExaminerSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>

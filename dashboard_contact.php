@@ -75,7 +75,7 @@
                 <div class="main-outer-wrapper">
                     <main id="main">
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Kontaktuppgifter</h2>
+                            <h2 class="dashboard-sub-title">Kontaktuppgifter</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -98,13 +98,13 @@
                                            value="<?php echo $contactEmail; ?>">
                                 </li>
                                 <li>
-                                    <input type="submit" name="contactSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="contactSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Footer</h2>
+                            <h2 class="dashboard-sub-title">Footer</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -117,7 +117,7 @@
                               rows="10"><?php echo $footerContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="footerSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="footerSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>

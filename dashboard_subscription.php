@@ -69,7 +69,7 @@
                 <div class="main-outer-wrapper">
                     <main id="main">
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Prislista</h2>
+                            <h2 class="dashboard-sub-title">Prislista</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -82,13 +82,13 @@
                               rows="10"><?php echo $priceContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="priceSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="priceSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Redigera Prenumereringsinfo</h2>
+                            <h2 class="dashboard-sub-title">Prenumereringsinfo</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
@@ -101,7 +101,7 @@
                               rows="10"><?php echo $subInfoContent; ?></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="subInfoSubmit" value="Spara Ändringar"
+                                    <input type="submit" name="subInfoSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>
