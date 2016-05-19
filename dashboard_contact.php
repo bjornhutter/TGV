@@ -55,6 +55,18 @@
     $_SESSION['contactPhone'] = replace_quotes($contactPhone);
     $_SESSION['contactEmail'] = replace_quotes($contactEmail);
 
+    /*
+     * Kontaktinformation
+     */
+
+    $contactInfoResult = mysqli_query($link, "SELECT * FROM tgv_contact_info") or die(mysqli_error($link));
+
+    $contactInfoRow = mysqli_fetch_array($contactInfoResult);
+
+    $contactInfoId = $contactInfoRow['id'];
+    $contactInfoContent = replace_quotes($contactInfoRow['content']);
+
+    $_SESSION['contactInfoContent'] = replace_quotes($contactInfoContent);
 
     /*
      * Footer
@@ -111,6 +123,20 @@
                                 </li>
                                 <li>
                                     <input type="submit" name="contactSubmit" value="Spara ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Kontaktinformation</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Beskrivning: </p>
+                    <textarea name="contactInfoContent" title="Kontaktinformation Beskrivning"
+                              rows="10"><?php echo $contactInfoContent; ?></textarea>
+                                </li>
+                                <li>
+                                    <input type="submit" name="contactInfoSubmit" value="Spara ändringar"
                                            class="form-input-submit">
                                 </li>
                             </ul>

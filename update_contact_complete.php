@@ -52,6 +52,18 @@
                         $oldContactPhone = $_SESSION['contactPhone'];
                         $oldContactEmail = $_SESSION['contactEmail'];
 
+                        /*
+                         * Kontaktinformation
+                         */
+
+                        $contactInfoResult = mysqli_query($link, "SELECT * FROM tgv_contact_info") or die(mysqli_error($link));
+
+                        $contactInfoRow = mysqli_fetch_array($contactInfoResult);
+
+                        $contactInfoId = $contactInfoRow['id'];
+                        $contactInfoContent = $contactInfoRow['content'];
+
+                        $oldContactInfoContent = $_SESSION['contactInfoContent'];
 
                         /*
                          * Footer
@@ -74,6 +86,9 @@
                         } elseif (($_GET['update']) == 2) {
                             echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Footer</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldFooterTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldFooterContent</p></div>";
                             echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Footer</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$footerTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$footerContent</p>";
+                        } elseif (($_GET['update']) == 3) {
+                            echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Kontaktinformation</h2></div><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldContactInfoContent</p></div>";
+                            echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Kontaktinformation</h2></div><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$contactInfoContent</p>";
                         }
 
 
@@ -89,6 +104,8 @@
                             <input type="hidden" name="oldContactEmail" value="<?php echo $oldContactEmail ?>">
                             <input type="hidden" name="oldFooterTitle" value="<?php echo $oldFooterTitle ?>">
                             <input type="hidden" name="oldFooterContent" value="<?php echo $oldFooterContent ?>">
+                            <input type="hidden" name="oldContactInfoContent"
+                                   value="<?php echo $oldContactInfoContent ?>">
                             <?php
                             if (($_GET['update']) == 1) {
 
@@ -96,6 +113,9 @@
                    onclick="if(!confirm(\'Detta återställer dina nya ändringar till de gamla igen. Är du säker på att du vill ångra dina nya ändringar?\')) return false">';
                             } elseif (($_GET['update']) == 2) {
                                 echo '<input class="revert-changes" type="submit" name="revertFooterSubmit" value="Ångra ändringar"
+                   onclick="if(!confirm(\'Detta återställer dina nya ändringar till de gamla igen. Är du säker på att du vill ångra dina nya ändringar?\')) return false">';
+                            } elseif (($_GET['update']) == 3) {
+                                echo '<input class="revert-changes" type="submit" name="revertContactInfoSubmit" value="Ångra ändringar"
                    onclick="if(!confirm(\'Detta återställer dina nya ändringar till de gamla igen. Är du säker på att du vill ångra dina nya ändringar?\')) return false">';
                             } else {
                                 header('Location: dashboard_contact.php');

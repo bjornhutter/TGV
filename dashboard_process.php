@@ -610,6 +610,45 @@ if (isset($_POST['revertFooterSubmit'])) {
     header('Location: update_contact_complete.php?update=2');
 
 }
+
+/*
+ * KONTAKTINFORMATION
+ */
+if (isset($_POST['contactInfoSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    /*$title = $_POST['contactInfoTitle'];*/
+    $content = $_POST['contactInfoContent'];
+
+    /*$title = mysqli_real_escape_string($link, $title);*/
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_contact_info SET  content = '$content' WHERE id = '1'");
+
+    header('Location: update_contact_complete.php?update=3');
+
+}
+/*
+ * ÅNGRA
+ * KONTAKTINFORMATION
+ */
+if (isset($_POST['revertContactInfoSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    /*$title = $_POST['oldContactInfoTitle'];*/
+    $content = $_POST['oldContactInfoContent'];
+
+    /*$title = mysqli_real_escape_string($link, $title);*/
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_contact_info SET content = '$content' WHERE id = '1'");
+
+    header('Location: update_contact_complete.php?update=3');
+
+}
+
 //todo tabort när vi inte behöver debug
 echo "<tt><pre>";
 
