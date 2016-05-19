@@ -16,22 +16,6 @@ a:hover {
     color: #000;
 }
 
-
-.edit {
-    background: #027b9a;
-    text-decoration: none;
-    color: #fff !important;
-    padding: 4px 9px;
-    margin: 2px 0;
-    display: block;
-    width: 54px;
-}
-
-.edit:hover {
-    background: #0295af;
-    color: #FFF;
-    text-decoration: none;
-}
 /*** ================= HEADER START =================== ***/
 
 header {
@@ -282,15 +266,13 @@ footer a:hover {
 }
 
 .recent-article-btn {
-    color: #e07929;
     font-family: 'Open Sans', sans-serif;
-    text-align: center;
     text-decoration: none;
     font-size: 0.8em;
 }
 
 .recent-article-btn:hover {
-    color: #027b9a;
+    color: #000;
 }
 
 .recent-article-more {
@@ -807,3 +789,20 @@ ul {
 }
 
 /*** ================= WYSIWYG END =================== ***/
+/*** ================= EDIT START =================== ***/
+.edit {
+    background: #027b9a;
+    text-decoration: none;
+    color: #fff !important;
+    padding: 4px 9px;
+    margin: 2px 0;
+    display: block;
+    width: 54px;
+}
+
+.edit:hover {
+    background: #0295af;
+    color: #FFF;
+    text-decoration: none;
+}
+/*** ================= EDIT END =================== ***/
