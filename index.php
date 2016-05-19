@@ -56,22 +56,26 @@ if (!isset($_SESSION)) {
     </ul>
 </main>
 <aside class="index-aside">
-    <section class="cfp">
-        <div>
-            <ul>
-                <li>
-                    <p>Tema 1</p>
-                </li>
-                <li>
-                    <p>Tema 2</p>
-                </li>
-                <li>
-                    <p>Tema 3</p>
-                </li>
-            </ul>
-        </div>
-        <a href="send_script.php" class="send-script-button">Skicka in ditt manus!</a>
-    </section>
+    <?php
+    include('includes/db_connect.inc');
+    $cfpResult = mysqli_query($link, "SELECT * FROM tgv_cfp") or die(mysqli_error($link));
+
+    echo ' <section class="cfp">';
+    $cfpRow = mysqli_fetch_array($cfpResult);
+
+    $cfpId = $cfpRow['id'];
+    $cfpTitle = $cfpRow['title'];
+    $cfpContent = $cfpRow['content'];
+
+    echo '<h1 class="cfp-main-title">' . $cfpTitle . '</h1>';
+    echo '<p>' . $cfpContent . '</p>';
+
+    if (isset($_SESSION['user'])) {
+        echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
+    }
+    echo '</section>';
+
+    ?>
     <section class="news-feed">
         <h1 class="news-main-title">Nyheter</h1>
 
