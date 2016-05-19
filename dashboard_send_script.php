@@ -16,12 +16,12 @@
         <script>
             tinymce.init({
                 selector: 'textarea',
-                /*toolbar: 'undo redo | bold italic | bullist numlist | link',
-                menubar: 'file edit view insert',
-                plugins: "link"*/
-                toolbar: 'undo redo | bold italic | bullist numlist code',
-                menubar: 'file edit view tools',
-                plugins: "code"
+                toolbar: 'undo redo | bold italic | bullist numlist | link code',
+                menubar: 'file edit view insert tools',
+                plugins: 'link code'
+                /*toolbar: 'undo redo | bold italic | bullist numlist code',
+                 menubar: 'file edit view tools',
+                 plugins: "code"*/
             });
         </script><!--todo ta bort code eller inte -->
         <script src="js/active_dashnav.js"></script>
@@ -29,6 +29,15 @@
     <body>
     <?php
     include('includes/db_connect.inc');
+
+    /*
+     * Funktion för att byta ut dubbelcitat mot enkelcitat
+     */
+    function replace_quotes($text)
+    {
+        $text = str_replace('"', "'", $text);
+        return $text;
+    }
 
     /*
      * ANVISNINGAR FÖR ARTIKELSKRIBENTER
@@ -40,13 +49,13 @@
 
     $writerGuidelinesId = $writerGuidelinesRow['id'];
 
-    $writerGuidelinesTitle = $writerGuidelinesRow['title'];
+    $writerGuidelinesTitle = replace_quotes($writerGuidelinesRow['title']);
 
-    $writerGuidelinesContent = $writerGuidelinesRow['content'];
+    $writerGuidelinesContent = replace_quotes($writerGuidelinesRow['content']);
 
-    $_SESSION['writerGuidelinesTitle'] = $writerGuidelinesTitle;
+    $_SESSION['writerGuidelinesTitle'] = replace_quotes($writerGuidelinesTitle);
 
-    $_SESSION['writerGuidelinesContent'] = $writerGuidelinesContent;
+    $_SESSION['writerGuidelinesContent'] = replace_quotes($writerGuidelinesContent);
 
     /*
      * GENERELLA RIKTLINJER
@@ -56,11 +65,11 @@
     $guidelinesRow = mysqli_fetch_array($guidelinesResult);
 
     $guidelinesId = $guidelinesRow['id'];
-    $guidelinesTitle = $guidelinesRow['title'];
-    $guidelinesContent = $guidelinesRow['content'];
+    $guidelinesTitle = replace_quotes($guidelinesRow['title']);
+    $guidelinesContent = replace_quotes($guidelinesRow['content']);
 
-    $_SESSION['guidelinesTitle'] = $guidelinesTitle;
-    $_SESSION['guidelinesContent'] = $guidelinesContent;
+    $_SESSION['guidelinesTitle'] = replace_quotes($guidelinesTitle);
+    $_SESSION['guidelinesContent'] = replace_quotes($guidelinesContent);
 
     /*
      * FORM
@@ -70,11 +79,11 @@
     $formRow = mysqli_fetch_array($formResult);
 
     $formId = $formRow['id'];
-    $formTitle = $formRow['title'];
-    $formContent = $formRow['content'];
+    $formTitle = replace_quotes($formRow['title']);
+    $formContent = replace_quotes($formRow['content']);
 
-    $_SESSION['formTitle'] = $formTitle;
-    $_SESSION['formContent'] = $formContent;
+    $_SESSION['formTitle'] = replace_quotes($formTitle);
+    $_SESSION['formContent'] = replace_quotes($formContent);
 
     /*
      * Rubriker
@@ -84,11 +93,11 @@
     $titlesRow = mysqli_fetch_array($titlesResult);
 
     $titlesId = $titlesRow['id'];
-    $titlesTitle = $titlesRow['title'];
-    $titlesContent = $titlesRow['content'];
+    $titlesTitle = replace_quotes($titlesRow['title']);
+    $titlesContent = replace_quotes($titlesRow['content']);
 
-    $_SESSION['titlesTitle'] = $titlesTitle;
-    $_SESSION['titlesContent'] = $titlesContent;
+    $_SESSION['titlesTitle'] = replace_quotes($titlesTitle);
+    $_SESSION['titlesContent'] = replace_quotes($titlesContent);
 
     /*
      * Citat
@@ -98,11 +107,11 @@
     $quotesRow = mysqli_fetch_array($quotesResult);
 
     $quotesId = $quotesRow['id'];
-    $quotesTitle = $quotesRow['title'];
-    $quotesContent = $quotesRow['content'];
+    $quotesTitle = replace_quotes($quotesRow['title']);
+    $quotesContent = replace_quotes($quotesRow['content']);
 
-    $_SESSION['quotesTitle'] = $quotesTitle;
-    $_SESSION['quotesContent'] = $quotesContent;
+    $_SESSION['quotesTitle'] = replace_quotes($quotesTitle);
+    $_SESSION['quotesContent'] = replace_quotes($quotesContent);
 
     /*
      * Referenser
@@ -112,11 +121,11 @@
     $refRow = mysqli_fetch_array($refResult);
 
     $refId = $refRow['id'];
-    $refTitle = $refRow['title'];
-    $refContent = $refRow['content'];
+    $refTitle = replace_quotes($refRow['title']);
+    $refContent = replace_quotes($refRow['content']);
 
-    $_SESSION['refTitle'] = $refTitle;
-    $_SESSION['refContent'] = $refContent;
+    $_SESSION['refTitle'] = replace_quotes($refTitle);
+    $_SESSION['refContent'] = replace_quotes($refContent);
 
     /*
      * Anvisningar för recensenter
@@ -126,11 +135,11 @@
     $scriptRevRow = mysqli_fetch_array($scriptRevResult);
 
     $scriptRevId = $scriptRevRow['id'];
-    $scriptRevTitle = $scriptRevRow['title'];
-    $scriptRevContent = $scriptRevRow['content'];
+    $scriptRevTitle = replace_quotes($scriptRevRow['title']);
+    $scriptRevContent = replace_quotes($scriptRevRow['content']);
 
-    $_SESSION['scriptRevTitle'] = $scriptRevTitle;
-    $_SESSION['scriptRevContent'] = $scriptRevContent;
+    $_SESSION['scriptRevTitle'] = replace_quotes($scriptRevTitle);
+    $_SESSION['scriptRevContent'] = replace_quotes($scriptRevContent);
 
     /*
      * Anvisningar för granskare
@@ -141,11 +150,11 @@
     $scriptExaminerRow = mysqli_fetch_array($scriptExaminerResult);
 
     $scriptExaminerId = $scriptExaminerRow['id'];
-    $scriptExaminerTitle = $scriptExaminerRow['title'];
-    $scriptExaminerContent = $scriptExaminerRow['content'];
+    $scriptExaminerTitle = replace_quotes($scriptExaminerRow['title']);
+    $scriptExaminerContent = replace_quotes($scriptExaminerRow['content']);
 
-    $_SESSION['scriptExaminerTitle'] = $scriptExaminerTitle;
-    $_SESSION['scriptExaminerContent'] = $scriptExaminerContent;
+    $_SESSION['scriptExaminerTitle'] = replace_quotes($scriptExaminerTitle);
+    $_SESSION['scriptExaminerContent'] = replace_quotes($scriptExaminerContent);
     ?>
     <header class="admin-header">
         <h1 class="header-title">Admin Dashboard</h1>
@@ -167,7 +176,8 @@
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
-                                    <input type="text" name="writerGuidelinesTitle" title="Anvisningar för artikelskribenter Titel"
+                                    <input type="text" name="writerGuidelinesTitle"
+                                           title="Anvisningar för artikelskribenter Titel"
                                            value="<?php echo $writerGuidelinesTitle; ?>">
                                 </li>
                                 <li>

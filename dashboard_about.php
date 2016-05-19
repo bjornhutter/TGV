@@ -16,8 +16,9 @@
         <script>
             tinymce.init({
                 selector: 'textarea',
-                toolbar: 'undo redo | bold italic | bullist numlist',
-                menubar: 'file edit view'
+                toolbar: 'undo redo | bold italic | bullist numlist | link code',
+                menubar: 'file edit view insert tools',
+                plugins: 'link code'
             });
         </script>
         <script src="js/active_dashnav.js"></script>
@@ -28,6 +29,15 @@
     include('includes/db_connect.inc');
 
     /*
+     * Funktion för att byta ut dubbelcitat mot enkelcitat
+     */
+    function replace_quotes($text)
+    {
+        $text = str_replace('"', "'", $text);
+        return $text;
+    }
+
+    /*
      * Info om TGV
      */
     $aboutResult = mysqli_query($link, "SELECT * FROM tgv_about") or die(mysqli_error($link));
@@ -35,11 +45,11 @@
     $aboutRow = mysqli_fetch_array($aboutResult);
 
     $aboutId = $aboutRow['id'];
-    $aboutTitle = $aboutRow['title'];
-    $aboutContent = $aboutRow['content'];
+    $aboutTitle = replace_quotes($aboutRow['title']);
+    $aboutContent = replace_quotes($aboutRow['content']);
 
-    $_SESSION['aboutTitle'] = $aboutTitle;
-    $_SESSION['aboutContent'] = $aboutContent;
+    $_SESSION['aboutTitle'] = replace_quotes($aboutTitle);
+    $_SESSION['aboutContent'] = replace_quotes($aboutContent);
     ?>
     <header class="admin-header">
         <h1 class="header-title">Admin Dashboard</h1>
@@ -100,9 +110,9 @@
                                 $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
                                 while ($staffRow = mysqli_fetch_array($staffResult)) {
                                     $staffId = $staffRow['id'];
-                                    $staffContent = $staffRow['content'];
-                                    $staffFname = $staffRow['fname'];
-                                    $staffLname = $staffRow['lname'];
+                                    $staffContent = replace_quotes($staffRow['content']);
+                                    $staffFname = replace_quotes($staffRow['fname']);
+                                    $staffLname = replace_quotes($staffRow['lname']);
                                     $staffImgName = $staffRow['image'];
 
                                     echo '<li class="staff">';

@@ -19,8 +19,9 @@
         <script>
             tinymce.init({
                 selector: 'textarea',
-                toolbar: 'undo redo | bold italic | bullist numlist',
-                menubar: 'file edit view'
+                toolbar: 'undo redo | bold italic | bullist numlist | link code',
+                menubar: 'file edit view insert tools',
+                plugins: 'link code'
             });
         </script>
         <script src="js/active_dashnav.js"></script>
@@ -31,6 +32,15 @@
     include('includes/db_connect.inc');
 
     /*
+     * Funktion för att byta ut dubbelcitat mot enkelcitat
+     */
+    function replace_quotes($text)
+    {
+        $text = str_replace('"', "'", $text);
+        return $text;
+    }
+
+    /*
      * Info om TGV
      */
     $cfpResult = mysqli_query($link, "SELECT * FROM tgv_cfp") or die(mysqli_error($link));
@@ -38,11 +48,11 @@
     $cfpRow = mysqli_fetch_array($cfpResult);
 
     $cfpId = $cfpRow['id'];
-    $cfpTitle = $cfpRow['title'];
-    $cfpContent = $cfpRow['content'];
+    $cfpTitle = replace_quotes($cfpRow['title']);
+    $cfpContent = replace_quotes($cfpRow['content']);
 
-    $_SESSION['cfpTitle'] = $cfpTitle;
-    $_SESSION['cfpContent'] = $cfpContent;
+    $_SESSION['cfpTitle'] = replace_quotes($cfpTitle);
+    $_SESSION['cfpContent'] = replace_quotes($cfpContent);
     ?>
     <header class="admin-header">
         <h1 class="header-title">Admin Dashboard</h1>
@@ -121,8 +131,8 @@
                                 $recentArticlesResult = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error($link));
                                 while ($recentArticlesRow = mysqli_fetch_array($recentArticlesResult)) {
                                     $recentArticlesId = $recentArticlesRow['id'];
-                                    $recentArticlesTitle = $recentArticlesRow['title'];
-                                    $recentArticlesContent = $recentArticlesRow['content'];
+                                    $recentArticlesTitle = replace_quotes($recentArticlesRow['title']);
+                                    $recentArticlesContent = replace_quotes($recentArticlesRow['content']);
                                     $recentArticlesImgName = $recentArticlesRow['image'];
 
                                     echo '<li class="recent-article">';

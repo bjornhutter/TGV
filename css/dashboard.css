@@ -939,6 +939,7 @@ ul {
 }
 
 ol {
+    background: #f1f1f1;
     list-style-type: decimal;
     list-style-position: inside;
 }

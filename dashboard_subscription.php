@@ -16,8 +16,9 @@
         <script>
             tinymce.init({
                 selector: 'textarea',
-                toolbar: 'undo redo | bold italic | bullist numlist',
-                menubar: 'file edit view'
+                toolbar: 'undo redo | bold italic | bullist numlist | link code',
+                menubar: 'file edit view insert tools',
+                plugins: 'link code'
             });
         </script>        <script src="js/active_dashnav.js"></script>
     </head>
@@ -27,6 +28,15 @@
     include('includes/db_connect.inc');
 
     /*
+     * Funktion för att byta ut dubbelcitat mot enkelcitat
+     */
+    function replace_quotes($text)
+    {
+        $text = str_replace('"', "'", $text);
+        return $text;
+    }
+
+    /*
      * Prislista
      */
     $priceResult = mysqli_query($link, "SELECT * FROM tgv_price") or die(mysqli_error($link));
@@ -34,11 +44,11 @@
     $priceRow = mysqli_fetch_array($priceResult);
 
     $priceId = $priceRow['id'];
-    $priceTitle = $priceRow['title'];
-    $priceContent = $priceRow['content'];
+    $priceTitle = replace_quotes($priceRow['title']);
+    $priceContent = replace_quotes($priceRow['content']);
 
-    $_SESSION['priceTitle'] = $priceTitle;
-    $_SESSION['priceContent'] = $priceContent;
+    $_SESSION['priceTitle'] = replace_quotes($priceTitle);
+    $_SESSION['priceContent'] = replace_quotes($priceContent);
 
     /*
      * Subinfo
@@ -48,11 +58,11 @@
     $subInfoRow = mysqli_fetch_array($subInfoResult);
 
     $subInfoId = $subInfoRow['id'];
-    $subInfoTitle = $subInfoRow['title'];
-    $subInfoContent = $subInfoRow['content'];
+    $subInfoTitle = replace_quotes($subInfoRow['title']);
+    $subInfoContent = replace_quotes($subInfoRow['content']);
 
-    $_SESSION['subInfoTitle'] = $subInfoTitle;
-    $_SESSION['subInfoContent'] = $subInfoContent;
+    $_SESSION['subInfoTitle'] = replace_quotes($subInfoTitle);
+    $_SESSION['subInfoContent'] = replace_quotes($subInfoContent);
     ?>
     <header class="admin-header">
         <h1 class="header-title">Admin Dashboard</h1>

@@ -16,8 +16,9 @@
         <script>
             tinymce.init({
                 selector: 'textarea',
-                toolbar: 'undo redo | bold italic | bullist numlist',
-                menubar: 'file edit view'
+                toolbar: 'undo redo | bold italic | bullist numlist | link code',
+                menubar: 'file edit view insert tools',
+                plugins: 'link code'
             });
         </script>
         <script src="js/active_dashnav.js"></script>
@@ -28,6 +29,15 @@
     include('includes/db_connect.inc');
 
     /*
+     * Funktion för att byta ut dubbelcitat mot enkelcitat
+     */
+    function replace_quotes($text)
+    {
+        $text = str_replace('"', "'", $text);
+        return $text;
+    }
+
+    /*
      * Kontaktuppgifter
      */
     $contactResult = mysqli_query($link, "SELECT * FROM tgv_contact") or die(mysqli_error($link));
@@ -35,15 +45,15 @@
     $contactRow = mysqli_fetch_array($contactResult);
 
     $contactId = $contactRow['id'];
-    $contactTitle = $contactRow['title'];
-    $contactAddress = $contactRow['address'];
-    $contactPhone = $contactRow['phone'];
-    $contactEmail = $contactRow['email'];
+    $contactTitle = replace_quotes($contactRow['title']);
+    $contactAddress = replace_quotes($contactRow['address']);
+    $contactPhone = replace_quotes($contactRow['phone']);
+    $contactEmail = replace_quotes($contactRow['email']);
 
-    $_SESSION['contactTitle'] = $contactTitle;
-    $_SESSION['contactAddress'] = $contactAddress;
-    $_SESSION['contactPhone'] = $contactPhone;
-    $_SESSION['contactEmail'] = $contactEmail;
+    $_SESSION['contactTitle'] = replace_quotes($contactTitle);
+    $_SESSION['contactAddress'] = replace_quotes($contactAddress);
+    $_SESSION['contactPhone'] = replace_quotes($contactPhone);
+    $_SESSION['contactEmail'] = replace_quotes($contactEmail);
 
 
     /*
@@ -54,11 +64,11 @@
     $footerRow = mysqli_fetch_array($footerResult);
 
     $footerId = $footerRow['id'];
-    $footerTitle = $footerRow['title'];
-    $footerContent = $footerRow['content'];
+    $footerTitle = replace_quotes($footerRow['title']);
+    $footerContent = replace_quotes($footerRow['content']);
 
-    $_SESSION['footerTitle'] = $footerTitle;
-    $_SESSION['footerContent'] = $footerContent;
+    $_SESSION['footerTitle'] = replace_quotes($footerTitle);
+    $_SESSION['footerContent'] = replace_quotes($footerContent);
 
     ?>
     <header class="admin-header">
