@@ -678,12 +678,10 @@ footer a:hover {
 }
 
 .contact-info {
-    width: calc(80% / 3 * 2);
+    width: 40%;
     display: block;
-    float: left;
-    height: 200px;
     background: #f3f3f3;
-    margin: 0 0 0 10%;
+    margin: 0 auto;
 }
 
 .contact-info-ul {
@@ -694,24 +692,28 @@ footer a:hover {
     font-family: 'Open Sans', sans-serif;
     line-height: 150%;
     font-size: 0.8em;
-    padding: 0 0 7px 17px;
+    padding: 0px 0 12px 30px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .contact-info-li:nth-child(2) {
     background: #F3F3F3 url('../img/location.svg') no-repeat left 2px;
-    background-size: 1em;
+    background-size: 1.5em;
     position: relative;
+    margin: 0 15% 0 0;
 }
 
 .contact-info-li:nth-child(3) {
-    background: #F3F3F3 url('../img/phone.svg') no-repeat left 2px;
-    background-size: 1em;
+    background: #F3F3F3 url('../img/phone.svg') no-repeat left 0px;
+    background-size: 1.5em;
     position: relative;
+    margin: 0 15% 0 0;
 }
 
 .contact-info-li:nth-child(4) {
-    background: #F3F3F3 url('../img/envelop.svg') no-repeat left 3px;
-    background-size: 1em;
+    background: #F3F3F3 url('../img/envelop.svg') no-repeat left 0px;
+    background-size: 1.5em;
     position: relative;
 }
 
@@ -720,13 +722,11 @@ footer a:hover {
 }
 
 .contact-more-info {
-    width: calc(80% / 3);
+    width: 40%;
     display: block;
-    float: left;
-    height: 200px;
     background: #f3f3f3;
-    margin: 0 10% 0 0;
-    padding: 20px 0 0 0;
+    margin: 0 auto;
+    padding: 20px 0 40px 0;
 }
 
 .contact-map {
