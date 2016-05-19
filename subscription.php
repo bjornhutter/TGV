@@ -32,12 +32,8 @@ if (!isset($_SESSION)) {
         echo '<h1 class="subscription-info-main-title">' . $subInfoTitle . '</h1>';
         echo '<p>' . $subInfoContent . '</p>';
         if (isset($_SESSION['user'])) {
-            //echo '<p><a href="subscription_info_edit.php?id=' . $id . '">Redigera</a></p>';
             echo '<p><a href="dashboard_subscription.php" class="edit">Redigera</a></p>';
         }
-        ?>
-        <p class="subscription-info-text">Fyll i <a href="http://natek.natverkstan.net/nyPrenumerant&52_subject=TGV">detta</a> formulär eller kontakta Nätverkstan via <a href="mailto:ekonomitjanst@natverkstan.net">mail</a>, eller betala in direkt till Plusgiro 182 08 53-8 eller Bankgiro 5582-1631, fyll NOGA i namn, adress och att det gäller Tidskrift för genusvetenskap.</p>
-    <?php
         echo '</section>';
     }
     ?>
@@ -50,13 +46,10 @@ if (!isset($_SESSION)) {
         $priceContent = $priceRow['content'];
         echo '<h1 class="subscription-price-main-title">' . $priceTitle . '</h1>';
         echo '<p>' . $priceContent . '</p>';
-        //if (isset($_SESSION['user'])) {
-        //echo '<p><a href="subscription_price_edit.php?id=' . $id . '">Redigera</a></p>';
         if (isset($_SESSION['user'])) {
             echo '<p><a href="dashboard_subscription.php" class="edit">Redigera</a></p>';
         }
         echo '</section>';
-        //}
     }
     ?>
 </main>

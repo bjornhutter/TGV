@@ -73,14 +73,11 @@ if (!isset($_SESSION)) {
 
     }
     echo '</ul>';
-    ?>
-    <p>Vill du beställa/köpa tidigare nummer/artiklar? Vänd dig till ekonomitjanst@natverkstan.net. Du kan också läsa mer om våra nummer och prenumeration här (lägg in länk!).</p>
-    <?php
     echo '</section>';
 
 ?>
-  <!--  --><?php
-/*    include('includes/db_connect.inc');
+    <?php
+   include('includes/db_connect.inc');
     $contactInfoResult = mysqli_query($link, "SELECT * FROM tgv_contact_info") or die(mysqli_error($link));
 
     echo ' <section class="contact-more-info">';
@@ -96,7 +93,7 @@ if (!isset($_SESSION)) {
     }
     echo '</section>';
 
-    */?>
+    ?>
 <section class="contact-map">
     <div id="map">
         </div>

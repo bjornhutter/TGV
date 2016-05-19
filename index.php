@@ -94,7 +94,7 @@ if (!isset($_SESSION)) {
             echo '<p class="news-date">' . $date . '</p>';
             echo '<p class="news-content">' . nl2br($content) . '</p>';
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard.php">Redigera</a></p>';
+                echo '<p><a href="dashboard.php" class="edit">Redigera</a></p>';
             }
 
             echo '<hr class="hr-news">';

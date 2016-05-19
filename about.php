@@ -63,6 +63,7 @@ if (!isset($_SESSION)) {
             echo '<li class="staff">';
             echo '<img src="uploads/'.$imgName.'" class="staff-img">';
             echo '<h1 class="staff-title">' . $fname . ' ' . $lname . '</h1>';
+            echo '<div class="staff-linebreak"></div>';
             echo '<p class="staff-content">' . $content . '</p>';
             // Lägg in rätt redigera-länk till dashboarden hrä sen
             if (isset($_SESSION['user'])) {
