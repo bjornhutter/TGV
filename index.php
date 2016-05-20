@@ -115,7 +115,6 @@ if (!isset($_SESSION)) {
                 echo '<p><a href="dashboard.php">Redigera</a></p>';
             }
 
-            echo '<a href="http://tegeve.se/newsite/tgv/admin.php" >Redigera inlägg</a>';
             echo '<hr>';
             echo '</div>';
 
