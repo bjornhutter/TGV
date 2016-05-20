@@ -1,4 +1,3 @@
-
 <?php
 require('includes/auth.inc');
 include('includes/db_connect.inc');
