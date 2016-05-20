@@ -13,7 +13,6 @@
           href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
     <script src="js/active_dashnav.js"></script>
 </head>
 <body>
@@ -48,8 +47,8 @@
                         $id = $row ['id'];
 
                         echo '<div class="news-post">';
-                        echo '<p class="news-date">' . $date . '</p>';
                         echo '<h2 class="news-title">' . $title . '</h2>';
+                        echo '<p class="news-date">' . $date . '</p>';
                         echo '<p class="news-content">' . nl2br($content) . '</p>';
                         echo '<p><a href="news_edit.php?id=' . $id . '">Redigera</a></p>';
 
@@ -65,6 +64,7 @@
         </div>
     </div>
 </div>
-
+<script src="js/toggle_nav.js"></script>
+<script src="js/add_toggle.js"></script>
 </body>
 </html>
