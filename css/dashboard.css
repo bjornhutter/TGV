@@ -524,7 +524,10 @@ form textarea {
 .form-input-submit:hover {
     background: #0295af;
 }
-
+.form-link-center-fix {
+    text-align: center;
+    line-height: 60px;
+}
 .logout-inactive {
     background: #fa4650;
     padding: 10px;
