@@ -40,6 +40,8 @@ $imgName = $row['image'];
     <script src="js/active_dashnav.js"></script>
 </head>
 <body>
+
+
 <header class="admin-header">
     <h1 class="header-title">Admin Dashboard</h1>
     <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">

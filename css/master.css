@@ -1,14 +1,64 @@
 body {
-    background: #70bada;
+    background: #f3f3f3;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    line-height: 150%;
+}
+
+a {
+    color: #027b9a;
+}
+
+a:hover {
+    color: #000;
 }
 
 /*** ================= HEADER START =================== ***/
 
 header {
     width: 100%;
-    height: 450px;
+    height: 500px;
     display: block;
     background: #aed4da;
+}
+
+.header-homepage {
+    background: url(../img/header_homepage.jpg) no-repeat center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.header-logo {
+    background: #e07929;
+    width: 43%;
+    margin-top: 6%;
+    position: absolute;
+    padding: 1% 3%;
+}
+
+.header-logo-main-title {
+    color: #FFFFFF;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header-welcome {
+    width: 41%;
+    margin-top: 11%;
+    position: absolute;
+    padding: 1% 3%;
+}
+
+.header-welcome-text {
+    color: #FFF;
+    font-family: 'open sans', sans-serif;
+    font-size: 1.2em;
+    line-height: 150%;
 }
 
 /*** ================= HEADER END =================== ***/
@@ -18,7 +68,7 @@ header {
 nav {
     width: 100%;
     display: block;
-    background: #6677da;
+    background: #252525;
 }
 
 nav ul {
@@ -30,11 +80,13 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
     text-decoration: none;
     padding: 20px;
     display: block;
     white-space: nowrap;
-    color: #000;
+    color: #FFFFFF;
     -webkit-transition: color 200ms;
     -moz-transition: color 200ms;
     -ms-transition: color 200ms;
@@ -43,7 +95,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #32da00;
+    color: #000000;
+    background: #e07929;
 }
 
 nav ul li a:visited {
@@ -71,8 +124,8 @@ nav ul li a:active {
 }
 
 .active {
-    color: #ccda3b;
-    background: #000000;
+    background: rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
 }
 
 /*** ================= NAVIGATION END =================== ***/
@@ -81,11 +134,51 @@ nav ul li a:active {
 
 footer {
     width: 100%;
-    text-align: center;
-    background: #da82d7;
-    padding: 20px 0;
-    display: block;
+    background: #252525;
+    padding: 40px 0;
     float: left;
+    color: #FFF;
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.footer-block {
+    width: auto;
+    margin: 0 0 0 80px;
+    line-height: 150%;
+}
+
+.footer-block-about {
+    width: 26%;
+}
+
+.footer-title {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    padding: 0 0 10px 0;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e07929;
+    text-decoration: none;
 }
 
 /*** ================= FOOTER END =================== ***/
@@ -94,13 +187,13 @@ footer {
 
 .index-main {
     display: inline-block;
-    width: 80%;
+    width: 78%;
     float: left;
 }
 
 .index-aside {
     display: inline-block;
-    width: 20%;
+    width: 22%;
     float: left;
 }
 
@@ -112,26 +205,30 @@ footer {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    padding: 40px 0;
 }
 
 .recent-article-main-title {
-    font-size: 3em;
-    color: #f4f4f4;
-    padding-top: 10px;
+    font-size: 2em;
+    color: #000000;
     text-align: left;
-    padding-left: calc(10% - 39px);
+    padding-left: 9%;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 0 10px 0;
 }
 
 .recent-article {
-    background: #da865a;
-    width: 20%;
+    background: #FFFFFF;
+    width: 26%;
     margin: 20px 10px 20px 10px;
     display: inline-block;
     height: auto;
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
+    padding: 0 0 1% 0;
+    text-align: left;
+    vertical-align: top;
 }
 
 .recent-article-img {
@@ -140,11 +237,86 @@ footer {
 }
 
 .recent-article-title {
-
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 5% 2% 5%;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin: 6% 0 0 0;
 }
 
 .recent-article-content {
+    font-family: 'Open Sans', sans-serif;
+    padding: 2% 5% 2% 5%;
+    font-size: 0.8em;
+    margin: 4% 0 0 0;
+}
 
+.recent-article p {
+    font-family: 'Open Sans', sans-serif;
+    padding: 2% 5% 2% 5%;
+    font-size: 0.8em;
+    line-height: 150%;
+}
+
+.recent-article-btn {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.recent-article-btn:hover {
+    color: #000;
+}
+
+.recent-article-more {
+    background: #FFFFFF;
+    width: 50%;
+    margin: 20px 10px 20px 10px;
+    display: inline-block;
+    height: auto;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 1% 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.recent-article-more-title {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 5% 2% 5%;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin: 4% 0 0 0;
+}
+
+.recent-article-more p {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 5% 2% 5%;
+    font-size: 0.8em;
+    margin: -2px 0 0 0;
+    line-height: 150%;
+}
+
+.article-more-back {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 0 0 5%;
+    font-size: 0.8em;
+    color: #e07929;
+}
+
+.article-more-back:hover {
+    color: #000;
+}
+
+.recent-article-featured {
+    margin: -10px 0 0 0;
 }
 
 /*** ================= RECENT ARTICLES END =================== ***/
@@ -165,40 +337,62 @@ footer {
     text-decoration: none;
 }
 
+.cfp-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+    margin: 10px 0 20px 0;
+}
+
 /*** ================= CALL FOR PAPERS END =================== ***/
 
 /*** ================= NEWSFEED START =================== ***/
 
 .news-feed {
-    height: 750px;
+    height: 550px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
-.news-feed-container {
+.news-post-container {
+
 }
 
 .news-main-title {
-    font-size: 1.4em;
-    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+    margin: 10px 0 20px 0;
 }
 
 .news-date {
-    font-size: 0.6em;
-    padding-top: 30px;
+    font-size: 0.7em;
+    margin: 5px 0 0 0;
 }
 
 .news-title {
-    font-size: 1.1em;
-    margin: 5px 0;
-
+    font-size: 1em;
+    display: block;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 0 5px 0
 }
 
 .news-content {
-    font-size: 0.9em;
+    font-size: 0.8em;
+    margin: 3px 0 10px 0;
 }
 
 .news-post {
+}
+
+.hr-news {
+    background: #e07929;
+    height: 2px;
+    margin: 20px 0 20px 0;
+    border: none;
 }
 
 /*** ================= NEWSFEED END =================== ***/
@@ -206,38 +400,44 @@ footer {
 /*** ================= OM OSS START =================== ***/
 
 .about-staff {
-
+    width: 50%;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
 .about-staff-main-title {
-
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: #000000;
+    text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .staff-wrapper {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background: #70bada;
+    background: #FFF;
+    padding: 40px 0;
 }
 
 .staff-main-title {
-    font-size: 3em;
-    color: #f4f4f4;
-    padding-top: 10px;
+    font-size: 2em;
+    color: #000000;
     text-align: left;
-    padding-left: calc(10% - 39px);
+    padding-left: calc(13% + 1px);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 0 10px 0;
 }
 
 .staff {
-    background: #da865a;
-    width: 20%;
-    margin: 20px 10px 20px 10px;
+    background: #FFFFFF;
+    width: 22.5%;
+    margin: 20px 25px 0px 25px;
     display: inline-block;
     height: auto;
-    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
+    text-align: left;
+    vertical-align: top;
 }
 
 .staff-img {
@@ -246,11 +446,34 @@ footer {
 }
 
 .staff-title {
-
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin: 6% 0 0 0;
 }
 
+/* Kolla vad som är bäst att göra med detta + för index, pga tinyMCE avslutar denna content och sätter in sin egen p istället, dvs den nedanför */
 .staff-content {
+    font-family: 'Open Sans', sans-serif;
+    padding: 2% 5% 2% 5%;
+    font-size: 0.8em;
+    margin: 4% 0 0 0;
+}
 
+.staff p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    line-height: 150%;
+}
+
+.staff-linebreak {
+    background: #e07929;
+    height: 2px;
+    width: 60px;
+    margin: 20px 0 10px 0;
 }
 
 /*** ================= OM OSS END =================== ***/
@@ -260,32 +483,42 @@ footer {
 .price-info-wrapper {
     width: 80%;
     display: block;
-    height: 300px;
     margin: 0 auto;
+    padding: 40px 0 0 0;
 }
 
 .subscription-price {
-    width: calc(100% / 3);
+    width: calc(40% - 4%);
     display: block;
     float: left;
-    height: 300px;
-    background: #ccda3b;
+    padding: 0 0 40px 4%;
+}
+
+.subscription-price-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .subscription-info {
-    width: calc(100% / 3 * 2);
+    width: calc(60% - 4%);
     display: block;
     float: left;
-    height: 300px;
-    background: #666eda;
+    padding: 0 4% 40px 0;
 }
 
-.retailers {
-    width: 100%;
-    height: 300px;
-    display: block;
-    background: #da3873;
-    float: left;
+.subscription-info-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+.subscription-info-text {
+    margin: 17px 0 0 0;
 }
 
 /*** ================= PRENUMERERA END =================== ***/
@@ -293,51 +526,68 @@ footer {
 /*** ================= SKICKA MANUS START =================== ***/
 
 .script-wrapper {
-    width: 80%;
+    width: 100%;
     display: block;
     margin: 0 auto;
+    padding: 40px 0;
 }
 
 .script-info {
-    width: 100%;
+    width: 50%;
     display: block;
-    background: #da3873;
+    background: #F3F3F3;
+    padding: 0 0% 40px 0%;
+    margin: 0 auto;
 }
 
 .script-info-main-title {
-
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .script-reviewers {
     width: 50%;
     display: block;
-    float: left;
-    background: #70bada;
+    background: #FFF;
+    padding: 40px 25% 40px 25%;
 }
 
 .script-reviewers-main-title {
-
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .script-examiner {
     width: 50%;
     display: block;
-    float: left;
-    background: #6677da;
+    background: #f3f3f3;
+    padding: 40px 25% 0px 25%;
 }
 
 .script-examiner-main-title {
-
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .script-form-wrapper {
     width: 100%;
     display: block;
     float: left;
+    padding: 40px 0;
+    background: #FFF;
 }
 
 .script-form-inner-wrapper {
-    width: 50%;
+    width: 35%;
     margin: 0 auto;
 }
 
@@ -351,15 +601,50 @@ footer {
 }
 
 .script-form-li {
-
+    margin: 1% 0 2% 0;
 }
 
 .script-form-input {
-
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+    background: #f3f3f3;
+    border: none;
+    padding: 1% 2%;
 }
 
 .script-form-input-submit {
+    width: 100%;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #FFF;
+    background: #027b9a;
+    border: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+    padding: 10px 0;
+}
 
+.script-form-input-submit:hover {
+    background: #0295af;
+}
+
+.scripts-form-input-attach {
+    margin: 1% 0 0 0;
+    font-family: 'open sans', sans-serif;
+}
+
+.send-script-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+    margin: 0 0 10px 0;
 }
 
 /*** ================= SKICKA MANUS END =================== ***/
@@ -367,18 +652,26 @@ footer {
 /*** ================= KONTAKT START =================== ***/
 
 .contact-wrapper {
-    width: 80%;
-    height: 300px;
+    width: 100%;
+    height: 200px;
     margin: 0 auto;
     display: block;
+    padding: 40px 0;
+}
+
+.contact-info-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    color: #000000;
+    text-align: left;
+    margin: 0 0 10px 0;
 }
 
 .contact-info {
-    width: calc(100% / 3 * 2);
+    width: 40%;
     display: block;
-    float: left;
-    height: 300px;
-    background: #dabf00;
+    background: #f3f3f3;
+    margin: 0 auto;
 }
 
 .contact-info-ul {
@@ -386,20 +679,57 @@ footer {
 }
 
 .contact-info-li {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 150%;
+    font-size: 0.8em;
+    padding: 0px 0 12px 30px;
+    display: inline-block;
+    vertical-align: top;
+}
 
+.contact-info-li:nth-child(2) {
+    background: #F3F3F3 url('../img/location.svg') no-repeat left 2px;
+    background-size: 1.5em;
+    position: relative;
+    margin: 0 15% 0 0;
+}
+
+.contact-info-li:nth-child(3) {
+    background: #F3F3F3 url('../img/phone.svg') no-repeat left 0px;
+    background-size: 1.5em;
+    position: relative;
+    margin: 0 15% 0 0;
+}
+
+.contact-info-li:nth-child(4) {
+    background: #F3F3F3 url('../img/envelop.svg') no-repeat left 0px;
+    background-size: 1.5em;
+    position: relative;
+}
+
+.contact-info-li p {
+    font-size: 1em;
+}
+
+.contact-more-info {
+    width: 40%;
+    display: block;
+    background: #f3f3f3;
+    margin: 10px auto 0;
+    padding: 0 0 40px 0;
 }
 
 .contact-map {
-    width: calc(100% / 3);
+    width: 100%;
     display: block;
     float: left;
-    height: 300px;
-    background: #da2723;
+    height: 400px;
+    background: #f3f3f3;
 }
 
 #map {
     width: 100%;
-    height: 300px;
+    height: 400px;
 }
 
 /*** ================= KONTAKT END =================== ***/
@@ -409,11 +739,17 @@ footer {
 #tabs {
     width: 50%;
     display: block;
-    margin: 20px auto;
+    margin: 0 auto 40px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    border-radius: 0;
+    padding: 0;
 }
 
 #tabs ol {
     padding-left: 10px;
+    font-size: 0.8em;
 }
 
 #tabs ol li {
@@ -422,8 +758,20 @@ footer {
 }
 
 #tabs ol li p {
-
+    font-size: 1em;
 }
+
+.ui-tabs .ui-tabs-nav .ui-corner-top, .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-radius: 0 !important;
+    border: none;
+}
+
+.ui-widget-header {
+    background: #cccccc !important;
+    color: #222222 !important;
+    border: 0px solid !important;
+}
+
 
 /*** ================= TABS END =================== ***/
 
@@ -439,18 +787,22 @@ em {
 ul {
     /* list-style: none; */
 }
+
 /*** ================= WYSIWYG END =================== ***/
+/*** ================= EDIT START =================== ***/
+.edit {
+    background: #027b9a;
+    text-decoration: none;
+    color: #fff !important;
+    padding: 4px 9px;
+    margin: 2px 0;
+    display: block;
+    width: 54px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.edit:hover {
+    background: #0295af;
+    color: #FFF;
+    text-decoration: none;
+}
+/*** ================= EDIT END =================== ***/

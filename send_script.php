@@ -20,9 +20,6 @@ if (!isset($_SESSION)) {
 <body>
 <?php include('includes/db_connect.inc') ?>
 
-<header>
-
-</header>
 <?php include('includes/navigation.inc') ?>
 
 <main class="script-wrapper">
@@ -160,7 +157,7 @@ if (!isset($_SESSION)) {
 
             echo $guidelinesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
         </div>
@@ -200,7 +197,7 @@ if (!isset($_SESSION)) {
 
             echo $formContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
 
@@ -228,7 +225,7 @@ if (!isset($_SESSION)) {
 
             echo $titlesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
         </div>
@@ -252,7 +249,7 @@ if (!isset($_SESSION)) {
 
             echo $quotesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
         </div>
@@ -311,7 +308,7 @@ if (!isset($_SESSION)) {
 
             echo $refContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
             }
             ?>
         </div>
@@ -332,7 +329,7 @@ if (!isset($_SESSION)) {
         if (isset($_SESSION['user'])) {
             //echo '<p><a href="script_reviewers_edit.php?id=' . $scriptRevId . '">Redigera</a></p>';
 
-            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
 
         }
         echo '</section>';
@@ -353,7 +350,7 @@ if (!isset($_SESSION)) {
 
         if (isset($_SESSION['user'])) {
             //echo '<p><a href="script_examiner_edit.php?id=' . $scriptExaminerId . '">Redigera</a></p>';
-            echo '<p><a href="dashboard_send_script.php">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php" class="edit">Redigera</a></p>';
         }
 
         echo '</section>';
@@ -363,37 +360,37 @@ if (!isset($_SESSION)) {
 
 <section class="script-form-wrapper">
     <div class="script-form-inner-wrapper">
+        <h1 class="send-script-main-title">Skicka in manus</h1>
         <form action="" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">
                     <p>Förnamn: </p>
-                    <input type="text" name="fname" placeholder="Förnamn" class="script-form-input" required>
+                    <input type="text" name="fname" class="script-form-input" required>
                 </li>
                 <li class="script-form-li">
                     <p>Efternamn: </p>
-                    <input type="text" name="lname" placeholder="Efternamn" class="script-form-input" required>
+                    <input type="text" name="lname" class="script-form-input" required>
                 </li>
                 <li class="script-form-li">
                     <p>Din emailaddress: </p>
-                    <input type="email" name="email" title="Email" placeholder="Din Email" class="script-form-input"
+                    <input type="email" name="email" title="Email" placeholder="exempel@adress.com" class="script-form-input"
                            required>
                 </li>
                 <li class="script-form-li">
                     <p>Ämne: </p>
-                    <input type="text" name="topic" title="Ämne" placeholder="Ämne" class="script-form-input" required>
-                </li>
-                <li class="script-form-li">
-                    <p>Meddelande: </p>
-                    <textarea name="message" title="Meddelande" rows="10" cols="50"
-                              class="script-form-input"></textarea>
+                    <input type="text" name="topic" title="Ämne" class="script-form-input" required>
                 </li>
                 <li class="script-form-li">
                     <input type="file" name="attachFile" class="scripts-form-input-attach">
                 </li>
                 <li class="script-form-li">
-                    <input type="submit" name="submit" value="Skicka Manus" class="script-form-input-submit">
+                    <p>Meddelande: </p>
+                    <textarea name="message" title="Meddelande" rows="7" cols="50"
+                              class="script-form-input"></textarea>
                 </li>
-
+                <li class="script-form-li">
+                    <input type="submit" name="submit" value="Skicka manus" class="script-form-input-submit">
+                </li>
             </ul>
         </form>
     </div>
