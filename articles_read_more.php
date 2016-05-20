@@ -39,7 +39,7 @@ if (!isset($_GET['id'])) {
         echo '<div class="recent-article">';
         echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
         echo '<h2 class="recent-article-more-title">I detta nummer</h2>';
-        echo '<p class="recent-article-content">' . $featured . '</p>';
+        echo '<p class="recent-article-featured">' . $featured . '</p>';
         //if (isset($_SESSION['user'])) {
         echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
         //}

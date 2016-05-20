@@ -42,7 +42,7 @@ if (!isset($_SESSION)) {
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $title = $row['title'];
-            $content = substr($row['content'], 3, 223);
+            $content = substr($row['content'], 3, 220);
             $imgName = $row['image'];
 
             echo '<li class="recent-article">';
