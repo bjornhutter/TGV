@@ -27,7 +27,7 @@ if (!isset($_SESSION)) {
         <h2 class="header-welcome-text">Välkommen till Nordens största referee-granskade tidskrift för aktuell tvärvetenskaplig genusforskning!</h2>
     </div>
 </header>
-<?php include('includes/navigation.inc') ?>
+<?php include('includes/navigation_index.inc') ?>
 
 <main class="index-main">
     <ul class="recent-article-wrapper">
