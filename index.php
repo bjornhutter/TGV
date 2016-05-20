@@ -111,9 +111,9 @@ if (!isset($_SESSION)) {
             echo '<p class="news-date">' . $date . '</p>';
             echo '<h2 class="news-title">' . $title . '</h2>';
             echo '<p class="news-content">' . nl2br($content) . '</p>';
-            if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard.php">Redigera</a></p>';
-            }
+            //if (isset($_SESSION['user'])) {
+                echo '<p><a href="news_edit.php?id=">Redigera</a></p>';
+            //}
 
             echo '<hr>';
             echo '</div>';
