@@ -79,7 +79,7 @@ if (isset($_POST['delete'])) {
     mysqli_query($link, "UPDATE tgv_recent_articles SET title = '$title', content = '$content', featured = '$featured' WHERE id = '$id'");
 }
 
-header("Location: index.php");
+header("Location: dashboard.php");
 
 ?>
     

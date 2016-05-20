@@ -6,13 +6,13 @@
  * Time: 12:53
  */
 
-function clean_input($input_data)
+/*function clean_input($input_data)
 {
     $input_data = trim($input_data);
     $input_data = stripslashes($input_data);
     $input_data = htmlspecialchars($input_data);
     return $input_data;
-}
+}*/
 
 /*
  * CALL FOR PAPERS
@@ -21,17 +21,36 @@ if (isset($_POST['cfpSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['cfpTitle']);
-    $content = clean_input($_POST['cfpContent']);
+    $title = $_POST['cfpTitle'];
+    $content = $_POST['cfpContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
 
-    echo "Mysqli query here! $title $content";
+    mysqli_query($link, "UPDATE tgv_cfp SET title = '$title', content = '$content' WHERE id = '1'");
 
-    //header('Location: update_home_complete.php');
+    header('Location: update_home_complete.php?update=1');
 
-    //@todo HUR SKA DENNA FUNGERA?
+}
+
+/*
+ * ÅNGRA
+ * CALL FOR PAPERS
+ */
+if (isset($_POST['revertCfpSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    $title = $_POST['oldCfpTitle'];
+    $content = $_POST['oldCfpContent'];
+
+    $title = mysqli_real_escape_string($link, $title);
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_cfp SET title = '$title', content = '$content' WHERE id = '1'");
+
+    header('Location: update_home_complete.php?update=1');
+
 }
 
 /*
@@ -41,8 +60,8 @@ if (isset($_POST['newsSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['newsTitle']);
-    $content = clean_input($_POST['newsContent']);
+    $title = $_POST['newsTitle'];
+    $content = $_POST['newsContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -62,8 +81,8 @@ if (isset($_POST['newNumberSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['newNumberTitle']);
-    $content = clean_input($_POST['newNumberContent']);
+    $title = $_POST['newNumberTitle'];
+    $content = $_POST['newNumberContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -82,8 +101,8 @@ if (isset($_POST['aboutSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['aboutTitle']);
-    $content = clean_input($_POST['aboutContent']);
+    $title = $_POST['aboutTitle'];
+    $content = $_POST['aboutContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -102,8 +121,8 @@ if (isset($_POST['revertAboutSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldAboutTitle']);
-    $content = clean_input($_POST['oldAboutContent']);
+    $title = $_POST['oldAboutTitle'];
+    $content = $_POST['oldAboutContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -120,8 +139,8 @@ if (isset($_POST['staffSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['staffTitle']);
-    $content = clean_input($_POST['staffContent']);
+    $title = $_POST['staffTitle'];
+    $content = $_POST['staffContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -139,8 +158,8 @@ if (isset($_POST['priceSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['priceTitle']);
-    $content = clean_input($_POST['priceContent']);
+    $title = $_POST['priceTitle'];
+    $content = $_POST['priceContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -159,8 +178,8 @@ if (isset($_POST['revertPriceSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldPriceTitle']);
-    $content = clean_input($_POST['oldPriceContent']);
+    $title = $_POST['oldPriceTitle'];
+    $content = $_POST['oldPriceContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -178,8 +197,8 @@ if (isset($_POST['subInfoSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['subInfoTitle']);
-    $content = clean_input($_POST['subInfoContent']);
+    $title = $_POST['subInfoTitle'];
+    $content = $_POST['subInfoContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -197,8 +216,8 @@ if (isset($_POST['revertSubInfoSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldSubInfoTitle']);
-    $content = clean_input($_POST['oldSubInfoContent']);
+    $title = $_POST['oldSubInfoTitle'];
+    $content = $_POST['oldSubInfoContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -216,8 +235,8 @@ if (isset($_POST['guidelinesSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['guidelinesTitle']);
-    $content = clean_input($_POST['guidelinesContent']);
+    $title = $_POST['guidelinesTitle'];
+    $content = $_POST['guidelinesContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -234,8 +253,8 @@ if (isset($_POST['revertGuidelinesSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldGuidelinesTitle']);
-    $content = clean_input($_POST['oldGuidelinesContent']);
+    $title = $_POST['oldGuidelinesTitle'];
+    $content = $_POST['oldGuidelinesContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -251,8 +270,8 @@ if (isset($_POST['formSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['formTitle']);
-    $content = clean_input($_POST['formContent']);
+    $title = $_POST['formTitle'];
+    $content = $_POST['formContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -271,8 +290,8 @@ if (isset($_POST['revertFormSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldFormTitle']);
-    $content = clean_input($_POST['oldFormContent']);
+    $title = $_POST['oldFormTitle'];
+    $content = $_POST['oldFormContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -290,8 +309,8 @@ if (isset($_POST['titlesSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['titlesTitle']);
-    $content = clean_input($_POST['titlesContent']);
+    $title = $_POST['titlesTitle'];
+    $content = $_POST['titlesContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -310,8 +329,8 @@ if (isset($_POST['revertTitlesSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldTitlesTitle']);
-    $content = clean_input($_POST['oldTitlesContent']);
+    $title = $_POST['oldTitlesTitle'];
+    $content = $_POST['oldTitlesContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -329,8 +348,8 @@ if (isset($_POST['quotesSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['quotesTitle']);
-    $content = clean_input($_POST['quotesContent']);
+    $title = $_POST['quotesTitle'];
+    $content = $_POST['quotesContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -348,8 +367,8 @@ if (isset($_POST['revertQuotesSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldQuotesTitle']);
-    $content = clean_input($_POST['oldQuotesContent']);
+    $title = $_POST['oldQuotesTitle'];
+    $content = $_POST['oldQuotesContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -366,8 +385,8 @@ if (isset($_POST['refSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['refTitle']);
-    $content = clean_input($_POST['refContent']);
+    $title = $_POST['refTitle'];
+    $content = $_POST['refContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -385,8 +404,8 @@ if (isset($_POST['revertRefSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldRefTitle']);
-    $content = clean_input($_POST['oldRefContent']);
+    $title = $_POST['oldRefTitle'];
+    $content = $_POST['oldRefContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -403,8 +422,8 @@ if (isset($_POST['scriptRevSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['scriptRevTitle']);
-    $content = clean_input($_POST['scriptRevContent']);
+    $title = $_POST['scriptRevTitle'];
+    $content = $_POST['scriptRevContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -422,8 +441,8 @@ if (isset($_POST['revertScriptRevSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldScriptRevTitle']);
-    $content = clean_input($_POST['oldScriptRevContent']);
+    $title = $_POST['oldScriptRevTitle'];
+    $content = $_POST['oldScriptRevContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -440,8 +459,8 @@ if (isset($_POST['scriptExaminerSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['scriptExaminerTitle']);
-    $content = clean_input($_POST['scriptExaminerContent']);
+    $title = $_POST['scriptExaminerTitle'];
+    $content = $_POST['scriptExaminerContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -459,8 +478,8 @@ if (isset($_POST['revertScriptExaminerSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldScriptExaminerTitle']);
-    $content = clean_input($_POST['oldScriptExaminerContent']);
+    $title = $_POST['oldScriptExaminerTitle'];
+    $content = $_POST['oldScriptExaminerContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -472,16 +491,54 @@ if (isset($_POST['revertScriptExaminerSubmit'])) {
 }
 
 /*
+ * ANVISNINGAR FÖR ARTIKELSKRIBENTER
+ */
+if (isset($_POST['writerGuidelinesSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    $title = $_POST['writerGuidelinesTitle'];
+    $content = $_POST['writerGuidelinesContent'];
+
+    $title = mysqli_real_escape_string($link, $title);
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_writer_guidelines SET title = '$title', content = '$content' WHERE id = '1'");
+
+    header('Location: update_send_script_complete.php?update=8');
+
+}
+/*
+ * ÅNGRA
+ * ANVISNINGAR FÖR ARTIKELSKRIBENTER
+ */
+if (isset($_POST['revertWriterGuidelinesSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    $title = $_POST['oldWriterGuidelinesTitle'];
+    $content = $_POST['oldWriterGuidelinesContent'];
+
+    $title = mysqli_real_escape_string($link, $title);
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_writer_guidelines SET title = '$title', content = '$content' WHERE id = '1'");
+
+    header('Location: update_send_script_complete.php?update=8');
+
+}
+
+/*
  * KONTAKTUPPGIFTER
  */
 if (isset($_POST['contactSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['contactTitle']);
-    $address = clean_input($_POST['contactAddress']);
-    $phone = clean_input($_POST['contactPhone']);
-    $email = clean_input($_POST['contactEmail']);
+    $title = $_POST['contactTitle'];
+    $address = $_POST['contactAddress'];
+    $phone = $_POST['contactPhone'];
+    $email = $_POST['contactEmail'];
 
     $title = mysqli_real_escape_string($link, $title);
     $address = mysqli_real_escape_string($link, $address);
@@ -501,10 +558,10 @@ if (isset($_POST['revertContactSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldContactTitle']);
-    $address = clean_input($_POST['oldContactAddress']);
-    $phone = clean_input($_POST['oldContactPhone']);
-    $email = clean_input($_POST['oldContactEmail']);
+    $title = $_POST['oldContactTitle'];
+    $address = $_POST['oldContactAddress'];
+    $phone = $_POST['oldContactPhone'];
+    $email = $_POST['oldContactEmail'];
 
     $title = mysqli_real_escape_string($link, $title);
     $address = mysqli_real_escape_string($link, $address);
@@ -523,8 +580,8 @@ if (isset($_POST['footerSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['footerTitle']);
-    $content = clean_input($_POST['footerContent']);
+    $title = $_POST['footerTitle'];
+    $content = $_POST['footerContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -542,8 +599,8 @@ if (isset($_POST['revertFooterSubmit'])) {
 
     include('includes/db_connect.inc');
 
-    $title = clean_input($_POST['oldFooterTitle']);
-    $content = clean_input($_POST['oldFooterContent']);
+    $title = $_POST['oldFooterTitle'];
+    $content = $_POST['oldFooterContent'];
 
     $title = mysqli_real_escape_string($link, $title);
     $content = mysqli_real_escape_string($link, $content);
@@ -553,6 +610,45 @@ if (isset($_POST['revertFooterSubmit'])) {
     header('Location: update_contact_complete.php?update=2');
 
 }
+
+/*
+ * KONTAKTINFORMATION
+ */
+if (isset($_POST['contactInfoSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    /*$title = $_POST['contactInfoTitle'];*/
+    $content = $_POST['contactInfoContent'];
+
+    /*$title = mysqli_real_escape_string($link, $title);*/
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_contact_info SET  content = '$content' WHERE id = '1'");
+
+    header('Location: update_contact_complete.php?update=3');
+
+}
+/*
+ * ÅNGRA
+ * KONTAKTINFORMATION
+ */
+if (isset($_POST['revertContactInfoSubmit'])) {
+
+    include('includes/db_connect.inc');
+
+    /*$title = $_POST['oldContactInfoTitle'];*/
+    $content = $_POST['oldContactInfoContent'];
+
+    /*$title = mysqli_real_escape_string($link, $title);*/
+    $content = mysqli_real_escape_string($link, $content);
+
+    mysqli_query($link, "UPDATE tgv_contact_info SET content = '$content' WHERE id = '1'");
+
+    header('Location: update_contact_complete.php?update=3');
+
+}
+
 //todo tabort när vi inte behöver debug
 echo "<tt><pre>";
 

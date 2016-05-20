@@ -8,74 +8,175 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
+              type='text/css'>
         <link rel="stylesheet"
               href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <!--<script src="js/stickynav.js"></script>-->
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({ selector:'textarea', content_css : 'css/tinymce.css'});</script>
+        <script>
+            tinymce.init({
+                selector: 'textarea',
+                toolbar: 'undo redo | bold italic | bullist numlist | link code',
+                menubar: 'file edit view insert tools',
+                plugins: 'link code'
+            });
+        </script>
+        <script src="js/active_dashnav.js"></script>
     </head>
     <body>
-    <?php // include('includes/db_connect.inc') ?>
-    <header>
-        <h1>Admin Dashboard</h1>
-    </header>
-    <?php include('includes/dashboard_nav.inc') ?>
-    <div class="main-outer-wrapper">
-        <main id="main">
-            <form action="dashboard_process.php" method="post">
-                <h1>Hem</h1>
-                <h2>Redigera Call for papers</h2>
-                <ul>
-                    <li>
-                        <p>Titel: </p>
-                        <input type="text" name="cfpTitle" title="Call For Papers Titel">
-                    </li>
-                    <li>
-                        <p>Beskrivning: </p>
-                        <textarea name="cfpContent" title="Call For Papers Beskrivning" rows="10"></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" name="cfpSubmit" value="Spara Ändringar">
-                    </li>
-                </ul>
-            </form>
-            <form action="dashboard_process.php" method="post">
-                <h2>Redigera Nyhetsflöde</h2>
-                <ul>
-                    <li>
-                        <p>Titel: </p>
-                        <input type="text" name="newsTitle" title="Nyhetsflöde Titel">
-                    </li>
-                    <li>
-                        <p>Beskrivning: </p>
-                        <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" name="newsSubmit" value="Spara Ändringar">
-                    </li>
-                </ul>
-            </form>
-            <form action="dashboard_process.php" method="post">
-                <h2>Redigera Senaste nummer</h2>
-                <ul>
-                    <li>
-                        <p>Titel: </p>
-                        <input type="text" name="newNumberTitle" title="Senaste Nummer Titel">
-                    </li>
-                    <li>
-                        <p>Beskrivning: </p>
-                        <textarea name="newNumberContent" title="Senaste Nummer Beskrivning" rows="10"></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" name="newNumberSubmit" value="Spara Ändringar">
-                    </li>
-                </ul>
-            </form>
-        </main>
-    </div>
+    <?php
 
-    <!--todo ta bort om vi inte behöver ajax <script src="js/dashboard_ajax_load_html.js"></script>-->
+    include('includes/db_connect.inc');
+
+    /*
+     * Funktion för att byta ut dubbelcitat mot enkelcitat
+     */
+    function replace_quotes($text)
+    {
+        $text = str_replace('"', "'", $text);
+        return $text;
+    }
+
+    /*
+     * Info om TGV
+     */
+    $cfpResult = mysqli_query($link, "SELECT * FROM tgv_cfp") or die(mysqli_error($link));
+
+    $cfpRow = mysqli_fetch_array($cfpResult);
+
+    $cfpId = $cfpRow['id'];
+    $cfpTitle = replace_quotes($cfpRow['title']);
+    $cfpContent = replace_quotes($cfpRow['content']);
+
+    $_SESSION['cfpTitle'] = replace_quotes($cfpTitle);
+    $_SESSION['cfpContent'] = replace_quotes($cfpContent);
+    ?>
+    <header class="admin-header">
+        <h1 class="header-title">Admin Dashboard</h1>
+        <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
+    </header>
+    <div id="site-wrapper">
+        <div id="site-canvas">
+            <div class="nav-main-wrapper">
+                <?php include('includes/dashboard_nav.inc') ?>
+                <div class="overview-wrapper">
+                    <h1 class="dashboard-title">Hem</h1>
+                    <a href="index.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Hem</a>
+                </div>
+                <div class="main-outer-wrapper">
+                    <main id="main">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Call for papers</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="cfpTitle" title="Call For Papers Titel"
+                                           value="<?php echo $cfpTitle ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
+                                    <textarea name="cfpContent" title="Call For Papers Beskrivning"
+                                              rows="10"><?php echo $cfpContent ?></textarea>
+                                </li>
+                                <li>
+                                    <input type="submit" name="cfpSubmit" value="Spara ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Nyhetsflöde</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="newsTitle" title="Nyhetsflöde Titel">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
+                                    <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
+                                </li>
+                                <li>
+                                    <input type="submit" name="newsSubmit" value="Spara ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <!--<form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Redigera Senaste nummer</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="newNumberTitle" title="Senaste Nummer Titel">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
+                                <textarea name="newNumberContent" title="Senaste Nummer Beskrivning"
+                                          rows="10"></textarea>
+                                </li>
+                                <li>
+                                    <input type="submit" name="newNumberSubmit" value="Spara Ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>-->
+                        <div class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Senaste nummer</h2>
+                            <ul class="recent-article-wrapper">
+                                <!--<h1 class="recent-article-main-title">Senaste nummer</h1>-->
+                                <?php
+                                include('includes/db_connect.inc');
+                                $recentArticlesResult = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error($link));
+                                while ($recentArticlesRow = mysqli_fetch_array($recentArticlesResult)) {
+                                    $recentArticlesId = $recentArticlesRow['id'];
+                                    $recentArticlesTitle = replace_quotes($recentArticlesRow['title']);
+                                    $recentArticlesContent = replace_quotes($recentArticlesRow['content']);
+                                    $recentArticlesImgName = $recentArticlesRow['image'];
+
+                                    echo '<li class="recent-article">';
+                                    echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
+                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
+                                    echo '<p class="recent-article-content">' . $recentArticlesContent . '</p>';
+                                    //if (isset($_SESSION['user'])) {
+                                    echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
+                                    //}
+                                    echo '</li>';
+                                }
+                                ?>
+                            </ul>
+                            <h2 id="add-toggle" class="add-toggle-icon-plus">Lägg till nummer</h2>
+                            <form action="recent_articles_process.php" method="post" enctype="multipart/form-data" id="add-article">
+                                <ul>
+                                    <li>
+                                        <p class="dashboard-first-form-title">Titel: </p>
+                                        <input type="text" name="title" id="title" title="Senaste nummer titel"
+                                               required>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">Beskrivning: </p>
+                                    <textarea name="content" id="content"
+                                              title="Senaste nummer beskrivning"></textarea>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">Bild: </p>
+                                        <input type="file" name="fileToUpload" id="fileToUpload" required>
+                                    </li>
+                                    <li>
+                                        <input type="submit" value="Lägg till nummer" name="submit"
+                                               class="form-input-submit">
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/toggle_nav.js"></script>
+    <script src="js/add_toggle.js"></script>
     </body>
     </html>
 <?php ob_end_flush(); ?>

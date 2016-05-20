@@ -52,22 +52,22 @@ if (!isset($_SESSION)) {
         <h1 class="staff-main-title">Om redaktionen</h1>
         <?php
         include('includes/db_connect.inc');
-        $result = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
-        while ($row = mysqli_fetch_array($result)) {
-            $id = $row['id'];
-            $content = $row['content'];
-            $fname = $row['fname'];
-            $lname = $row['lname'];
-            $imgName = $row['image'];
-            
+        $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
+        while ($staffRow = mysqli_fetch_array($staffResult)) {
+            $staffId = $staffRow['id'];
+            $staffContent = $staffRow['content'];
+            $staffFname = $staffRow['fname'];
+            $staffLname = $staffRow['lname'];
+            $staffImgName = $staffRow['image'];
+
             echo '<li class="staff">';
-            echo '<img src="uploads/'.$imgName.'" class="staff-img">';
-            echo '<h1 class="staff-title">' . $fname . ' ' . $lname . '</h1>';
+            echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
+            echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
             echo '<div class="staff-linebreak"></div>';
-            echo '<p class="staff-content">' . $content . '</p>';
-            // Lägg in rätt redigera-länk till dashboarden hrä sen
+            echo '<p class="staff-content">' . $staffContent . '</p>';
+            // Lägg in rätt länk till dashboarden här under
             if (isset($_SESSION['user'])) {
-            echo '<p><a href="about_editors_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
+            echo '<p><a href="about_editors_edit.php?id=' . $staffId . '" class="edit">Redigera</a></p>';
             }
             echo '</li>';
         }

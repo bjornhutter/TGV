@@ -68,10 +68,10 @@ if (isset($_POST['login_submit'])) {
             $passwordErrField = "* Fel lösenord";
             echo '<style type="text/css">
             #password {
-                border: 1px solid rgba(255, 35, 50, 1);
-                -webkit-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
-                -moz-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
-                box-shadow: 0 0 2px rgba(255, 35, 50, 1);
+                border: 1px solid rgba(250, 70, 80, 1);
+                -webkit-box-shadow: 0 0 2px rgba(250, 70, 80, 1);
+                -moz-box-shadow: 0 0 2px rgba(250, 70, 80, 1);
+                box-shadow: 0 0 2px rgba(250, 70, 80, 1);
             }
             #logout {
                 display: none;
@@ -87,10 +87,10 @@ if (isset($_POST['login_submit'])) {
         $userErrField = "* Fel användarnamn";
         echo '<style type="text/css">
         #user {
-            border: 1px solid rgba(255, 35, 50, 1);
-            -webkit-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
-            -moz-box-shadow: 0 0 2px rgba(255, 35, 50, 1);
-            box-shadow: 0 0 2px rgba(255, 35, 50, 1);
+            border: 1px solid rgba(250, 70, 80, 1);
+            -webkit-box-shadow: 0 0 2px rgba(250, 70, 80, 1);
+            -moz-box-shadow: 0 0 2px rgba(250, 70, 80, 1);
+            box-shadow: 0 0 2px rgba(250, 70, 80, 1);
         }
         #logout {
             display: none;

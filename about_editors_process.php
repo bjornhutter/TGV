@@ -9,7 +9,7 @@ $uploadOk = 1;
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 
 // Check if image file is a actual image or fake image
-if (isset($_POST["submit"])) {
+if (isset($_POST["addStaffSubmit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if ($check !== false) {
         echo "File is an image - " . $check["mime"] . ".";
@@ -60,10 +60,10 @@ if ($uploadOk == 0) {
     $lname = $_POST['lname'];
     $content = $_POST['content'];
 
-    mysqli_query($link, "INSERT INTO tgv_about_editors (fname, lname, content, image) VALUES ('$fname', '$lname', '$content', '$new_filename')") or die(mysqli_error());
+    mysqli_query($link, "INSERT INTO tgv_staff (fname, lname, content, image) VALUES ('$fname', '$lname', '$content', '$new_filename')") or die(mysqli_error($link));
 
 }
 
-header('Location: about.php')
+header('Location: dashboard_about.php')
 
 ?>

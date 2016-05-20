@@ -4,12 +4,12 @@ include('includes/db_connect.inc');
 $id = $_POST['id'];
 
 if (isset($_POST['delete'])) {
-    $result = mysqli_query($link, "SELECT * FROM tgv_about_editors WHERE id = '$id'");
+    $result = mysqli_query($link, "SELECT * FROM tgv_staff WHERE id = '$id'");
     $row = mysqli_fetch_array($result);
     $image = 'uploads/' . $row['image'];
     unlink($image);
 
-    mysqli_query($link, "DELETE FROM tgv_about_editors WHERE id = '$id'");
+    mysqli_query($link, "DELETE FROM tgv_staff WHERE id = '$id'");
 } elseif (isset($_POST['save'])) {
 
     // Process för bilden
@@ -23,7 +23,7 @@ if (isset($_POST['delete'])) {
     if (isset($_POST["save"])) {
         $check = getimagesize($_FILES["newfileToUpload"]["tmp_name"]);
         if ($check !== false) {
-            $result = mysqli_query($link, "SELECT image FROM tgv_about_editors WHERE id = '$id'");
+            $result = mysqli_query($link, "SELECT image FROM tgv_staff WHERE id = '$id'");
             $row = mysqli_fetch_array($result);
             $image = 'uploads/' . $row['image'];
             unlink($image);
@@ -70,15 +70,15 @@ if (isset($_POST['delete'])) {
     } else {
         chmod("uploads/$new_filename", 0755);
 
-        mysqli_query($link, "UPDATE tgv_about_editors SET image = '$new_filename' WHERE id = '$id'") or die(mysqli_error($link));
+        mysqli_query($link, "UPDATE tgv_staff SET image = '$new_filename' WHERE id = '$id'") or die(mysqli_error($link));
 
     }
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $content = $_POST['content'];
-    mysqli_query($link, "UPDATE tgv_about_editors SET fname = '$fname', lname = '$lname', content = '$content' WHERE id = '$id'");
+    mysqli_query($link, "UPDATE tgv_staff SET fname = '$fname', lname = '$lname', content = '$content' WHERE id = '$id'");
 }
 
-header("Location: about.php");
+header("Location: dashboard_about.php");
 
 ?>

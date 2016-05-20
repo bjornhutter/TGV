@@ -1,4 +1,5 @@
 <?php
+
 //Todo rensa bort onödig data
 //$host = "localhost";
 //$user = "root";

@@ -28,14 +28,17 @@ if (!isset($_SESSION)) {
     </div>
 </header>
 <?php include('includes/navigation.inc') ?>
+
 <main class="index-main">
     <ul class="recent-article-wrapper">
+
 <!--        Fixa något med diven under, nu finns den för att man ska kunna länka tillbaka från läsmer-->
         <div id="recent"></div> 
         <h1 class="recent-article-main-title">Senaste nummer</h1>
         <?php
        include('includes/db_connect.inc');
-        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles LIMIT 3") or die(mysqli_error());
+        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles LIMIT 3") or die(mysqli_error($link));
+
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $title = $row['title'];

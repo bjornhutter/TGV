@@ -13,12 +13,29 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>tinymce.init({ selector:'textarea', content_css : 'css/tinymce.css'});</script>
+        <script>
+            tinymce.init({
+                selector: 'textarea',
+                toolbar: 'undo redo | bold italic | bullist numlist | link code',
+                menubar: 'file edit view insert tools',
+                plugins: 'link code'
+            });
+        </script>
+        <script src="js/active_dashnav.js"></script>
     </head>
     <body>
     <?php
 
     include('includes/db_connect.inc');
+
+    /*
+     * Funktion för att byta ut dubbelcitat mot enkelcitat
+     */
+    function replace_quotes($text)
+    {
+        $text = str_replace('"', "'", $text);
+        return $text;
+    }
 
     /*
      * Kontaktuppgifter
@@ -28,16 +45,28 @@
     $contactRow = mysqli_fetch_array($contactResult);
 
     $contactId = $contactRow['id'];
-    $contactTitle = $contactRow['title'];
-    $contactAddress = $contactRow['address'];
-    $contactPhone = $contactRow['phone'];
-    $contactEmail = $contactRow['email'];
+    $contactTitle = replace_quotes($contactRow['title']);
+    $contactAddress = replace_quotes($contactRow['address']);
+    $contactPhone = replace_quotes($contactRow['phone']);
+    $contactEmail = replace_quotes($contactRow['email']);
 
-    $_SESSION['contactTitle'] = $contactTitle;
-    $_SESSION['contactAddress'] = $contactAddress;
-    $_SESSION['contactPhone'] = $contactPhone;
-    $_SESSION['contactEmail'] = $contactEmail;
+    $_SESSION['contactTitle'] = replace_quotes($contactTitle);
+    $_SESSION['contactAddress'] = replace_quotes($contactAddress);
+    $_SESSION['contactPhone'] = replace_quotes($contactPhone);
+    $_SESSION['contactEmail'] = replace_quotes($contactEmail);
 
+    /*
+     * Kontaktinformation
+     */
+
+    $contactInfoResult = mysqli_query($link, "SELECT * FROM tgv_contact_info") or die(mysqli_error($link));
+
+    $contactInfoRow = mysqli_fetch_array($contactInfoResult);
+
+    $contactInfoId = $contactInfoRow['id'];
+    $contactInfoContent = replace_quotes($contactInfoRow['content']);
+
+    $_SESSION['contactInfoContent'] = replace_quotes($contactInfoContent);
 
     /*
      * Footer
@@ -47,69 +76,96 @@
     $footerRow = mysqli_fetch_array($footerResult);
 
     $footerId = $footerRow['id'];
-    $footerTitle = $footerRow['title'];
-    $footerContent = $footerRow['content'];
+    $footerTitle = replace_quotes($footerRow['title']);
+    $footerContent = replace_quotes($footerRow['content']);
 
-    $_SESSION['footerTitle'] = $footerTitle;
-    $_SESSION['footerContent'] = $footerContent;
+    $_SESSION['footerTitle'] = replace_quotes($footerTitle);
+    $_SESSION['footerContent'] = replace_quotes($footerContent);
 
     ?>
-    <header>
-        <h1>Admin Dashboard</h1>
+    <header class="admin-header">
+        <h1 class="header-title">Admin Dashboard</h1>
+        <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
     </header>
-    <?php include('includes/dashboard_nav.inc') ?>
-    <div class="main-outer-wrapper">
-        <main id="main">
-            <form action="dashboard_process.php" method="post">
-                <h1>Kontakt</h1>
-                <h2>Redigera Kontaktuppgifter</h2>
-                <ul>
-                    <li>
-                        <p>Titel: </p>
-                        <input type="text" name="contactTitle" title="Kontaktuppgifter Titel"
-                               value="<?php echo $contactTitle; ?>">
-                    </li>
-                    <li>
-                        <p>Address: </p>
-                        <input type="text" name="contactAddress" title="Kontaktuppgifter Adress"
-                               value="<?php echo $contactAddress; ?>">
-                    </li>
-                    <li>
-                        <p>Telefon: </p>
-                        <input type="text" name="contactPhone" title="Kontaktuppgifter Telefon"
-                               value="<?php echo $contactPhone; ?>">
-                    </li>
-                    <li>
-                        <p>Email: </p>
-                        <input type="text" name="contactEmail" title="Kontaktuppgifter Email"
-                               value="<?php echo $contactEmail; ?>">
-                    </li>
-                    <li>
-                        <input type="submit" name="contactSubmit" value="Spara Ändringar">
-                    </li>
-                </ul>
-            </form>
-            <form action="dashboard_process.php" method="post">
-                <h2>Redigera Footer</h2>
-                <ul>
-                    <li>
-                        <p>Titel: </p>
-                        <input type="text" name="footerTitle" title="Footer Titel" value="<?php echo $footerTitle; ?>">
-                    </li>
-                    <li>
-                        <p>Beskrivning: </p>
+    <div id="site-wrapper">
+        <div id="site-canvas">
+            <div class="nav-main-wrapper">
+                <?php include('includes/dashboard_nav.inc') ?>
+                <div class="overview-wrapper">
+                    <h1 class="dashboard-title">Kontakt</h1>
+                    <a href="contact.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till
+                        Kontakt</a>
+                </div>
+                <div class="main-outer-wrapper">
+                    <main id="main">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Kontaktuppgifter</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="contactTitle" title="Kontaktuppgifter Titel"
+                                           value="<?php echo $contactTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Address: </p>
+                                    <textarea name="contactAddress"
+                                              title="Kontaktuppgifter Adress"><?php echo $contactAddress; ?></textarea>
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Telefon: </p>
+                                    <input type="text" name="contactPhone" title="Kontaktuppgifter Telefon"
+                                           value="<?php echo $contactPhone; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Email: </p>
+                                    <input type="text" name="contactEmail" title="Kontaktuppgifter Email"
+                                           value="<?php echo $contactEmail; ?>">
+                                </li>
+                                <li>
+                                    <input type="submit" name="contactSubmit" value="Spara ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Kontaktinformation</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Beskrivning: </p>
+                    <textarea name="contactInfoContent" title="Kontaktinformation Beskrivning"
+                              rows="10"><?php echo $contactInfoContent; ?></textarea>
+                                </li>
+                                <li>
+                                    <input type="submit" name="contactInfoSubmit" value="Spara ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                            <h2 class="dashboard-sub-title">Footer</h2>
+                            <ul>
+                                <li>
+                                    <p class="dashboard-first-form-title">Titel: </p>
+                                    <input type="text" name="footerTitle" title="Footer Titel"
+                                           value="<?php echo $footerTitle; ?>">
+                                </li>
+                                <li>
+                                    <p class="dashboard-form-title">Beskrivning: </p>
                     <textarea name="footerContent" title="Footer Beskrivning"
                               rows="10"><?php echo $footerContent; ?></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" name="footerSubmit" value="Spara Ändringar">
-                    </li>
-                </ul>
-            </form>
-        </main>
+                                </li>
+                                <li>
+                                    <input type="submit" name="footerSubmit" value="Spara ändringar"
+                                           class="form-input-submit">
+                                </li>
+                            </ul>
+                        </form>
+                    </main>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!--todo ta bort om vi inte behöver ajax <script src="js/dashboard_ajax_load_html.js"></script>-->
+    <script src="js/toggle_nav.js"></script>
     </body>
     </html>
 <?php ob_end_flush(); ?>
