@@ -49,7 +49,6 @@ if (!isset($_SESSION)) {
             echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
             echo '<p class="recent-article-content">' . $content . '... <a class="recent-article-btn" href="articles_read_more.php?id='.$id.'">[Läs mer]</a></p>';
-            //FIXA RÄTT LÄNK FÖR REDIGERING
             if (isset($_SESSION['user'])) {
             echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
             }
@@ -74,7 +73,7 @@ if (!isset($_SESSION)) {
     echo '<p>' . $cfpContent . '</p>';
 
     if (isset($_SESSION['user'])) {
-        echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
+        echo '<p><a href="dashboard.php" class="edit">Redigera</a></p>';
     }
     echo '</section>';
 
