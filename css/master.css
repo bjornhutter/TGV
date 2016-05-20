@@ -261,14 +261,13 @@ footer a:hover {
     font-family: 'Open Sans', sans-serif;
     padding: 2% 5% 2% 5%;
     font-size: 0.8em;
-    margin: 4% 0 0 0;
     line-height: 150%;
 }
 
 .recent-article-btn {
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .recent-article-btn:hover {

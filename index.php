@@ -37,12 +37,12 @@ if (!isset($_SESSION)) {
         <h1 class="recent-article-main-title">Senaste nummer</h1>
         <?php
        include('includes/db_connect.inc');
-        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles LIMIT 3") or die(mysqli_error($link));
+        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles ORDER BY date DESC LIMIT 3") or die(mysqli_error($link));
 
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $title = $row['title'];
-            $content = substr($row['content'], 3, 220);
+            $content = substr($row['content'], 3, 223);
             $imgName = $row['image'];
 
             echo '<li class="recent-article">';
