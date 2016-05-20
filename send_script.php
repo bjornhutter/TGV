@@ -360,8 +360,8 @@ if (!isset($_SESSION)) {
 
 <section class="script-form-wrapper">
     <div class="script-form-inner-wrapper">
+        <form enctype="multipart/form-data" action="send_script_process.php" method="post" class="script-form">
         <h1 class="send-script-main-title">Skicka in manus</h1>
-        <form action="" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">
                     <p>Förnamn: </p>
@@ -373,7 +373,7 @@ if (!isset($_SESSION)) {
                 </li>
                 <li class="script-form-li">
                     <p>Din emailaddress: </p>
-                    <input type="email" name="email" title="Email" placeholder="exempel@adress.com" class="script-form-input"
+                    <input type="email" name="from" title="Email" placeholder="exempel@adress.com" class="script-form-input"
                            required>
                 </li>
                 <li class="script-form-li">
@@ -385,7 +385,7 @@ if (!isset($_SESSION)) {
                 </li>
                 <li class="script-form-li">
                     <p>Meddelande: </p>
-                    <textarea name="message" title="Meddelande" rows="7" cols="50"
+                    <textarea name="emailMessage" title="Meddelande" rows="7" cols="50"
                               class="script-form-input"></textarea>
                 </li>
                 <li class="script-form-li">

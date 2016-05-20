@@ -87,7 +87,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="news_create.php" method="post" class="dashboard-form">
                             <h2 class="dashboard-sub-title">Nyhetsflöde</h2>
                             <ul>
                                 <li>
@@ -99,7 +99,12 @@
                                     <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" name="newsSubmit" value="Spara ändringar"
+                                    <a href="news_posts.php" class="form-link-textdec-fix"><p
+                                            class="form-input-submit form-link-center-fix">Visa alla nyheter
+                                        </p></a>
+                                </li>
+                                <li>
+                                    <input type="submit" name="newsSubmit" value="Skapa inlägg"
                                            class="form-input-submit">
                                 </li>
                             </ul>

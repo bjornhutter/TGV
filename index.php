@@ -100,6 +100,7 @@ if (!isset($_SESSION)) {
             echo '<h2 class="news-title">' . $title . '</h2>';
             echo '<p class="news-date">' . $date . '</p>';
             echo '<p class="news-content">' . nl2br($content) . '</p>';
+
             if (isset($_SESSION['user'])) {
                 echo '<p><a href="dashboard.php" class="edit">Redigera</a></p>';
             }

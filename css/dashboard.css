@@ -650,6 +650,16 @@ form textarea {
     background: #0295af;
 }
 
+.form-link-center-fix {
+    text-align: center;
+    line-height: 60px;
+}
+
+.form-link-textdec-fix {
+    text-decoration: none;
+
+}
+
 .logout-inactive {
     background: #fa4650;
     padding: 10px;
