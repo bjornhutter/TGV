@@ -70,6 +70,11 @@ $imgName = $row['image'];
                                           title="Beskrivning"><?php echo $content ?></textarea>
                             </li>
                             <li>
+                                <p class="dashboard-form-title">I detta nummer: </p>
+                                <textarea name="featured" id="featured"
+                                          title="I detta nummer"><?php echo $featured ?></textarea>
+                            </li>
+                            <li>
                                 <p class="dashboard-form-title">Ladda upp en ny bild (välj ingen fil, om du önskar ha
                                     kvar samma): </p>
                                 <input type="file" name="newfileToUpload" id="newfileToUpload">

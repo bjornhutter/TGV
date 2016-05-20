@@ -128,26 +128,33 @@
                                 <!--<h1 class="recent-article-main-title">Senaste nummer</h1>-->
                                 <?php
                                 include('includes/db_connect.inc');
-                                $recentArticlesResult = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error($link));
+                                $recentArticlesResult = mysqli_query($link, "SELECT * FROM tgv_recent_articles ORDER BY DATE DESC LIMIT 1") or die(mysqli_error($link));
                                 while ($recentArticlesRow = mysqli_fetch_array($recentArticlesResult)) {
                                     $recentArticlesId = $recentArticlesRow['id'];
                                     $recentArticlesTitle = replace_quotes($recentArticlesRow['title']);
                                     $recentArticlesContent = replace_quotes($recentArticlesRow['content']);
+                                    $recentArticlesFeatured = replace_quotes($recentArticlesRow['featured']);
                                     $recentArticlesImgName = $recentArticlesRow['image'];
 
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
                                     echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
                                     echo '<p class="recent-article-content">' . $recentArticlesContent . '</p>';
+                                    echo '<p class="recent-article-content">' . $recentArticlesFeatured . '</p>';
+
                                     //if (isset($_SESSION['user'])) {
                                     echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
+
+                                    echo '<a href="recent_articles.php">Visa alla nummer</a>';
+
                                     //}
                                     echo '</li>';
                                 }
                                 ?>
                             </ul>
                             <h2 id="add-toggle" class="add-toggle-icon-plus">Lägg till nummer</h2>
-                            <form action="recent_articles_process.php" method="post" enctype="multipart/form-data" id="add-article">
+                            <form action="recent_articles_process.php" method="post" enctype="multipart/form-data"
+                                  id="add-article">
                                 <ul>
                                     <li>
                                         <p class="dashboard-first-form-title">Titel: </p>
@@ -158,6 +165,11 @@
                                         <p class="dashboard-form-title">Beskrivning: </p>
                                     <textarea name="content" id="content"
                                               title="Senaste nummer beskrivning"></textarea>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">I detta nummer: </p>
+                                <textarea name="featured" id="featured"
+                                          title="I detta nummer"></textarea>
                                     </li>
                                     <li>
                                         <p class="dashboard-form-title">Bild: </p>
