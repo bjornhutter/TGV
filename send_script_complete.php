@@ -12,9 +12,6 @@
     <script src="js/stickynav.js"></script>
 </head>
 <body>
-<header>
-
-</header>
 <main>
     <section class="email-sent-container">
         <ul>
