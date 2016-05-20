@@ -10,6 +10,8 @@ if (isset($_POST['newsSubmit'])) {
     $newsContent = $_POST['content'];
 
     mysqli_query($link, "UPDATE tgv_news SET title = '$newsTitle', content = '$newsContent' WHERE id = '$id'");
+} elseif (isset($_POST['newsDelete'])) {
+    mysqli_query($link, "DELETE FROM tgv_news WHERE id = '$id'");
 }
 
-header("Location: dashboard.php"); 
+header("Location: news_posts.php"); 
