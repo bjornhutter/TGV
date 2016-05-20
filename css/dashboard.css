@@ -470,8 +470,7 @@ form {
 
 .edit:hover,
 .show-all:hover,
-.back-to-top-btn:hover
-{
+.back-to-top-btn:hover {
     background: #0295af;
 }
 
@@ -846,7 +845,6 @@ form textarea {
     background: #ff7277;
 }
 
-
 .staff {
     margin-bottom: 20px;
     background: #ffffff;
@@ -1132,5 +1130,145 @@ p {
 
 /*** ================= RESPONSIVE START =================== ***/
 
+@media screen and (max-width: 1467px) {
+
+    .dashboard-form-full {
+        width: calc(80% - 80px);
+        min-width: 500px;
+    }
+
+    .dashboard-form {
+        width: calc(80% - 80px);
+        min-width: 500px;
+        float: none;
+        /*background: #ffffff;
+        padding: 20px;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        margin: 20px 20px 20px 20px;*/
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .dashboard-form {
+        width: calc(100% - 80px);
+        min-width: 500px;
+    }
+
+    .dashboard-form-full {
+        width: calc(100% - 80px);
+        min-width: 500px;
+    }
+
+    .old-container {
+        float: none;
+        width: calc(100% - 40px);
+        margin: 20px auto;
+    }
+
+    .new-container {
+        float: none;
+        width: calc(100% - 40px);
+        margin: 20px auto;
+
+    }
+}
+
+@media screen and (max-width: 769px) {
+
+    .main-outer-wrapper {
+        width: 100%;
+    }
+
+    .main-outer-wrapper-update-success {
+        width: 100%;
+    }
+
+    .dashboard-form {
+        width: calc(100% - 80px);
+        min-width: 200px;
+    }
+
+    .dashboard-form-full {
+        width: calc(100% - 80px);
+        min-width: 200px;
+    }
+
+    .old-container {
+
+    }
+
+    .new-container {
+
+    }
+
+    .header-title {
+        font-size: 1.6em;
+        white-space: nowrap;
+    }
+
+    .update-success-header-title {
+        font-size: 1.6em;
+        white-space: nowrap;
+    }
+
+    .dashboard-title {
+        /*font-size: 2em;*/
+        text-align: center;
+    }
+
+    .overview-wrapper {
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 569px) {
+    .update-success-header-title {
+        font-size: 1.5em;
+        padding-left: 30px;
+    }
+
+    .dashboard-title {
+        font-size: 1.5em;
+    }
+
+    .dashboard-sub-title {
+        font-size: 1.5em;
+    }
+
+    .new-container-header h2,
+    .old-container-header h2 {
+        font-size: 1.5em;
+
+    }
+
+    .old-title {
+        font-size: 1.15em;
+    }
+
+    .new-title {
+        font-size: 1.15em;
+
+    }
+
+    .header-title {
+        font-size: 1.5em;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 381px) {
+    .header-title {
+        padding-left: 50px;
+
+    }
+}
 
 /*** ================= RESPONSIVE END =================== ***/
