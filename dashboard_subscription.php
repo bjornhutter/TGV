@@ -20,7 +20,8 @@
                 menubar: 'file edit view insert tools',
                 plugins: 'link code'
             });
-        </script>        <script src="js/active_dashnav.js"></script>
+        </script>        
+        <script src="js/active_dashnav.js"></script>
     </head>
     <body>
     <?php

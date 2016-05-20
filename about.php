@@ -20,9 +20,6 @@ if (!isset($_SESSION)) {
 </head>
 <body>
 
-<header>
-
-</header>
 <?php include('includes/navigation.inc') ?>
 
 <main>
@@ -44,33 +41,15 @@ if (!isset($_SESSION)) {
         if (isset($_SESSION['user'])) {
             //echo '<p><a href="about_staff_edit.php?id=' . $aboutId . '">Redigera</a></p>';
 
-            echo '<p><a href="dashboard_about.php">Redigera</a></p>';
+            echo '<p><a href="dashboard_about.php" class="edit">Redigera</a></p>';
 
         }
         echo '</section>';
     }
     ?>
     <!--kanske lägga till section för staff här under? -->
-    <h1 class="staff-main-title">Om oss</h1>
     <ul class="staff-wrapper">
-        <!--
-                <li class="staff">
-                    <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
-                    <h1 class="staff-title">Här ligger en title</h1>
-                    <p class="staff-content">Här ligger en personal begravd</p>
-                </li>
-                <li class="staff">
-                    <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
-                    <h1 class="staff-title">Här ligger en title</h1>
-                    <p class="staff-content">Här ligger en personal begravd</p>
-                </li>
-                <li class="staff">
-                    <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="staff-img">
-                    <h1 class="staff-title">Här ligger en title</h1>
-                    <p class="staff-content">Här ligger en personal begravd</p>
-                </li>
-
-        <h1 class="staff-main-title">Om oss</h1>-->
+        <h1 class="staff-main-title">Om redaktionen</h1>
         <?php
         include('includes/db_connect.inc');
         $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
@@ -84,10 +63,12 @@ if (!isset($_SESSION)) {
             echo '<li class="staff">';
             echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
             echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+            echo '<div class="staff-linebreak"></div>';
             echo '<p class="staff-content">' . $staffContent . '</p>';
-            //if (isset($_SESSION['user'])) {
-            echo '<p><a href="about_editors_edit.php?id=' . $staffId . '">Redigera</a></p>';
-            //}
+            // Lägg in rätt länk till dashboarden här under
+            if (isset($_SESSION['user'])) {
+            echo '<p><a href="about_editors_edit.php?id=' . $staffId . '" class="edit">Redigera</a></p>';
+            }
             echo '</li>';
         }
         ?>

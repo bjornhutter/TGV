@@ -128,24 +128,32 @@
                             </ul>
                         </form>-->
                         <div class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Senaste nummer</h2>
+                            <a href="recent_articles.php" class="show-all">Visa alla nummer</a>
+                            <h2 class="dashboard-sub-title-no-padding-top">Senaste nummer</h2>
                             <ul class="recent-article-wrapper">
                                 <!--<h1 class="recent-article-main-title">Senaste nummer</h1>-->
                                 <?php
                                 include('includes/db_connect.inc');
-                                $recentArticlesResult = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error($link));
+                                $recentArticlesResult = mysqli_query($link, "SELECT * FROM tgv_recent_articles ORDER BY DATE DESC LIMIT 1") or die(mysqli_error($link));
                                 while ($recentArticlesRow = mysqli_fetch_array($recentArticlesResult)) {
                                     $recentArticlesId = $recentArticlesRow['id'];
                                     $recentArticlesTitle = replace_quotes($recentArticlesRow['title']);
                                     $recentArticlesContent = replace_quotes($recentArticlesRow['content']);
+                                    $recentArticlesFeatured = replace_quotes($recentArticlesRow['featured']);
                                     $recentArticlesImgName = $recentArticlesRow['image'];
-
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
+                                    echo '<div class="recent-article-button-wrapper">';
+                                    echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
+                                    echo '</div>';
                                     echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
-                                    echo '<p class="recent-article-content">' . $recentArticlesContent . '</p>';
+                                    echo $recentArticlesContent;
+                                    echo $recentArticlesFeatured;
+
                                     //if (isset($_SESSION['user'])) {
-                                    echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
+                                    //echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
+
+
                                     //}
                                     echo '</li>';
                                 }
@@ -164,6 +172,11 @@
                                         <p class="dashboard-form-title">Beskrivning: </p>
                                     <textarea name="content" id="content"
                                               title="Senaste nummer beskrivning"></textarea>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">I detta nummer: </p>
+                                <textarea name="featured" id="featured"
+                                          title="I detta nummer"></textarea>
                                     </li>
                                     <li>
                                         <p class="dashboard-form-title">Bild: </p>

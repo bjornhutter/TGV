@@ -36,7 +36,7 @@ $email = $row['email'];
 <form action="contact_edit_process.php" method="post">
     <ul>
         <li>
-            <textarea name="title" id="title"><?php echo $title ?></textarea>
+            <input type="text" name="title" id="title" value="<?php echo $title ?>">
         </li>
         <li>
             <textarea name="adress" id="adress"><?php echo $adress ?></textarea>

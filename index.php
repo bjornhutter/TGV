@@ -19,77 +19,66 @@ if (!isset($_SESSION)) {
 </head>
 <body>
 
-<header>
-
+<header class="header-homepage">
+    <div class="header-logo">
+        <h1 class="header-logo-main-title">Tidsskrift för genusvetenskap</h1>
+    </div>
+    <div class="header-welcome">
+        <h2 class="header-welcome-text">Välkommen till Nordens största referee-granskade tidskrift för aktuell tvärvetenskaplig genusforskning!</h2>
+    </div>
 </header>
 <?php include('includes/navigation.inc') ?>
 
-<!--
 <main class="index-main">
-    <h1 class="recent-article-main-title">Senaste nummer</h1>
     <ul class="recent-article-wrapper">
-        <li class="recent-article">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
-            <h1 class="recent-article-title">Här ligger en title</h1>
-            <p class="recent-article-content">Här ligger en hund begravd</p>
-        </li>
-        <li class="recent-article">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
-            <h1 class="recent-article-title">Här ligger en title</h1>
-            <p class="recent-article-content">Här ligger en hund begravd</p>
-        </li>
-        <li class="recent-article">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
-            <h1 class="recent-article-title">Här ligger en title</h1>
-            <p class="recent-article-content">Här ligger en hund begravd</p>
-        </li>
-        <li class="recent-article">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
-            <h1 class="recent-article-title">Här ligger en title</h1>
-            <p class="recent-article-content">Här ligger en hund begravd</p>
-        </li>
--->
-<main>
-    <ul class="recent-article-wrapper">
+
+<!--        Fixa något med diven under, nu finns den för att man ska kunna länka tillbaka från läsmer-->
+        <div id="recent"></div> 
         <h1 class="recent-article-main-title">Senaste nummer</h1>
         <?php
-        include('includes/db_connect.inc');
-        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error($link));
+       include('includes/db_connect.inc');
+        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles ORDER BY date DESC LIMIT 3") or die(mysqli_error($link));
+
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $title = $row['title'];
-            $content = $row['content'];
+            $content = substr($row['content'], 3, 220);
             $imgName = $row['image'];
 
             echo '<li class="recent-article">';
             echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
-            echo '<p class="recent-article-content">' . $content . '</p>';
-            //if (isset($_SESSION['user'])) {
-            echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
-            //}
+            echo '<p class="recent-article-content">' . $content . '... <a class="recent-article-btn" href="articles_read_more.php?id='.$id.'">[Läs mer]</a></p>';
+            //FIXA RÄTT LÄNK FÖR REDIGERING
+            if (isset($_SESSION['user'])) {
+            echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
+            }
             echo '</li>';
         }
         ?>
     </ul>
 </main>
 <aside class="index-aside">
-    <section class="cfp">
-        <div>
-            <ul>
-                <li>
-                    <p>Tema 1</p>
-                </li>
-                <li>
-                    <p>Tema 2</p>
-                </li>
-                <li>
-                    <p>Tema 3</p>
-                </li>
-            </ul>
-        </div>
-        <a href="send_script.php" class="send-script-button">Skicka in ditt manus!</a>
-    </section>
+    <?php
+    include('includes/db_connect.inc');
+    $cfpResult = mysqli_query($link, "SELECT * FROM tgv_cfp") or die(mysqli_error($link));
+
+    echo ' <section class="cfp">';
+    $cfpRow = mysqli_fetch_array($cfpResult);
+
+    $cfpId = $cfpRow['id'];
+    $cfpTitle = $cfpRow['title'];
+    $cfpContent = $cfpRow['content'];
+
+    echo '<h1 class="cfp-main-title">' . $cfpTitle . '</h1>';
+    echo '<p>' . $cfpContent . '</p>';
+
+    if (isset($_SESSION['user'])) {
+        echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
+    }
+    echo '</section>';
+
+    ?>
     <section class="news-feed">
         <h1 class="news-main-title">Nyheter</h1>
 
@@ -98,7 +87,7 @@ if (!isset($_SESSION)) {
         include('includes/db_connect.inc');
 
 
-        $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC") or die (mysqli_error($link));
+        $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC LIMIT 5") or die (mysqli_error($link));
 
         echo '<div class="news-post-container>';
         while ($row = mysqli_fetch_array($result)) {
@@ -108,14 +97,15 @@ if (!isset($_SESSION)) {
             $id = $row ['id'];
 
             echo '<div class="news-post">';
-            echo '<p class="news-date">' . $date . '</p>';
             echo '<h2 class="news-title">' . $title . '</h2>';
+            echo '<p class="news-date">' . $date . '</p>';
             echo '<p class="news-content">' . nl2br($content) . '</p>';
-            //if (isset($_SESSION['user'])) {
-            echo '<p><a href="news_edit.php?id=' . $id . '">Redigera</a></p>';
-            //}
 
-            echo '<hr>';
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard.php" class="edit">Redigera</a></p>';
+            }
+
+            echo '<hr class="hr-news">';
             echo '</div>';
 
         }
