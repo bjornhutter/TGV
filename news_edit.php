@@ -75,7 +75,7 @@ $newsContent = $row['content'];
                             </li>
                             <li>
                                 <input type="submit" name="newsDelete" value="Radera inlägg"
-                                       class="form-input-submit">
+                                       class="form-input-submit"  onClick="return confirm('Är du säker på att du vill ta bort nyhetsinlägget?')">
                             </li>
                         </ul>
                     </form>
@@ -84,5 +84,7 @@ $newsContent = $row['content'];
         </div>
     </div>
 </div>
+<script src="js/toggle_nav.js"></script>
+<script src="js/add_toggle.js"></script>
 </body>
 </html>
