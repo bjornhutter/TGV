@@ -603,9 +603,9 @@ footer a:hover {
 .script-form-ul {
     background: #f6f6f6;
     padding: 50px;
-    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .script-form-li {
@@ -616,9 +616,9 @@ footer a:hover {
     height: 350px;
     background: #fff;
     margin: 5% auto;
-    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .email-sent-container ul {
