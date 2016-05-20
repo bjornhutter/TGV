@@ -99,8 +99,8 @@
                                     <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
                                 </li>
                                 <li>
-                                    <p class="form-input-submit">Visa alla nyheter<a href="news_posts.php"></a>
-                                    </p>
+                                    <a href="news_posts.php"><p class="form-input-submit form-link-center-fix">Visa alla nyheter
+                                    </p></a>
                                 </li>
                                 <li>
                                     <input type="submit" name="newsSubmit" value="Skapa inlägg"
