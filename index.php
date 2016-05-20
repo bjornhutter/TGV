@@ -112,7 +112,7 @@ if (!isset($_SESSION)) {
             echo '<h2 class="news-title">' . $title . '</h2>';
             echo '<p class="news-content">' . nl2br($content) . '</p>';
             //if (isset($_SESSION['user'])) {
-                echo '<p><a href="news_edit.php?id=">Redigera</a></p>';
+            echo '<p><a href="news_edit.php?id=' . $id . '">Redigera</a></p>';
             //}
 
             echo '<hr>';
