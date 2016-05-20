@@ -15,7 +15,6 @@
 <header>
 
 </header>
-<?php include('includes/navigation.inc') ?>
 <main>
     <section class="email-sent-container">
         <ul>
