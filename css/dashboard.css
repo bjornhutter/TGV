@@ -411,7 +411,7 @@ form {
     text-decoration: none;
     color: #fff !important;
     padding: 5px 10px;
-    margin: 10px 0 0 10px;
+    margin: 0 0 10px 10px;
     display: inline-block;
     width: 150px;
     position: relative;
@@ -424,6 +424,7 @@ form {
     -ms-transition: background 200ms;
     -o-transition: background 200ms;
     transition: background 200ms;
+    font-weight: 400;
 }
 
 .show-all {
@@ -431,8 +432,8 @@ form {
     text-decoration: none;
     color: #fff !important;
     padding: 5px 10px;
-    margin: 0;
-    display: block;
+    margin: 0 0 10px 10px;
+    display: inline-block;
     width: 150px;
     text-align: center;
     -webkit-border-radius: 2px;
@@ -443,6 +444,7 @@ form {
     -ms-transition: background 200ms;
     -o-transition: background 200ms;
     transition: background 200ms;
+    font-weight: 400;
 }
 
 .edit {
@@ -463,6 +465,7 @@ form {
     -ms-transition: background 200ms;
     -o-transition: background 200ms;
     transition: background 200ms;
+    font-weight: 400;
 }
 
 .edit:hover,
@@ -473,11 +476,18 @@ form {
 }
 
 .recent-article-wrapper {
+    background: none;
 
 }
 
 .recent-article {
     margin-bottom: 40px;
+    background: #ffffff;
+    border-bottom: 2px solid #e07929;
+}
+
+.recent-article p {
+    background: none;
 }
 
 .recent-article-title {
@@ -515,6 +525,10 @@ form {
     -moz-border-radius: 5px;
     border-radius: 5px;
     margin: 20px 20px 20px 20px;
+}
+
+.dashboard-form-full ul {
+    background: none;
 }
 
 .dashboard-form {

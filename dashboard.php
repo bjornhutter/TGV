@@ -98,11 +98,11 @@
                                     <p class="dashboard-form-title">Beskrivning: </p>
                                     <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a href="news_posts.php" class="form-link-textdec-fix"><p
                                             class="form-input-submit form-link-center-fix">Visa alla nyheter
                                         </p></a>
-                                </li>
+                                </li>-->
                                 <li>
                                     <input type="submit" name="newsSubmit" value="Skapa inlägg"
                                            class="form-input-submit">
@@ -128,7 +128,6 @@
                             </ul>
                         </form>-->
                         <div class="dashboard-form">
-                            <a href="recent_articles.php" class="show-all">Visa alla nummer</a>
                             <h2 class="dashboard-sub-title-no-padding-top">Senaste nummer</h2>
                             <ul class="recent-article-wrapper">
                                 <!--<h1 class="recent-article-main-title">Senaste nummer</h1>-->
@@ -141,15 +140,20 @@
                                     $recentArticlesContent = replace_quotes($recentArticlesRow['content']);
                                     $recentArticlesFeatured = replace_quotes($recentArticlesRow['featured']);
                                     $recentArticlesImgName = $recentArticlesRow['image'];
+
+                                    //todo buggar flera strong tags
+                                    $recentArticlesContent = substr($recentArticlesContent, 3, 220);
+                                    $recentArticlesFeatured = substr($recentArticlesFeatured, 3, 220);
+
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
+                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
+                                    echo '<p class="recent-article-content">' . $recentArticlesContent . '...</p>';
+                                    echo '<p class="recent-article-content">' . $recentArticlesFeatured . '...</p>';
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
+                                    echo '<a href="recent_articles.php" class="show-all">Visa alla nummer</a>';
                                     echo '</div>';
-                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
-                                    echo $recentArticlesContent;
-                                    echo $recentArticlesFeatured;
-
                                     //if (isset($_SESSION['user'])) {
                                     //echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
 

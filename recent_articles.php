@@ -70,15 +70,25 @@
                                     $recentArticlesFeatured = replace_quotes($recentArticlesRow['featured']);
                                     $recentArticlesImgName = $recentArticlesRow['image'];
 
+
+                                    //todo buggar flera strong tags
+                                    $recentArticlesContent = substr($recentArticlesContent, 3, 220);
+                                    $recentArticlesFeatured = substr($recentArticlesFeatured, 3, 220);
+
+
+                                    //todo alternativt göra dashboard-form
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
+                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
+
+                                    echo '<p class="recent-article-content">' . $recentArticlesContent . '...</p>';
+                                    echo '<p class="recent-article-content">' . $recentArticlesFeatured . '...</p>';
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
                                     echo '<a href="#top" class="back-to-top-btn">Tillbaks till toppen</a>';
                                     echo '</div>';
-                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
-                                    echo $recentArticlesContent;
-                                    echo $recentArticlesFeatured;
+                                    //echo $recentArticlesContent;
+                                    //echo $recentArticlesFeatured;
                                     //if (isset($_SESSION['user'])) {
                                     //echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a></p>';
                                     //}
