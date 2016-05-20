@@ -481,7 +481,7 @@ form {
 }
 
 .recent-article {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     background: #ffffff;
     border-bottom: 2px solid #e07929;
 }
@@ -507,7 +507,13 @@ form {
 .recent-article-img {
     min-width: 50%;
     max-width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*border: 1px solid rgba(0, 0, 0, 0.3);*/
     /*todo justera för responsive*/
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .dashboard-form-full {
@@ -842,9 +848,14 @@ form textarea {
 
 
 .staff {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-bottom: 2px solid #e07929;
 }
 
+.staff p {
+    background: none;
+}
 
 .about-staff {
     display: block;
@@ -874,7 +885,13 @@ form textarea {
 .staff-img {
     min-width: 50%;
     max-width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*border: 1px solid rgba(0, 0, 0, 0.3);*/
     /*todo justera för responsive*/
+    /*-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);*/
 }
 
 .staff-title {
@@ -889,6 +906,7 @@ form textarea {
     padding-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    background: none;
 }
 
 #add-toggle {
@@ -1111,3 +1129,8 @@ p {
 }
 
 /*** ================= WYSIWYG END =================== ***/
+
+/*** ================= RESPONSIVE START =================== ***/
+
+
+/*** ================= RESPONSIVE END =================== ***/

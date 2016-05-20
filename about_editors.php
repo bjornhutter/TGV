@@ -72,12 +72,12 @@
 
                                     echo '<li class="staff">';
                                     echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
+                                    echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+                                    echo $staffContent;
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="about_editors_edit.php?id=' . $staffId . '" class="edit">Redigera</a>';
                                     echo '<a href="#top" class="back-to-top-btn">Tillbaks till toppen</a>';
                                     echo '</div>';
-                                    echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
-                                    echo '<p class="staff-content">' . $staffContent . '</p>';
                                     //if (isset($_SESSION['user'])) {
                                     //}
                                     echo '</li>';
