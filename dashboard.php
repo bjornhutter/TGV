@@ -99,6 +99,10 @@
                                     <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
                                 </li>
                                 <li>
+                                    <p class="form-input-submit">Visa alla nyheter<a href="news_posts.php"></a>
+                                    </p>
+                                </li>
+                                <li>
                                     <input type="submit" name="newsSubmit" value="Skapa inlägg"
                                            class="form-input-submit">
                                 </li>
@@ -147,7 +151,8 @@
                                 ?>
                             </ul>
                             <h2 id="add-toggle" class="add-toggle-icon-plus">Lägg till nummer</h2>
-                            <form action="recent_articles_process.php" method="post" enctype="multipart/form-data" id="add-article">
+                            <form action="recent_articles_process.php" method="post" enctype="multipart/form-data"
+                                  id="add-article">
                                 <ul>
                                     <li>
                                         <p class="dashboard-first-form-title">Titel: </p>
