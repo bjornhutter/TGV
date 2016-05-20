@@ -586,7 +586,7 @@ footer a:hover {
     background: #FFF;
 }
 
-.script-form-inner-wrapper {
+#script-form-inner-wrapper {
     width: 35%;
     margin: 0 auto;
 }

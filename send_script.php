@@ -358,7 +358,7 @@ if (!isset($_SESSION)) {
 </main>
 
 <section class="script-form-wrapper">
-    <div class="script-form-inner-wrapper">
+    <div id="script-form-inner-wrapper">
         <h1 class="send-script-main-title">Skicka in manus</h1>
         <form action="" method="post" class="script-form">
             <ul class="script-form-ul">
