@@ -70,6 +70,11 @@ nav ul li a:active {
     -webkit-transform: translateZ(0);
 }
 
+.active {
+    color: #ccda3b;
+    background: #000000;
+}
+
 /*** ================= NAVIGATION END =================== ***/
 
 /*** ================= FOOTER START =================== ***/
@@ -200,6 +205,14 @@ footer {
 
 /*** ================= OM OSS START =================== ***/
 
+.about-staff {
+
+}
+
+.about-staff-main-title {
+
+}
+
 .staff-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -279,9 +292,48 @@ footer {
 
 /*** ================= SKICKA MANUS START =================== ***/
 
+.script-wrapper {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.script-info {
+    width: 100%;
+    display: block;
+    background: #da3873;
+}
+
+.script-info-main-title {
+
+}
+
+.script-reviewers {
+    width: 50%;
+    display: block;
+    float: left;
+    background: #70bada;
+}
+
+.script-reviewers-main-title {
+
+}
+
+.script-examiner {
+    width: 50%;
+    display: block;
+    float: left;
+    background: #6677da;
+}
+
+.script-examiner-main-title {
+
+}
+
 .script-form-wrapper {
     width: 100%;
     display: block;
+    float: left;
 }
 
 .script-form-inner-wrapper {
@@ -408,8 +460,9 @@ footer {
     background: #da2723;
 }
 
-.map {
-
+#map {
+    width: 100%;
+    height: 300px;
 }
 
 /*** ================= KONTAKT END =================== ***/
@@ -436,6 +489,21 @@ footer {
 }
 
 /*** ================= TABS END =================== ***/
+
+/*** ================= WYSIWYG START =================== ***/
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+ul {
+    /* list-style: none; */
+}
+/*** ================= WYSIWYG END =================== ***/
+
 
 
 

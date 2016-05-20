@@ -1,3 +1,8 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +14,8 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/stickynav.js"></script>
+    <script src="js/active_nav.js"></script>
 </head>
 <body>
 
@@ -16,30 +23,52 @@
 
 </header>
 <?php include('includes/navigation.inc') ?>
-
+<?php include('includes/db_connect.inc'); ?>
 <main class="price-info-wrapper">
-    <section class="subscription-price">
-        <ul>
-            <li>
-                <p>Pris 1</p>
-            </li>
-            <li>
-                <p>Pris 2</p>
-            </li>
-            <li>
-                <p>Pris 3</p>
-            </li>
-            <li>
-                <p>Pris 4</p>
-            </li>
-            <li>
-                <p>Pris 5</p>
-            </li>
-        </ul>
-    </section>
-    <section class="subscription-info">
-        <p>lkm lk mlak mdls  lakmsd aslkdm aasdl kmasd asdl kamsdl kasmdal ksdmalskdm alskdmalksdmalskdm</p>
-    </section>
+    <?php
+    $priceResult = mysqli_query($link, "SELECT * FROM tgv_price") or die(mysqli_error($link));
+
+    echo '<section class="subscription-price">';
+    while ($priceRow = mysqli_fetch_array($priceResult)) {
+
+        $priceId = $priceRow['id'];
+        $priceTitle = $priceRow['title'];
+        $priceContent = $priceRow['content'];
+
+        echo '<p>' . $priceTitle . '</p>';
+        echo '<p>' . $priceContent . '</p>';
+
+        //if (isset($_SESSION['user'])) {
+        //echo '<p><a href="subscription_price_edit.php?id=' . $id . '">Redigera</a></p>';
+        if (isset($_SESSION['user'])) {
+            echo '<p><a href="dashboard_subscription.php">Redigera</a></p>';
+        }
+        echo '</section>';
+        //}
+    }
+    ?>
+    <?php
+    $subInfoResult = mysqli_query($link, "SELECT * FROM tgv_subscription_info") or die(mysqli_error($link));
+
+    echo '<section class="subscription-info">';
+    while ($subInfoRow = mysqli_fetch_array($subInfoResult)) {
+
+        $subInfoId = $subInfoRow['id'];
+        $subInfoTitle = $subInfoRow['title'];
+        $subInfoContent = $subInfoRow['content'];
+
+        echo '<p>' . $subInfoTitle . '</p>';
+        echo '<p>' . $subInfoContent . '</p>';
+
+        if (isset($_SESSION['user'])) {
+            //echo '<p><a href="subscription_info_edit.php?id=' . $id . '">Redigera</a></p>';
+            echo '<p><a href="dashboard_subscription.php">Redigera</a></p>';
+        }
+
+        echo '</section>';
+
+    }
+    ?>
     <section class="retailers">
         <button>HELO</button>
         <p>HELO</p>

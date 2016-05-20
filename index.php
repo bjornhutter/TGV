@@ -1,3 +1,8 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/stickynav.js"></script>
+    <script src="js/active_nav.js"></script>
 </head>
 <body>
 
@@ -18,29 +24,53 @@
 </header>
 <?php include('includes/navigation.inc') ?>
 
+<!--
 <main class="index-main">
+    <h1 class="recent-article-main-title">Senaste nummer</h1>
+    <ul class="recent-article-wrapper">
+        <li class="recent-article">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
+            <h1 class="recent-article-title">Här ligger en title</h1>
+            <p class="recent-article-content">Här ligger en hund begravd</p>
+        </li>
+        <li class="recent-article">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
+            <h1 class="recent-article-title">Här ligger en title</h1>
+            <p class="recent-article-content">Här ligger en hund begravd</p>
+        </li>
+        <li class="recent-article">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
+            <h1 class="recent-article-title">Här ligger en title</h1>
+            <p class="recent-article-content">Här ligger en hund begravd</p>
+        </li>
+        <li class="recent-article">
+            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
+            <h1 class="recent-article-title">Här ligger en title</h1>
+            <p class="recent-article-content">Här ligger en hund begravd</p>
+        </li>
+-->
+<main>
     <ul class="recent-article-wrapper">
         <h1 class="recent-article-main-title">Senaste nummer</h1>
-        <li class="recent-article">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
-            <h1 class="recent-article-title">Här ligger en title</h1>
-            <p class="recent-article-content">Här ligger en hund begravd</p>
-        </li>
-        <li class="recent-article">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
-            <h1 class="recent-article-title">Här ligger en title</h1>
-            <p class="recent-article-content">Här ligger en hund begravd</p>
-        </li>
-        <li class="recent-article">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
-            <h1 class="recent-article-title">Här ligger en title</h1>
-            <p class="recent-article-content">Här ligger en hund begravd</p>
-        </li>
-        <li class="recent-article">
-            <img src="http://tegeve.se/wp-content/uploads/2012/06/tgv_miljo_stor.jpg" class="recent-article-img">
-            <h1 class="recent-article-title">Här ligger en title</h1>
-            <p class="recent-article-content">Här ligger en hund begravd</p>
-        </li>
+        <?php
+        include('includes/db_connect.inc');
+        $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles") or die(mysqli_error($link));
+        while ($row = mysqli_fetch_array($result)) {
+            $id = $row['id'];
+            $title = $row['title'];
+            $content = $row['content'];
+            $imgName = $row['image'];
+
+            echo '<li class="recent-article">';
+            echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
+            echo '<h1 class="recent-article-title">' . $title . '</h1>';
+            echo '<p class="recent-article-content">' . $content . '</p>';
+            //if (isset($_SESSION['user'])) {
+            echo '<p><a href="recent_articles_edit.php?id=' . $id . '">Redigera</a></p>';
+            //}
+            echo '</li>';
+        }
+        ?>
     </ul>
 </main>
 <aside class="index-aside">
@@ -65,7 +95,7 @@
 
         <?php
 
-        include ('includes/db_connect.inc');
+        include('includes/db_connect.inc');
 
 
         $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY date DESC") or die (mysqli_error($link));
@@ -81,17 +111,21 @@
             echo '<p class="news-date">' . $date . '</p>';
             echo '<h2 class="news-title">' . $title . '</h2>';
             echo '<p class="news-content">' . nl2br($content) . '</p>';
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard.php">Redigera</a></p>';
+            }
 
             echo '<a href="http://tegeve.se/newsite/tgv/admin.php" >Redigera inlägg</a>';
             echo '<hr>';
             echo '</div>';
+
         }
         echo '</div>';
 
         ?>
     </section>
 </aside>
-
+<!--@todo Footer funkar inte pga det som finns i asiden-->
 <?php include('includes/footer.inc') ?>
 </body>
 </html>
