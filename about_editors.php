@@ -50,37 +50,35 @@
             <div class="nav-main-wrapper">
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
-                    <h1 class="dashboard-title">Hem</h1>
-                    <a href='dashboard.php' class='go-back-link'>Ta mig tillbaka till dashboarden!</a>
-                    <a href="index.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Hem</a>
+                    <h1 class="dashboard-title">Om oss</h1>
+                    <a href='dashboard_about.php' class='go-back-link'>Ta mig tillbaka till dashboarden!</a>
+                    <a href="about.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Om oss</a>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
                         <div class="dashboard-form-full">
-                            <h2 class="dashboard-sub-title">Senaste nummer</h2>
-                            <ul class="recent-article-wrapper">
-                                <!--<h1 class="recent-article-main-title">Senaste nummer</h1>-->
+                            <!--todo gör responsive så att bilderna inte blir jättesmå (om vi väljer att ha det såhär) -->
+                            <h2 class="dashboard-sub-title">Om redaktionen</h2>
+                            <ul class="staff-wrapper">
                                 <?php
                                 include('includes/db_connect.inc');
-                                $recentArticlesResult = mysqli_query($link, "SELECT * FROM tgv_recent_articles ORDER BY DATE DESC") or die(mysqli_error($link));
-                                while ($recentArticlesRow = mysqli_fetch_array($recentArticlesResult)) {
-                                    $recentArticlesId = $recentArticlesRow['id'];
-                                    $recentArticlesTitle = replace_quotes($recentArticlesRow['title']);
-                                    $recentArticlesContent = replace_quotes($recentArticlesRow['content']);
-                                    $recentArticlesFeatured = replace_quotes($recentArticlesRow['featured']);
-                                    $recentArticlesImgName = $recentArticlesRow['image'];
+                                $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
+                                while ($staffRow = mysqli_fetch_array($staffResult)) {
+                                    $staffId = $staffRow['id'];
+                                    $staffContent = replace_quotes($staffRow['content']);
+                                    $staffFname = replace_quotes($staffRow['fname']);
+                                    $staffLname = replace_quotes($staffRow['lname']);
+                                    $staffImgName = $staffRow['image'];
 
-                                    echo '<li class="recent-article">';
-                                    echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
+                                    echo '<li class="staff">';
+                                    echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
                                     echo '<div class="recent-article-button-wrapper">';
-                                    echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
+                                    echo '<a href="about_editors_edit.php?id=' . $staffId . '" class="edit">Redigera</a>';
                                     echo '<a href="#top" class="back-to-top-btn">Tillbaks till toppen</a>';
                                     echo '</div>';
-                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
-                                    echo $recentArticlesContent;
-                                    echo $recentArticlesFeatured;
+                                    echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+                                    echo '<p class="staff-content">' . $staffContent . '</p>';
                                     //if (isset($_SESSION['user'])) {
-                                    //echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a></p>';
                                     //}
                                     echo '</li>';
                                 }

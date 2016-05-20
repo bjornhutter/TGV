@@ -49,14 +49,15 @@ $imgName = $row['image'];
         <div class="nav-main-wrapper">
             <?php include('includes/dashboard_nav.inc') ?>
             <div class="overview-wrapper">
-                <h1 class="dashboard-title">Senaste nummer</h1>
+                <h1 class="dashboard-title">Hem</h1>
                 <a href='dashboard.php' class='go-back-link'>Ta mig tillbaka till dashboarden!</a>
                 <a href="index.php" class="go-back-link" target="_blank">Gå till Hem</a>
             </div>
             <div class="main-outer-wrapper">
                 <main id="main">
                     <form action="recent_articles_edit_process.php" method="post" enctype="multipart/form-data"
-                          class="dashboard-form">
+                          class="dashboard-form-full">
+                        <h2 class="dashboard-sub-title">Senaste nummer</h2>
                         <ul>
                             <li>
                                 <p class="dashboard-first-form-title">Titel: </p>

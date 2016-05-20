@@ -123,7 +123,8 @@
                             </ul>
                         </form>-->
                         <div class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Senaste nummer</h2>
+                            <a href="recent_articles.php" class="show-all">Visa alla nummer</a>
+                            <h2 class="dashboard-sub-title-no-padding-top">Senaste nummer</h2>
                             <ul class="recent-article-wrapper">
                                 <!--<h1 class="recent-article-main-title">Senaste nummer</h1>-->
                                 <?php
@@ -135,17 +136,18 @@
                                     $recentArticlesContent = replace_quotes($recentArticlesRow['content']);
                                     $recentArticlesFeatured = replace_quotes($recentArticlesRow['featured']);
                                     $recentArticlesImgName = $recentArticlesRow['image'];
-
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
+                                    echo '<div class="recent-article-button-wrapper">';
+                                    echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
+                                    echo '</div>';
                                     echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
-                                    echo '<p class="recent-article-content">' . $recentArticlesContent . '</p>';
-                                    echo '<p class="recent-article-content">' . $recentArticlesFeatured . '</p>';
+                                    echo $recentArticlesContent;
+                                    echo $recentArticlesFeatured;
 
                                     //if (isset($_SESSION['user'])) {
-                                    echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
+                                    //echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
 
-                                    echo '<a href="recent_articles.php">Visa alla nummer</a>';
 
                                     //}
                                     echo '</li>';
