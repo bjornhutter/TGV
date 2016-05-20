@@ -99,7 +99,7 @@
                                     <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
                                 </li>
                                 <li>
-                                    <a href="news_posts.php"><p class="form-input-submit form-link-center-fix">Visa alla nyheter
+                                    <a href="news_posts.php" class="form-link-textdec-fix"><p class="form-input-submit form-link-center-fix">Visa alla nyheter
                                     </p></a>
                                 </li>
                                 <li>
