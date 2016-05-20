@@ -75,7 +75,8 @@ if (isset($_POST['delete'])) {
     }
     $title = $_POST['title'];
     $content = $_POST['content'];
-    mysqli_query($link, "UPDATE tgv_recent_articles SET title = '$title', content = '$content' WHERE id = '$id'");
+    $featured = $_POST['featured'];
+    mysqli_query($link, "UPDATE tgv_recent_articles SET title = '$title', content = '$content', featured = '$featured' WHERE id = '$id'");
 }
 
 header("Location: dashboard.php");
