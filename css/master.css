@@ -806,3 +806,27 @@ ul {
     text-decoration: none;
 }
 /*** ================= EDIT END =================== ***/
+
+/*** ================= RESPONSIVE START =================== ***/
+
+@media screen and (max-width: 1467px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 769px) {
+
+}
+
+@media screen and (max-width: 569px) {
+
+}
+
+@media screen and (max-width: 381px) {
+
+}
+
+/*** ================= RESPONSIVE END =================== ***/
