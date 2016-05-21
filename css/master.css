@@ -832,6 +832,14 @@ ul {
     margin: 2px 0;
     display: block;
     width: 54px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: background 200ms;
+    -moz-transition: background 200ms;
+    -ms-transition: background 200ms;
+    -o-transition: background 200ms;
+    transition: background 200ms;
 }
 
 .edit:hover {
