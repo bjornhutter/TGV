@@ -51,14 +51,15 @@ $newsContent = $row['content'];
             <?php include('includes/dashboard_nav.inc') ?>
             <div class="overview-wrapper">
                 <h1 class="dashboard-title">Hem</h1>
+                <a href='dashboard.php' class='go-back-link'>Ta mig tillbaka till dashboarden!</a>
                 <a href="index.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Hem</a>
             </div>
             <div class="main-outer-wrapper">
                 <main id="main">
 
-                    <form action="news_edit_process.php" method="post" class="dashboard-form">
+                    <form action="news_edit_process.php" method="post" class="dashboard-form-full">
                         <h2 class="dashboard-sub-title">Nyhetsflöde</h2>
-                        <ul>
+                        <ul style="background:none">
                             <li>
                                 <p class="dashboard-first-form-title">Titel: </p>
                                 <input type="text" name="newsTitle" title="Nyhetsflöde Titel"
@@ -75,9 +76,11 @@ $newsContent = $row['content'];
                             </li>
                             <li>
                                 <input type="submit" name="newsDelete" value="Radera inlägg"
-                                       class="form-input-submit"  onClick="return confirm('Är du säker på att du vill ta bort nyhetsinlägget?')">
+                                       class="revert-changes"
+                                       onclick="if(!confirm('Detta kommer radera inlägget. Är du säker på att du vill göra det?')) return false">
                             </li>
                         </ul>
+                        <input type="hidden" value="<?php echo $id ?>" name="id">
                     </form>
                 </main>
             </div>

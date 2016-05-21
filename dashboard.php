@@ -87,9 +87,51 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="news_create.php" method="post" class="dashboard-form">
+                        <form action="news_create.php" method="post" class="dashboard-form float-fix">
                             <h2 class="dashboard-sub-title">Nyhetsflöde</h2>
-                            <ul>
+
+                            <!--<h2 class="dashboard-sub-title" style="padding: 20px 0 20px 0">Senaste inlägget</h2>-->
+                            <ul class="news-posts-wrapper">
+
+                                <?php
+
+                                include('includes/db_connect.inc');
+
+                                $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY DATE DESC LIMIT 1") or die (mysqli_error($link));
+
+                                while ($row = mysqli_fetch_array($result)) {
+                                    $title = $row['title'];
+                                    $content = $row ['content'];
+                                    $date = $row ['date'];
+                                    $id = $row ['id'];
+
+
+                                    echo '<li class="news-post">';
+                                    echo '<h1 class="news-title">' . $title . '</h1>';
+
+
+                                    if (strlen($content) < 220) {
+                                        echo "$content";
+                                    } elseif (strlen($content) > 220) {
+                                        $content = substr($content, 0, 220);
+                                        echo $content;
+                                        echo '...';
+                                    } else {
+                                        echo "$content";
+                                    }
+
+
+                                    echo '<p class="news-date">' . $date . '</p>';
+                                    echo '<div class="recent-article-button-wrapper">';
+                                    echo '<a href="news_edit.php?id=' . $id . '" class="edit">Redigera</a>';
+                                    echo '<a href="news_posts.php" class="show-all">Visa alla inlägg</a>';
+                                    echo '</div>';
+                                    echo '</li>';
+                                }
+                                ?>
+                            </ul>
+                            <h2 id="add-news-toggle" class="add-toggle-icon-plus">Skapa ett nytt inlägg</h2>
+                            <ul id="add-news-post">
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
                                     <input type="text" name="newsTitle" title="Nyhetsflöde Titel">
@@ -142,14 +184,39 @@
                                     $recentArticlesImgName = $recentArticlesRow['image'];
 
                                     //todo buggar flera strong tags
-                                    $recentArticlesContent = substr($recentArticlesContent, 3, 220);
-                                    $recentArticlesFeatured = substr($recentArticlesFeatured, 3, 220);
+                                    //$recentArticlesContent = substr($recentArticlesContent, 0, 220);
+                                    //$recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
 
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
                                     echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
-                                    echo '<p class="recent-article-content">' . $recentArticlesContent . '...</p>';
-                                    echo '<p class="recent-article-content">' . $recentArticlesFeatured . '...</p>';
+
+
+                                    if (strlen($recentArticlesContent) < 220) {
+                                        echo "$recentArticlesContent";
+                                    } elseif (strlen($recentArticlesContent) > 220) {
+                                        $recentArticlesContent = substr($recentArticlesContent, 0, 220);
+                                        echo $recentArticlesContent;
+                                        echo '...';
+                                    } else {
+                                        echo "$recentArticlesContent";
+                                    }
+
+                                    if (strlen($recentArticlesFeatured) < 220) {
+                                        echo "$recentArticlesFeatured";
+                                    } elseif (strlen($recentArticlesFeatured) > 220) {
+                                        $recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
+                                        echo $recentArticlesFeatured;
+                                        echo '...';
+                                    } else {
+                                        echo "$recentArticlesFeatured";
+                                    }
+
+
+                                    //echo $recentArticlesContent;
+                                    //echo '...';
+                                    //echo $recentArticlesFeatured;
+                                    //echo '...';
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
                                     echo '<a href="recent_articles.php" class="show-all">Visa alla nummer</a>';

@@ -5,11 +5,11 @@ include('includes/db_connect.inc');
 $id = $_POST['id'];
 
 if (isset($_POST['newsDelete'])) {
-    $id = $_POST['id'];
+    //$id = $_POST['id'];
 
     mysqli_query($link, "DELETE FROM tgv_news WHERE id = '$id'");
 } elseif (isset($_POST['newsSubmit'])) {
-    $id = $_POST['id'];
+    //$id = $_POST['id'];
 
     $title = $_POST['newsTitle'];
     $content = $_POST['newsContent'];

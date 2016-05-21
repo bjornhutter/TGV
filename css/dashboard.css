@@ -474,29 +474,45 @@ form {
     background: #0295af;
 }
 
-.recent-article-wrapper {
+.recent-article-wrapper,
+.news-posts-wrapper {
     background: none;
 
 }
 
-.recent-article {
+.news-posts-wrapper ul,
+.news-posts-wrapper ol,
+.news-posts-wrapper li
+{
+    background: none;
+}
+
+.recent-article,
+.news-post
+{
     margin-bottom: 20px;
     background: #ffffff;
     border-bottom: 2px solid #e07929;
 }
 
-.recent-article p {
+.recent-article p,
+.news-post p
+{
     background: none;
 }
 
-.recent-article-title {
+.recent-article-title,
+.news-title
+{
     font-size: 1.75em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     padding-top: 0;
 }
 
-.recent-article-content {
+.recent-article-content,
+.news-content
+{
     font-size: 1em;
     padding-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
@@ -504,8 +520,8 @@ form {
 }
 
 .recent-article-img {
-    min-width: 50%;
-    max-width: 50%;
+    min-width: 25%;
+    max-width: 25%;
     margin-top: 10px;
     margin-bottom: 10px;
     /*border: 1px solid rgba(0, 0, 0, 0.3);*/
@@ -513,6 +529,13 @@ form {
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.news-date {
+    font-size: 0.75em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .dashboard-form-full {
@@ -907,7 +930,9 @@ form textarea {
     background: none;
 }
 
-#add-toggle {
+#add-toggle,
+#add-news-toggle
+{
     cursor: pointer;
     font-size: 1.25em;
     font-family: 'Open Sans', sans-serif;
@@ -922,7 +947,9 @@ form textarea {
 }
 
 #add-staff,
-#add-article {
+#add-article,
+#add-news-post
+{
     display: none;
 }
 
@@ -1129,6 +1156,10 @@ p {
 /*** ================= WYSIWYG END =================== ***/
 
 /*** ================= RESPONSIVE START =================== ***/
+
+.float-fix {
+    float: right;
+}
 
 @media screen and (max-width: 1467px) {
 

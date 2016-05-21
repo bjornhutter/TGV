@@ -106,7 +106,7 @@
                             <ul class="staff-wrapper">
                                 <?php
                                 include('includes/db_connect.inc');
-                                $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff LIMIT 1") or die(mysqli_error($link));
+                                $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff ORDER BY DATE DESC LIMIT 1") or die(mysqli_error($link));
                                 while ($staffRow = mysqli_fetch_array($staffResult)) {
                                     $staffId = $staffRow['id'];
                                     $staffContent = replace_quotes($staffRow['content']);
