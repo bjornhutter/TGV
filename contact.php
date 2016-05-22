@@ -50,7 +50,6 @@ if (!isset($_SESSION)) {
     $contactResult = mysqli_query($link, "SELECT * FROM tgv_contact") or die(mysqli_error($link));
 
     echo '<section class="contact-info">';
-    echo '<ul class="contact-info-ul">';
     $contactRow = mysqli_fetch_array($contactResult);
 
     $contactId = $contactRow['id'];
@@ -60,6 +59,7 @@ if (!isset($_SESSION)) {
     $contactEmail = $contactRow['email'];
     
     echo '<h1 class="contact-info-main-title">' . $contactTitle . '</h1>';
+    echo '<ul class="contact-info-ul">';
     echo '<li class="contact-info-li">' . $contactAddress . '</li>';
     echo '<li class="contact-info-li">' . $contactPhone . '</li>';
     echo '<li class="contact-info-li">' . $contactEmail . '</li>';

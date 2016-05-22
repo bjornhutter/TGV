@@ -675,7 +675,8 @@ footer a:hover {
 }
 
 .contact-info-ul {
-
+    display: flex;
+    display: -webkit-flex;
 }
 
 .contact-info-li {
@@ -687,21 +688,21 @@ footer a:hover {
     vertical-align: top;
 }
 
-.contact-info-li:nth-child(2) {
+.contact-info-li:nth-child(1) {
     background: #F3F3F3 url('../img/location.svg') no-repeat left 2px;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
-.contact-info-li:nth-child(3) {
+.contact-info-li:nth-child(2) {
     background: #F3F3F3 url('../img/phone.svg') no-repeat left 0px;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
-.contact-info-li:nth-child(4) {
+.contact-info-li:nth-child(3) {
     background: #F3F3F3 url('../img/envelop.svg') no-repeat left 0px;
     background-size: 1.5em;
     position: relative;
@@ -809,24 +810,106 @@ ul {
 
 /*** ================= RESPONSIVE START =================== ***/
 
-@media screen and (max-width: 1467px) {
+@media screen and (max-width: 1342px) {
+    .contact-info {
+        width: 50%;
+    }
+
+    .contact-more-info {
+        width: 50%;
+    }
 
 }
 
-@media screen and (max-width: 1200px) {
 
+@media screen and (max-width: 1200px) {
+    .contact-info {
+        width: 60%;
+    }
+
+    .contact-more-info {
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .contact-info {
+        width: 71%;
+    }
+
+    .contact-more-info {
+        width: 71%;
+    }
+
+    .footer-block {
+        margin: 0 0 0 40px;
+    }
+
+    .footer-block-about {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 769px) {
 
+    .contact-info {
+        width: 88%;
+    }
+
+    .contact-more-info {
+        width: 88%;
+    }
+
+    .contact-info-ul {
+        display: block
+    }
+
+    .footer-block {
+        margin: 0 0 0 40px;
+    }
+
+    .footer-block-about {
+        width: 40%;
+    }
 }
 
-@media screen and (max-width: 569px) {
+@media screen and (max-width: 620px) {
 
+    .contact-info-li {
+        display: block;
+    }
 }
 
-@media screen and (max-width: 381px) {
 
-}
+@media screen and (max-width: 500px) {
+
+    .contact-info {
+        width: 88%;
+    }
+
+    .contact-more-info {
+        width: 88%;
+    }
+
+    .contact-info-ul {
+        display: block;
+    }
+
+    .contact-info-li {
+        display: block;
+    }
+
+    .footer-block {
+        width: auto;
+        padding: 0 2%;
+        display: inline-block;
+        margin: 30px 3% 0 3%;
+    }
+
+    .footer-block-about {
+        width: 88%;
+        padding: 0 6%;
+    }
 
 /*** ================= RESPONSIVE END =================== ***/
