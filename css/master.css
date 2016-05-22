@@ -818,28 +818,28 @@ ul {
     .contact-more-info {
         width: 50%;
     }
-
 }
 
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 1001px) {
     .contact-info {
         width: 60%;
     }
 
     .contact-more-info {
-        width: 60%;
+        width: 55%;
+        padding: 0 5% 40px 0;
     }
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-width: 770px) {
     .contact-info {
         width: 71%;
     }
 
     .contact-more-info {
-        width: 71%;
+        width: 66%;
+        padding: 0 5% 40px 0;
     }
 
     .footer-block {
@@ -851,14 +851,15 @@ ul {
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 769px) and (min-width: 501px) {
 
     .contact-info {
         width: 88%;
     }
 
     .contact-more-info {
-        width: 88%;
+        width: 85%;
+        padding: 0 3% 40px 0;
     }
 
     .contact-info-ul {
