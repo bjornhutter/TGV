@@ -928,6 +928,7 @@ ul {
 
     .staff {
         width: 88%;
+        margin: 20px 0;
     }
 
     .staff-main-title {
@@ -959,7 +960,7 @@ ul {
 
     .footer-block-about {
         width: 88%;
-        padding: 0 6%;
     }
+}
 
 /*** ================= RESPONSIVE END =================== ***/
