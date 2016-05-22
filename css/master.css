@@ -425,7 +425,7 @@ footer a:hover {
     font-size: 2em;
     color: #000000;
     text-align: left;
-    padding-left: calc(13% + 1px);
+    padding-left: calc(12% + 1px);
     font-family: 'Open Sans', sans-serif;
     margin: 0 0 10px 0;
 }
@@ -821,6 +821,11 @@ ul {
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1001px) {
+
+    .staff-main-title {
+        padding-left: calc(11% + 1px);
+    }
+
     .contact-info {
         width: 60%;
     }
@@ -833,6 +838,19 @@ ul {
 
 
 @media screen and (max-width: 1000px) and (min-width: 770px) {
+
+    .about-staff {
+        width: 71%;
+    }
+
+    .staff {
+        width: 26%;
+    }
+
+    .staff-main-title {
+        padding-left: calc(5% + 1px);
+    }
+
     .contact-info {
         width: 71%;
     }
@@ -852,6 +870,25 @@ ul {
 }
 
 @media screen and (max-width: 769px) and (min-width: 501px) {
+
+    .about-staff {
+        width: 88%;
+    }
+
+    .staff {
+        width: 88%;
+}
+    .staff-linebreak {
+        margin: 20px 0 -15px 0;
+    }
+
+    .staff-main-title {
+        padding-left: calc(5% + 3px);
+    }
+
+    .staff-content {
+        padding: 0% 5% 2% 5%;
+    }
 
     .contact-info {
         width: 88%;
@@ -883,7 +920,19 @@ ul {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (min-width: 0px) {
+
+    .about-staff {
+        width: 88%;
+    }
+
+    .staff {
+        width: 88%;
+    }
+
+    .staff-main-title {
+        padding-left: calc(6% + 1px);
+    }
 
     .contact-info {
         width: 88%;
