@@ -70,8 +70,8 @@
                             echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Prislista</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldPriceTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldPriceContent</p></div>";
                             echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Prislista</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$priceTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$priceContent</p>";
                         } elseif (($_GET['update']) == 2) {
-                            echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Prenumereringsinfo</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldSubInfoTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldSubInfoContent</p></div>";
-                            echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Prenumereringsinfo</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$subInfoTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$subInfoContent</p>";
+                            echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Prenumerationsinfo</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldSubInfoTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldSubInfoContent</p></div>";
+                            echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Prenumerationsinfo</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$subInfoTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$subInfoContent</p>";
                         }
 
 

@@ -90,7 +90,7 @@
                                     echo '<p class="news-date">' . $date . '</p>';
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="news_edit.php?id=' . $id . '" class="edit">Redigera</a>';
-                                    echo '<a href="#top" class="back-to-top-btn">Tillbaks till toppen</a>';
+                                    echo '<a href="#top" class="back-to-top-btn">Tillbaka till toppen</a>';
                                     echo '</div>';
                                     //echo $recentArticlesContent;
                                     //echo $recentArticlesFeatured;
