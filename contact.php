@@ -63,6 +63,8 @@ if (!isset($_SESSION)) {
     echo '<li class="contact-info-li">' . $contactAddress . '</li>';
     echo '<li class="contact-info-li">' . $contactPhone . '</li>';
     echo '<li class="contact-info-li">' . $contactEmail . '</li>';
+    echo '</ul>';
+    
 
 
     if (isset($_SESSION['user'])) {
@@ -73,7 +75,6 @@ if (!isset($_SESSION)) {
     echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
 
     }
-    echo '</ul>';
     echo '</section>';
 
 ?>
