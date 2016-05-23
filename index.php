@@ -23,7 +23,7 @@ if (!isset($_SESSION)) {
 
 <header class="header-homepage">
     <div class="header-logo">
-        <h1 class="header-logo-main-title">Tidsskrift för genusvetenskap</h1>
+        <h1 class="header-logo-main-title">Tidskrift för genusvetenskap</h1>
     </div>
     <div class="header-welcome">
         <h2 class="header-welcome-text">Välkommen till Nordens största referee-granskade tidskrift för aktuell tvärvetenskaplig genusforskning!</h2>
