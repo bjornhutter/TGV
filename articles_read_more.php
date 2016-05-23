@@ -43,7 +43,7 @@ if (!isset($_GET['id'])) {
         echo '<h2 class="read-more-featured-title">I detta nummer</h2>';
         echo '<p class="recent-article-featured">' . $featured . '</p>';
         //if (isset($_SESSION['user'])) {
-        echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
+        echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
         //}
         echo '</div>';
         echo '<div class="read-more-content">';
@@ -51,7 +51,7 @@ if (!isset($_GET['id'])) {
         echo '<h1 class="recent-article-more-title">' . $title . '</h1>';
         echo '<p class="recent-article-content">' . $content . '</p>';
         //if (isset($_SESSION['user'])) {
-        echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
+        echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
         //}
         echo '</div>';
         ?>

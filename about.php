@@ -10,7 +10,7 @@ if (!isset($_SESSION)) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
-    <title>Om oss | Tidskrift för genusvetenskap</title>
+    <title>Om TGV | Tidskrift för genusvetenskap</title>
     <link rel="icon" href="img/tgv_favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -41,7 +41,7 @@ if (!isset($_SESSION)) {
         if (isset($_SESSION['user'])) {
             //echo '<p><a href="about_staff_edit.php?id=' . $aboutId . '">Redigera</a></p>';
 
-            echo '<p><a href="dashboard_about.php" class="edit">Redigera</a></p>';
+            echo '<p><a href="dashboard_about.php" class="edit" target="_blank">Redigera</a></p>';
 
         }
         echo '</section>';
@@ -69,7 +69,7 @@ if (!isset($_SESSION)) {
             echo '<p class="staff-content">' . $staffContent . '</p>';
             // Lägg in rätt länk till dashboarden här under
             if (isset($_SESSION['user'])) {
-            echo '<p><a href="about_editors_edit.php?id=' . $staffId . '" class="edit">Redigera</a></p>';
+            echo '<p><a href="about_editors_edit.php?id=' . $staffId . '" class="edit"  target="_blank">Redigera</a></p>';
             }
             echo '</li>';
         }

@@ -72,7 +72,7 @@ if (!isset($_SESSION)) {
     //Behöver inte GET ID
     //echo '<p><a href="contact_edit.php?id=' . $contactId . '">Redigera</a></p>';
 
-    echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
+    echo '<p><a href="dashboard_contact.php" class="edit" target="_blank">Redigera</a></p>';
 
     }
     echo '</section>';
@@ -91,7 +91,7 @@ if (!isset($_SESSION)) {
     echo '<p>' . $contactInfoContent . '</p>';
 
     if (isset($_SESSION['user'])) {
-        echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
+        echo '<p><a href="dashboard_contact.php" class="edit" target="_blank">Redigera</a></p>';
     }
     echo '</section>';
 
