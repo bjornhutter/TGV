@@ -363,6 +363,7 @@ if (!isset($_SESSION)) {
 <section class="script-form-wrapper">
     <div id="script-form-inner-wrapper">
         <h1 class="send-script-main-title">Skicka in manus</h1>
+        <p class="send-script-info">För att skicka in ditt manus kan du enkelt göra det via formuläret nedan. Du kan också skicka in det till <a href="mailto:tegeve@oru.se">tegeve@oru.se</a>.  </p>
         <form enctype="multipart/form-data" action="send_script_process.php" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">

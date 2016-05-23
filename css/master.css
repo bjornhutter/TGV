@@ -646,7 +646,10 @@ footer a:hover {
     margin: 0 0 10px 0;
 }
 
-
+.send-script-info {
+    margin: 0 0 20px 0;
+    font-style: italic;
+}
 
 /*** ================= SKICKA MANUS END =================== ***/
 
