@@ -401,7 +401,7 @@ footer a:hover {
 
 .about-staff {
     width: 50%;
-    margin: 0 auto;
+    margin: 54px auto 0;
     padding: 40px 0;
 }
 
@@ -425,7 +425,7 @@ footer a:hover {
     font-size: 2em;
     color: #000000;
     text-align: left;
-    padding-left: calc(13% + 1px);
+    padding-left: calc(12% + 1px);
     font-family: 'Open Sans', sans-serif;
     margin: 0 0 10px 0;
 }
@@ -483,7 +483,7 @@ footer a:hover {
 .price-info-wrapper {
     width: 80%;
     display: block;
-    margin: 0 auto;
+    margin: 54px auto 0;
     padding: 40px 0 0 0;
 }
 
@@ -528,7 +528,7 @@ footer a:hover {
 .script-wrapper {
     width: 100%;
     display: block;
-    margin: 0 auto;
+    margin: 54px auto 0;
     padding: 40px 0;
 }
 
@@ -586,7 +586,7 @@ footer a:hover {
     background: #FFF;
 }
 
-.script-form-inner-wrapper {
+#script-form-inner-wrapper {
     width: 35%;
     margin: 0 auto;
 }
@@ -688,7 +688,7 @@ footer a:hover {
 .contact-wrapper {
     width: 100%;
     height: 200px;
-    margin: 0 auto;
+    margin: 54px auto 0;
     display: block;
     padding: 40px 0;
 }
@@ -709,7 +709,8 @@ footer a:hover {
 }
 
 .contact-info-ul {
-
+    display: flex;
+    display: -webkit-flex;
 }
 
 .contact-info-li {
@@ -721,21 +722,21 @@ footer a:hover {
     vertical-align: top;
 }
 
-.contact-info-li:nth-child(2) {
+.contact-info-li:nth-child(1) {
     background: #F3F3F3 url('../img/location.svg') no-repeat left 2px;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
-.contact-info-li:nth-child(3) {
+.contact-info-li:nth-child(2) {
     background: #F3F3F3 url('../img/phone.svg') no-repeat left 0px;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
-.contact-info-li:nth-child(4) {
+.contact-info-li:nth-child(3) {
     background: #F3F3F3 url('../img/envelop.svg') no-repeat left 0px;
     background-size: 1.5em;
     position: relative;
@@ -848,3 +849,160 @@ ul {
     text-decoration: none;
 }
 /*** ================= EDIT END =================== ***/
+
+/*** ================= RESPONSIVE START =================== ***/
+
+@media screen and (max-width: 1342px) {
+    .contact-info {
+        width: 50%;
+    }
+
+    .contact-more-info {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1001px) {
+
+    .staff-main-title {
+        padding-left: calc(11% + 1px);
+    }
+
+    .contact-info {
+        width: 60%;
+    }
+
+    .contact-more-info {
+        width: 55%;
+        padding: 0 5% 40px 0;
+    }
+}
+
+
+@media screen and (max-width: 1000px) and (min-width: 770px) {
+
+    .about-staff {
+        width: 71%;
+    }
+
+    .staff {
+        width: 26%;
+    }
+
+    .staff-main-title {
+        padding-left: calc(5% + 1px);
+    }
+
+    .contact-info {
+        width: 71%;
+    }
+
+    .contact-more-info {
+        width: 66%;
+        padding: 0 5% 40px 0;
+    }
+
+    .footer-block {
+        margin: 0 0 0 40px;
+    }
+
+    .footer-block-about {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 769px) and (min-width: 501px) {
+
+    .about-staff {
+        width: 88%;
+    }
+
+    .staff {
+        width: 88%;
+}
+    .staff-linebreak {
+        margin: 20px 0 -15px 0;
+    }
+
+    .staff-main-title {
+        padding-left: calc(5% + 3px);
+    }
+
+    .staff-content {
+        padding: 0% 5% 2% 5%;
+    }
+
+    .contact-info {
+        width: 88%;
+    }
+
+    .contact-more-info {
+        width: 85%;
+        padding: 0 3% 40px 0;
+    }
+
+    .contact-info-ul {
+        display: block
+    }
+
+    .footer-block {
+        margin: 0 0 0 40px;
+    }
+
+    .footer-block-about {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    .contact-info-li {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 500px) and (min-width: 0px) {
+
+    .about-staff {
+        width: 88%;
+    }
+
+    .staff {
+        width: 88%;
+        margin: 20px 0;
+    }
+
+    .staff-main-title {
+        padding-left: calc(6% + 1px);
+    }
+
+    .contact-info {
+        width: 88%;
+    }
+
+    .contact-more-info {
+        width: 88%;
+    }
+
+    .contact-info-ul {
+        display: block;
+    }
+
+    .contact-info-li {
+        display: block;
+    }
+
+    .footer-block {
+        width: auto;
+        padding: 0 2%;
+        display: inline-block;
+        margin: 30px 3% 0 3%;
+    }
+
+    .footer-block-about {
+        width: 88%;
+    }
+}
+
+/*** ================= RESPONSIVE END =================== ***/

@@ -1,4 +1,4 @@
-<nav class="fixed">
+<nav>
     <ul>
         <li>
             <a href="index.php">Hem</a>
