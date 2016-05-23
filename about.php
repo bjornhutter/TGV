@@ -58,11 +58,13 @@ if (!isset($_SESSION)) {
             $staffContent = $staffRow['content'];
             $staffFname = $staffRow['fname'];
             $staffLname = $staffRow['lname'];
+            $staffTitle = $staffRow['title'];
             $staffImgName = $staffRow['image'];
 
             echo '<li class="staff">';
             echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
             echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+            echo '<p>' . $staffTitle . '</p>';
             echo '<div class="staff-linebreak"></div>';
             echo '<p class="staff-content">' . $staffContent . '</p>';
             // Lägg in rätt länk till dashboarden här under

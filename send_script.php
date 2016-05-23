@@ -362,6 +362,7 @@ if (!isset($_SESSION)) {
 <section class="script-form-wrapper">
     <div id="script-form-inner-wrapper">
         <h1 class="send-script-main-title">Skicka in manus</h1>
+        <p>Info om att skicka manus</p>
         <form action="" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">
