@@ -14,6 +14,7 @@ $content = $row['content'];
 $fname = $row['fname'];
 $lname = $row['lname'];
 $imgName = $row['image'];
+$title = $row['title'];
 
 ?>
 <!doctype html>
@@ -67,6 +68,10 @@ $imgName = $row['image'];
                                 <p class="dashboard-form-title">Efternamn: </p>
                                 <input type="text" name="lname" id="lname" value="<?php echo $lname ?>"
                                        title="Efternamn">
+                            </li>
+                            <li>
+                                <p class="dashboard-form-title">Titel: </p>
+                                <input type="text" name="title" id="title" title="Titel" value="<?php echo $title ?>" required>
                             </li>
                             <li>
                                 <p class="dashboard-form-title">Beskrivning: </p>

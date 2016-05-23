@@ -58,9 +58,10 @@ if ($uploadOk == 0) {
 
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
+    $title = $_POST['title'];
     $content = $_POST['content'];
 
-    mysqli_query($link, "INSERT INTO tgv_staff (fname, lname, content, image) VALUES ('$fname', '$lname', '$content', '$new_filename')") or die(mysqli_error($link));
+    mysqli_query($link, "INSERT INTO tgv_staff (fname, lname, content, image, title) VALUES ('$fname', '$lname', '$content', '$new_filename', '$title')") or die(mysqli_error($link));
 
 }
 
