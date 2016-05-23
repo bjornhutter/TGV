@@ -1148,15 +1148,20 @@ ul {
         padding: 20px 6% 20px 6%;
     }
 
+    footer {
+        display: block;
+    }
+
     .footer-block {
         width: auto;
         padding: 0 2%;
         display: inline-block;
-        margin: 30px 3% 0 3%;
+        margin: 30px 4% 0 4%;
     }
 
     .footer-block-about {
         width: 88%;
+        margin: 0 auto;
     }
 }
 
