@@ -13,7 +13,7 @@
             <a href="send_script.php">Skicka manus</a>
         </li>
         <li>
-            <a href="about.php">Om oss</a>
+            <a href="about.php">Om TGV</a>
         </li>
         <li>
             <a href="contact.php">Kontakt</a>
