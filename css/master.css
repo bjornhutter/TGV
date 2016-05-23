@@ -851,11 +851,19 @@ ul {
         width: 60%;
     }
 
-    .subscription-price, .subscription-info {
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 60%;
         padding: 20px 20% 20px 20%;
     }
 
+    #tabs {
+        width: 60%;
+        overflow: hidden;
+    }
+
+    #script-form-inner-wrapper {
+        width: 40%;
+    }
 
     .contact-more-info {
         width: 55%;
@@ -927,9 +935,18 @@ ul {
         padding: 0 5% 40px 0;
     }
 
-    .subscription-price, .subscription-info {
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 71%;
         padding: 20px 14.5% 20px 14.5%;
+    }
+
+    #tabs {
+        width: 71%;
+        overflow: hidden;
+    }
+
+    #script-form-inner-wrapper {
+        width: 50%;
     }
 
     .footer-block {
@@ -1032,9 +1049,18 @@ ul {
         display: block
     }
 
-    .subscription-price, .subscription-info {
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 88%;
         padding: 20px 6% 20px 6%;
+    }
+
+    #tabs {
+        width: 88%;
+        overflow: hidden;
+    }
+
+    #script-form-inner-wrapper {
+        width: 70%;
     }
 
     .footer-block {
@@ -1143,9 +1169,18 @@ ul {
         display: block;
     }
 
-    .subscription-price, .subscription-info {
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 88%;
         padding: 20px 6% 20px 6%;
+    }
+
+    #tabs {
+        width: 88%;
+        overflow: hidden;
+    }
+
+    #script-form-inner-wrapper {
+        width: 88%;
     }
 
     footer {

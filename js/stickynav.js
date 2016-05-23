@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     var navOffset = $("nav").offset().top;
 
-    $(".nav-index").wrap('<div class="nav-placeholder"></div>');
+    $("nav").wrap('<div class="nav-placeholder"></div>');
 
     $(".nav-placeholder").height($("nav").outerHeight());
     
