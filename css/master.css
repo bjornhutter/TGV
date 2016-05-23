@@ -524,7 +524,6 @@ footer a:hover {
 /*** ================= PRENUMERERA END =================== ***/
 
 /*** ================= SKICKA MANUS START =================== ***/
-
 .script-wrapper {
     width: 100%;
     display: block;
@@ -592,48 +591,15 @@ footer a:hover {
 }
 
 .script-form {
-    margin: 50px auto;
+    margin: 0 auto;
     display: block;
 }
 
-.script-form-title {
-    font-size: 1.5em;
-}
-
 .script-form-ul {
-    background: #f6f6f6;
-    padding: 50px;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
 }
 
 .script-form-li {
-}
-
-.email-sent-container {
-    width: 50%;
-    height: 350px;
-    background: #fff;
-    margin: 5% auto;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.email-sent-container ul {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20%;
-}
-
-.email-sent-container h1 {
-    font-size: 2em;
-}
-
-.email-sent-container p {
-    font-size: 1.5em;
-    padding-top: 10px;
     margin: 1% 0 2% 0;
 }
 
@@ -678,8 +644,9 @@ footer a:hover {
     color: #000000;
     text-align: left;
     margin: 0 0 10px 0;
->>>>>>> origin/master
 }
+
+
 
 /*** ================= SKICKA MANUS END =================== ***/
 
