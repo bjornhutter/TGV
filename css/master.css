@@ -627,6 +627,14 @@ footer a:hover {
     box-sizing: border-box;
     margin: 10px 0 0 0;
     padding: 10px 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: background 200ms;
+    -moz-transition: background 200ms;
+    -ms-transition: background 200ms;
+    -o-transition: background 200ms;
+    transition: background 200ms;
 }
 
 .script-form-input-submit:hover {
@@ -766,6 +774,10 @@ footer a:hover {
 .ui-tabs .ui-tabs-nav .ui-corner-top, .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
     border-radius: 0 !important;
     border: none;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    outline: none;
 }
 
 .ui-widget-header {
