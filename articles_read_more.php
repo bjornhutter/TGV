@@ -38,15 +38,15 @@ if (!isset($_GET['id'])) {
         $featured = $row['featured'];
         $imgName = $row['image'];
 
-        echo '<div class="recent-article">';
-        echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
-        echo '<h2 class="recent-article-more-title">I detta nummer</h2>';
+        echo '<div class="read-more-info">';
+        echo '<img src="uploads/' . $imgName . '" class="read-more-img">';
+        echo '<h2 class="read-more-featured-title">I detta nummer</h2>';
         echo '<p class="recent-article-featured">' . $featured . '</p>';
         //if (isset($_SESSION['user'])) {
         echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
         //}
         echo '</div>';
-        echo '<div class="recent-article-more">';
+        echo '<div class="read-more-content">';
         echo '<a class="article-more-back" href="index.php#recent">Tillbaka</a>';
         echo '<h1 class="recent-article-more-title">' . $title . '</h1>';
         echo '<p class="recent-article-content">' . $content . '</p>';

@@ -221,7 +221,7 @@ footer a:hover {
     margin: 0 0 10px 0;
 }
 
-.recent-article {
+.recent-article, .read-more-info {
     background: #FFFFFF;
     width: 26%;
     margin: 20px 10px 20px 10px;
@@ -258,7 +258,7 @@ footer a:hover {
     margin: 4% 0 0 0;
 }
 
-.recent-article p {
+.recent-article p, .read-more-info p {
     font-family: 'Open Sans', sans-serif;
     padding: 2% 5% 2% 5%;
     font-size: 0.8em;
@@ -275,7 +275,7 @@ footer a:hover {
     color: #000;
 }
 
-.recent-article-more {
+.read-more-content {
     background: #FFFFFF;
     width: 50%;
     margin: 20px 10px 20px 10px;
@@ -289,7 +289,11 @@ footer a:hover {
     vertical-align: top;
 }
 
-.recent-article-more-title {
+.read-more-img {
+
+}
+
+.recent-article-more-title, .read-more-featured-title {
     font-family: 'Open Sans', sans-serif;
     padding: 0 5% 2% 5%;
     font-weight: 600;
@@ -300,7 +304,7 @@ footer a:hover {
     margin: 4% 0 0 0;
 }
 
-.recent-article-more p {
+.read-more-content p {
     font-family: 'Open Sans', sans-serif;
     padding: 0 5% 2% 5%;
     font-size: 0.8em;
@@ -898,6 +902,20 @@ ul {
         box-shadow: none;
     }
 
+    .read-more-info {
+        width: 35%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .read-more-content {
+        width: 56%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
     .index-aside {
         width: 100%;
     }
@@ -993,12 +1011,16 @@ ul {
         padding-left: 6%;
     }
 
-    .recent-article {
+    .recent-article, .read-more-info, .read-more-content {
         width: 88%;
-        margin: 10px 0;
+        margin: 20px 0;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
+    }
+
+    .read-more-img {
+        display: none;
     }
 
     .index-aside {
@@ -1116,12 +1138,16 @@ ul {
         padding-left: 6%;
     }
 
-    .recent-article {
+    .recent-article, .read-more-info, .read-more-content {
         width: 88%;
         margin: 20px 0;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
+    }
+
+    .read-more-img {
+        display: none;
     }
 
     .index-aside {
