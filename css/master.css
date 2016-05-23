@@ -851,6 +851,12 @@ ul {
         width: 60%;
     }
 
+    .subscription-price, .subscription-info {
+        width: 60%;
+        padding: 20px 20% 20px 20%;
+    }
+
+
     .contact-more-info {
         width: 55%;
         padding: 0 5% 40px 0;
@@ -919,6 +925,11 @@ ul {
     .contact-more-info {
         width: 66%;
         padding: 0 5% 40px 0;
+    }
+
+    .subscription-price, .subscription-info {
+        width: 71%;
+        padding: 20px 14.5% 20px 14.5%;
     }
 
     .footer-block {
@@ -1019,6 +1030,11 @@ ul {
 
     .contact-info-ul {
         display: block
+    }
+
+    .subscription-price, .subscription-info {
+        width: 88%;
+        padding: 20px 6% 20px 6%;
     }
 
     .footer-block {
