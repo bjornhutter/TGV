@@ -12,7 +12,8 @@ if (!isset($_SESSION)) {
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Skicka manus | Tidskrift för genusvetenskap</title>
     <link rel="icon" href="img/tgv_favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
+          type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -362,20 +363,20 @@ if (!isset($_SESSION)) {
 <section class="script-form-wrapper">
     <div id="script-form-inner-wrapper">
         <h1 class="send-script-main-title">Skicka in manus</h1>
-        <p>Info om att skicka manus</p>
-        <form action="" method="post" class="script-form">
+        <form enctype="multipart/form-data" action="send_script_process.php" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">
                     <p>Förnamn: </p>
-                    <input type="text" name="fname" class="script-form-input" required>
+                    <input type="text" name="fname" class="script-form-input" title="Förnamn" required>
                 </li>
                 <li class="script-form-li">
                     <p>Efternamn: </p>
-                    <input type="text" name="lname" class="script-form-input" required>
+                    <input type="text" name="lname" class="script-form-input" title="Efternamn" required>
                 </li>
                 <li class="script-form-li">
                     <p>Din emailaddress: </p>
-                    <input type="email" name="email" title="Email" placeholder="exempel@adress.com" class="script-form-input"
+                    <input type="email" name="from" title="Emailaddress" placeholder="exempel@adress.com"
+                           class="script-form-input"
                            required>
                 </li>
                 <li class="script-form-li">
@@ -387,7 +388,7 @@ if (!isset($_SESSION)) {
                 </li>
                 <li class="script-form-li">
                     <p>Meddelande: </p>
-                    <textarea name="message" title="Meddelande" rows="7" cols="50"
+                    <textarea name="emailMessage" title="Meddelande" rows="7" cols="50"
                               class="script-form-input"></textarea>
                 </li>
                 <li class="script-form-li">

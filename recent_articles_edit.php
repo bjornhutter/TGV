@@ -26,6 +26,7 @@ $imgName = $row['image'];
     <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
     <title>Redigera redaktörer | Tidskrift för genusvetenskap</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -51,14 +52,15 @@ $imgName = $row['image'];
         <div class="nav-main-wrapper">
             <?php include('includes/dashboard_nav.inc') ?>
             <div class="overview-wrapper">
-                <h1 class="dashboard-title">Senaste nummer</h1>
+                <h1 class="dashboard-title">Hem</h1>
                 <a href='dashboard.php' class='go-back-link'>Ta mig tillbaka till dashboarden!</a>
                 <a href="index.php" class="go-back-link" target="_blank">Gå till Hem</a>
             </div>
             <div class="main-outer-wrapper">
                 <main id="main">
                     <form action="recent_articles_edit_process.php" method="post" enctype="multipart/form-data"
-                          class="dashboard-form">
+                          class="dashboard-form-full">
+                        <h2 class="dashboard-sub-title">Senaste nummer</h2>
                         <ul>
                             <li>
                                 <p class="dashboard-first-form-title">Titel: </p>

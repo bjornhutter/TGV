@@ -56,7 +56,7 @@ $imgName = $row['image'];
             <div class="main-outer-wrapper">
                 <main id="main">
                     <form action="about_editors_edit_process.php" method="post" enctype="multipart/form-data"
-                          class="dashboard-form">
+                          class="dashboard-form-full">
                         <h2 class="dashboard-sub-title">Redigera redaktör</h2>
                         <ul>
                             <li>

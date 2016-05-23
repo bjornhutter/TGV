@@ -50,10 +50,6 @@
                         if (($_GET['update']) == 1) {
                             echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Call for papers</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldCfpTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldCfpContent</p></div>";
                             echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Call for papers</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$cfpTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$cfpContent</p>";
-                        } // todo ta bort eller fixa
-                        elseif (($_GET['update']) == 2) {
-                            echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Om redaktionen</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldAboutTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldAboutContent</p></div>";
-                            echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Om redaktionen</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$aboutTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$aboutContent</p>";
                         }
 
 

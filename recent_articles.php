@@ -41,7 +41,7 @@
     }
 
     ?>
-    <header class="admin-header">
+    <header class="admin-header" id="top">
         <h1 class="header-title">Admin Dashboard</h1>
         <img src="img/icons/menu_white_revorked.svg" alt="Meny" class="toggle-nav" title="Meny">
     </header>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
-                        <div class="dashboard-form">
+                        <div class="dashboard-form-full">
                             <h2 class="dashboard-sub-title">Senaste nummer</h2>
                             <ul class="recent-article-wrapper">
                                 <!--<h1 class="recent-article-main-title">Senaste nummer</h1>-->
@@ -70,13 +70,29 @@
                                     $recentArticlesFeatured = replace_quotes($recentArticlesRow['featured']);
                                     $recentArticlesImgName = $recentArticlesRow['image'];
 
+
+                                    //todo buggar flera strong tags
+                                    $recentArticlesContent = substr($recentArticlesContent, 0, 220);
+                                    $recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
+
+
+                                    //todo alternativt göra dashboard-form
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
                                     echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
-                                    echo '<p class="recent-article-content">' . $recentArticlesContent . '</p>';
-                                    echo '<p class="recent-article-content">' . $recentArticlesFeatured . '</p>';
+
+                                    echo $recentArticlesContent;
+                                    echo '...';
+                                    echo $recentArticlesFeatured;
+                                    echo '...';
+                                    echo '<div class="recent-article-button-wrapper">';
+                                    echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
+                                    echo '<a href="#top" class="back-to-top-btn">Tillbaka till toppen</a>';
+                                    echo '</div>';
+                                    //echo $recentArticlesContent;
+                                    //echo $recentArticlesFeatured;
                                     //if (isset($_SESSION['user'])) {
-                                    echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
+                                    //echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a></p>';
                                     //}
                                     echo '</li>';
                                 }

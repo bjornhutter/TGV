@@ -99,7 +99,7 @@
                             </ul>
                         </form>
                         <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Prenumereringsinfo</h2>
+                            <h2 class="dashboard-sub-title">Prenumerationsinfo</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>

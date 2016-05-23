@@ -102,12 +102,11 @@
                             </ul>
                         </form>-->
                         <div class="dashboard-form">
-                            <!--todo gör responsive så att bilderna inte blir jättesmå (om vi väljer att ha det såhär) -->
                             <h2 class="dashboard-sub-title">Om redaktionen</h2>
                             <ul class="staff-wrapper">
                                 <?php
                                 include('includes/db_connect.inc');
-                                $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
+                                $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff ORDER BY DATE DESC LIMIT 1") or die(mysqli_error($link));
                                 while ($staffRow = mysqli_fetch_array($staffResult)) {
                                     $staffId = $staffRow['id'];
                                     $staffContent = replace_quotes($staffRow['content']);
@@ -117,10 +116,14 @@
 
                                     echo '<li class="staff">';
                                     echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
+
                                     echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
-                                    echo '<p class="staff-content">' . $staffContent . '</p>';
+                                    echo $staffContent;
+                                    echo '<div class="recent-article-button-wrapper">';
+                                    echo '<a href="about_editors_edit.php?id=' . $staffId . '" class="edit">Redigera</a>';
+                                    echo '<a href="about_editors.php" class="show-all">Visa alla redaktörer</a>';
+                                    echo '</div>';
                                     //if (isset($_SESSION['user'])) {
-                                    echo '<p><a href="about_editors_edit.php?id=' . $staffId . '">Redigera</a></p>';
                                     //}
                                     echo '</li>';
                                 }
