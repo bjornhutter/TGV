@@ -365,15 +365,15 @@ if (!isset($_SESSION)) {
             <ul class="script-form-ul">
                 <li class="script-form-li">
                     <p>Förnamn: </p>
-                    <input type="text" name="fname" class="script-form-input" required>
+                    <input type="text" name="fname" class="script-form-input" title="Förnamn" required>
                 </li>
                 <li class="script-form-li">
                     <p>Efternamn: </p>
-                    <input type="text" name="lname" class="script-form-input" required>
+                    <input type="text" name="lname" class="script-form-input" title="Efternamn" required>
                 </li>
                 <li class="script-form-li">
                     <p>Din emailaddress: </p>
-                    <input type="email" name="from" title="Email" placeholder="exempel@adress.com" class="script-form-input"
+                    <input type="email" name="from" title="Emailaddress" placeholder="exempel@adress.com" class="script-form-input"
                            required>
                 </li>
                 <li class="script-form-li">

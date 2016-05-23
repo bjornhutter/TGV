@@ -74,7 +74,7 @@ if (!isset($_SESSION)) {
     echo '<p>' . $cfpContent . '</p>';
 
     if (isset($_SESSION['user'])) {
-        echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
+        echo '<p><a href="dashboard.php" class="edit">Redigera</a></p>';
     }
     echo '</section>';
 
