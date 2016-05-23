@@ -455,7 +455,6 @@ footer a:hover {
     margin: 6% 0 0 0;
 }
 
-/* Kolla vad som är bäst att göra med detta + för index, pga tinyMCE avslutar denna content och sätter in sin egen p istället, dvs den nedanför */
 .staff-content {
     font-family: 'Open Sans', sans-serif;
     padding: 2% 5% 2% 5%;
@@ -469,11 +468,16 @@ footer a:hover {
     line-height: 150%;
 }
 
+.staffWorktitle {
+    font-style: italic;
+    margin: 5px 0 0 0;
+}
+
 .staff-linebreak {
     background: #e07929;
     height: 2px;
     width: 60px;
-    margin: 20px 0 10px 0;
+    margin: 15px 0 -5px 0;
 }
 
 /*** ================= OM OSS END =================== ***/
@@ -481,17 +485,16 @@ footer a:hover {
 /*** ================= PRENUMERERA START =================== ***/
 
 .price-info-wrapper {
-    width: 80%;
+    width: 100%;
     display: block;
     margin: 54px auto 0;
-    padding: 40px 0 0 0;
 }
 
 .subscription-price {
-    width: calc(40% - 4%);
+    width: 50%;
     display: block;
-    float: left;
-    padding: 0 0 40px 4%;
+    padding: 40px 25% 40px 25%;
+    background: #FFF;
 }
 
 .subscription-price-main-title {
@@ -503,10 +506,9 @@ footer a:hover {
 }
 
 .subscription-info {
-    width: calc(60% - 4%);
+    width: 50%;
     display: block;
-    float: left;
-    padding: 0 4% 40px 0;
+    padding: 40px 25% 40px 25%;
 }
 
 .subscription-info-main-title {

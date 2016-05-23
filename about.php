@@ -64,7 +64,7 @@ if (!isset($_SESSION)) {
             echo '<li class="staff">';
             echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
             echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
-            echo '<p>' . $staffTitle . '</p>';
+            echo '<p class="staffWorktitle">' . $staffTitle . '</p>';
             echo '<div class="staff-linebreak"></div>';
             echo '<p class="staff-content">' . $staffContent . '</p>';
             // Lägg in rätt länk till dashboarden här under
