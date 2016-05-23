@@ -87,15 +87,15 @@ nav ul li a {
     display: block;
     white-space: nowrap;
     color: #FFFFFF;
-    -webkit-transition: color 200ms;
-    -moz-transition: color 200ms;
-    -ms-transition: color 200ms;
-    -o-transition: color 200ms;
-    transition: color 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -ms-transition: all 200ms;
+    -o-transition: all 200ms;
+    transition: all 200ms;
 }
 
 nav ul li a:hover {
-    color: #000000;
+    color: #fff;
     background: #e07929;
 }
 

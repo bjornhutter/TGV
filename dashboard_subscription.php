@@ -76,10 +76,15 @@
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Prenumerera</h1>
                     <a href="subscription.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Prenumerera</a>
+                    <div class="helper-links-wrapper">
+                        <a href="#1" class="helper-links">Prislista</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#2" class="helper-links">Prenumerationsinfo</a>
+                    </div>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="1">
                             <h2 class="dashboard-sub-title">Prislista</h2>
                             <ul>
                                 <li>
@@ -98,7 +103,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="2">
                             <h2 class="dashboard-sub-title">Prenumerationsinfo</h2>
                             <ul>
                                 <li>

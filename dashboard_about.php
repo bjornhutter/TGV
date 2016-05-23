@@ -62,10 +62,15 @@
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Om oss</h1>
                     <a href="about.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Om oss</a>
+                    <div class="helper-links-wrapper">
+                        <a href="#1" class="helper-links">Info om TGV</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#2" class="helper-links">Om redaktionen</a>
+                    </div>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="1">
                             <h2 class="dashboard-sub-title">Info om TGV</h2>
                             <ul>
                                 <li>
@@ -101,7 +106,7 @@
                                 </li>
                             </ul>
                         </form>-->
-                        <div class="dashboard-form">
+                        <div class="dashboard-form" id="2">
                             <h2 class="dashboard-sub-title">Om redaktionen</h2>
                             <ul class="staff-wrapper">
                                 <?php

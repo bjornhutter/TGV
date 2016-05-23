@@ -168,10 +168,27 @@
                     <h1 class="dashboard-title">Skicka manus</h1>
                     <a href="send_script.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till
                         Skicka manus</a>
+                    <div class="helper-links-wrapper">
+                        <a href="#1" class="helper-links">Anvisningar för artikelskribenter</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#2" class="helper-links">Riktlinjer</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#3" class="helper-links">Form</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#4" class="helper-links">Rubriker</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#5" class="helper-links">Citat</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#6" class="helper-links">Referenser</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#7" class="helper-links">Anvisningar för recensenter</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#8" class="helper-links">Anvisningar för granskare</a>
+                    </div>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="1">
                             <h2 class="dashboard-sub-title">Anvisningar för artikelskribenter</h2>
                             <ul>
                                 <li>
@@ -191,7 +208,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="2">
                             <h2 class="dashboard-sub-title">Riktlinjer</h2>
                             <ul>
                                 <li>
@@ -210,7 +227,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="3">
                             <h2 class="dashboard-sub-title">Form</h2>
                             <ul>
                                 <li>
@@ -229,7 +246,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="4">
                             <h2 class="dashboard-sub-title">Rubriker</h2>
                             <ul>
                                 <li>
@@ -248,7 +265,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="5">
                             <h2 class="dashboard-sub-title">Citat</h2>
                             <ul>
                                 <li>
@@ -267,7 +284,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="6">
                             <h2 class="dashboard-sub-title">Referenser</h2>
                             <ul>
                                 <li>
@@ -286,7 +303,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="7">
                             <h2 class="dashboard-sub-title">Anvisningar för recensenter</h2>
                             <ul>
                                 <li>
@@ -305,7 +322,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="8">
                             <h2 class="dashboard-sub-title">Anvisningar för granskare</h2>
                             <ul>
                                 <li>
