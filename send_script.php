@@ -375,7 +375,7 @@ if (!isset($_SESSION)) {
                     <input type="text" name="lname" class="script-form-input" title="Efternamn" required>
                 </li>
                 <li class="script-form-li">
-                    <p>Din emailaddress: </p>
+                    <p>E-mail: </p>
                     <input type="email" name="from" title="Emailaddress" placeholder="exempel@adress.com"
                            class="script-form-input"
                            required>
