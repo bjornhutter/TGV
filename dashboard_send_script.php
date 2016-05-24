@@ -18,7 +18,8 @@
                 selector: 'textarea',
                 toolbar: 'undo redo | bold italic | bullist numlist | link code',
                 menubar: 'file edit view insert tools',
-                plugins: 'link code'
+                plugins: 'link code',
+                content_css : 'css/tinymce.css'
                 /*toolbar: 'undo redo | bold italic | bullist numlist code',
                  menubar: 'file edit view tools',
                  plugins: "code"*/

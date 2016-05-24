@@ -34,8 +34,10 @@ $imgName = $row['image'];
     <script>
         tinymce.init({
             selector: 'textarea',
-            toolbar: 'undo redo | bold italic | bullist numlist',
-            menubar: 'file edit view'
+            toolbar: 'undo redo | bold italic | bullist numlist | link code',
+            menubar: 'file edit view insert tools',
+            plugins: 'link code',
+            content_css : 'css/tinymce.css'
         });
     </script>
     <script src="js/active_dashnav.js"></script>
