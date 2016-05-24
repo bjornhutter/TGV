@@ -125,4 +125,5 @@ if (!isset($_SESSION)) {
 <!--@todo Footer funkar inte pga det som finns i asiden-->
 <?php include('includes/footer.inc') ?>
 </body>
+<script src="js/menu_toggle.js"></script>
 </html>
