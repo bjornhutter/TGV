@@ -68,11 +68,13 @@
                                     $staffContent = replace_quotes($staffRow['content']);
                                     $staffFname = replace_quotes($staffRow['fname']);
                                     $staffLname = replace_quotes($staffRow['lname']);
+                                    $staffTitle = replace_quotes($staffRow['title']);
                                     $staffImgName = $staffRow['image'];
 
                                     echo '<li class="staff">';
                                     echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
                                     echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+                                    echo '<p>' . $staffTitle . '</p>';
                                     echo $staffContent;
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="about_editors_edit.php?id=' . $staffId . '" class="edit">Redigera</a>';

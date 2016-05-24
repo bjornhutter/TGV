@@ -91,15 +91,15 @@ nav ul li a {
     display: block;
     white-space: nowrap;
     color: #FFFFFF;
-    -webkit-transition: color 200ms;
-    -moz-transition: color 200ms;
-    -ms-transition: color 200ms;
-    -o-transition: color 200ms;
-    transition: color 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -ms-transition: all 200ms;
+    -o-transition: all 200ms;
+    transition: all 200ms;
 }
 
 nav ul li a:hover {
-    color: #000000;
+    color: #fff;
     background: #e07929;
 }
 
@@ -637,6 +637,14 @@ footer a:hover {
     box-sizing: border-box;
     margin: 10px 0 0 0;
     padding: 10px 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: background 200ms;
+    -moz-transition: background 200ms;
+    -ms-transition: background 200ms;
+    -o-transition: background 200ms;
+    transition: background 200ms;
 }
 
 .script-form-input-submit:hover {
@@ -779,6 +787,10 @@ footer a:hover {
 .ui-tabs .ui-tabs-nav .ui-corner-top, .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
     border-radius: 0 !important;
     border: none;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    outline: none;
 }
 
 .ui-widget-header {

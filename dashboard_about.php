@@ -62,10 +62,15 @@
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Om oss</h1>
                     <a href="about.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Om oss</a>
+                    <div class="helper-links-wrapper">
+                        <a href="#1" class="helper-links">Info om TGV</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#2" class="helper-links">Om redaktionen</a>
+                    </div>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="1">
                             <h2 class="dashboard-sub-title">Info om TGV</h2>
                             <ul>
                                 <li>
@@ -101,7 +106,7 @@
                                 </li>
                             </ul>
                         </form>-->
-                        <div class="dashboard-form">
+                        <div class="dashboard-form" id="2">
                             <h2 class="dashboard-sub-title">Om redaktionen</h2>
                             <ul class="staff-wrapper">
                                 <?php
@@ -112,12 +117,14 @@
                                     $staffContent = replace_quotes($staffRow['content']);
                                     $staffFname = replace_quotes($staffRow['fname']);
                                     $staffLname = replace_quotes($staffRow['lname']);
+                                    $staffTitle = replace_quotes($staffRow['title']);
                                     $staffImgName = $staffRow['image'];
 
                                     echo '<li class="staff">';
                                     echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
 
                                     echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+                                    echo '<p>' . $staffTitle . '</p>';
                                     echo $staffContent;
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="about_editors_edit.php?id=' . $staffId . '" class="edit">Redigera</a>';
@@ -139,6 +146,10 @@
                                     <li>
                                         <p class="dashboard-form-title">Efternamn: </p>
                                         <input type="text" name="lname" id="lname" title="Efternamn" required>
+                                    </li>
+                                    <li>
+                                        <p class="dashboard-form-title">Titel: </p>
+                                        <input type="text" name="title" id="title" title="Titel" required>
                                     </li>
                                     <li>
                                         <p class="dashboard-form-title">Beskrivning: </p>
