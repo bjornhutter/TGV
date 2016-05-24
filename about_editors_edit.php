@@ -14,6 +14,7 @@ $content = $row['content'];
 $fname = $row['fname'];
 $lname = $row['lname'];
 $imgName = $row['image'];
+$title = $row['title'];
 
 ?>
 <!doctype html>
@@ -25,6 +26,8 @@ $imgName = $row['image'];
     <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
     <title>Redigera redaktörer | Tidskrift för genusvetenskap</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
+          type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -34,7 +37,8 @@ $imgName = $row['image'];
             selector: 'textarea',
             toolbar: 'undo redo | bold italic | bullist numlist | link code',
             menubar: 'file edit view insert tools',
-            plugins: 'link code'
+            plugins: 'link code',
+            content_css : 'css/tinymce.css'
         });
     </script>
     <script src="js/active_dashnav.js"></script>
@@ -49,9 +53,9 @@ $imgName = $row['image'];
         <div class="nav-main-wrapper">
             <?php include('includes/dashboard_nav.inc') ?>
             <div class="overview-wrapper">
-                <h1 class="dashboard-title">Om oss</h1>
+                <h1 class="dashboard-title">Om TGV</h1>
                 <a href='dashboard_about.php' class='go-back-link'>Ta mig tillbaka till dashboarden!</a>
-                <a href="about.php" class="go-back-link" target="_blank">Gå till Om oss</a>
+                <a href="about.php" class="go-back-link" target="_blank">Gå till Om TGV</a>
             </div>
             <div class="main-outer-wrapper">
                 <main id="main">
@@ -67,6 +71,10 @@ $imgName = $row['image'];
                                 <p class="dashboard-form-title">Efternamn: </p>
                                 <input type="text" name="lname" id="lname" value="<?php echo $lname ?>"
                                        title="Efternamn">
+                            </li>
+                            <li>
+                                <p class="dashboard-form-title">Titel: </p>
+                                <input type="text" name="title" id="title" title="Titel" value="<?php echo $title ?>" required>
                             </li>
                             <li>
                                 <p class="dashboard-form-title">Beskrivning: </p>

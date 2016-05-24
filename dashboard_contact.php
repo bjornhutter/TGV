@@ -8,6 +8,8 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
+              type='text/css'>
         <link rel="stylesheet"
               href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -18,7 +20,8 @@
                 selector: 'textarea',
                 toolbar: 'undo redo | bold italic | bullist numlist | link code',
                 menubar: 'file edit view insert tools',
-                plugins: 'link code'
+                plugins: 'link code',
+                content_css : 'css/tinymce.css'
             });
         </script>
         <script src="js/active_dashnav.js"></script>
@@ -95,10 +98,17 @@
                     <h1 class="dashboard-title">Kontakt</h1>
                     <a href="contact.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till
                         Kontakt</a>
+                    <div class="helper-links-wrapper">
+                        <a href="#1" class="helper-links">Kontaktuppgifter</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#2" class="helper-links">Kontaktinformation</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#3" class="helper-links">Footer</a>
+                    </div>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="1">
                             <h2 class="dashboard-sub-title">Kontaktuppgifter</h2>
                             <ul>
                                 <li>
@@ -127,7 +137,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="2">
                             <h2 class="dashboard-sub-title">Kontaktinformation</h2>
                             <ul>
                                 <li>
@@ -141,7 +151,7 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="3">
                             <h2 class="dashboard-sub-title">Footer</h2>
                             <ul>
                                 <li>

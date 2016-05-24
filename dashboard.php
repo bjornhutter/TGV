@@ -21,7 +21,8 @@
                 selector: 'textarea',
                 toolbar: 'undo redo | bold italic | bullist numlist | link code',
                 menubar: 'file edit view insert tools',
-                plugins: 'link code'
+                plugins: 'link code',
+                content_css : 'css/tinymce.css'
             });
         </script>
         <script src="js/active_dashnav.js"></script>
@@ -65,10 +66,17 @@
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Hem</h1>
                     <a href="index.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Hem</a>
+                    <div class="helper-links-wrapper">
+                        <a href="#1" class="helper-links">Call for papers</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#2" class="helper-links">Nyhetsflöde</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#3" class="helper-links">Senaste nummer</a>
+                    </div>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="1">
                             <h2 class="dashboard-sub-title">Call for papers</h2>
                             <ul>
                                 <li>
@@ -87,9 +95,51 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="news_create.php" method="post" class="dashboard-form">
+                        <form action="news_create.php" method="post" class="dashboard-form float-fix" id="2">
                             <h2 class="dashboard-sub-title">Nyhetsflöde</h2>
-                            <ul>
+
+                            <!--<h2 class="dashboard-sub-title" style="padding: 20px 0 20px 0">Senaste inlägget</h2>-->
+                            <ul class="news-posts-wrapper">
+
+                                <?php
+
+                                include('includes/db_connect.inc');
+
+                                $result = mysqli_query($link, "SELECT * FROM tgv_news ORDER BY DATE DESC LIMIT 1") or die (mysqli_error($link));
+
+                                while ($row = mysqli_fetch_array($result)) {
+                                    $title = $row['title'];
+                                    $content = $row ['content'];
+                                    $date = $row ['date'];
+                                    $id = $row ['id'];
+
+
+                                    echo '<li class="news-post">';
+                                    echo '<h1 class="news-title">' . $title . '</h1>';
+
+
+                                    if (strlen($content) < 220) {
+                                        echo "$content";
+                                    } elseif (strlen($content) > 220) {
+                                        $content = substr($content, 0, 220);
+                                        echo $content;
+                                        echo '...';
+                                    } else {
+                                        echo "$content";
+                                    }
+
+
+                                    echo '<p class="news-date">' . $date . '</p>';
+                                    echo '<div class="recent-article-button-wrapper">';
+                                    echo '<a href="news_edit.php?id=' . $id . '" class="edit">Redigera</a>';
+                                    echo '<a href="news_posts.php" class="show-all">Visa alla inlägg</a>';
+                                    echo '</div>';
+                                    echo '</li>';
+                                }
+                                ?>
+                            </ul>
+                            <h2 id="add-news-toggle" class="add-toggle-icon-plus">Skapa ett nytt inlägg</h2>
+                            <ul id="add-news-post">
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>
                                     <input type="text" name="newsTitle" title="Nyhetsflöde Titel">
@@ -98,11 +148,11 @@
                                     <p class="dashboard-form-title">Beskrivning: </p>
                                     <textarea name="newsContent" title="Nyhetsflöde Beskrivning" rows="10"></textarea>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a href="news_posts.php" class="form-link-textdec-fix"><p
                                             class="form-input-submit form-link-center-fix">Visa alla nyheter
                                         </p></a>
-                                </li>
+                                </li>-->
                                 <li>
                                     <input type="submit" name="newsSubmit" value="Skapa inlägg"
                                            class="form-input-submit">
@@ -127,8 +177,7 @@
                                 </li>
                             </ul>
                         </form>-->
-                        <div class="dashboard-form">
-                            <a href="recent_articles.php" class="show-all">Visa alla nummer</a>
+                        <div class="dashboard-form" id="3">
                             <h2 class="dashboard-sub-title-no-padding-top">Senaste nummer</h2>
                             <ul class="recent-article-wrapper">
                                 <!--<h1 class="recent-article-main-title">Senaste nummer</h1>-->
@@ -141,15 +190,45 @@
                                     $recentArticlesContent = replace_quotes($recentArticlesRow['content']);
                                     $recentArticlesFeatured = replace_quotes($recentArticlesRow['featured']);
                                     $recentArticlesImgName = $recentArticlesRow['image'];
+
+                                    //todo buggar flera strong tags
+                                    //$recentArticlesContent = substr($recentArticlesContent, 0, 220);
+                                    //$recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
+
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
+                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
+
+
+                                    if (strlen($recentArticlesContent) < 220) {
+                                        echo "$recentArticlesContent";
+                                    } elseif (strlen($recentArticlesContent) > 220) {
+                                        $recentArticlesContent = substr($recentArticlesContent, 0, 220);
+                                        echo $recentArticlesContent;
+                                        echo '...';
+                                    } else {
+                                        echo "$recentArticlesContent";
+                                    }
+
+                                    if (strlen($recentArticlesFeatured) < 220) {
+                                        echo "$recentArticlesFeatured";
+                                    } elseif (strlen($recentArticlesFeatured) > 220) {
+                                        $recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
+                                        echo $recentArticlesFeatured;
+                                        echo '...';
+                                    } else {
+                                        echo "$recentArticlesFeatured";
+                                    }
+
+
+                                    //echo $recentArticlesContent;
+                                    //echo '...';
+                                    //echo $recentArticlesFeatured;
+                                    //echo '...';
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
+                                    echo '<a href="recent_articles.php" class="show-all">Visa alla nummer</a>';
                                     echo '</div>';
-                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
-                                    echo $recentArticlesContent;
-                                    echo $recentArticlesFeatured;
-
                                     //if (isset($_SESSION['user'])) {
                                     //echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '">Redigera</a></p>';
 

@@ -8,6 +8,8 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
+              type='text/css'>
         <link rel="stylesheet"
               href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -18,7 +20,8 @@
                 selector: 'textarea',
                 toolbar: 'undo redo | bold italic | bullist numlist | link code',
                 menubar: 'file edit view insert tools',
-                plugins: 'link code'
+                plugins: 'link code',
+                content_css : 'css/tinymce.css'
             });
         </script>        
         <script src="js/active_dashnav.js"></script>
@@ -76,10 +79,15 @@
                 <div class="overview-wrapper">
                     <h1 class="dashboard-title">Prenumerera</h1>
                     <a href="subscription.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Prenumerera</a>
+                    <div class="helper-links-wrapper">
+                        <a href="#1" class="helper-links">Prislista</a>
+                        <p class="helper-links-p">/</p>
+                        <a href="#2" class="helper-links">Prenumerationsinfo</a>
+                    </div>
                 </div>
                 <div class="main-outer-wrapper">
                     <main id="main">
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="1">
                             <h2 class="dashboard-sub-title">Prislista</h2>
                             <ul>
                                 <li>
@@ -98,8 +106,8 @@
                                 </li>
                             </ul>
                         </form>
-                        <form action="dashboard_process.php" method="post" class="dashboard-form">
-                            <h2 class="dashboard-sub-title">Prenumereringsinfo</h2>
+                        <form action="dashboard_process.php" method="post" class="dashboard-form" id="2">
+                            <h2 class="dashboard-sub-title">Prenumerationsinfo</h2>
                             <ul>
                                 <li>
                                     <p class="dashboard-first-form-title">Titel: </p>

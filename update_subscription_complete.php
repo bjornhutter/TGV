@@ -8,6 +8,8 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
+              type='text/css'>
         <link rel="stylesheet"
               href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -70,8 +72,8 @@
                             echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Prislista</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldPriceTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldPriceContent</p></div>";
                             echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Prislista</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$priceTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$priceContent</p>";
                         } elseif (($_GET['update']) == 2) {
-                            echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Prenumereringsinfo</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldSubInfoTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldSubInfoContent</p></div>";
-                            echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Prenumereringsinfo</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$subInfoTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$subInfoContent</p>";
+                            echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Prenumerationsinfo</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldSubInfoTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldSubInfoContent</p></div>";
+                            echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Prenumerationsinfo</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$subInfoTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$subInfoContent</p>";
                         }
 
 

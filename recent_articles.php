@@ -21,7 +21,8 @@
                 selector: 'textarea',
                 toolbar: 'undo redo | bold italic | bullist numlist | link code',
                 menubar: 'file edit view insert tools',
-                plugins: 'link code'
+                plugins: 'link code',
+                content_css : 'css/tinymce.css'
             });
         </script>
         <script src="js/active_dashnav.js"></script>
@@ -70,15 +71,27 @@
                                     $recentArticlesFeatured = replace_quotes($recentArticlesRow['featured']);
                                     $recentArticlesImgName = $recentArticlesRow['image'];
 
+
+                                    //todo buggar flera strong tags
+                                    $recentArticlesContent = substr($recentArticlesContent, 0, 220);
+                                    $recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
+
+
+                                    //todo alternativt göra dashboard-form
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
+                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
+
+                                    echo $recentArticlesContent;
+                                    echo '...';
+                                    echo $recentArticlesFeatured;
+                                    echo '...';
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
-                                    echo '<a href="#top" class="back-to-top-btn">Tillbaks till toppen</a>';
+                                    echo '<a href="#top" class="back-to-top-btn">Tillbaka till toppen</a>';
                                     echo '</div>';
-                                    echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
-                                    echo $recentArticlesContent;
-                                    echo $recentArticlesFeatured;
+                                    //echo $recentArticlesContent;
+                                    //echo $recentArticlesFeatured;
                                     //if (isset($_SESSION['user'])) {
                                     //echo '<p><a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a></p>';
                                     //}

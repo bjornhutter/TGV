@@ -11,23 +11,32 @@ if (!isset($_SESSION)) {
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Tidskrift för genusvetenskap</title>
+    <link rel="icon" href="img/tgv_favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/stickynav.js"></script>
     <script src="js/active_nav.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#menyButton").click(function(){
+                $("#mobile_ul").slideToggle(600, "swing");
+            });
+        });
+    </script>
 </head>
 <body>
 
 <header class="header-homepage">
     <div class="header-logo">
-        <h1 class="header-logo-main-title">Tidsskrift för genusvetenskap</h1>
+        <h1 class="header-logo-main-title">Tidskrift för genusvetenskap</h1>
     </div>
     <div class="header-welcome">
         <h2 class="header-welcome-text">Välkommen till Nordens största referee-granskade tidskrift för aktuell tvärvetenskaplig genusforskning!</h2>
     </div>
 </header>
-<?php include('includes/navigation.inc') ?>
+<?php include('includes/navigation_index.inc') ?>
 
 <main class="index-main">
     <ul class="recent-article-wrapper">
@@ -49,9 +58,8 @@ if (!isset($_SESSION)) {
             echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
             echo '<p class="recent-article-content">' . $content . '... <a class="recent-article-btn" href="articles_read_more.php?id='.$id.'">[Läs mer]</a></p>';
-            //FIXA RÄTT LÄNK FÖR REDIGERING
             if (isset($_SESSION['user'])) {
-            echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit">Redigera</a></p>';
+            echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
             }
             echo '</li>';
         }
@@ -74,7 +82,7 @@ if (!isset($_SESSION)) {
     echo '<p>' . $cfpContent . '</p>';
 
     if (isset($_SESSION['user'])) {
-        echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
+        echo '<p><a href="dashboard.php" class="edit" target="_blank">Redigera</a></p>';
     }
     echo '</section>';
 
@@ -102,7 +110,7 @@ if (!isset($_SESSION)) {
             echo '<p class="news-content">' . nl2br($content) . '</p>';
 
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard.php" class="edit">Redigera</a></p>';
+                echo '<p><a href="dashboard.php" class="edit" target="_blank">Redigera</a></p>';
             }
 
             echo '<hr class="hr-news">';
@@ -117,4 +125,5 @@ if (!isset($_SESSION)) {
 <!--@todo Footer funkar inte pga det som finns i asiden-->
 <?php include('includes/footer.inc') ?>
 </body>
+<script src="js/menu_toggle.js"></script>
 </html>

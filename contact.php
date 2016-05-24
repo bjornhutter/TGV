@@ -11,10 +11,11 @@ if (!isset($_SESSION)) {
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Kontakt | Tidskrift för genusvetenskap</title>
+    <link rel="icon" href="img/tgv_favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="js/stickynav.js"></script>
     <script src="js/active_nav.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script>
@@ -49,7 +50,6 @@ if (!isset($_SESSION)) {
     $contactResult = mysqli_query($link, "SELECT * FROM tgv_contact") or die(mysqli_error($link));
 
     echo '<section class="contact-info">';
-    echo '<ul class="contact-info-ul">';
     $contactRow = mysqli_fetch_array($contactResult);
 
     $contactId = $contactRow['id'];
@@ -59,9 +59,12 @@ if (!isset($_SESSION)) {
     $contactEmail = $contactRow['email'];
     
     echo '<h1 class="contact-info-main-title">' . $contactTitle . '</h1>';
+    echo '<ul class="contact-info-ul">';
     echo '<li class="contact-info-li">' . $contactAddress . '</li>';
     echo '<li class="contact-info-li">' . $contactPhone . '</li>';
     echo '<li class="contact-info-li">' . $contactEmail . '</li>';
+    echo '</ul>';
+    
 
 
     if (isset($_SESSION['user'])) {
@@ -69,10 +72,9 @@ if (!isset($_SESSION)) {
     //Behöver inte GET ID
     //echo '<p><a href="contact_edit.php?id=' . $contactId . '">Redigera</a></p>';
 
-    echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
+    echo '<p><a href="dashboard_contact.php" class="edit" target="_blank">Redigera</a></p>';
 
     }
-    echo '</ul>';
     echo '</section>';
 
 ?>
@@ -89,7 +91,7 @@ if (!isset($_SESSION)) {
     echo '<p>' . $contactInfoContent . '</p>';
 
     if (isset($_SESSION['user'])) {
-        echo '<p><a href="dashboard_contact.php" class="edit">Redigera</a></p>';
+        echo '<p><a href="dashboard_contact.php" class="edit" target="_blank">Redigera</a></p>';
     }
     echo '</section>';
 
@@ -102,4 +104,5 @@ if (!isset($_SESSION)) {
 
 <?php include('includes/footer.inc') ?>
 </body>
+<script src="js/menu_toggle.js"></script>
 </html>

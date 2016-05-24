@@ -16,6 +16,10 @@ a:hover {
     color: #000;
 }
 
+#mobile_nav_bar {
+    display:none;
+}
+
 /*** ================= HEADER START =================== ***/
 
 header {
@@ -34,7 +38,7 @@ header {
 
 .header-logo {
     background: #e07929;
-    width: 43%;
+    width: 508px;
     margin-top: 6%;
     position: absolute;
     padding: 1% 3%;
@@ -42,7 +46,7 @@ header {
 
 .header-logo-main-title {
     color: #FFFFFF;
-    font-size: 2em;
+    font-size: 32px;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
 }
@@ -87,15 +91,15 @@ nav ul li a {
     display: block;
     white-space: nowrap;
     color: #FFFFFF;
-    -webkit-transition: color 200ms;
-    -moz-transition: color 200ms;
-    -ms-transition: color 200ms;
-    -o-transition: color 200ms;
-    transition: color 200ms;
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -ms-transition: all 200ms;
+    -o-transition: all 200ms;
+    transition: all 200ms;
 }
 
 nav ul li a:hover {
-    color: #000000;
+    color: #fff;
     background: #e07929;
 }
 
@@ -217,7 +221,7 @@ footer a:hover {
     margin: 0 0 10px 0;
 }
 
-.recent-article {
+.recent-article, .read-more-info {
     background: #FFFFFF;
     width: 26%;
     margin: 20px 10px 20px 10px;
@@ -254,7 +258,7 @@ footer a:hover {
     margin: 4% 0 0 0;
 }
 
-.recent-article p {
+.recent-article p, .read-more-info p {
     font-family: 'Open Sans', sans-serif;
     padding: 2% 5% 2% 5%;
     font-size: 0.8em;
@@ -271,7 +275,7 @@ footer a:hover {
     color: #000;
 }
 
-.recent-article-more {
+.read-more-content {
     background: #FFFFFF;
     width: 50%;
     margin: 20px 10px 20px 10px;
@@ -285,7 +289,11 @@ footer a:hover {
     vertical-align: top;
 }
 
-.recent-article-more-title {
+.read-more-img {
+
+}
+
+.recent-article-more-title, .read-more-featured-title {
     font-family: 'Open Sans', sans-serif;
     padding: 0 5% 2% 5%;
     font-weight: 600;
@@ -296,7 +304,7 @@ footer a:hover {
     margin: 4% 0 0 0;
 }
 
-.recent-article-more p {
+.read-more-content p {
     font-family: 'Open Sans', sans-serif;
     padding: 0 5% 2% 5%;
     font-size: 0.8em;
@@ -401,7 +409,7 @@ footer a:hover {
 
 .about-staff {
     width: 50%;
-    margin: 0 auto;
+    margin: 54px auto 0;
     padding: 40px 0;
 }
 
@@ -425,7 +433,7 @@ footer a:hover {
     font-size: 2em;
     color: #000000;
     text-align: left;
-    padding-left: calc(13% + 1px);
+    padding-left: calc(12% + 1px);
     font-family: 'Open Sans', sans-serif;
     margin: 0 0 10px 0;
 }
@@ -433,7 +441,7 @@ footer a:hover {
 .staff {
     background: #FFFFFF;
     width: 22.5%;
-    margin: 20px 25px 0px 25px;
+    margin: 20px 25px 0 25px;
     display: inline-block;
     height: auto;
     text-align: left;
@@ -455,7 +463,6 @@ footer a:hover {
     margin: 6% 0 0 0;
 }
 
-/* Kolla vad som är bäst att göra med detta + för index, pga tinyMCE avslutar denna content och sätter in sin egen p istället, dvs den nedanför */
 .staff-content {
     font-family: 'Open Sans', sans-serif;
     padding: 2% 5% 2% 5%;
@@ -469,11 +476,16 @@ footer a:hover {
     line-height: 150%;
 }
 
+.staffWorktitle {
+    font-style: italic;
+    margin: 5px 0 0 0;
+}
+
 .staff-linebreak {
     background: #e07929;
     height: 2px;
     width: 60px;
-    margin: 20px 0 10px 0;
+    margin: 15px 0 -5px 0;
 }
 
 /*** ================= OM OSS END =================== ***/
@@ -481,17 +493,16 @@ footer a:hover {
 /*** ================= PRENUMERERA START =================== ***/
 
 .price-info-wrapper {
-    width: 80%;
+    width: 100%;
     display: block;
-    margin: 0 auto;
-    padding: 40px 0 0 0;
+    margin: 54px auto 0;
 }
 
 .subscription-price {
-    width: calc(40% - 4%);
+    width: 50%;
     display: block;
-    float: left;
-    padding: 0 0 40px 4%;
+    padding: 40px 25% 40px 25%;
+    background: #FFF;
 }
 
 .subscription-price-main-title {
@@ -503,10 +514,9 @@ footer a:hover {
 }
 
 .subscription-info {
-    width: calc(60% - 4%);
+    width: 50%;
     display: block;
-    float: left;
-    padding: 0 4% 40px 0;
+    padding: 40px 25% 40px 25%;
 }
 
 .subscription-info-main-title {
@@ -524,11 +534,10 @@ footer a:hover {
 /*** ================= PRENUMERERA END =================== ***/
 
 /*** ================= SKICKA MANUS START =================== ***/
-
 .script-wrapper {
     width: 100%;
     display: block;
-    margin: 0 auto;
+    margin: 54px auto 0;
     padding: 40px 0;
 }
 
@@ -536,7 +545,7 @@ footer a:hover {
     width: 50%;
     display: block;
     background: #F3F3F3;
-    padding: 0 0% 40px 0%;
+    padding: 0 0 40px 0;
     margin: 0 auto;
 }
 
@@ -567,7 +576,7 @@ footer a:hover {
     width: 50%;
     display: block;
     background: #f3f3f3;
-    padding: 40px 25% 0px 25%;
+    padding: 40px 25% 0 25%;
 }
 
 .script-examiner-main-title {
@@ -586,54 +595,21 @@ footer a:hover {
     background: #FFF;
 }
 
-.script-form-inner-wrapper {
+#script-form-inner-wrapper {
     width: 35%;
     margin: 0 auto;
 }
 
 .script-form {
-    margin: 50px auto;
+    margin: 0 auto;
     display: block;
 }
 
-.script-form-title {
-    font-size: 1.5em;
-}
-
 .script-form-ul {
-    background: #f6f6f6;
-    padding: 50px;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
 }
 
 .script-form-li {
-}
-
-.email-sent-container {
-    width: 50%;
-    height: 350px;
-    background: #fff;
-    margin: 5% auto;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.email-sent-container ul {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20%;
-}
-
-.email-sent-container h1 {
-    font-size: 2em;
-}
-
-.email-sent-container p {
-    font-size: 1.5em;
-    padding-top: 10px;
     margin: 1% 0 2% 0;
 }
 
@@ -661,6 +637,14 @@ footer a:hover {
     box-sizing: border-box;
     margin: 10px 0 0 0;
     padding: 10px 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: background 200ms;
+    -moz-transition: background 200ms;
+    -ms-transition: background 200ms;
+    -o-transition: background 200ms;
+    transition: background 200ms;
 }
 
 .script-form-input-submit:hover {
@@ -678,7 +662,11 @@ footer a:hover {
     color: #000000;
     text-align: left;
     margin: 0 0 10px 0;
->>>>>>> origin/master
+}
+
+.send-script-info {
+    margin: 0 0 20px 0;
+    font-style: italic;
 }
 
 /*** ================= SKICKA MANUS END =================== ***/
@@ -688,7 +676,7 @@ footer a:hover {
 .contact-wrapper {
     width: 100%;
     height: 200px;
-    margin: 0 auto;
+    margin: 54px auto 0;
     display: block;
     padding: 40px 0;
 }
@@ -709,34 +697,35 @@ footer a:hover {
 }
 
 .contact-info-ul {
-
+    display: flex;
+    display: -webkit-flex;
 }
 
 .contact-info-li {
     font-family: 'Open Sans', sans-serif;
     line-height: 150%;
     font-size: 0.8em;
-    padding: 0px 0 12px 30px;
+    padding: 0 0 12px 30px;
     display: inline-block;
     vertical-align: top;
 }
 
-.contact-info-li:nth-child(2) {
+.contact-info-li:nth-child(1) {
     background: #F3F3F3 url('../img/location.svg') no-repeat left 2px;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
-.contact-info-li:nth-child(3) {
-    background: #F3F3F3 url('../img/phone.svg') no-repeat left 0px;
+.contact-info-li:nth-child(2) {
+    background: #F3F3F3 url('../img/phone.svg') no-repeat left 0;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
-.contact-info-li:nth-child(4) {
-    background: #F3F3F3 url('../img/envelop.svg') no-repeat left 0px;
+.contact-info-li:nth-child(3) {
+    background: #F3F3F3 url('../img/envelop.svg') no-repeat left 0;
     background-size: 1.5em;
     position: relative;
 }
@@ -800,10 +789,14 @@ footer a:hover {
     border: none;
 }
 
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    outline: none;
+}
+
 .ui-widget-header {
     background: #cccccc !important;
     color: #222222 !important;
-    border: 0px solid !important;
+    border: 0 solid !important;
 }
 
 
@@ -832,6 +825,14 @@ ul {
     margin: 2px 0;
     display: block;
     width: 54px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: background 200ms;
+    -moz-transition: background 200ms;
+    -ms-transition: background 200ms;
+    -o-transition: background 200ms;
+    transition: background 200ms;
 }
 
 .edit:hover {
@@ -840,3 +841,612 @@ ul {
     text-decoration: none;
 }
 /*** ================= EDIT END =================== ***/
+
+.nav-hide-mobile {
+    display: none;
+    position: relative;
+}
+
+.nav-hide {
+    display: block;
+}
+
+.menu-toggle-hide {
+    display: none;
+}
+
+#menu-toggle {
+    padding: 20px;
+    background: #252525;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+/*** ================= RESPONSIVE START =================== ***/
+
+@media screen and (max-width: 1342px) {
+    .contact-info {
+        width: 50%;
+    }
+
+    .contact-more-info {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1001px) {
+    header {
+        height: 400px;
+    }
+
+    .staff-main-title {
+        padding-left: calc(11% + 1px);
+    }
+
+    .contact-info {
+        width: 60%;
+    }
+
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
+        width: 60%;
+        padding: 20px 20% 20px 20%;
+    }
+
+    #tabs {
+        width: 60%;
+        overflow: hidden;
+    }
+
+    #script-form-inner-wrapper {
+        width: 40%;
+    }
+
+    .contact-more-info {
+        width: 55%;
+        padding: 0 5% 40px 0;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;    }
+
+    #menu-slidedown {
+        display: block;
+    }
+
+    .nav-hide-mobile {
+        display: block;
+        position: fixed;
+    }
+
+    .nav-hide {
+        display: none;
+        position: relative;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
+
+}
+
+@media screen and (max-width: 1000px) and (min-width: 770px) {
+
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-slidedown {
+        display: none;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        width: 100%;
+    }
+
+    .fixed-2 {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .fixed {
+        display: none;
+        position: relative;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
+
+    header {
+        height: 300px;
+    }
+
+    .header-welcome {
+        width: 59%;
+        margin-top: 13%;
+    }
+
+    .index-main {
+        width: 100%;
+    }
+
+    .recent-article-main-title {
+        padding-left: 2%;
+    }
+
+    .recent-article {
+        width: 31%;
+        margin: 20px 5px 20px 5px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .read-more-info {
+        width: 35%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .read-more-content {
+        width: 56%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .index-aside {
+        width: 100%;
+    }
+
+    .cfp, .news-feed {
+        width: 88%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 0 auto 10px;
+    }
+
+    .news-feed {
+        height: auto;
+    }
+
+    .about-staff {
+        width: 71%;
+    }
+
+    .staff {
+        width: 26%;
+    }
+
+    .staff-main-title {
+        padding-left: calc(5% + 1px);
+    }
+
+    .contact-info {
+        width: 71%;
+    }
+
+    .contact-more-info {
+        width: 66%;
+        padding: 0 5% 40px 0;
+    }
+
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
+        width: 71%;
+        padding: 20px 14.5% 20px 14.5%;
+    }
+
+    #tabs {
+        width: 71%;
+        overflow: hidden;
+    }
+
+    #script-form-inner-wrapper {
+        width: 50%;
+    }
+
+    .footer-block {
+        margin: 0 0 0 40px;
+    }
+
+    .footer-block-about {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 769px) and (min-width: 501px) {
+
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-slidedown {
+        display: none;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        width: 100%;
+    }
+
+    .fixed-2 {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .fixed {
+        display: none;
+        position: relative;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
+
+    header {
+        height: 300px;
+    }
+
+    .header-logo {
+        width: 413px;
+        margin-top: 10%;
+    }
+    .header-logo-main-title {
+        font-size: 26px;
+    }
+
+    .header-welcome {
+        display: none;
+    }
+
+    .header-welcome-text {
+        display: none;
+    }
+
+    .index-main {
+        width: 100%;
+    }
+
+    .recent-article-wrapper {
+        padding: 20px 0 0 0;
+    }
+
+    .recent-article-main-title {
+        font-size: 1.5em;
+        padding-left: 6%;
+    }
+
+    .recent-article, .read-more-info, .read-more-content {
+        width: 88%;
+        margin: 20px 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .read-more-img {
+        display: none;
+    }
+
+    .index-aside {
+        width: 100%;
+    }
+
+    .cfp, .news-feed {
+        width: 83.5%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 0 auto 10px;
+    }
+
+    .news-feed {
+        height: auto;
+    }
+
+    .about-staff {
+        width: 88%;
+    }
+
+    .staff {
+        width: 88%;
+}
+    .staff-linebreak {
+        margin: 20px 0 -15px 0;
+    }
+
+    .staff-main-title {
+        padding-left: calc(5% + 3px);
+    }
+
+    .staff-content {
+        padding: 0 5% 2% 5%;
+    }
+
+    .contact-info {
+        width: 88%;
+    }
+
+    .contact-more-info {
+        width: 85%;
+        padding: 0 3% 40px 0;
+    }
+
+    .contact-info-ul {
+        display: block
+    }
+
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
+        width: 88%;
+        padding: 20px 6% 20px 6%;
+    }
+
+    #tabs {
+        width: 88%;
+        overflow: hidden;
+    }
+
+    #script-form-inner-wrapper {
+        width: 70%;
+    }
+
+    .footer-block {
+        margin: 0 0 0 40px;
+    }
+
+    .footer-block-about {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-slidedown {
+        display: none;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        width: 100%;
+    }
+
+    .fixed-2 {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .fixed {
+        display: none;
+        position: relative;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
+
+    .contact-info-li {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 500px) and (min-width: 0px) {
+
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-slidedown {
+        display: none;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        width: 100%;
+    }
+
+    .fixed-2 {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .fixed {
+        display: none;
+        position: relative;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
+
+    header {
+        height: 200px;
+    }
+
+    .header-logo {
+        width: 222px;
+        margin-top: 10%;
+    }
+
+    .header-logo-main-title {
+        font-size: 14px;
+    }
+
+    .header-welcome {
+        display: none;
+    }
+
+    .header-welcome-text {
+        display: none;
+    }
+
+    .index-main {
+        width: 100%;
+    }
+
+    .recent-article-wrapper {
+        padding: 10px 0 0 0;
+    }
+
+    .recent-article-main-title {
+        font-size: 1.5em;
+        padding-left: 6%;
+    }
+
+    .recent-article, .read-more-info, .read-more-content {
+        width: 88%;
+        margin: 20px 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .read-more-img {
+        display: none;
+    }
+
+    .index-aside {
+        width: 100%;
+    }
+
+    .cfp, .news-feed {
+        width: 83.5%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 0 auto 10px;
+    }
+
+    .news-feed {
+        height: auto;
+    }
+
+    .about-staff {
+        width: 88%;
+    }
+
+    .staff {
+        width: 88%;
+        margin: 20px 0;
+    }
+
+    .staff-main-title {
+        padding-left: calc(6% + 1px);
+    }
+
+    .contact-info {
+        width: 88%;
+    }
+
+    .contact-more-info {
+        width: 88%;
+    }
+
+    .contact-info-ul {
+        display: block;
+    }
+
+    .contact-info-li {
+        display: block;
+    }
+
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
+        width: 88%;
+        padding: 20px 6% 20px 6%;
+    }
+
+    #tabs {
+        width: 88%;
+        overflow: hidden;
+    }
+
+    #script-form-inner-wrapper {
+        width: 88%;
+    }
+
+    footer {
+        display: block;
+    }
+
+    .footer-block {
+        width: auto;
+        padding: 0 2%;
+        display: inline-block;
+        margin: 30px 4% 0 4%;
+    }
+
+    .footer-block-about {
+        width: 88%;
+        margin: 0 auto;
+    }
+}
+
+/*** ================= RESPONSIVE END =================== ***/

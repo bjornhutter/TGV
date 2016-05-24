@@ -11,10 +11,11 @@ if (!isset($_SESSION)) {
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Prenumerera | Tidskrift för genusvetenskap</title>
+    <link rel="icon" href="img/tgv_favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="js/stickynav.js"></script>
     <script src="js/active_nav.js"></script>
 </head>
 <body>
@@ -32,7 +33,7 @@ if (!isset($_SESSION)) {
         echo '<h1 class="subscription-info-main-title">' . $subInfoTitle . '</h1>';
         echo '<p>' . $subInfoContent . '</p>';
         if (isset($_SESSION['user'])) {
-            echo '<p><a href="dashboard_subscription.php" class="edit">Redigera</a></p>';
+            echo '<p><a href="dashboard_subscription.php" class="edit" target="_blank">Redigera</a></p>';
         }
         echo '</section>';
     }
@@ -47,7 +48,7 @@ if (!isset($_SESSION)) {
         echo '<h1 class="subscription-price-main-title">' . $priceTitle . '</h1>';
         echo '<p>' . $priceContent . '</p>';
         if (isset($_SESSION['user'])) {
-            echo '<p><a href="dashboard_subscription.php" class="edit">Redigera</a></p>';
+            echo '<p><a href="dashboard_subscription.php" class="edit" target="_blank">Redigera</a></p>';
         }
         echo '</section>';
     }
@@ -56,4 +57,5 @@ if (!isset($_SESSION)) {
 
 <?php include('includes/footer.inc') ?>
 </body>
+<script src="js/menu_toggle.js"></script>
 </html>
