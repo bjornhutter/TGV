@@ -127,7 +127,7 @@
                                     echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
 
                                     echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
-                                    echo '<p>' . $staffTitle . '</p>';
+                                    echo '<p class="staff-title-2">' . $staffTitle . '</p>';
                                     echo $staffContent;
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="about_editors_edit.php?id=' . $staffId . '" class="edit">Redigera</a>';

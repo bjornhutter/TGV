@@ -425,6 +425,8 @@ form {
     -o-transition: background 200ms;
     transition: background 200ms;
     font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
 }
 
 .show-all {
@@ -445,6 +447,8 @@ form {
     -o-transition: background 200ms;
     transition: background 200ms;
     font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
 }
 
 .edit {
@@ -452,6 +456,7 @@ form {
     text-decoration: none;
     color: #fff !important;
     padding: 5px 10px;
+    padding-right: 14px;
     margin: 0 0 0 10px;
     display: inline-block;
     width: 54px;
@@ -466,6 +471,8 @@ form {
     -o-transition: background 200ms;
     transition: background 200ms;
     font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
 }
 
 .edit:hover,
@@ -504,10 +511,12 @@ form {
 .recent-article-title,
 .news-title
 {
-    font-size: 1.75em;
+    font-size: 1.65em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    padding-top: 0;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    text-align: left;
 }
 
 .recent-article-content,
@@ -651,14 +660,14 @@ form {
 }
 
 .dashboard-sub-title {
-    font-size: 1.75em;
+    font-size: 2em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
 
 .dashboard-sub-title-no-padding-top {
     padding-top: 0;
-    font-size: 1.75em;
+    font-size: 2em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
@@ -959,6 +968,15 @@ form textarea {
     padding-top: 0;
 }
 
+
+.staff-title-2 {
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
 .staff-content {
     font-size: 1em;
     padding-bottom: 20px;
@@ -971,9 +989,9 @@ form textarea {
 #add-news-toggle
 {
     cursor: pointer;
-    font-size: 1.25em;
+    font-size: 1em;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     text-align: left;
     padding-left: 40px;
 }
@@ -1183,7 +1201,7 @@ p {
     text-align: left;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 1.15;
     background: #f1f1f1;
     font-family: 'Open Sans', sans-serif;
@@ -1299,15 +1317,21 @@ p {
 
 @media screen and (max-width: 569px) {
     .update-success-header-title {
-        font-size: 1.5em;
+        font-size: 1.65em;
         padding-left: 30px;
     }
 
     .dashboard-title {
-        font-size: 1.5em;
+        font-size: 1.65em;
     }
 
-    .dashboard-sub-title {
+    .dashboard-sub-title,
+    .dashboard-sub-title-no-padding-top
+    {
+        font-size: 1.65em;
+    }
+
+    .recent-article-title, .news-title {
         font-size: 1.5em;
     }
 
