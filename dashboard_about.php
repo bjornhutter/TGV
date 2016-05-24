@@ -8,6 +8,8 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
+              type='text/css'>
         <link rel="stylesheet"
               href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -61,8 +63,8 @@
             <div class="nav-main-wrapper">
                 <?php include('includes/dashboard_nav.inc') ?>
                 <div class="overview-wrapper">
-                    <h1 class="dashboard-title">Om oss</h1>
-                    <a href="about.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Om oss</a>
+                    <h1 class="dashboard-title">Om TGV</h1>
+                    <a href="about.php" class="go-back-link" target="_blank" title="Öppnas på ny flik">Gå till Om TGV</a>
                     <div class="helper-links-wrapper">
                         <a href="#1" class="helper-links">Info om TGV</a>
                         <p class="helper-links-p">/</p>

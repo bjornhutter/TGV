@@ -14,7 +14,7 @@
                 <a href="dashboard_send_script.php" id="send-script-btn">Skicka manus</a>
             </li>
             <li>
-                <a href="dashboard_about.php" id="about-btn">Om oss</a>
+                <a href="dashboard_about.php" id="about-btn">Om TGV</a>
             </li>
             <li>
                 <a href="dashboard_contact.php" id="contact-btn">Kontakt & Footer</a>
