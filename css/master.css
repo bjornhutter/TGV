@@ -912,18 +912,42 @@ ul {
         padding: 0 5% 40px 0;
     }
 
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;    }
+
+    #menu-slidedown {
+        display: block;
+    }
+
+    .nav-hide-mobile {
+        display: block;
+        position: fixed;
+    }
+
+    .nav-hide {
+        display: none;
+        position: relative;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
+
 }
 
 @media screen and (max-width: 1000px) and (min-width: 770px) {
 
     /*** STYLING FÖR MOBIL/IPAD START ***/
-    #nav-hide {
-        display: none;
-    }
-
-    .nav-placeholder {
-        height: 0 !important;
-    }
 
     .menu-toggle-hide {
         display: block;
@@ -1064,13 +1088,6 @@ ul {
 @media screen and (max-width: 769px) and (min-width: 501px) {
 
     /*** STYLING FÖR MOBIL/IPAD START ***/
-    #nav-hide {
-        display: none;
-    }
-
-    .nav-placeholder {
-        height: 0 !important;
-    }
 
     .menu-toggle-hide {
         display: block;
@@ -1229,13 +1246,6 @@ ul {
 @media screen and (max-width: 620px) {
 
     /*** STYLING FÖR MOBIL/IPAD START ***/
-    #nav-hide {
-        display: none;
-    }
-
-    .nav-placeholder {
-        height: 0 !important;
-    }
 
     .menu-toggle-hide {
         display: block;
@@ -1283,14 +1293,6 @@ ul {
 @media screen and (max-width: 500px) and (min-width: 0px) {
 
     /*** STYLING FÖR MOBIL/IPAD START ***/
-
-    #nav-hide {
-        display: none;
-    }
-
-    .nav-placeholder {
-        height: 0 !important;
-    }
 
     .menu-toggle-hide {
         display: block;
