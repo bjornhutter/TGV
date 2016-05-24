@@ -96,16 +96,12 @@ nav ul li a {
     white-space: nowrap;
     letter-spacing: 0.2px;
     color: #FFFFFF;
-    -webkit-transition: all 200ms;
-    -moz-transition: all 200ms;
-    -ms-transition: all 200ms;
-    -o-transition: all 200ms;
-    transition: all 200ms;
 }
 
 nav ul li a:hover {
     color: #fff;
-    background: #e07929;
+    border-bottom: 5px solid #E07929;
+    padding: 20px 20px 15px 20px;
 }
 
 nav ul li a:visited {
@@ -133,8 +129,9 @@ nav ul li a:active {
 }
 
 .active {
-    background: rgba(0, 0, 0, 0.3);
     color: #FFFFFF;
+    border-bottom: 5px solid #027B9A;
+    padding: 20px 20px 15px 20px;
 }
 
 /*** ================= NAVIGATION END =================== ***/
@@ -364,7 +361,7 @@ footer a:hover {
 /*** ================= NEWSFEED START =================== ***/
 
 .news-feed {
-    padding: 10px 0px 10px 10px;
+    padding: 10px 0 10px 10px;
 }
 
 .news-post-container {
