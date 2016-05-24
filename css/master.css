@@ -364,13 +364,13 @@ footer a:hover {
 /*** ================= NEWSFEED START =================== ***/
 
 .news-feed {
-    height: 550px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    padding: 10px 0px 10px 10px;
 }
 
 .news-post-container {
-
+    height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .news-main-title {
