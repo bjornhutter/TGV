@@ -104,4 +104,5 @@ if (!isset($_SESSION)) {
 
 <?php include('includes/footer.inc') ?>
 </body>
+<script src="js/menu_toggle.js"></script>
 </html>

@@ -845,6 +845,29 @@ ul {
 }
 /*** ================= EDIT END =================== ***/
 
+.nav-hide-mobile {
+    display: none;
+    position: relative;
+}
+
+.nav-hide {
+    display: block;
+}
+
+.menu-toggle-hide {
+    display: none;
+}
+
+#menu-toggle {
+    padding: 20px;
+    background: #252525;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
 /*** ================= RESPONSIVE START =================== ***/
 
 @media screen and (max-width: 1342px) {
@@ -888,10 +911,81 @@ ul {
         width: 55%;
         padding: 0 5% 40px 0;
     }
+
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;    }
+
+    #menu-slidedown {
+        display: block;
+    }
+
+    .nav-hide-mobile {
+        display: block;
+        position: fixed;
+    }
+
+    .nav-hide {
+        display: none;
+        position: relative;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
+
 }
 
-
 @media screen and (max-width: 1000px) and (min-width: 770px) {
+
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-slidedown {
+        display: none;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        width: 100%;
+    }
+
+    .fixed-2 {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .fixed {
+        display: none;
+        position: relative;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
+
     header {
         height: 300px;
     }
@@ -992,6 +1086,45 @@ ul {
 }
 
 @media screen and (max-width: 769px) and (min-width: 501px) {
+
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-slidedown {
+        display: none;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        width: 100%;
+    }
+
+    .fixed-2 {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .fixed {
+        display: none;
+        position: relative;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
 
     header {
         height: 300px;
@@ -1112,6 +1245,45 @@ ul {
 
 @media screen and (max-width: 620px) {
 
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-slidedown {
+        display: none;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        width: 100%;
+    }
+
+    .fixed-2 {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .fixed {
+        display: none;
+        position: relative;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
+
     .contact-info-li {
         display: block;
     }
@@ -1119,6 +1291,45 @@ ul {
 
 
 @media screen and (max-width: 500px) and (min-width: 0px) {
+
+    /*** STYLING FÖR MOBIL/IPAD START ***/
+
+    .menu-toggle-hide {
+        display: block;
+    }
+
+    #menu-slidedown {
+        display: none;
+    }
+
+    #menu-toggle {
+        padding: 20px;
+        background: #252525;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+        width: 100%;
+    }
+
+    .fixed-2 {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .fixed {
+        display: none;
+        position: relative;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /*** STYLING FÖR MOBIL/IPAD SLUT ***/
 
     header {
         height: 200px;

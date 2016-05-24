@@ -61,4 +61,5 @@ if (!isset($_GET['id'])) {
 
 <?php include('includes/footer.inc') ?>
 </body>
+<script src="js/menu_toggle.js"></script>
 </html>
