@@ -7,10 +7,10 @@ if (isset($_POST['submit'])) {
     $emailMessage = $_POST['emailMessage'];
 
     $transport = Swift_SmtpTransport::newInstance()
-        ->setHost('smtp.tegeve.se')
-        ->setPort(587)
-        //->setEncryption('ssl')
-    ;  //varför ssl inte funkar/ om det behövs
+        ->setHost('smtp01.binero.se')
+        ->setPort(465)
+        ->setEncryption('ssl')
+    ; 
 
     $mailer = Swift_Mailer::newInstance($transport);
 
@@ -18,11 +18,10 @@ if (isset($_POST['submit'])) {
 
     $message = Swift_Message::newInstance()
         ->setFrom(array($from => $fname . " " . $lname))
-        ->setTo(array('test@tegeve.se'))  //lägg till fler adresser
+        ->setTo(array('kontakt@tegeve.se'))  //lägg till fler adresser
         ->setSubject('Manus från ' . $fname . " " . $lname)
         ->setBody($emailMessage, 'text/html')
         ->setMaxLineLength(78)
-        //->attach(Swift_Attachment::fromPath('emailTest.txt'))  lokal fil
         ->attach($attachment)
     ;
 
@@ -30,4 +29,4 @@ if (isset($_POST['submit'])) {
 }
 
 
-header('Location:send_script_complete.php');
+//header('Location:send_script_complete.php');
