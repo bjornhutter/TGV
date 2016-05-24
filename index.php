@@ -18,15 +18,10 @@ if (!isset($_SESSION)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/stickynav.js"></script>
     <script src="js/active_nav.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#menyButton").click(function(){
-                $("#mobile_ul").slideToggle(600, "swing");
-            });
-        });
-    </script>
+    <script src="js/nav_mobile_toggle.js"></script>
 </head>
 <body>
+<?php include('includes/navigation_mobile.inc') ?>
 
 <header class="header-homepage">
     <div class="header-logo">

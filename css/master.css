@@ -16,10 +16,6 @@ a:hover {
     color: #000;
 }
 
-#mobile_nav_bar {
-    display:none;
-}
-
 /*** ================= HEADER START =================== ***/
 
 header {
@@ -130,6 +126,20 @@ nav ul li a:active {
 .active {
     background: rgba(0, 0, 0, 0.3);
     color: #FFFFFF;
+}
+
+#nav_mobile {
+    display:none;
+}
+
+#nav_mobile li {
+    list-style-type: none;
+    font-size: 1em;
+    margin: 3% 0 0 0;
+}
+
+#nav_mobile ul {
+    display: none;
 }
 
 /*** ================= NAVIGATION END =================== ***/
@@ -1224,6 +1234,30 @@ ul {
         width: 88%;
         margin: 0 auto;
     }
+
+    #nav_mobile {
+        display: block;
+    }
+
+    .nav-index {
+        display: none;
+    }
+
+    .fixed {
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 1%;
+    }
+
+    #mobile_nav ul li {
+        display:block;
+        margin: 5% 1% 1% 1%;
+    }
+
+
 }
 
 /*** ================= RESPONSIVE END =================== ***/
