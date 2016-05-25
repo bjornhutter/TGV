@@ -968,14 +968,70 @@ ul {
 
 /*** ================= RESPONSIVE START =================== ***/
 
-@media screen and (max-width: 1342px) {
-    .contact-info {
-        width: 50%;
+@media screen and (min-width: 1343px) {
+    .recent-article-main-title {
+        padding-left: 13.5%;
     }
 
-    .contact-more-info {
-        width: 50%;
+    .recent-article {
+        width: 22%;
+        margin: 20px 25px;
     }
+
+    .subscription-info, .subscription-price {
+        width: 45%;
+        padding: 40px 27.5% 40px 27.5%;
+    }
+
+    .script-info, #tabs  {
+        width: 45%;
+    }
+
+    .script-reviewers, .script-examiner {
+        width: 45%;
+        padding: 40px 27.5% 40px 27.5%;
+    }
+
+    .about-staff {
+        width: 45%;
+    }
+
+    .staff {
+        width: 17%;
+    }
+
+    #map, .contact-map {
+        height: 550px;
+    }
+
+    .footer-block-about {
+        width: 22%;
+    }
+
+    .read-more-info {
+        width: 17%;
+    }
+
+    .read-more-content {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 1342px) and (min-width: 1201px) {
+    .subscription-info, .subscription-price, .script-info, .script-examiner, .script-reviewers {
+    width: 55%;
+    padding: 40px 22.5% 40px 22.5%;
+    }
+
+    #tabs {
+        width: 55%;
+    }
+
+    .contact-info, .contact-more-info {
+        width: 55%;
+    }
+
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1001px) {
@@ -993,7 +1049,7 @@ ul {
 
     .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 60%;
-        padding: 20px 20% 20px 20%;
+        padding: 40px 20% 40px 20%;
     }
 
     #tabs {
@@ -1008,6 +1064,10 @@ ul {
     .contact-more-info {
         width: 55%;
         padding: 0 5% 40px 0;
+    }
+
+    .about-staff {
+        width: 60%;
     }
 
 }
@@ -1093,7 +1153,7 @@ ul {
 
     .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 71%;
-        padding: 20px 14.5% 20px 14.5%;
+        padding: 40px 14.5% 40px 14.5%;
     }
 
     #tabs {
@@ -1212,7 +1272,7 @@ ul {
 
     .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 88%;
-        padding: 20px 6% 20px 6%;
+        padding: 40px 6% 40px 6%;
     }
 
     #tabs {
