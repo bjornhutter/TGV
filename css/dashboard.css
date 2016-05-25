@@ -213,7 +213,7 @@ nav ul li a:active {
 
 }
 
-nav ul li:nth-child(1) {
+nav ul li:nth-child(2) {
     background: #252525 url('../img/icons/home_grey.svg') no-repeat center left 10px;
     background-size: 1.5em;
     /*border-bottom: 1px solid rgba(0, 0, 0, 0.3);*/
@@ -588,7 +588,7 @@ form {
 .dashboard-form ul,
 .dashboard-form-full ul {
     list-style: none;
-
+    background: none;
 }
 
 .overview-wrapper {
