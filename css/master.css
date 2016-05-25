@@ -336,6 +336,13 @@ footer a:hover {
     padding: 40px 0;
 }
 
+.read-more-wrapper {
+    width: 100%;
+    margin: 36px auto 0;
+    text-align: center;
+    padding: 40px 0;
+}
+
 .recent-article-main-title {
     font-size: 2em;
     color: #000000;
@@ -518,6 +525,7 @@ footer a:hover {
 }
 
 .news-post {
+    margin: 0 10px 0 0;
 }
 
 .hr-news {
@@ -661,8 +669,7 @@ footer a:hover {
 .script-wrapper {
     width: 100%;
     display: block;
-    margin: 54px auto 0;
-    padding: 40px 0;
+    padding: 54px 0 0 0;
 }
 
 .script-info {
@@ -968,7 +975,7 @@ ul {
 
 /*** ================= RESPONSIVE START =================== ***/
 
-@media screen and (min-width: 1343px) {
+@media screen and (min-width: 1367px) {
     .header-welcome {
         margin-top: 10%;
         width: 28%;
@@ -1027,7 +1034,7 @@ ul {
 
 }
 
-@media screen and (max-width: 1342px) and (min-width: 1201px) {
+@media screen and (max-width: 1366px) and (min-width: 1201px) {
     .subscription-info, .subscription-price, .script-info, .script-examiner, .script-reviewers {
     width: 55%;
     padding: 40px 22.5% 40px 22.5%;
@@ -1135,7 +1142,7 @@ ul {
         width: 100%;
     }
 
-    .cfp, .news-feed {
+    .cfp {
         width: 88%;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -1145,6 +1152,11 @@ ul {
 
     .news-feed {
         height: auto;
+        width: 89.5%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 40px auto;
     }
 
     .about-staff {
@@ -1197,16 +1209,21 @@ ul {
         height: 300px;
     }
 
+    .header-homepage {
+        margin: 56px 0 0 0;
+    }
+
     .header-logo {
         width: 413px;
-        margin-top: 10%;
+        margin-top: 12%;
     }
+
     .header-logo-main-title {
         font-size: 26px;
     }
 
     .header-welcome {
-        margin: 17% 0 0 0;
+        margin: 20% 0 0 0;
         width: 440px;
     }
 
@@ -1218,12 +1235,7 @@ ul {
         width: 100%;
     }
 
-    .recent-article-wrapper {
-        padding: 20px 0 0 0;
-    }
-
     .recent-article-main-title {
-        font-size: 1.5em;
         padding-left: 6%;
     }
 
@@ -1235,7 +1247,15 @@ ul {
         box-shadow: none;
     }
 
+    .read-more-info, .read-more-content {
+        padding: 10px 0 0;
+    }
+
     .read-more-img {
+        display: none;
+    }
+
+    .article-more-back {
         display: none;
     }
 
@@ -1243,7 +1263,7 @@ ul {
         width: 100%;
     }
 
-    .cfp, .news-feed {
+    .cfp {
         width: 85%;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -1253,7 +1273,13 @@ ul {
 
     .news-feed {
         height: auto;
+        width: 87.5%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 40px auto;
     }
+
 
     .about-staff {
         width: 88%;
@@ -1350,6 +1376,10 @@ ul {
         height: 200px;
     }
 
+    .header-homepage {
+        margin: 56px 0 0 0;
+    }
+
     .header-logo {
         width: 222px;
         margin-top: 10%;
@@ -1378,6 +1408,7 @@ ul {
     .recent-article-main-title {
         font-size: 1.5em;
         padding-left: 6%;
+        margin: 10px 0 0 0;
     }
 
     .recent-article, .read-more-info, .read-more-content {
@@ -1388,7 +1419,15 @@ ul {
         box-shadow: none;
     }
 
+    .read-more-info, .read-more-content {
+        padding: 10px 0 0;
+    }
+
     .read-more-img {
+        display: none;
+    }
+
+    .article-more-back {
         display: none;
     }
 
@@ -1401,7 +1440,7 @@ ul {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-        margin: 0px auto 20px;
+        margin: 20px auto 20px;
     }
 
     .news-feed {
@@ -1411,7 +1450,7 @@ ul {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-        margin: 20px auto;
+        margin: 40px auto;
     }
 
     .about-staff {

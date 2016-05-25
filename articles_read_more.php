@@ -27,7 +27,7 @@ if (!isset($_GET['id'])) {
 <?php include('includes/navigation_mobile.inc') ?>
 <?php include('includes/navigation.inc') ?>
 <main>
-    <section class="recent-article-wrapper">
+    <section class="read-more-wrapper">
         <?php
         include('includes/db_connect.inc');
         $id = $_GET['id'];
