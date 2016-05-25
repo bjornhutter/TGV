@@ -706,9 +706,6 @@ form input {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
 }
 
 form textarea {
@@ -741,6 +738,9 @@ form textarea {
     -ms-transition: background 200ms;
     -o-transition: background 200ms;
     transition: background 200ms;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .form-input-submit:hover {
