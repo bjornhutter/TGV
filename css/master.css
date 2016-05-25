@@ -737,6 +737,15 @@ footer a:hover {
     margin: 1% 0 2% 0;
 }
 
+form input {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .script-form-input {
     width: 100%;
     box-sizing: border-box;
