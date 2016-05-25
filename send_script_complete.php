@@ -12,6 +12,7 @@
     <script src="js/stickynav.js"></script>
 </head>
 <body>
+<?php include ('includes/navigation.inc')?>
 <main>
     <section class="email-sent-container">
         <ul>
