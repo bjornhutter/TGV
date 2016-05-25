@@ -9,24 +9,34 @@ if (isset($_POST['submit'])) {
     $transport = Swift_SmtpTransport::newInstance()
         ->setHost('smtp01.binero.se')
         ->setPort(465)
-        ->setEncryption('ssl')
-    ; 
+        ->setEncryption('ssl');
 
     $mailer = Swift_Mailer::newInstance($transport);
 
     $attachment = Swift_Attachment::fromPath($_FILES['attachFile']['tmp_name'])->setFilename($_FILES['attachFile']['name']);
 
+    $img = Swift_Image::fromPath('img/tgv_email_header.png');
+
     $message = Swift_Message::newInstance()
         ->setFrom(array($from => $fname . " " . $lname))
-        ->setTo(array('kontakt@tegeve.se'))  //lägg till fler adresser
+        ->setTo(array('noreply@tegeve.se', 'arvid.f.johansson@gmail.com'))//ändra till tegeve@oru.se
         ->setSubject('Manus från ' . $fname . " " . $lname)
-        ->setBody($emailMessage, 'text/html')
         ->setMaxLineLength(78)
         ->attach($attachment)
-    ;
+        ->setBody($emailMessage, 'text/plain')
+        ->addPart(
+            '<html>' .
+            '<head></head>' .
+            '<body>' .
+            '<img src="' . $img . '" alt="image"/>' .
+            '<h1 style="color:blue;">här är en titel</h1>' .
+            '<p>här är meddelandet <b>' . $emailMessage . '</b></p>' .
+            '</body>' .
+            '</html>',
+            'text/html');
 
     $result = $mailer->send($message);
 }
 
 
-//header('Location:send_script_complete.php');
+header('Location:send_script_complete.php');
