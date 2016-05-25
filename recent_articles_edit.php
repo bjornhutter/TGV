@@ -1,5 +1,5 @@
 <?php
-//require('includes/auth.php');
+require('includes/auth.inc');
 
 if (!isset($_GET['id'])) {
     header("Location: dashboard.php");

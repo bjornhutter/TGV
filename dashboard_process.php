@@ -13,6 +13,9 @@
     $input_data = htmlspecialchars($input_data);
     return $input_data;
 }*/
+require('includes/auth.inc');
+
+
 
 /*
  * CALL FOR PAPERS
@@ -650,8 +653,9 @@ if (isset($_POST['revertContactInfoSubmit'])) {
 }
 
 //todo tabort när vi inte behöver debug
-echo "<tt><pre>";
+//echo "<tt><pre>";
 
-var_dump($_POST);
+//var_dump($_POST);
 
-echo "</pre></tt>";
+//echo "</pre></tt>";
+ob_end_flush();
