@@ -605,7 +605,8 @@ form {
     text-decoration: underline;
     color: #027b9a;
     padding-left: 2px;
-    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
 
 }
 
