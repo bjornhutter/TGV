@@ -414,7 +414,7 @@ footer a:hover {
 }
 
 .read-more-img {
-
+    width: 100%;
 }
 
 .recent-article-more-title, .read-more-featured-title {
@@ -969,6 +969,11 @@ ul {
 /*** ================= RESPONSIVE START =================== ***/
 
 @media screen and (min-width: 1343px) {
+    .header-welcome {
+        margin-top: 10%;
+        width: 28%;
+    }
+
     .recent-article-main-title {
         padding-left: 13.5%;
     }
@@ -998,6 +1003,10 @@ ul {
 
     .staff {
         width: 17%;
+    }
+
+    .staff-main-title {
+        padding-left: 12%;
     }
 
     #map, .contact-map {
@@ -1030,6 +1039,14 @@ ul {
 
     .contact-info, .contact-more-info {
         width: 55%;
+    }
+
+    .staff {
+        width: 20%;
+    }
+
+    .staff-main-title {
+        padding-left: 4%;
     }
 
 }

@@ -48,13 +48,23 @@ if (!isset($_SESSION)) {
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $title = $row['title'];
-            $content = substr($row['content'], 3, 220);
+            $content = $row['content'];
             $imgName = $row['image'];
 
             echo '<li class="recent-article">';
             echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
-            echo '<p class="recent-article-content">' . $content . '... <a class="recent-article-btn" href="articles_read_more.php?id=' . $id . '">[Läs mer]</a></p>';
+
+            if (strlen($content) < 220) {
+                echo '<p class="recent-article-content">' . $content . ' </p>';
+            } elseif (strlen($content) > 220) {
+                $content = substr($content, 3, 220);
+                echo '<p class="recent-article-content">' . $content . '';
+                echo '...';
+            } else {
+                echo "$content";
+            }
+            
             if (isset($_SESSION['user'])) {
                 echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
             }
@@ -106,7 +116,7 @@ if (!isset($_SESSION)) {
                 echo '<p class="news-content">' . nl2br($content) . '</p>';
 
                 if (isset($_SESSION['user'])) {
-                    echo '<p><a href="dashboard.php" class="edit" target="_blank">Redigera</a></p>';
+                    echo '<p><a href="news_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
                 }
 
                 echo '<hr class="hr-news">';
