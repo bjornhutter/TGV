@@ -45,13 +45,22 @@ if (!isset($_SESSION)) {
 </div>-->
 
 <main class="script-wrapper">
-    <section class="script-info">
-        <h1 class="script-info-main-title">Anvisningar för artikelskribenter</h1>
-        <p>Tidskrift för genusvetenskap(TGV) kommer ut med fyra nummer per år. En förutsättning för publicering i TGV är
-            att artikeln inte redan är publicerad av annan tidskrift eller annat förlag. För tidskriften intressanta
-            artikelförslag referee-granskas. Om en artikel samtidigt är under bedömning någon annanstans bör detta
-            tydligt anges.</p>
-    </section>
+    <?php include('includes/db_connect.inc'); ?>
+        <?php
+        $writerGuidelinesResult = mysqli_query($link, "SELECT * FROM tgv_writer_guidelines") or die(mysqli_error($link));
+        echo '<section class="script-info">';
+        while ($writerGuidelinesRow = mysqli_fetch_array($writerGuidelinesResult)) {
+            $writerGuidelinesId = $writerGuidelinesRow['id'];
+            $writerGuidelinesTitle = $writerGuidelinesRow['title'];
+            $writerGuidelinesContent = $writerGuidelinesRow['content'];
+            echo '<h1 class="script-info-main-title">' . $writerGuidelinesTitle . '</h1>';
+            echo '<p>' . $writerGuidelinesContent . '</p>';
+            if (isset($_SESSION['user'])) {
+                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+            }
+            echo '</section>';
+        }
+        ?>
     <?php
 
     /*

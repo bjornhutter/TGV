@@ -62,10 +62,10 @@ if (!isset($_SESSION)) {
                 echo '<p class="recent-article-content">' . $content . '';
                 echo '...';
             } else {
-                echo "$content";
+                echo '<p class="recent-article-content">' . $content . ' </p>';
             }
             
-            echo '<p class="recent-article-content"><a class="recent-article-btn" href="articles_read_more.php?id=' . $id . '">[Läs mer]</a></p>';
+            echo '<p class="recent-article-content"><a class="recent-article-btn" href="articles_read_more.php?id=' . $id . '">Läs mer</a></p>';
             
             if (isset($_SESSION['user'])) {
                 echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
