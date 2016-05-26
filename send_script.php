@@ -25,6 +25,25 @@ if (!isset($_SESSION)) {
 <?php include('includes/navigation_mobile.inc') ?>
 <?php include('includes/navigation.inc') ?>
 
+<!--OM vi använder breadcrumbs, lägg till styling i css och id:n på avsnitten-->
+<!--
+<div class="helper-links-wrapper">
+    <ul>
+        <li>
+            <a href="#1" class="helper-links">Anvisningar för artikelskribenter</a>
+        </li>
+        <li>
+            <a href="#2" class="helper-links">Anvisningar för recensenter</a>
+        </li>
+        <li>
+            <a href="#3" class="helper-links">Anvisningar för granskare</a>
+        </li>
+        <li>
+            <a href="#4" class="helper-links">Skicka in manus</a>
+        </li>
+    </ul>
+</div>-->
+
 <main class="script-wrapper">
     <section class="script-info">
         <h1 class="script-info-main-title">Anvisningar för artikelskribenter</h1>
@@ -361,10 +380,11 @@ if (!isset($_SESSION)) {
     ?>
 </main>
 
-<section class="script-form-wrapper">
+<section class="script-form-wrapper>
     <div id="script-form-inner-wrapper">
         <h1 class="send-script-main-title">Skicka in manus</h1>
-        <p class="send-script-info">Ditt manus kan du enkelt skicka in via formuläret nedan. Du kan även skicka in det till <a href="mailto:tegeve@oru.se">tegeve@oru.se</a>.</p>
+        <p class="send-script-info">Ditt manus kan du enkelt skicka in via formuläret nedan. Du kan även skicka in det
+            till <a href="mailto:tegeve@oru.se">tegeve@oru.se</a>.</p>
         <form enctype="multipart/form-data" action="send_script_process.php" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">
