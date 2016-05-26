@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     $mailer = Swift_Mailer::newInstance($transport);
 
     $attachment = Swift_Attachment::fromPath($_FILES['attachFile']['tmp_name'])->setFilename($_FILES['attachFile']['name']);
-        
+
     //$img = Swift_Image::fromPath('http://www.tegeve.se/public_html/newsite/tgv_arvid/img/tgv_email_header.png');
 
     $message = Swift_Message::newInstance()
@@ -28,34 +28,55 @@ if (isset($_POST['submit'])) {
             '<html>' .
             '<head></head>' .
             '<body>' .
-            '<table style="width:400px;height:600px;">'.
+            '<table align="center" style="width:600px;height:700px;">' .
             // header img
-            '<tr>'. 
-            '<td style="color:#fff;background-color:#e07929;"></td>'.
+            '<tr style="color:#fff;background-color:#e07929;">' .
+            '<td align="center" style="height:60px;font-size:30px">TIDSKRIFT FÖR GENUSVETENSKAP</td>' .
             //'<td><img src="' . $img . '" alt="image"/></td>' .
-            '</tr>'.
+            '</tr>' .
+            '<tr style="height:50px;"></tr>' . //whitespace
+
             // title
-            '<tr>'. 
-            '<td><h1 style="color:blue;">här är en titel</h1></td>'.
-            '</tr>'.
+            '<tr>' .
+            '<td><h3 style="">' . $fname . " " . $lname . ' har skickat in manus till TGV</h3></td>' .
+            '</tr>' .
+            '<tr style="height:50px;"><td></td></tr>' . //whitespace
+
             // message
-            '<tr>'.   
-            '<td><p>här är meddelandet <b>' . $emailMessage . '</b></p></td>' .
-            '</tr>'.
-            '</table>'.
+            '<tr>' .
+            '<td>' . $emailMessage . '</td>' .
+            '</tr>' .
+            '</table>' .
+            '<tr style="height:50px;"></tr>' . //whitespace
+
             // footer
-            '<table style="height:100px;width:400px;color:white;background-color:#252525;">'.
-            '<tr>'.
-            '<td>Tel: 1823819723</td>'.
-            '</tr>'.
-            '<tr>'.
-            '<td><a href="http://tegeve.se/">Till TGV</a></td>'.
-            '</tr>'.
-            '</table>'.
+            '<table align="center" style="width:600px;color:white;background-color:#252525;">' .
+            '<tr style="height:20px;">' .
+            //'<td></td>'.
+            '</tr>' .
+            '<tr>' .
+            '<td>Kontakt</td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td>054-700 1000</td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td>tegeve@oru.se</td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td>Universitetsgatan 2</td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td>651 88 Karlstad</td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td><a href="http://tegeve.se/">Till TGV</a></td>' .
+            '</tr>' .
+            '</table>' .
             '</body>' .
             '</html>',
             'text/html');
-    
+
     $result = $mailer->send($message);
 }
 
