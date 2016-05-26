@@ -489,28 +489,24 @@ form {
 
 .news-posts-wrapper ul,
 .news-posts-wrapper ol,
-.news-posts-wrapper li
-{
+.news-posts-wrapper li {
     background: none;
 }
 
 .recent-article,
-.news-post
-{
+.news-post {
     margin-bottom: 20px;
     background: #ffffff;
     border-bottom: 2px solid #e07929;
 }
 
 .recent-article p,
-.news-post p
-{
+.news-post p {
     background: none;
 }
 
 .recent-article-title,
-.news-title
-{
+.news-title {
     font-size: 1.65em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -520,8 +516,7 @@ form {
 }
 
 .recent-article-content,
-.news-content
-{
+.news-content {
     font-size: 1em;
     padding-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
@@ -650,7 +645,6 @@ form {
     text-decoration: underline;
 }
 
-
 .dashboard-title {
     font-size: 2em;
     font-family: 'Open Sans', sans-serif;
@@ -763,6 +757,12 @@ form textarea {
     padding: 10px;
     display: block;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: #f1f1f1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
 }
 
 .logout {
@@ -770,7 +770,11 @@ form textarea {
     padding: 10px;
     display: block;
     cursor: pointer;
-
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: #f1f1f1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 #logout-inactive {
@@ -980,7 +984,6 @@ form textarea {
     padding-top: 0;
 }
 
-
 .staff-title-2 {
     font-size: 1em;
     font-family: 'Open Sans', sans-serif;
@@ -998,8 +1001,7 @@ form textarea {
 }
 
 #add-toggle,
-#add-news-toggle
-{
+#add-news-toggle {
     cursor: pointer;
     font-size: 1em;
     font-family: 'Open Sans', sans-serif;
@@ -1015,8 +1017,7 @@ form textarea {
 
 #add-staff,
 #add-article,
-#add-news-post
-{
+#add-news-post {
     display: none;
 }
 
@@ -1174,6 +1175,9 @@ form textarea {
     -ms-transition: background 200ms;
     -o-transition: background 200ms;
     transition: background 200ms;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;;
 }
 
 .login-input-submit:hover {
@@ -1181,9 +1185,17 @@ form textarea {
 }
 
 .error-field {
-    color: #ff2332;
-    position: absolute;
-    padding-left: 5px;
+    color: #f1f1f1;
+    font-weight: 700;
+    /*padding-left: 5px;*/
+    display: block;
+    background: rgba(250, 70, 80, 1);;
+    line-height: 2.5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
 }
 
 /*** ================= LOGIN END =================== ***/
@@ -1338,8 +1350,7 @@ p {
     }
 
     .dashboard-sub-title,
-    .dashboard-sub-title-no-padding-top
-    {
+    .dashboard-sub-title-no-padding-top {
         font-size: 1.65em;
     }
 
