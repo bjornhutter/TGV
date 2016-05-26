@@ -18,7 +18,6 @@
 <form action="dashboard_process.php" method="post">
     <h2>Redigera Om redaktionen</h2>
     <ul>
-        <!--todo göra så man kan lägga till eller ta bort personal, generera fälten från en databas? t.ex. namn, bild etc.-->
         <li>
             <p>Titel: </p>
             <input type="text" name="staffTitle" title="Redaktion Titel">

@@ -73,7 +73,6 @@ if (isset($_POST['newsSubmit'])) {
 
     //header('Location: update_home_complete.php');
 
-    //@todo HUR SKA DENNA FUNGERA LIMIT 5, ny sida för alla nyhetsinlägg?
 
 }
 
@@ -94,7 +93,6 @@ if (isset($_POST['newNumberSubmit'])) {
 
     //header('Location: update_home_complete.php');
 
-    //@todo HUR SKA DENNA FUNGERA?
 }
 
 /*
@@ -150,7 +148,6 @@ if (isset($_POST['staffSubmit'])) {
 
     //header('Location: update_about_complete.php?update=2');
 
-    //@todo BILD? LÄGGA TILL NYA FÄLT?
 
 }
 
@@ -651,8 +648,7 @@ if (isset($_POST['revertContactInfoSubmit'])) {
     header('Location: update_contact_complete.php?update=3');
 
 }
-
-//todo tabort när vi inte behöver debug
+// DEBUGGING
 //echo "<tt><pre>";
 
 //var_dump($_POST);

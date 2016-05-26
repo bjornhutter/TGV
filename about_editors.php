@@ -58,7 +58,6 @@
                 <div class="main-outer-wrapper">
                     <main id="main">
                         <div class="dashboard-form-full">
-                            <!--todo gör responsive så att bilderna inte blir jättesmå (om vi väljer att ha det såhär) -->
                             <h2 class="dashboard-sub-title">Om redaktionen</h2>
                             <ul class="staff-wrapper">
                                 <?php

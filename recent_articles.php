@@ -77,7 +77,6 @@
                                     $recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
 
 
-                                    //todo alternativt göra dashboard-form
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
                                     echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
