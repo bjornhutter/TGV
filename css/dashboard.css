@@ -1031,7 +1031,7 @@ form textarea {
 /*** ================= LOGIN START =================== ***/
 
 .admin-body {
-    background: url("https://static.pexels.com/photos/24902/pexels-photo-24902.jpg") no-repeat center top;
+    background: url("../img/login_background.jpg") no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
