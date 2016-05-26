@@ -1,5 +1,5 @@
 body {
-    background: #f3f3f3;
+    background: #F1F1F1;
 }
 
 p {
@@ -680,7 +680,7 @@ footer a:hover {
 .script-info {
     width: 50%;
     display: block;
-    background: #F3F3F3;
+    background: #F1F1F1;
     padding: 0 0 40px 0;
     margin: 0 auto;
 }
@@ -711,7 +711,7 @@ footer a:hover {
 .script-examiner {
     width: 50%;
     display: block;
-    background: #f3f3f3;
+    background: #F1F1F1;
     padding: 40px 25% 0 25%;
 }
 
@@ -754,7 +754,7 @@ footer a:hover {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     font-family: 'open sans', sans-serif;
-    background: #f3f3f3;
+    background: #F1F1F1;
     border: none;
     padding: 1% 2%;
 }
@@ -825,7 +825,7 @@ footer a:hover {
 .contact-info {
     width: 40%;
     display: block;
-    background: #f3f3f3;
+    background: #F1F1F1;
     margin: 0 auto;
 }
 
@@ -845,21 +845,21 @@ footer a:hover {
 }
 
 .contact-info-li:nth-child(1) {
-    background: #F3F3F3 url('../img/location.svg') no-repeat left 2px;
+    background: #F1F1F1 url('../img/location.svg') no-repeat left 2px;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
 .contact-info-li:nth-child(2) {
-    background: #F3F3F3 url('../img/phone.svg') no-repeat left 0;
+    background: #F1F1F1 url('../img/phone.svg') no-repeat left 0;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
 .contact-info-li:nth-child(3) {
-    background: #F3F3F3 url('../img/envelop.svg') no-repeat left 0;
+    background: #F1F1F1 url('../img/envelop.svg') no-repeat left 0;
     background-size: 1.5em;
     position: relative;
 }
@@ -871,7 +871,7 @@ footer a:hover {
 .contact-more-info {
     width: 40%;
     display: block;
-    background: #f3f3f3;
+    background: #F1F1F1;
     margin: 10px auto 0;
     padding: 0 0 40px 0;
 }
@@ -881,7 +881,7 @@ footer a:hover {
     display: block;
     float: left;
     height: 400px;
-    background: #f3f3f3;
+    background: #F1F1F1;
 }
 
 #map {
@@ -928,7 +928,7 @@ footer a:hover {
 }
 
 .ui-widget-header {
-    background: #cccccc !important;
+    background: #bbbbbb !important;
     color: #000 !important;
     border: 0 solid !important;
 }
