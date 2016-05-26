@@ -380,7 +380,7 @@ if (!isset($_SESSION)) {
     ?>
 </main>
 
-<section class="script-form-wrapper>
+<section class="script-form-wrapper">
     <div id="script-form-inner-wrapper">
         <h1 class="send-script-main-title">Skicka in manus</h1>
         <p class="send-script-info">Ditt manus kan du enkelt skicka in via formuläret nedan. Du kan även skicka in det

@@ -674,6 +674,7 @@ footer a:hover {
 .script-wrapper {
     width: 100%;
     display: block;
+    margin: 54px 0 0 0;
 }
 
 .script-info {
@@ -928,7 +929,7 @@ footer a:hover {
 
 .ui-widget-header {
     background: #cccccc !important;
-    color: #222222 !important;
+    color: #000 !important;
     border: 0 solid !important;
 }
 
