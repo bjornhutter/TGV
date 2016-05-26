@@ -20,7 +20,7 @@
         ?>
     </div>
     <div class="footer-block">
-        <h2 class="footer-title">Site map</h2>
+        <h2 class="footer-title">Sidkarta</h2>
         <p><a href="../about.php">Om TGV</a></p>
         <p><a href="../subscription.php">Prenumerera</a></p>
         <p><a href="http://ojs.ub.gu.se/ojs/index.php/tgv">Tidigare nummer</a></p>

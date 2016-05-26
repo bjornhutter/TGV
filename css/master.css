@@ -77,6 +77,7 @@ nav {
 
 nav ul {
     text-align: center;
+    list-style: none;
 }
 
 nav ul li {
@@ -137,9 +138,10 @@ nav ul li a:active {
     top: 0;
     left: 0;
     z-index: +1;
-    background: #252525 url('../img/menu_white.svg') no-repeat center left 15px;
-    background-size: 1.7em;
-    background-position-y: 15px;
+    background: #252525 url('../img/menu_white.svg') no-repeat center left 13px;
+    background-size: 2em;
+    background-position-y: 11px;
+    cursor: pointer;
 }
 
 #menyButton {
@@ -169,6 +171,7 @@ nav ul li a:active {
 
 #nav_mobile ul li a:hover {
     border: none;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 #nav_mobile ul li:nth-child(1) {
@@ -202,7 +205,7 @@ nav ul li a:active {
 
 
 #nav_mobile ul li:nth-child(3) {
-    background: #252525 url('../img/envelop_white.svg') no-repeat center left 15px;
+    background: #252525 url('../img/book_white.svg') no-repeat center left 15px;
     background-size: 1.5em;
     -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -739,7 +742,7 @@ footer a:hover {
 }
 
 .script-form-ul {
-
+    list-style: none;
 }
 
 .script-form-li {
@@ -770,9 +773,6 @@ footer a:hover {
     box-sizing: border-box;
     margin: 10px 0 0 0;
     padding: 10px 0;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
     -webkit-transition: background 200ms;
     -moz-transition: background 200ms;
     -ms-transition: background 200ms;
@@ -832,6 +832,7 @@ footer a:hover {
 .contact-info-ul {
     display: flex;
     display: -webkit-flex;
+    list-style: none;
 }
 
 .contact-info-li {
@@ -945,7 +946,19 @@ em {
 }
 
 ul {
-    /* list-style: none; */
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+}
+
+.script-examiner ol {
+    margin: -20px 0 0 0;
 }
 
 /*** ================= WYSIWYG END =================== ***/
@@ -1318,7 +1331,7 @@ ul {
     }
 
     .contact-info-ul {
-        display: block
+        display: block;
     }
 
     .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
