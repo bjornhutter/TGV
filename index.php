@@ -8,6 +8,7 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Senaste nummer av Tidskrift för genusvetenskap inklusive senaste nyheterna och call for papers.">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Tidskrift för genusvetenskap</title>

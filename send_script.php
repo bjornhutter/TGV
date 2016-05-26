@@ -8,6 +8,7 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anvisningar för artikelskribenter, recensenter och granskare. Skicka in ditt manus till TGV via formuläret!">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Skicka manus | Tidskrift för genusvetenskap</title>

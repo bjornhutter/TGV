@@ -8,6 +8,7 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Information om Tidskrift för genusvetenskap, Nordens största referee-granskade tidskrift för aktuell tvärvetenskaplig genusforskning, och om redaktionen.">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Om TGV | Tidskrift för genusvetenskap</title>
