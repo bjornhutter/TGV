@@ -25,7 +25,7 @@ if (!isset($_GET['id'])) {
 
 <?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation_mobile.inc') ?>
-<?php include('includes/navigation.inc') ?>
+<?php include('includes/navigation_readmore.inc') ?>
 <main>
     <section class="read-more-wrapper">
         <?php

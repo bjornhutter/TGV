@@ -33,6 +33,14 @@ header {
     background-size: cover;
 }
 
+.header-other {
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0,0,0,0.2)), url(../img/header_homepage.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 300px;
+}
+
 .header-logo {
     margin-top: 6%;
     position: absolute;
@@ -538,7 +546,7 @@ footer a:hover {
 
 .about-staff {
     width: 50%;
-    margin: 54px auto 0;
+    margin: 0 auto;
     padding: 40px 0;
 }
 
@@ -624,7 +632,7 @@ footer a:hover {
 .price-info-wrapper {
     width: 100%;
     display: block;
-    margin: 54px auto 0;
+    margin: 0 auto;
 }
 
 .subscription-price {
@@ -666,7 +674,6 @@ footer a:hover {
 .script-wrapper {
     width: 100%;
     display: block;
-    margin: 54px 0 0 0;
 }
 
 .script-info {
@@ -810,7 +817,7 @@ form input {
 .contact-wrapper {
     width: 100%;
     height: 200px;
-    margin: 54px auto 0;
+    margin: 0 auto;
     display: block;
     padding: 40px 0;
 }
@@ -992,6 +999,10 @@ ol {
 /*** ================= RESPONSIVE START =================== ***/
 
 @media screen and (min-width: 1367px) {
+    header {
+        height: 650px;
+    }
+
     .header-welcome {
         margin-top: 10%;
         width: 28%;
@@ -1079,9 +1090,13 @@ ol {
         height: 400px;
     }
 
+    .header-logo {
+        margin-top: 13%;
+    }
+
     .header-welcome {
         width: 43%;
-        margin-top: 12%;
+        margin-top: 19%;
     }
 
     .contact-info {
@@ -1130,7 +1145,7 @@ ol {
     }
 
     .header-logo {
-        margin-top: 8%;
+        margin-top: 13%;
     }
 
     .logo {
@@ -1139,7 +1154,7 @@ ol {
 
     .header-welcome {
         width: 50%;
-        margin-top: 14%;
+        margin-top: 19%;
     }
 
     .index-main {
@@ -1243,12 +1258,12 @@ ol {
         height: 300px;
     }
 
-    .header-homepage {
+    .header-homepage, .header-other {
         margin: 56px 0 0 0;
     }
 
     .header-logo {
-        margin-top: 12%;
+        margin-top: 14%;
     }
 
     .logo {
@@ -1256,7 +1271,7 @@ ol {
     }
 
     .header-welcome {
-        margin: 22% 0 0 0;
+        margin: 23.5% 0 0 0;
         width: 440px;
     }
 
@@ -1373,7 +1388,7 @@ ol {
         display: block;
     }
 
-    .nav-index {
+    .nav-sticky {
         display: none;
     }
 
@@ -1412,6 +1427,11 @@ ol {
 
     .header-homepage {
         margin: 56px 0 0 0;
+    }
+
+    .header-other {
+        margin: 56px 0 0 0;
+        height: 200px;
     }
 
     .header-logo {
@@ -1549,7 +1569,7 @@ ol {
         display: block;
     }
 
-    .nav-index {
+    .nav-sticky {
         display: none;
     }
 

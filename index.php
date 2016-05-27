@@ -34,7 +34,7 @@ if (!isset($_SESSION)) {
             tvärvetenskaplig genusforskning!</h2>
     </div>
 </header>
-<?php include('includes/navigation_index.inc') ?>
+<?php include('includes/navigation.inc') ?>
 
 <main class="index-main">
     <ul class="recent-article-wrapper">

@@ -19,6 +19,7 @@ if (!isset($_SESSION)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/active_nav.js"></script>
+    <script src="js/stickynav.js"></script>
     <script src="js/nav_mobile_toggle.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script>
@@ -166,6 +167,11 @@ if (!isset($_SESSION)) {
     </script>
 </head>
 <body onload="initialize()" onunload="GUnload()">
+<header class="header-other">
+    <div class="header-logo">
+        <img src="img/tgv_logo.png" class="logo">
+    </div>
+</header>
 <?php include('includes/navigation_mobile.inc') ?>
 <?php include('includes/navigation.inc') ?>
 <main class="contact-wrapper">
