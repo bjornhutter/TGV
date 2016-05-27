@@ -285,5 +285,4 @@ if (!isset($_SESSION)) {
 <?php include('includes/footer.inc') ?>
 <script src="js/send_script_tabs.js"></script>
 </body>
-<script src="js/menu_toggle.js"></script>
 </html>
