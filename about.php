@@ -41,15 +41,13 @@ if (!isset($_SESSION)) {
         echo '<p>' . $aboutContent . '</p>';
 
         if (isset($_SESSION['user'])) {
-            //echo '<p><a href="about_staff_edit.php?id=' . $aboutId . '">Redigera</a></p>';
-
-            echo '<p><a href="dashboard_about.php" class="edit" target="_blank">Redigera</a></p>';
+            echo '<p><a href="dashboard_about.php#1" class="edit" target="_blank">Redigera</a></p>';
 
         }
         echo '</section>';
     }
     ?>
-    <!--kanske lägga till section för staff här under? -->
+
     <ul class="staff-wrapper">
         <h1 class="staff-main-title">Om redaktionen</h1>
         <?php
@@ -69,7 +67,6 @@ if (!isset($_SESSION)) {
             echo '<p class="staffWorktitle">' . $staffTitle . '</p>';
             echo '<div class="staff-linebreak"></div>';
             echo '<p class="staff-content">' . $staffContent . '</p>';
-            // Lägg in rätt länk till dashboarden här under
             if (isset($_SESSION['user'])) {
             echo '<p><a href="about_editors_edit.php?id=' . $staffId . '" class="edit"  target="_blank">Redigera</a></p>';
             }

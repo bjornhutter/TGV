@@ -8,7 +8,8 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Anvisningar för artikelskribenter, recensenter och granskare. Skicka in ditt manus till TGV via formuläret!">
+    <meta name="description"
+          content="Anvisningar för artikelskribenter, recensenter och granskare. Skicka in ditt manus till TGV via formuläret!">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Skicka manus | Tidskrift för genusvetenskap</title>
@@ -47,21 +48,21 @@ if (!isset($_SESSION)) {
 
 <main class="script-wrapper">
     <?php include('includes/db_connect.inc'); ?>
-        <?php
-        $writerGuidelinesResult = mysqli_query($link, "SELECT * FROM tgv_writer_guidelines") or die(mysqli_error($link));
-        echo '<section class="script-info">';
-        while ($writerGuidelinesRow = mysqli_fetch_array($writerGuidelinesResult)) {
-            $writerGuidelinesId = $writerGuidelinesRow['id'];
-            $writerGuidelinesTitle = $writerGuidelinesRow['title'];
-            $writerGuidelinesContent = $writerGuidelinesRow['content'];
-            echo '<h1 class="script-info-main-title">' . $writerGuidelinesTitle . '</h1>';
-            echo '<p>' . $writerGuidelinesContent . '</p>';
-            if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
-            }
-            echo '</section>';
+    <?php
+    $writerGuidelinesResult = mysqli_query($link, "SELECT * FROM tgv_writer_guidelines") or die(mysqli_error($link));
+    echo '<section class="script-info">';
+    while ($writerGuidelinesRow = mysqli_fetch_array($writerGuidelinesResult)) {
+        $writerGuidelinesId = $writerGuidelinesRow['id'];
+        $writerGuidelinesTitle = $writerGuidelinesRow['title'];
+        $writerGuidelinesContent = $writerGuidelinesRow['content'];
+        echo '<h1 class="script-info-main-title">' . $writerGuidelinesTitle . '</h1>';
+        echo '<p>' . $writerGuidelinesContent . '</p>';
+        if (isset($_SESSION['user'])) {
+            echo '<p><a href="dashboard_send_script.php#1" class="edit" target="_blank">Redigera</a></p>';
         }
-        ?>
+        echo '</section>';
+    }
+    ?>
     <?php
 
     /*
@@ -143,7 +144,7 @@ if (!isset($_SESSION)) {
             <?php
             echo $guidelinesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#2" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
         </div>
@@ -153,7 +154,7 @@ if (!isset($_SESSION)) {
 
             echo $formContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#3" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
 
@@ -164,7 +165,7 @@ if (!isset($_SESSION)) {
 
             echo $titlesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#4" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
         </div>
@@ -175,7 +176,7 @@ if (!isset($_SESSION)) {
 
             echo $quotesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#5" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
         </div>
@@ -184,7 +185,7 @@ if (!isset($_SESSION)) {
 
             echo $refContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#6" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
         </div>
@@ -203,9 +204,8 @@ if (!isset($_SESSION)) {
         echo '<p>' . $scriptRevContent . '</p>';
 
         if (isset($_SESSION['user'])) {
-            //echo '<p><a href="script_reviewers_edit.php?id=' . $scriptRevId . '">Redigera</a></p>';
 
-            echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php#7" class="edit" target="_blank">Redigera</a></p>';
 
         }
         echo '</section>';
@@ -225,8 +225,7 @@ if (!isset($_SESSION)) {
         echo '<p>' . nl2br($scriptExaminerContent) . '</p>';
 
         if (isset($_SESSION['user'])) {
-            //echo '<p><a href="script_examiner_edit.php?id=' . $scriptExaminerId . '">Redigera</a></p>';
-            echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php#8" class="edit" target="_blank">Redigera</a></p>';
         }
 
         echo '</section>';

@@ -27,34 +27,26 @@ header {
 }
 
 .header-homepage {
-    background: url(../img/header_homepage.jpg) no-repeat center top;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0,0,0,0.2)), url(../img/header_homepage.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
 
 .header-logo {
-    background: #e07929;
-    width: 508px;
     margin-top: 6%;
     position: absolute;
-    padding: 1% 3%;
-    white-space: nowrap;
 }
 
-.header-logo-main-title {
-    color: #FFFFFF;
-    font-size: 32px;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    white-space: nowrap;
+.logo {
+    width: 100%;
 }
 
 .header-welcome {
-    width: 41%;
+    width: 34%;
     margin-top: 11%;
     position: absolute;
-    padding: 1% 3%;
+    padding: 0.5% 1.5%;
 }
 
 .header-welcome-text {
@@ -1087,6 +1079,11 @@ ol {
         height: 400px;
     }
 
+    .header-welcome {
+        width: 43%;
+        margin-top: 12%;
+    }
+
     .contact-info {
         width: 60%;
     }
@@ -1132,9 +1129,17 @@ ol {
         height: 300px;
     }
 
+    .header-logo {
+        margin-top: 8%;
+    }
+
+    .logo {
+        width: 86%;
+    }
+
     .header-welcome {
-        width: 59%;
-        margin-top: 13%;
+        width: 50%;
+        margin-top: 14%;
     }
 
     .index-main {
@@ -1243,16 +1248,15 @@ ol {
     }
 
     .header-logo {
-        width: 413px;
         margin-top: 12%;
     }
 
-    .header-logo-main-title {
-        font-size: 26px;
+    .logo {
+        width: 86%;
     }
 
     .header-welcome {
-        margin: 20% 0 0 0;
+        margin: 22% 0 0 0;
         width: 440px;
     }
 
@@ -1411,12 +1415,11 @@ ol {
     }
 
     .header-logo {
-        width: 222px;
-        margin-top: 10%;
+        margin-top: 15%;
     }
 
-    .header-logo-main-title {
-        font-size: 14px;
+    .logo {
+        width: 90%;
     }
 
     .header-welcome {

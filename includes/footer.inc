@@ -15,7 +15,7 @@
         echo '<h2 class="footer-title">' . $footerTitle . '</h2>';
         echo '<p>' . $footerContent . '<p/>';
         if (isset($_SESSION['user'])) {
-            echo '<p><a href="dashboard_contact.php" target="_blank" class="edit">Redigera</a></p>';
+            echo '<p><a href="dashboard_contact.php#3" target="_blank" class="edit">Redigera</a></p>';
         }
         ?>
     </div>
@@ -45,11 +45,7 @@
 
 
         if (isset($_SESSION['user'])) {
-
-            //Behöver inte GET ID
-            //echo '<p><a href="contact_edit.php?id=' . $contactId . '">Redigera</a></p>';
-
-            echo '<p><a href="dashboard_contact.php" target="_blank" class="edit">Redigera</a></p>';
+            echo '<p><a href="dashboard_contact.php#1" target="_blank" class="edit">Redigera</a></p>';
 
         }
         ?>

@@ -27,7 +27,7 @@ if (!isset($_SESSION)) {
 
 <header class="header-homepage">
     <div class="header-logo">
-        <h1 class="header-logo-main-title">Tidskrift för genusvetenskap</h1>
+        <img src="img/tgv_logo.png" class="logo">
     </div>
     <div class="header-welcome">
         <h2 class="header-welcome-text">Välkommen till Nordens största referee-granskade tidskrift för aktuell
