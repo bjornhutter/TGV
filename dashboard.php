@@ -154,7 +154,7 @@
                                         </p></a>
                                 </li>-->
                                 <li>
-                                    <input type="submit" name="newsSubmit" value="Skapa inlägg"
+                                    <input type="submit" name="newsSubmit" value="Publicera inlägg"
                                            class="form-input-submit">
                                 </li>
                             </ul>
@@ -262,7 +262,7 @@
                                         <input type="file" name="fileToUpload" id="fileToUpload" required>
                                     </li>
                                     <li>
-                                        <input type="submit" value="Lägg till nummer" name="submit"
+                                        <input type="submit" value="Publicera nummer" name="submit"
                                                class="form-input-submit">
                                     </li>
                                 </ul>

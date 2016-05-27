@@ -164,7 +164,7 @@
                                         <input type="file" name="fileToUpload" id="fileToUpload" required>
                                     </li>
                                     <li>
-                                        <input type="submit" value="Lägg till redaktör" name="addStaffSubmit"
+                                        <input type="submit" value="Publicera redaktör" name="addStaffSubmit"
                                                class="form-input-submit">
                                     </li>
                                 </ul>

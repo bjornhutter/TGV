@@ -1,6 +1,6 @@
 <?php
 include('includes/db_connect.inc');
-//require('includes/auth.php');
+require('includes/auth.inc');
 $id = $_POST['id'];
 
 if (isset($_POST['delete'])) {
@@ -81,5 +81,4 @@ if (isset($_POST['delete'])) {
 
 header("Location: dashboard.php");
 
-?>
-    
+ob_end_flush();

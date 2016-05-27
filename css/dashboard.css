@@ -213,7 +213,7 @@ nav ul li a:active {
 
 }
 
-nav ul li:nth-child(1) {
+nav ul li:nth-child(2) {
     background: #252525 url('../img/icons/home_grey.svg') no-repeat center left 10px;
     background-size: 1.5em;
     /*border-bottom: 1px solid rgba(0, 0, 0, 0.3);*/
@@ -489,28 +489,24 @@ form {
 
 .news-posts-wrapper ul,
 .news-posts-wrapper ol,
-.news-posts-wrapper li
-{
+.news-posts-wrapper li {
     background: none;
 }
 
 .recent-article,
-.news-post
-{
+.news-post {
     margin-bottom: 20px;
     background: #ffffff;
     border-bottom: 2px solid #e07929;
 }
 
 .recent-article p,
-.news-post p
-{
+.news-post p {
     background: none;
 }
 
 .recent-article-title,
-.news-title
-{
+.news-title {
     font-size: 1.65em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -520,8 +516,7 @@ form {
 }
 
 .recent-article-content,
-.news-content
-{
+.news-content {
     font-size: 1em;
     padding-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
@@ -588,7 +583,7 @@ form {
 .dashboard-form ul,
 .dashboard-form-full ul {
     list-style: none;
-
+    background: none;
 }
 
 .overview-wrapper {
@@ -605,7 +600,8 @@ form {
     text-decoration: underline;
     color: #027b9a;
     padding-left: 2px;
-    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
 
 }
 
@@ -648,7 +644,6 @@ form {
 .helper-links:hover {
     text-decoration: underline;
 }
-
 
 .dashboard-title {
     font-size: 2em;
@@ -700,6 +695,12 @@ form ul li p {
 form input {
     width: 100%;
     height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
 }
 
 form textarea {
@@ -732,6 +733,9 @@ form textarea {
     -ms-transition: background 200ms;
     -o-transition: background 200ms;
     transition: background 200ms;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .form-input-submit:hover {
@@ -753,6 +757,12 @@ form textarea {
     padding: 10px;
     display: block;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: #f1f1f1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
 }
 
 .logout {
@@ -760,7 +770,11 @@ form textarea {
     padding: 10px;
     display: block;
     cursor: pointer;
-
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: #f1f1f1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 #logout-inactive {
@@ -840,6 +854,7 @@ form textarea {
     border-radius: 5px 5px 0 0;
     color: #f4f4f4;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
 }
 
 .new-container-header h2, .old-container-header h2 {
@@ -856,6 +871,7 @@ form textarea {
     border-radius: 5px 5px 0 0;
     color: #f4f4f4;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
 }
 
 .update-success-main {
@@ -968,7 +984,6 @@ form textarea {
     padding-top: 0;
 }
 
-
 .staff-title-2 {
     font-size: 1em;
     font-family: 'Open Sans', sans-serif;
@@ -986,8 +1001,7 @@ form textarea {
 }
 
 #add-toggle,
-#add-news-toggle
-{
+#add-news-toggle {
     cursor: pointer;
     font-size: 1em;
     font-family: 'Open Sans', sans-serif;
@@ -1003,8 +1017,7 @@ form textarea {
 
 #add-staff,
 #add-article,
-#add-news-post
-{
+#add-news-post {
     display: none;
 }
 
@@ -1018,7 +1031,7 @@ form textarea {
 /*** ================= LOGIN START =================== ***/
 
 .admin-body {
-    background: url("https://static.pexels.com/photos/24902/pexels-photo-24902.jpg") no-repeat center top;
+    background: url("../img/login_background.jpg") no-repeat center top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -1162,6 +1175,9 @@ form textarea {
     -ms-transition: background 200ms;
     -o-transition: background 200ms;
     transition: background 200ms;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;;
 }
 
 .login-input-submit:hover {
@@ -1169,9 +1185,17 @@ form textarea {
 }
 
 .error-field {
-    color: #ff2332;
-    position: absolute;
-    padding-left: 5px;
+    color: #f1f1f1;
+    font-weight: 700;
+    /*padding-left: 5px;*/
+    display: block;
+    background: rgba(250, 70, 80, 1);;
+    line-height: 2.5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
 }
 
 /*** ================= LOGIN END =================== ***/
@@ -1326,8 +1350,7 @@ p {
     }
 
     .dashboard-sub-title,
-    .dashboard-sub-title-no-padding-top
-    {
+    .dashboard-sub-title-no-padding-top {
         font-size: 1.65em;
     }
 

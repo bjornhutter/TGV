@@ -175,7 +175,7 @@ nav ul li a:active {
 }
 
 #nav_mobile ul li:nth-child(1) {
-    background: #252525 url('../img/home_white.svg') no-repeat center left 15px;
+    background: #252525 url('../img/icons/home_white.svg') no-repeat center left 15px;
     background-size: 1.5em;
     -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -189,7 +189,7 @@ nav ul li a:active {
 }
 
 #nav_mobile ul li:nth-child(2) {
-    background: #252525 url('../img/books_white.svg') no-repeat center left 15px;
+    background: #252525 url('../img/icons/books_white.svg') no-repeat center left 15px;
     background-size: 1.5em;
     -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -219,7 +219,7 @@ nav ul li a:active {
 }
 
 #nav_mobile ul li:nth-child(4) {
-    background: #252525 url('../img/envelop_white.svg') no-repeat center left 15px;
+    background: #252525 url('../img/icons/envelop_white.svg') no-repeat center left 15px;
     background-size: 1.5em;
     -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -233,7 +233,7 @@ nav ul li a:active {
 }
 
 #nav_mobile ul li:nth-child(5) {
-    background: #252525 url('../img/users_white.svg') no-repeat center left 15px;
+    background: #252525 url('../img/icons/users_white.svg') no-repeat center left 15px;
     background-size: 1.5em;
     -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -247,7 +247,7 @@ nav ul li a:active {
 }
 
 #nav_mobile ul li:nth-child(6) {
-    background: #252525 url('../img/address-book_white.svg') no-repeat center left 15px;
+    background: #252525 url('../img/icons/address-book_white.svg') no-repeat center left 15px;
     background-size: 1.5em;
     -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -747,6 +747,15 @@ footer a:hover {
 
 .script-form-li {
     margin: 1% 0 2% 0;
+}
+
+form input {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .script-form-input {
@@ -1307,7 +1316,7 @@ ol {
 
     .staff {
         width: 40%;
-        margin: 20px 20px 0px 20px;
+        margin: 20px 20px 0 20px;
 }
     .staff-linebreak {
         margin: 15px 0 15px 0;

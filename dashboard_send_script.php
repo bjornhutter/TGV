@@ -22,11 +22,8 @@
                 menubar: 'file edit view insert tools',
                 plugins: 'link code',
                 content_css : 'css/tinymce.css'
-                /*toolbar: 'undo redo | bold italic | bullist numlist code',
-                 menubar: 'file edit view tools',
-                 plugins: "code"*/
             });
-        </script><!--todo ta bort code eller inte -->
+        </script>
         <script src="js/active_dashnav.js"></script>
     </head>
     <body>
