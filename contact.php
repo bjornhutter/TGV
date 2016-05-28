@@ -167,11 +167,7 @@ if (!isset($_SESSION)) {
     </script>
 </head>
 <body onload="initialize()" onunload="GUnload()">
-<header class="header-other">
-    <div class="header-logo">
-        <img src="img/tgv_logo.png" class="logo">
-    </div>
-</header>
+<?php include('includes/header_other.inc') ?>
 <?php include('includes/navigation_mobile.inc') ?>
 <?php include('includes/navigation.inc') ?>
 <main class="contact-wrapper">

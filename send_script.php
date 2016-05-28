@@ -25,12 +25,7 @@ if (!isset($_SESSION)) {
 </head>
 <body>
 
-<header class="header-other">
-    <div class="header-logo">
-        <img src="img/tgv_logo.png" class="logo">
-    </div>
-</header>
-
+<?php include('includes/header_other.inc') ?>
 <?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation_mobile.inc') ?>
 <?php include('includes/navigation.inc') ?>
