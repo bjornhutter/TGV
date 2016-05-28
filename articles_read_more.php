@@ -19,13 +19,14 @@ if (!isset($_GET['id'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/active_nav.js"></script>
+    <script src="js/stickynav.js"></script>
     <script src="js/nav_mobile_toggle.js"></script>
 </head>
 <body>
 <?php include('includes/db_connect.inc') ?>
 <?php include('includes/header_other.inc') ?>
+<?php include('includes/navigation.inc') ?>
 <?php include('includes/navigation_mobile.inc') ?>
-<?php include('includes/navigation_readmore.inc') ?>
 <main>
     <section class="read-more-wrapper">
         <?php
