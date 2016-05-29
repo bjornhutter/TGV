@@ -1,5 +1,5 @@
 body {
-    background: #f3f3f3;
+    background: #F1F1F1;
 }
 
 p {
@@ -23,38 +23,38 @@ header {
     width: 100%;
     height: 500px;
     display: block;
-    background: #aed4da;
+    background: #FFFFFF;
 }
 
 .header-homepage {
-    background: url(../img/header_homepage.jpg) no-repeat center top;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../img/header_homepage.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
 
-.header-logo {
-    background: #e07929;
-    width: 508px;
-    margin-top: 6%;
-    position: absolute;
-    padding: 1% 3%;
-    white-space: nowrap;
+.header-other {
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../img/header_homepage.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 300px;
 }
 
-.header-logo-main-title {
-    color: #FFFFFF;
-    font-size: 32px;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    white-space: nowrap;
+.header-logo {
+    margin-top: 6%;
+    position: absolute;
+}
+
+.logo {
+    width: 100%;
 }
 
 .header-welcome {
-    width: 41%;
+    width: 34%;
     margin-top: 11%;
     position: absolute;
-    padding: 1% 3%;
+    padding: 0.5% 1.5%;
 }
 
 .header-welcome-text {
@@ -77,6 +77,7 @@ nav {
 
 nav ul {
     text-align: center;
+    list-style: none;
 }
 
 nav ul li {
@@ -131,18 +132,21 @@ nav ul li a:active {
 }
 
 #nav_mobile {
-    display:none;
+    display: none;
     width: 100%;
-    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: +1;
+    background: #252525 url('../img/menu_white.svg') no-repeat center left 13px;
+    background-size: 2em;
+    background-position-y: 11px;
+    cursor: pointer;
 }
 
 #menyButton {
     color: #FFF;
-    padding: 20px;
+    padding: 20px 20px 20px 59px;
     display: block;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
@@ -163,10 +167,11 @@ nav ul li a:active {
 
 #nav_mobile ul li a {
     padding: 20px 20px 20px 60px;
-    }
+}
 
 #nav_mobile ul li a:hover {
     border: none;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 #nav_mobile ul li:nth-child(1) {
@@ -197,10 +202,8 @@ nav ul li a:active {
     transition: border ease 200ms;
 }
 
-
-
 #nav_mobile ul li:nth-child(3) {
-    background: #252525 url('../img/icons/envelop_white.svg') no-repeat center left 15px;
+    background: #252525 url('../img/book_white.svg') no-repeat center left 15px;
     background-size: 1.5em;
     -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
@@ -336,6 +339,13 @@ footer a:hover {
     padding: 40px 0;
 }
 
+.read-more-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+}
+
 .recent-article-main-title {
     font-size: 2em;
     color: #000000;
@@ -351,9 +361,9 @@ footer a:hover {
     margin: 20px 10px 20px 10px;
     display: inline-block;
     height: auto;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0 0 1% 0;
     text-align: left;
     vertical-align: top;
@@ -405,16 +415,16 @@ footer a:hover {
     margin: 20px 10px 20px 10px;
     display: inline-block;
     height: auto;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1% 0;
     text-align: left;
     vertical-align: top;
 }
 
 .read-more-img {
-
+    width: 100%;
 }
 
 .recent-article-more-title, .read-more-featured-title {
@@ -460,9 +470,9 @@ footer a:hover {
     background: #fff;
     margin: 20px 0;
     padding: 10px;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .send-script-button {
@@ -518,6 +528,7 @@ footer a:hover {
 }
 
 .news-post {
+    margin: 0 10px 0 0;
 }
 
 .hr-news {
@@ -533,7 +544,7 @@ footer a:hover {
 
 .about-staff {
     width: 50%;
-    margin: 54px auto 0;
+    margin: 0 auto;
     padding: 40px 0;
 }
 
@@ -619,7 +630,7 @@ footer a:hover {
 .price-info-wrapper {
     width: 100%;
     display: block;
-    margin: 54px auto 0;
+    margin: 0 auto;
 }
 
 .subscription-price {
@@ -661,14 +672,12 @@ footer a:hover {
 .script-wrapper {
     width: 100%;
     display: block;
-    margin: 54px auto 0;
-    padding: 40px 0;
 }
 
 .script-info {
     width: 50%;
     display: block;
-    background: #F3F3F3;
+    background: #F1F1F1;
     padding: 0 0 40px 0;
     margin: 0 auto;
 }
@@ -699,7 +708,7 @@ footer a:hover {
 .script-examiner {
     width: 50%;
     display: block;
-    background: #f3f3f3;
+    background: #F1F1F1;
     padding: 40px 25% 0 25%;
 }
 
@@ -730,7 +739,7 @@ footer a:hover {
 }
 
 .script-form-ul {
-
+    list-style: none;
 }
 
 .script-form-li {
@@ -751,7 +760,7 @@ form input {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     font-family: 'open sans', sans-serif;
-    background: #f3f3f3;
+    background: #F1F1F1;
     border: none;
     padding: 1% 2%;
 }
@@ -770,9 +779,6 @@ form input {
     box-sizing: border-box;
     margin: 10px 0 0 0;
     padding: 10px 0;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
     -webkit-transition: background 200ms;
     -moz-transition: background 200ms;
     -ms-transition: background 200ms;
@@ -809,7 +815,7 @@ form input {
 .contact-wrapper {
     width: 100%;
     height: 200px;
-    margin: 54px auto 0;
+    margin: 0 auto;
     display: block;
     padding: 40px 0;
 }
@@ -825,13 +831,14 @@ form input {
 .contact-info {
     width: 40%;
     display: block;
-    background: #f3f3f3;
+    background: #F1F1F1;
     margin: 0 auto;
 }
 
 .contact-info-ul {
     display: flex;
     display: -webkit-flex;
+    list-style: none;
 }
 
 .contact-info-li {
@@ -844,21 +851,21 @@ form input {
 }
 
 .contact-info-li:nth-child(1) {
-    background: #F3F3F3 url('../img/location.svg') no-repeat left 2px;
+    background: #F1F1F1 url('../img/location.svg') no-repeat left 2px;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
 .contact-info-li:nth-child(2) {
-    background: #F3F3F3 url('../img/phone.svg') no-repeat left 0;
+    background: #F1F1F1 url('../img/phone.svg') no-repeat left 0;
     background-size: 1.5em;
     position: relative;
     margin: 0 15% 0 0;
 }
 
 .contact-info-li:nth-child(3) {
-    background: #F3F3F3 url('../img/envelop.svg') no-repeat left 0;
+    background: #F1F1F1 url('../img/envelop.svg') no-repeat left 0;
     background-size: 1.5em;
     position: relative;
 }
@@ -870,7 +877,7 @@ form input {
 .contact-more-info {
     width: 40%;
     display: block;
-    background: #f3f3f3;
+    background: #F1F1F1;
     margin: 10px auto 0;
     padding: 0 0 40px 0;
 }
@@ -880,7 +887,7 @@ form input {
     display: block;
     float: left;
     height: 400px;
-    background: #f3f3f3;
+    background: #F1F1F1;
 }
 
 #map {
@@ -927,11 +934,10 @@ form input {
 }
 
 .ui-widget-header {
-    background: #cccccc !important;
-    color: #222222 !important;
+    background: #bbbbbb !important;
+    color: #000 !important;
     border: 0 solid !important;
 }
-
 
 /*** ================= TABS END =================== ***/
 
@@ -945,7 +951,19 @@ em {
 }
 
 ul {
-    /* list-style: none; */
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+}
+
+.script-examiner ol {
+    margin: -20px 0 0 0;
 }
 
 /*** ================= WYSIWYG END =================== ***/
@@ -973,18 +991,96 @@ ul {
     color: #FFF;
     text-decoration: none;
 }
+
 /*** ================= EDIT END =================== ***/
 
 /*** ================= RESPONSIVE START =================== ***/
 
-@media screen and (max-width: 1342px) {
-    .contact-info {
-        width: 50%;
+@media screen and (min-width: 1367px) {
+    header {
+        height: 650px;
     }
 
-    .contact-more-info {
-        width: 50%;
+    .header-welcome {
+        margin-top: 10%;
+        width: 28%;
     }
+
+    .recent-article-main-title {
+        padding-left: 13.5%;
+    }
+
+    .recent-article {
+        width: 22%;
+        margin: 20px 25px;
+    }
+
+    .subscription-info, .subscription-price {
+        width: 45%;
+        padding: 40px 27.5% 40px 27.5%;
+    }
+
+    .script-info, #tabs {
+        width: 45%;
+    }
+
+    .script-reviewers, .script-examiner {
+        width: 45%;
+        padding: 40px 27.5% 40px 27.5%;
+    }
+
+    .about-staff {
+        width: 45%;
+    }
+
+    .staff {
+        width: 17%;
+    }
+
+    .staff-main-title {
+        padding-left: 12%;
+    }
+
+    #map, .contact-map {
+        height: 550px;
+    }
+
+    .footer-block-about {
+        width: 22%;
+    }
+
+    .read-more-info {
+        width: 17%;
+    }
+
+    .read-more-content {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1201px) {
+    .subscription-info, .subscription-price, .script-info, .script-examiner, .script-reviewers {
+        width: 55%;
+        padding: 40px 22.5% 40px 22.5%;
+    }
+
+    #tabs {
+        width: 55%;
+    }
+
+    .contact-info, .contact-more-info {
+        width: 55%;
+    }
+
+    .staff {
+        width: 20%;
+    }
+
+    .staff-main-title {
+        padding-left: 4%;
+    }
+
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1001px) {
@@ -992,8 +1088,13 @@ ul {
         height: 400px;
     }
 
-    .staff-main-title {
-        padding-left: calc(11% + 1px);
+    .header-logo {
+        margin-top: 13%;
+    }
+
+    .header-welcome {
+        width: 43%;
+        margin-top: 19%;
     }
 
     .contact-info {
@@ -1002,7 +1103,7 @@ ul {
 
     .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 60%;
-        padding: 20px 20% 20px 20%;
+        padding: 40px 20% 40px 20%;
     }
 
     #tabs {
@@ -1019,18 +1120,39 @@ ul {
         padding: 0 5% 40px 0;
     }
 
+    .about-staff {
+        width: 60%;
+    }
+
+    .staff {
+        width: 20%;
+        margin: 20px 20px 0 20px;
+    }
+
+    .staff-main-title {
+        padding-left: 5%;
+    }
+
 }
 
 @media screen and (max-width: 1000px) and (min-width: 770px) {
-
 
     header {
         height: 300px;
     }
 
-    .header-welcome {
-        width: 59%;
+    .header-logo {
         margin-top: 13%;
+    }
+
+    .logo {
+        width: 86%;
+    }
+
+    .header-welcome {
+        width: 50%;
+        margin-top: 19%;
+        padding: 0.5% 2%;
     }
 
     .index-main {
@@ -1067,7 +1189,7 @@ ul {
         width: 100%;
     }
 
-    .cfp, .news-feed {
+    .cfp {
         width: 88%;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -1077,6 +1199,11 @@ ul {
 
     .news-feed {
         height: auto;
+        width: 89.5%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 40px auto;
     }
 
     .about-staff {
@@ -1084,11 +1211,11 @@ ul {
     }
 
     .staff {
-        width: 26%;
+        width: 29%;
     }
 
     .staff-main-title {
-        padding-left: calc(5% + 1px);
+        padding-left: 18%;
     }
 
     .contact-info {
@@ -1102,7 +1229,7 @@ ul {
 
     .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 71%;
-        padding: 20px 14.5% 20px 14.5%;
+        padding: 40px 14.5% 40px 14.5%;
     }
 
     #tabs {
@@ -1129,17 +1256,22 @@ ul {
         height: 300px;
     }
 
-    .header-logo {
-        width: 413px;
-        margin-top: 10%;
+    .header-homepage, .header-other {
+        margin: 56px 0 0 0;
     }
-    .header-logo-main-title {
-        font-size: 26px;
+
+    .header-logo {
+        margin-top: 14%;
+    }
+
+    .logo {
+        width: 86%;
     }
 
     .header-welcome {
-        margin: 17% 0 0 0;
+        margin: 23.5% 0 0 0;
         width: 440px;
+        padding: 0.5% 2.5%;
     }
 
     .header-welcome-text {
@@ -1150,12 +1282,7 @@ ul {
         width: 100%;
     }
 
-    .recent-article-wrapper {
-        padding: 20px 0 0 0;
-    }
-
     .recent-article-main-title {
-        font-size: 1.5em;
         padding-left: 6%;
     }
 
@@ -1167,7 +1294,15 @@ ul {
         box-shadow: none;
     }
 
+    .read-more-info, .read-more-content {
+        padding: 10px 0 0;
+    }
+
     .read-more-img {
+        display: none;
+    }
+
+    .article-more-back {
         display: none;
     }
 
@@ -1175,7 +1310,7 @@ ul {
         width: 100%;
     }
 
-    .cfp, .news-feed {
+    .cfp {
         width: 85%;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -1185,6 +1320,11 @@ ul {
 
     .news-feed {
         height: auto;
+        width: 87.5%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 40px auto;
     }
 
     .about-staff {
@@ -1192,10 +1332,12 @@ ul {
     }
 
     .staff {
-        width: 88%;
-}
+        width: 40%;
+        margin: 20px 20px 0 20px;
+    }
+
     .staff-linebreak {
-        margin: 20px 0 -15px 0;
+        margin: 15px 0 15px 0;
     }
 
     .staff-main-title {
@@ -1216,12 +1358,12 @@ ul {
     }
 
     .contact-info-ul {
-        display: block
+        display: block;
     }
 
     .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
         width: 88%;
-        padding: 20px 6% 20px 6%;
+        padding: 40px 6% 40px 6%;
     }
 
     #tabs {
@@ -1245,7 +1387,7 @@ ul {
         display: block;
     }
 
-    .nav-index {
+    .nav-sticky {
         display: none;
     }
 
@@ -1258,7 +1400,7 @@ ul {
     }
 
     #mobile_nav ul li {
-        display:block;
+        display: block;
     }
 
     .active {
@@ -1275,28 +1417,37 @@ ul {
     }
 }
 
-
 @media screen and (max-width: 500px) and (min-width: 0px) {
 
     header {
         height: 200px;
     }
 
-    .header-logo {
-        width: 222px;
-        margin-top: 10%;
+    .header-homepage {
+        margin: 56px 0 0 0;
     }
 
-    .header-logo-main-title {
-        font-size: 14px;
+    .header-other {
+        margin: 56px 0 0 0;
+        height: 200px;
+    }
+
+    .header-logo {
+        margin-top: 15%;
+    }
+
+    .logo {
+        width: 90%;
     }
 
     .header-welcome {
-        display: none;
+        width: 87%;
+        margin-top: 26%;
+        padding: 0.5% 3%;
     }
 
     .header-welcome-text {
-        display: none;
+        font-size: 0.9em;
     }
 
     .index-main {
@@ -1310,6 +1461,7 @@ ul {
     .recent-article-main-title {
         font-size: 1.5em;
         padding-left: 6%;
+        margin: 10px 0 0 0;
     }
 
     .recent-article, .read-more-info, .read-more-content {
@@ -1320,7 +1472,15 @@ ul {
         box-shadow: none;
     }
 
+    .read-more-info, .read-more-content {
+        padding: 10px 0 0;
+    }
+
     .read-more-img {
+        display: none;
+    }
+
+    .article-more-back {
         display: none;
     }
 
@@ -1333,7 +1493,7 @@ ul {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-        margin: 0px auto 20px;
+        margin: 20px auto 20px;
     }
 
     .news-feed {
@@ -1343,7 +1503,7 @@ ul {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
-        margin: 20px auto;
+        margin: 40px auto;
     }
 
     .about-staff {
@@ -1409,7 +1569,7 @@ ul {
         display: block;
     }
 
-    .nav-index {
+    .nav-sticky {
         display: none;
     }
 
@@ -1422,7 +1582,7 @@ ul {
     }
 
     #mobile_nav ul li {
-        display:block;
+        display: block;
     }
 
     .active {

@@ -8,6 +8,7 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Prenumerera på Tidskrift för genusvetenskap! Tidskriften kommer ut med fyra nummer per år och innehåller aktuell tvärvetenskaplig genusforskning.">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Prenumerera | Tidskrift för genusvetenskap</title>
@@ -17,10 +18,12 @@ if (!isset($_SESSION)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/active_nav.js"></script>
+    <script src="js/stickynav.js"></script>
     <script src="js/nav_mobile_toggle.js"></script>
 </head>
 <body>
 
+<?php include('includes/header_other.inc') ?>
 <?php include('includes/navigation.inc') ?>
 <?php include('includes/navigation_mobile.inc') ?>
 <?php include('includes/db_connect.inc'); ?>
@@ -35,7 +38,7 @@ if (!isset($_SESSION)) {
         echo '<h1 class="subscription-info-main-title">' . $subInfoTitle . '</h1>';
         echo '<p>' . $subInfoContent . '</p>';
         if (isset($_SESSION['user'])) {
-            echo '<p><a href="dashboard_subscription.php" class="edit" target="_blank">Redigera</a></p>';
+            echo '<p><a href="dashboard_subscription.php#2" class="edit" target="_blank">Redigera</a></p>';
         }
         echo '</section>';
     }
@@ -47,10 +50,10 @@ if (!isset($_SESSION)) {
         $priceId = $priceRow['id'];
         $priceTitle = $priceRow['title'];
         $priceContent = $priceRow['content'];
-        echo '<h1 class="subscription-price-main-title">' . $priceTitle . '</h1>';
+        echo '<h2 class="subscription-price-main-title">' . $priceTitle . '</h2>';
         echo '<p>' . $priceContent . '</p>';
         if (isset($_SESSION['user'])) {
-            echo '<p><a href="dashboard_subscription.php" class="edit" target="_blank">Redigera</a></p>';
+            echo '<p><a href="dashboard_subscription.php#1" class="edit" target="_blank">Redigera</a></p>';
         }
         echo '</section>';
     }
@@ -59,5 +62,4 @@ if (!isset($_SESSION)) {
 
 <?php include('includes/footer.inc') ?>
 </body>
-<script src="js/menu_toggle.js"></script>
 </html>
