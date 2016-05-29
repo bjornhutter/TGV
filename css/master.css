@@ -5,7 +5,7 @@ body {
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8em;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.1px;
 }
 
@@ -65,7 +65,7 @@ header {
     color: #FFF;
     font-family: 'open sans', sans-serif;
     font-size: 1.2em;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.2px;
 }
 
@@ -285,11 +285,17 @@ footer {
 .footer-block {
     width: auto;
     margin: 0 0 0 80px;
-    line-height: 150%;
+    line-height: 1.5;
 }
 
 .footer-block-about {
     width: 27%;
+}
+
+.footer-block-about ul, .footer-block-about ol {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
 }
 
 .footer-title {
@@ -400,7 +406,7 @@ footer a:hover {
     font-family: 'Open Sans', sans-serif;
     padding: 2% 5% 2% 5%;
     font-size: 0.8em;
-    line-height: 150%;
+    line-height: 1.5;
 }
 
 .recent-article-btn {
@@ -427,8 +433,10 @@ footer a:hover {
     vertical-align: top;
 }
 
-.read-more-content ol, .read-more-content ul, .recent-article ol, .recent-article ul {
+.read-more-content ol, .read-more-content ul, .recent-article ol, .recent-article ul, .read-more-info ul, .read-more-info ol {
     padding: 0 5%;
+    font-size: 0.8em;
+    line-height: 1.5;
 }
 
 .read-more-img {
@@ -451,7 +459,7 @@ footer a:hover {
     padding: 0 5% 2% 5%;
     font-size: 0.8em;
     margin: -2px 0 0 0;
-    line-height: 150%;
+    line-height: 1.5;
 }
 
 .article-more-back {
@@ -493,6 +501,11 @@ footer a:hover {
     color: #000000;
     text-align: left;
     margin: 10px 0 20px 0;
+}
+
+.cfp ul, .cfp ol, .news-feed ul, .news-feed ol  {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
 }
 
 /*** ================= CALL FOR PAPERS END =================== ***/
@@ -556,6 +569,12 @@ footer a:hover {
     padding: 40px 0;
 }
 
+.about-staff ul, .about-staff ol, .staff ul, .staff ol {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
 .about-staff-main-title {
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
@@ -616,7 +635,7 @@ footer a:hover {
 .staff p {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8em;
-    line-height: 150%;
+    line-height: 1.5;
 }
 
 .staffWorktitle {
@@ -646,6 +665,12 @@ footer a:hover {
     display: block;
     padding: 40px 25% 40px 25%;
     background: #FFF;
+}
+
+.subscription-price ul, .subscription-price ol, .subscription-info ul, .subscription-info ol {
+    font-family: 'open sans', sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
 }
 
 .subscription-price-main-title {
@@ -688,6 +713,19 @@ footer a:hover {
     background: #F1F1F1;
     padding: 0 0 40px 0;
     margin: 0 auto;
+}
+
+
+.script-info ul, .script-info ol, .script-reviewers ul, .script-reviewers ol {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+.script-examiner ul, .script-examiner ol {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    line-height: 1;
 }
 
 .script-info-main-title {
@@ -851,7 +889,7 @@ form input {
 
 .contact-info-li {
     font-family: 'Open Sans', sans-serif;
-    line-height: 150%;
+    line-height: 1.5;
     font-size: 0.8em;
     padding: 0 0 12px 30px;
     display: inline-block;
@@ -888,6 +926,12 @@ form input {
     background: #F1F1F1;
     margin: 10px auto 0;
     padding: 0 0 40px 0;
+}
+
+.contact-more-info ul, .contact-more-info ol {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
 }
 
 .contact-map {
@@ -961,6 +1005,7 @@ em {
 ul {
     list-style-type: disc;
     list-style-position: inside;
+    font-family: 'Open Sans', sans-serif;
 }
 
 ol {
