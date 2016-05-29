@@ -8,6 +8,7 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link rel="icon" href="img/tgv_favicon.ico">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
               type='text/css'>
         <link rel="stylesheet"
@@ -22,11 +23,8 @@
                 menubar: 'file edit view insert tools',
                 plugins: 'link code',
                 content_css : 'css/tinymce.css'
-                /*toolbar: 'undo redo | bold italic | bullist numlist code',
-                 menubar: 'file edit view tools',
-                 plugins: "code"*/
             });
-        </script><!--todo ta bort code eller inte -->
+        </script>
         <script src="js/active_dashnav.js"></script>
     </head>
     <body>

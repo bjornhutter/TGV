@@ -2,19 +2,19 @@
 
 $(document).ready(function () {
 
-    var navOffset = $("nav").offset().top;
+    var navOffset = $(".nav-sticky").offset().top;
 
-    $("nav").wrap('<div class="nav-placeholder"></div>');
+    $(".nav-sticky").wrap('<div class="nav-placeholder"></div>');
 
-    $(".nav-placeholder").height($("nav").outerHeight());
+    $(".nav-placeholder").height($(".nav-sticky").outerHeight());
     
     $(window).scroll(function () {
         var scrollPos = $(window).scrollTop();
 
         if (scrollPos >= navOffset) {
-            $("nav").addClass("fixed");
+            $(".nav-sticky").addClass("fixed");
         } else {
-            $("nav").removeClass("fixed");
+            $(".nav-sticky").removeClass("fixed");
         }
 
     });

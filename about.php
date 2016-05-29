@@ -8,6 +8,7 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Information om Tidskrift för genusvetenskap, Nordens största referee-granskade tidskrift för aktuell tvärvetenskaplig genusforskning, och om redaktionen.">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Om TGV | Tidskrift för genusvetenskap</title>
@@ -17,9 +18,13 @@ if (!isset($_SESSION)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/active_nav.js"></script>
+    <script src="js/stickynav.js"></script>
+    <script src="js/nav_mobile_toggle.js"></script>
 </head>
 <body>
 
+<?php include('includes/header_other.inc') ?>
+<?php include('includes/navigation_mobile.inc') ?>
 <?php include('includes/navigation.inc') ?>
 
 <main>
@@ -39,17 +44,15 @@ if (!isset($_SESSION)) {
         echo '<p>' . $aboutContent . '</p>';
 
         if (isset($_SESSION['user'])) {
-            //echo '<p><a href="about_staff_edit.php?id=' . $aboutId . '">Redigera</a></p>';
-
-            echo '<p><a href="dashboard_about.php" class="edit" target="_blank">Redigera</a></p>';
+            echo '<p><a href="dashboard_about.php#1" class="edit" target="_blank">Redigera</a></p>';
 
         }
         echo '</section>';
     }
     ?>
-    <!--kanske lägga till section för staff här under? -->
+
     <ul class="staff-wrapper">
-        <h1 class="staff-main-title">Om redaktionen</h1>
+        <h2 class="staff-main-title">Om redaktionen</h2>
         <?php
         include('includes/db_connect.inc');
         $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
@@ -63,11 +66,10 @@ if (!isset($_SESSION)) {
 
             echo '<li class="staff">';
             echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
-            echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+            echo '<h3 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h3>';
             echo '<p class="staffWorktitle">' . $staffTitle . '</p>';
             echo '<div class="staff-linebreak"></div>';
             echo '<p class="staff-content">' . $staffContent . '</p>';
-            // Lägg in rätt länk till dashboarden här under
             if (isset($_SESSION['user'])) {
             echo '<p><a href="about_editors_edit.php?id=' . $staffId . '" class="edit"  target="_blank">Redigera</a></p>';
             }
@@ -80,5 +82,4 @@ if (!isset($_SESSION)) {
 
 <?php include('includes/footer.inc') ?>
 </body>
-<script src="js/menu_toggle.js"></script>
 </html>

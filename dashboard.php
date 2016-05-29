@@ -8,6 +8,7 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link rel="icon" href="img/tgv_favicon.ico">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
               type='text/css'>
         <link rel="stylesheet"
@@ -22,7 +23,7 @@
                 toolbar: 'undo redo | bold italic | bullist numlist | link code',
                 menubar: 'file edit view insert tools',
                 plugins: 'link code',
-                content_css : 'css/tinymce.css'
+                content_css: 'css/tinymce.css'
             });
         </script>
         <script src="js/active_dashnav.js"></script>
@@ -118,7 +119,7 @@
                                     echo '<h1 class="news-title">' . $title . '</h1>';
 
 
-                                    if (strlen($content) < 220) {
+                                    /*if (strlen($content) < 220) {
                                         echo "$content";
                                     } elseif (strlen($content) > 220) {
                                         $content = substr($content, 0, 220);
@@ -126,7 +127,9 @@
                                         echo '...';
                                     } else {
                                         echo "$content";
-                                    }
+                                    }*/
+
+                                    echo $content;
 
 
                                     echo '<p class="news-date">' . $date . '</p>';
@@ -154,7 +157,7 @@
                                         </p></a>
                                 </li>-->
                                 <li>
-                                    <input type="submit" name="newsSubmit" value="Skapa inlägg"
+                                    <input type="submit" name="newsSubmit" value="Publicera inlägg"
                                            class="form-input-submit">
                                 </li>
                             </ul>
@@ -262,7 +265,7 @@
                                         <input type="file" name="fileToUpload" id="fileToUpload" required>
                                     </li>
                                     <li>
-                                        <input type="submit" value="Lägg till nummer" name="submit"
+                                        <input type="submit" value="Publicera nummer" name="submit"
                                                class="form-input-submit">
                                     </li>
                                 </ul>

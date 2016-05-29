@@ -8,6 +8,7 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link rel="icon" href="img/tgv_favicon.ico">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
               type='text/css'>
         <link rel="stylesheet"
@@ -73,19 +74,38 @@
 
 
                                     //todo buggar flera strong tags
-                                    $recentArticlesContent = substr($recentArticlesContent, 0, 220);
-                                    $recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
+                                    //$recentArticlesContent = substr($recentArticlesContent, 0, 220);
+                                    //$recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
 
 
-                                    //todo alternativt göra dashboard-form
                                     echo '<li class="recent-article">';
                                     echo '<img src="uploads/' . $recentArticlesImgName . '" class="recent-article-img">';
                                     echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
 
-                                    echo $recentArticlesContent;
-                                    echo '...';
-                                    echo $recentArticlesFeatured;
-                                    echo '...';
+
+                                    if (strlen($recentArticlesContent) < 220) {
+                                        echo "$recentArticlesContent";
+                                    } elseif (strlen($recentArticlesContent) > 220) {
+                                        $recentArticlesContent = substr($recentArticlesContent, 0, 220);
+                                        echo $recentArticlesContent;
+                                        echo '...';
+                                    } else {
+                                        echo "$recentArticlesContent";
+                                    }
+                                    if (strlen($recentArticlesFeatured) < 220) {
+                                        echo "$recentArticlesFeatured";
+                                    } elseif (strlen($recentArticlesFeatured) > 220) {
+                                        $recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
+                                        echo $recentArticlesFeatured;
+                                        echo '...';
+                                    } else {
+                                        echo "$recentArticlesFeatured";
+                                    }
+
+                                    //echo $recentArticlesContent;
+                                    //echo '...';
+                                    //echo $recentArticlesFeatured;
+                                    //echo '...';
                                     echo '<div class="recent-article-button-wrapper">';
                                     echo '<a href="recent_articles_edit.php?id=' . $recentArticlesId . '" class="edit">Redigera</a>';
                                     echo '<a href="#top" class="back-to-top-btn">Tillbaka till toppen</a>';

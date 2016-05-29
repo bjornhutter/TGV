@@ -1,6 +1,6 @@
 <?php
 include('includes/db_connect.inc');
-//require('includes/auth.php');
+require('includes/auth.inc');
 
 $temp_filename = $_FILES["fileToUpload"]["tmp_name"];
 $target_dir = "uploads/";
@@ -65,6 +65,6 @@ if ($uploadOk == 0) {
 
 }
 
-header('Location: dashboard_about.php')
+header('Location: dashboard_about.php');
 
-?>
+ob_end_flush();

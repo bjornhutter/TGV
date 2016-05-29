@@ -1,6 +1,6 @@
 <?php
 include('includes/db_connect.inc');
-//require('includes/auth.php');
+require('includes/auth.inc');
 
 $temp_filename = $_FILES["fileToUpload"]["tmp_name"];
 $target_dir = "uploads/";
@@ -63,8 +63,6 @@ if ($uploadOk == 0) {
     mysqli_query($link, "INSERT INTO tgv_recent_articles (title, content, featured, image) VALUES ('$title', '$content', '$featured', '$new_filename')") or die(mysqli_error($link));
 }
 
-header('Location: dashboard.php')
+header('Location: dashboard.php');
 
-?>
-
-
+ob_end_flush();

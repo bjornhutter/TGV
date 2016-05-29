@@ -65,13 +65,16 @@ if (isset($_POST['login_submit'])) {
         } else {
             $userCorrect = "$user";
             $passwordErr = "Fel lösenord";
-            $passwordErrField = "* Fel lösenord";
+            $passwordErrField = "Fel lösenord";
             echo '<style type="text/css">
             #password {
-                border: 1px solid rgba(250, 70, 80, 1);
-                -webkit-box-shadow: 0 0 2px rgba(250, 70, 80, 1);
-                -moz-box-shadow: 0 0 2px rgba(250, 70, 80, 1);
-                box-shadow: 0 0 2px rgba(250, 70, 80, 1);
+                border: 2px solid rgba(250, 70, 80, 1);
+                -webkit-border-radius: 2px 2px 0 0;
+                -moz-border-radius: 2px 2px 0 0;
+                border-radius: 2px 2px 0 0;
+                -webkit-box-shadow: 0 0 2px rgba(250, 70, 80, 0);
+                -moz-box-shadow: 0 0 2px rgba(250, 70, 80, 0);
+                box-shadow: 0 0 2px rgba(250, 70, 80, 0);
             }
             #logout {
                 display: none;
@@ -84,13 +87,16 @@ if (isset($_POST['login_submit'])) {
 
     } else {
         $userErr = "Fel användarnamn";
-        $userErrField = "* Fel användarnamn";
+        $userErrField = "Fel användarnamn";
         echo '<style type="text/css">
         #user {
-            border: 1px solid rgba(250, 70, 80, 1);
-            -webkit-box-shadow: 0 0 2px rgba(250, 70, 80, 1);
-            -moz-box-shadow: 0 0 2px rgba(250, 70, 80, 1);
-            box-shadow: 0 0 2px rgba(250, 70, 80, 1);
+            border: 2px solid rgba(250, 70, 80, 1);
+            -webkit-border-radius: 2px 2px 0 0;
+            -moz-border-radius: 2px 2px 0 0;
+            border-radius: 2px 2px 0 0;
+            -webkit-box-shadow: 0 0 2px rgba(250, 70, 80, 0);
+            -moz-box-shadow: 0 0 2px rgba(250, 70, 80, 0);
+            box-shadow: 0 0 2px rgba(250, 70, 80, 0);
         }
         #logout {
             display: none;
@@ -113,7 +119,8 @@ if (isset($_POST['login_submit'])) {
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-    <title>Admin Inloggning | Tidskrift för genusvetenskap</title>
+    <title>Admininloggning | Tidskrift för genusvetenskap</title>
+    <link rel="icon" href="img/tgv_favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">

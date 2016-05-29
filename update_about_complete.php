@@ -8,6 +8,7 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link rel="icon" href="img/tgv_favicon.ico">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
               type='text/css'>
         <link rel="stylesheet"
@@ -52,16 +53,7 @@
                         if (($_GET['update']) == 1) {
                             echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Info om TGV</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldAboutTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldAboutContent</p></div>";
                             echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Info om TGV</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$aboutTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$aboutContent</p>";
-                        } //todo ändra och lägg till variabler för Om Redaktionen
-                        elseif (($_GET['update']) == 2) {
-                            echo "<div class='old-container'><div class='old-container-header'><h1>Gammalt</h1><h2>Om redaktionen</h2></div><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldAboutTitle</p><h2 class='old-title'>Beskrivning:</h2><p class='old-content'>$oldAboutContent</p></div>";
-                            echo "<div class='new-container'><div class='new-container-header'><h1>Nytt</h1><h2>Om redaktionen</h2></div><h2 class='new-title'>Titel:</h2><p class='new-content'>$aboutTitle</p><h2 class='new-title'>Beskrivning:</h2><p class='new-content'>$aboutContent</p>";
                         }
-
-
-                        //echo "<div class='old-container'><h1>Gammal info om TGV</h1><h2 class='old-title'>Titel:</h2><p class='old-content'>$oldAboutTitle</p><h2 class='old-title'>Innehåll:</h2><p class='old-content'>$oldAboutContent</p></div>";
-                        //echo "<div class='new-container'><h1>Ny info om TGV</h1><h2 class='new-title'>Titel:</h2><p class='new-content'>$aboutTitle</p><h2 class='new-title'>Innehåll:</h2><p class='new-content'>$aboutContent</p>";
-
 
                         ?>
                         <form action="dashboard_process.php" method="post">

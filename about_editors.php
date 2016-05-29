@@ -8,6 +8,7 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link rel="icon" href="img/tgv_favicon.ico">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
               type='text/css'>
         <link rel="stylesheet"
@@ -58,7 +59,6 @@
                 <div class="main-outer-wrapper">
                     <main id="main">
                         <div class="dashboard-form-full">
-                            <!--todo gör responsive så att bilderna inte blir jättesmå (om vi väljer att ha det såhär) -->
                             <h2 class="dashboard-sub-title">Om redaktionen</h2>
                             <ul class="staff-wrapper">
                                 <?php

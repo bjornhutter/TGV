@@ -13,6 +13,9 @@
     $input_data = htmlspecialchars($input_data);
     return $input_data;
 }*/
+require('includes/auth.inc');
+
+
 
 /*
  * CALL FOR PAPERS
@@ -70,7 +73,6 @@ if (isset($_POST['newsSubmit'])) {
 
     //header('Location: update_home_complete.php');
 
-    //@todo HUR SKA DENNA FUNGERA LIMIT 5, ny sida för alla nyhetsinlägg?
 
 }
 
@@ -91,7 +93,6 @@ if (isset($_POST['newNumberSubmit'])) {
 
     //header('Location: update_home_complete.php');
 
-    //@todo HUR SKA DENNA FUNGERA?
 }
 
 /*
@@ -147,7 +148,6 @@ if (isset($_POST['staffSubmit'])) {
 
     //header('Location: update_about_complete.php?update=2');
 
-    //@todo BILD? LÄGGA TILL NYA FÄLT?
 
 }
 
@@ -648,10 +648,10 @@ if (isset($_POST['revertContactInfoSubmit'])) {
     header('Location: update_contact_complete.php?update=3');
 
 }
+// DEBUGGING
+//echo "<tt><pre>";
 
-//todo tabort när vi inte behöver debug
-echo "<tt><pre>";
+//var_dump($_POST);
 
-var_dump($_POST);
-
-echo "</pre></tt>";
+//echo "</pre></tt>";
+ob_end_flush();

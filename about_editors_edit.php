@@ -25,7 +25,8 @@ $title = $row['title'];
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-    <title>Redigera redaktörer | Tidskrift för genusvetenskap</title>
+    <title>Dashboard | Tidskrift för genusvetenskap</title>
+    <link rel="icon" href="img/tgv_favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">

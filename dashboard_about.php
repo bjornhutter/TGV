@@ -8,6 +8,7 @@
         <!--<link rel="stylesheet" type="text/css" href="css/master.css">-->
         <link rel="stylesheet" type="text/css" href="css/dashboard.css">
         <title>Dashboard | Tidskrift för genusvetenskap</title>
+        <link rel="icon" href="img/tgv_favicon.ico">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
               type='text/css'>
         <link rel="stylesheet"
@@ -164,7 +165,7 @@
                                         <input type="file" name="fileToUpload" id="fileToUpload" required>
                                     </li>
                                     <li>
-                                        <input type="submit" value="Lägg till redaktör" name="addStaffSubmit"
+                                        <input type="submit" value="Publicera redaktör" name="addStaffSubmit"
                                                class="form-input-submit">
                                     </li>
                                 </ul>
