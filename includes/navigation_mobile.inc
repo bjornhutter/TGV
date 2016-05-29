@@ -8,7 +8,7 @@
                     <a href="subscription.php">Prenumerera</a>
                 </li>
                 <li>
-                    <a href="old_articles">Tidigare nummer</a>
+                    <a href="old_articles.php">Tidigare nummer</a>
                 </li>
                 <li>
                     <a href="send_script.php">Skicka manus</a>
