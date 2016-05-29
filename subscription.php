@@ -50,7 +50,7 @@ if (!isset($_SESSION)) {
         $priceId = $priceRow['id'];
         $priceTitle = $priceRow['title'];
         $priceContent = $priceRow['content'];
-        echo '<h1 class="subscription-price-main-title">' . $priceTitle . '</h1>';
+        echo '<h2 class="subscription-price-main-title">' . $priceTitle . '</h2>';
         echo '<p>' . $priceContent . '</p>';
         if (isset($_SESSION['user'])) {
             echo '<p><a href="dashboard_subscription.php#1" class="edit" target="_blank">Redigera</a></p>';

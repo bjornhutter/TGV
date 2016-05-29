@@ -1152,6 +1152,7 @@ ol {
     .header-welcome {
         width: 50%;
         margin-top: 19%;
+        padding: 0.5% 2%;
     }
 
     .index-main {
@@ -1270,6 +1271,7 @@ ol {
     .header-welcome {
         margin: 23.5% 0 0 0;
         width: 440px;
+        padding: 0.5% 2.5%;
     }
 
     .header-welcome-text {
@@ -1439,11 +1441,13 @@ ol {
     }
 
     .header-welcome {
-        display: none;
+        width: 87%;
+        margin-top: 26%;
+        padding: 0.5% 3%;
     }
 
     .header-welcome-text {
-        display: none;
+        font-size: 0.9em;
     }
 
     .index-main {

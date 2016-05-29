@@ -52,7 +52,7 @@ if (!isset($_SESSION)) {
     ?>
 
     <ul class="staff-wrapper">
-        <h1 class="staff-main-title">Om redaktionen</h1>
+        <h2 class="staff-main-title">Om redaktionen</h2>
         <?php
         include('includes/db_connect.inc');
         $staffResult = mysqli_query($link, "SELECT * FROM tgv_staff") or die(mysqli_error($link));
@@ -66,7 +66,7 @@ if (!isset($_SESSION)) {
 
             echo '<li class="staff">';
             echo '<img src="uploads/' . $staffImgName . '" class="staff-img">';
-            echo '<h1 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h1>';
+            echo '<h3 class="staff-title">' . $staffFname . ' ' . $staffLname . '</h3>';
             echo '<p class="staffWorktitle">' . $staffTitle . '</p>';
             echo '<div class="staff-linebreak"></div>';
             echo '<p class="staff-content">' . $staffContent . '</p>';

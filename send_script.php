@@ -58,7 +58,7 @@ if (!isset($_SESSION)) {
         $writerGuidelinesId = $writerGuidelinesRow['id'];
         $writerGuidelinesTitle = $writerGuidelinesRow['title'];
         $writerGuidelinesContent = $writerGuidelinesRow['content'];
-        echo '<h1 class="script-info-main-title">' . $writerGuidelinesTitle . '</h1>';
+        echo '<h2 class="script-info-main-title">' . $writerGuidelinesTitle . '</h2>';
         echo '<p>' . $writerGuidelinesContent . '</p>';
         if (isset($_SESSION['user'])) {
             echo '<p><a href="dashboard_send_script.php#1" class="edit" target="_blank">Redigera</a></p>';
@@ -203,7 +203,7 @@ if (!isset($_SESSION)) {
         $scriptRevTitle = $scriptRevRow['title'];
         $scriptRevContent = $scriptRevRow['content'];
 
-        echo '<h1 class="script-reviewers-main-title">' . $scriptRevTitle . '</h1>';
+        echo '<h2 class="script-reviewers-main-title">' . $scriptRevTitle . '</h2>';
         echo '<p>' . $scriptRevContent . '</p>';
 
         if (isset($_SESSION['user'])) {
@@ -224,7 +224,7 @@ if (!isset($_SESSION)) {
         $scriptExaminerTitle = $scriptExaminerRow['title'];
         $scriptExaminerContent = $scriptExaminerRow['content'];
 
-        echo '<h1 class="script-examiner-main-title">' . $scriptExaminerTitle . '</h1>';
+        echo '<h2 class="script-examiner-main-title">' . $scriptExaminerTitle . '</h2>';
         echo '<p>' . nl2br($scriptExaminerContent) . '</p>';
 
         if (isset($_SESSION['user'])) {
@@ -238,7 +238,7 @@ if (!isset($_SESSION)) {
 
 <section class="script-form-wrapper">
     <div id="script-form-inner-wrapper">
-        <h1 class="send-script-main-title">Skicka in manus</h1>
+        <h2 class="send-script-main-title">Skicka in manus</h2>
         <p class="send-script-info">Ditt manus kan du enkelt skicka in via formuläret nedan. Du kan även skicka in det
             till <a href="mailto:tegeve@oru.se">tegeve@oru.se</a>.</p>
         <form enctype="multipart/form-data" action="send_script_process.php" method="post" class="script-form">
