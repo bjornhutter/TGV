@@ -517,9 +517,10 @@ footer a:hover {
 }
 
 .news-post-container {
-    height: 550px;
+    height: auto;
     overflow-y: auto;
     overflow-x: hidden;
+    max-height: 750px;
 }
 
 .news-main-title {
