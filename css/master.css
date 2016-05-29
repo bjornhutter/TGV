@@ -1028,6 +1028,10 @@ ol {
         width: 45%;
     }
 
+    .script-info {
+        padding-top: 40px;
+    }
+
     .script-reviewers, .script-examiner {
         width: 45%;
         padding: 40px 27.5% 40px 27.5%;
