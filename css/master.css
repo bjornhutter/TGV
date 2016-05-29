@@ -854,6 +854,25 @@ form input {
     font-style: italic;
 }
 
+.email-sent-container {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    text-align: left;
+    width:50%;
+    margin:15% auto 20%;
+}
+
+.email-sent-container ul {
+    list-style: none;
+}
+.email-sent-container ul li h1 {
+    font-size: 3em;
+    margin:0 0 3%;
+}
+.email-sent-container ul li h2 {
+    font-size: 2em;
+}
+
 /*** ================= SKICKA MANUS END =================== ***/
 
 /*** ================= KONTAKT START =================== ***/
