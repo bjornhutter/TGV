@@ -55,7 +55,7 @@ header {
 }
 
 .header-welcome {
-    width: 34%;
+    width: 35%;
     margin-top: 11%;
     position: absolute;
     padding: 0.5% 1.5%;
@@ -1209,12 +1209,12 @@ ol {
     }
 
     .header-logo {
-        margin-top: 13%;
+        margin-top: 11%;
     }
 
     .header-welcome {
         width: 43%;
-        margin-top: 19%;
+        margin-top: 17%;
     }
 
     .contact-info {
@@ -1262,7 +1262,7 @@ ol {
     }
 
     .header-logo {
-        margin-top: 13%;
+        margin-top: 11%;
     }
 
     .logo {
@@ -1271,7 +1271,7 @@ ol {
 
     .header-welcome {
         width: 50%;
-        margin-top: 19%;
+        margin-top: 17%;
         padding: 0.5% 2%;
     }
 
@@ -1553,7 +1553,7 @@ ol {
     }
 
     .header-logo {
-        margin-top: 15%;
+        margin-top: 14%;
     }
 
     .logo {
@@ -1562,7 +1562,7 @@ ol {
 
     .header-welcome {
         width: 87%;
-        margin-top: 26%;
+        margin-top: 25%;
         padding: 0.5% 3%;
     }
 
