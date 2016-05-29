@@ -21,10 +21,10 @@
     </div>
     <div class="footer-block">
         <h2 class="footer-title">Sidkarta</h2>
-        <p><a href="../about.php">Om TGV</a></p>
-        <p><a href="../subscription.php">Prenumerera</a></p>
-        <p><a href="http://ojs.ub.gu.se/ojs/index.php/tgv">Tidigare nummer</a></p>
-        <p><a href="../send_script.php">Skicka manus</a></p>
+        <p><a href="about.php">Om TGV</a></p>
+        <p><a href="subscription.php">Prenumerera</a></p>
+        <p><a href="old_articles.php">Tidigare nummer</a></p>
+        <p><a href="send_script.php">Skicka manus</a></p>
     </div>
     <div class="footer-block">
         <?php
