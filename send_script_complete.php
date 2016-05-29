@@ -7,7 +7,7 @@
           content="Anvisningar för artikelskribenter, recensenter och granskare. Skicka in ditt manus till TGV via formuläret!">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
-    <title>Skicka manus | Tidskrift för genusvetenskap</title>
+    <title>Manus skickat | Tidskrift för genusvetenskap</title>
     <link rel="icon" href="img/tgv_favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
           type='text/css'>
@@ -19,11 +19,13 @@
     <script src="js/nav_mobile_toggle.js"></script>
 </head>
 <body>
-<?php include ('includes/navigation.inc')?>
+<?php include('includes/navigation_mobile.inc') ?>
+<?php include('includes/navigation.inc') ?>
 <main>
     <section class="email-sent-container">
         <ul>
-            <li><h1>Tack! Manus skickat.</h1></li>
+            <li><h1>Tack!</h1></li>
+            <li><h2>Manus skickat</h2></li>
         </ul>
     </section>
 </main>
