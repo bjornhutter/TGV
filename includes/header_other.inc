@@ -1,5 +1,5 @@
 <header class="header-other">
     <div class="header-logo">
-        <img src="img/tgv_logo.png" class="logo">
+        <a href="../index.php"><img src="img/tgv_logo.png" class="logo"></a>
     </div>
 </header>

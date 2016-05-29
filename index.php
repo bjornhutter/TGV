@@ -27,7 +27,7 @@ if (!isset($_SESSION)) {
 
 <header class="header-homepage">
     <div class="header-logo">
-        <img src="img/tgv_logo.png" class="logo" alt="Headerbild för Tidsskrift för genusvetenskap">
+        <a href="index.php"><img src="img/tgv_logo.png" class="logo" alt="Headerbild för Tidsskrift för genusvetenskap"></a>
         <h1 class="site-main-title">Tidskrift för genusvetenskap</h1>
     </div>
     <div class="header-welcome">
