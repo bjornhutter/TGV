@@ -540,6 +540,7 @@ form {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-style: italic;
+    padding-top: 10px;
 }
 
 .dashboard-form-full {
@@ -619,6 +620,28 @@ form {
     list-style-position: inside;
     text-align: left;
     padding-left: 10px;
+}
+
+.news-posts-wrapper ol {
+    background: none;
+    list-style-type: decimal;
+    list-style-position: inside;
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    padding-bottom: 20px;
+}
+
+.news-posts-wrapper ul {
+    background: none;
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    padding-bottom: 20px;
 }
 
 .overview-wrapper {

@@ -119,7 +119,7 @@
                                     echo '<h1 class="news-title">' . $title . '</h1>';
 
 
-                                    if (strlen($content) < 220) {
+                                    /*if (strlen($content) < 220) {
                                         echo "$content";
                                     } elseif (strlen($content) > 220) {
                                         $content = substr($content, 0, 220);
@@ -127,7 +127,9 @@
                                         echo '...';
                                     } else {
                                         echo "$content";
-                                    }
+                                    }*/
+
+                                    echo $content;
 
 
                                     echo '<p class="news-date">' . $date . '</p>';
