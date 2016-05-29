@@ -559,7 +559,9 @@ form {
     margin: 20px 20px 20px 20px;
 }
 
-.dashboard-form-full ul {
+.dashboard-form-full ul,
+.dashboard-form-full ol
+{
     background: none;
 }
 
@@ -584,6 +586,31 @@ form {
 .dashboard-form-full ul {
     list-style: none;
     background: none;
+}
+
+.recent-article-wrapper ol
+{
+    background: none;
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.recent-article-wrapper ul {
+    background: none;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.staff-wrapper ol {
+    background: none;
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.staff-wrapper ul {
+    background: none;
+    list-style-type: disc;
+    list-style-position: inside;
 }
 
 .overview-wrapper {
