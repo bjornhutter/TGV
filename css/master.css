@@ -427,6 +427,10 @@ footer a:hover {
     vertical-align: top;
 }
 
+.read-more-content ol, .read-more-content ul, .recent-article ol, .recent-article ul {
+    padding: 0 5%;
+}
+
 .read-more-img {
     width: 100%;
 }
