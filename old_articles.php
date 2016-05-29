@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Prenumerera på Tidskrift för genusvetenskap! Tidskriften kommer ut med fyra nummer per år och innehåller aktuell tvärvetenskaplig genusforskning.">
+    <meta name="description" content="Tidigare nummer av Tidskrift för genusvetenskap/Kvinnovetenskaplig tidskrift finns här att läsa online!">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Tidigare nummer | Tidskrift för genusvetenskap</title>
