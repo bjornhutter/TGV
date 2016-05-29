@@ -59,7 +59,7 @@
                 <div class="main-outer-wrapper">
                     <main id="main">
                         <div class="dashboard-form-full">
-                            <h2 class="dashboard-sub-title">Om redaktionen</h2>
+                            <h2 class="dashboard-sub-title">Alla redaktörer</h2>
                             <ul class="staff-wrapper">
                                 <?php
                                 include('includes/db_connect.inc');

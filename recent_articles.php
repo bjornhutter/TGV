@@ -83,19 +83,19 @@
                                     echo '<h1 class="recent-article-title">' . $recentArticlesTitle . '</h1>';
 
 
-                                    if (strlen($recentArticlesContent) < 220) {
+                                    if (strlen($recentArticlesContent) < 300) {
                                         echo "$recentArticlesContent";
-                                    } elseif (strlen($recentArticlesContent) > 220) {
-                                        $recentArticlesContent = substr($recentArticlesContent, 0, 220);
+                                    } elseif (strlen($recentArticlesContent) > 300) {
+                                        $recentArticlesContent = substr($recentArticlesContent, 0, 300);
                                         echo $recentArticlesContent;
                                         echo '...';
                                     } else {
                                         echo "$recentArticlesContent";
                                     }
-                                    if (strlen($recentArticlesFeatured) < 220) {
+                                    if (strlen($recentArticlesFeatured) < 300) {
                                         echo "$recentArticlesFeatured";
-                                    } elseif (strlen($recentArticlesFeatured) > 220) {
-                                        $recentArticlesFeatured = substr($recentArticlesFeatured, 0, 220);
+                                    } elseif (strlen($recentArticlesFeatured) > 300) {
+                                        $recentArticlesFeatured = substr($recentArticlesFeatured, 0, 300);
                                         echo $recentArticlesFeatured;
                                         echo '...';
                                     } else {

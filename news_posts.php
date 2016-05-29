@@ -59,7 +59,7 @@
                 <div class="main-outer-wrapper">
                     <main id="main">
                         <div class="dashboard-form-full">
-                            <h2 class="dashboard-sub-title" style="padding-bottom: 20px">Senaste nummer</h2>
+                            <h2 class="dashboard-sub-title" style="padding-bottom: 20px">Alla nyhetsinlägg</h2>
                             <ul class="news-posts-wrapper">
 
                                 <?php
