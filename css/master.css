@@ -50,6 +50,10 @@ header {
     width: 100%;
 }
 
+.site-main-title {
+    display: none;
+}
+
 .header-welcome {
     width: 34%;
     margin-top: 11%;
@@ -421,6 +425,10 @@ footer a:hover {
     padding: 1% 0;
     text-align: left;
     vertical-align: top;
+}
+
+.read-more-content ol, .read-more-content ul, .recent-article ol, .recent-article ul {
+    padding: 0 5%;
 }
 
 .read-more-img {
@@ -1022,6 +1030,10 @@ ol {
 
     .script-info, #tabs {
         width: 45%;
+    }
+
+    .script-info {
+        padding-top: 40px;
     }
 
     .script-reviewers, .script-examiner {
