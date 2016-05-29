@@ -15,12 +15,12 @@
         echo '<h2 class="footer-title">' . $footerTitle . '</h2>';
         echo '<p>' . $footerContent . '<p/>';
         if (isset($_SESSION['user'])) {
-            echo '<p><a href="dashboard_contact.php" target="_blank" class="edit">Redigera</a></p>';
+            echo '<p><a href="dashboard_contact.php#3" target="_blank" class="edit">Redigera</a></p>';
         }
         ?>
     </div>
     <div class="footer-block">
-        <h2 class="footer-title">Site map</h2>
+        <h2 class="footer-title">Sidkarta</h2>
         <p><a href="../about.php">Om TGV</a></p>
         <p><a href="../subscription.php">Prenumerera</a></p>
         <p><a href="http://ojs.ub.gu.se/ojs/index.php/tgv">Tidigare nummer</a></p>
@@ -45,11 +45,7 @@
 
 
         if (isset($_SESSION['user'])) {
-
-            //Behöver inte GET ID
-            //echo '<p><a href="contact_edit.php?id=' . $contactId . '">Redigera</a></p>';
-
-            echo '<p><a href="dashboard_contact.php" target="_blank" class="edit">Redigera</a></p>';
+            echo '<p><a href="dashboard_contact.php#1" target="_blank" class="edit">Redigera</a></p>';
 
         }
         ?>

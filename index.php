@@ -8,6 +8,7 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Senaste nummer av Tidskrift för genusvetenskap inklusive senaste nyheterna och call for papers.">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Tidskrift för genusvetenskap</title>
@@ -26,14 +27,14 @@ if (!isset($_SESSION)) {
 
 <header class="header-homepage">
     <div class="header-logo">
-        <h1 class="header-logo-main-title">Tidskrift för genusvetenskap</h1>
+        <img src="img/tgv_logo.png" class="logo">
     </div>
     <div class="header-welcome">
         <h2 class="header-welcome-text">Välkommen till Nordens största referee-granskade tidskrift för aktuell
             tvärvetenskaplig genusforskning!</h2>
     </div>
 </header>
-<?php include('includes/navigation_index.inc') ?>
+<?php include('includes/navigation.inc') ?>
 
 <main class="index-main">
     <ul class="recent-article-wrapper">
@@ -48,13 +49,25 @@ if (!isset($_SESSION)) {
         while ($row = mysqli_fetch_array($result)) {
             $id = $row['id'];
             $title = $row['title'];
-            $content = substr($row['content'], 3, 220);
+            $content = $row['content'];
             $imgName = $row['image'];
 
             echo '<li class="recent-article">';
             echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
             echo '<h1 class="recent-article-title">' . $title . '</h1>';
-            echo '<p class="recent-article-content">' . $content . '... <a class="recent-article-btn" href="articles_read_more.php?id=' . $id . '">[Läs mer]</a></p>';
+
+            if (strlen($content) < 220) {
+                echo '<p class="recent-article-content">' . $content . ' </p>';
+            } elseif (strlen($content) > 220) {
+                $content = substr($content, 3, 220);
+                echo '<p class="recent-article-content">' . $content . '';
+                echo '...';
+            } else {
+                echo '<p class="recent-article-content">' . $content . ' </p>';
+            }
+            
+            echo '<p class="recent-article-content"><a class="recent-article-btn" href="articles_read_more.php?id=' . $id . '">Läs mer om detta nummer</a></p>';
+            
             if (isset($_SESSION['user'])) {
                 echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
             }
@@ -106,7 +119,7 @@ if (!isset($_SESSION)) {
                 echo '<p class="news-content">' . nl2br($content) . '</p>';
 
                 if (isset($_SESSION['user'])) {
-                    echo '<p><a href="dashboard.php" class="edit" target="_blank">Redigera</a></p>';
+                    echo '<p><a href="news_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
                 }
 
                 echo '<hr class="hr-news">';
@@ -119,5 +132,4 @@ if (!isset($_SESSION)) {
 </aside>
 <?php include('includes/footer.inc') ?>
 </body>
-<script src="js/menu_toggle.js"></script>
 </html>

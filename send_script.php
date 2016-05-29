@@ -8,6 +8,8 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Anvisningar för artikelskribenter, recensenter och granskare. Skicka in ditt manus till TGV via formuläret!">
     <link rel="stylesheet" type="text/css" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Skicka manus | Tidskrift för genusvetenskap</title>
@@ -18,21 +20,52 @@ if (!isset($_SESSION)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/active_nav.js"></script>
+    <script src="js/stickynav.js"></script>
     <script src="js/nav_mobile_toggle.js"></script>
 </head>
 <body>
+
+<?php include('includes/header_other.inc') ?>
 <?php include('includes/db_connect.inc') ?>
 <?php include('includes/navigation_mobile.inc') ?>
 <?php include('includes/navigation.inc') ?>
 
+<!--OM vi använder breadcrumbs, lägg till styling i css och id:n på avsnitten-->
+<!--
+<div class="helper-links-wrapper">
+    <ul>
+        <li>
+            <a href="#1" class="helper-links">Anvisningar för artikelskribenter</a>
+        </li>
+        <li>
+            <a href="#2" class="helper-links">Anvisningar för recensenter</a>
+        </li>
+        <li>
+            <a href="#3" class="helper-links">Anvisningar för granskare</a>
+        </li>
+        <li>
+            <a href="#4" class="helper-links">Skicka in manus</a>
+        </li>
+    </ul>
+</div>-->
+
 <main class="script-wrapper">
-    <section class="script-info">
-        <h1 class="script-info-main-title">Anvisningar för artikelskribenter</h1>
-        <p>Tidskrift för genusvetenskap(TGV) kommer ut med fyra nummer per år. En förutsättning för publicering i TGV är
-            att artikeln inte redan är publicerad av annan tidskrift eller annat förlag. För tidskriften intressanta
-            artikelförslag referee-granskas. Om en artikel samtidigt är under bedömning någon annanstans bör detta
-            tydligt anges.</p>
-    </section>
+    <?php include('includes/db_connect.inc'); ?>
+    <?php
+    $writerGuidelinesResult = mysqli_query($link, "SELECT * FROM tgv_writer_guidelines") or die(mysqli_error($link));
+    echo '<section class="script-info">';
+    while ($writerGuidelinesRow = mysqli_fetch_array($writerGuidelinesResult)) {
+        $writerGuidelinesId = $writerGuidelinesRow['id'];
+        $writerGuidelinesTitle = $writerGuidelinesRow['title'];
+        $writerGuidelinesContent = $writerGuidelinesRow['content'];
+        echo '<h2 class="script-info-main-title">' . $writerGuidelinesTitle . '</h2>';
+        echo '<p>' . $writerGuidelinesContent . '</p>';
+        if (isset($_SESSION['user'])) {
+            echo '<p><a href="dashboard_send_script.php#1" class="edit" target="_blank">Redigera</a></p>';
+        }
+        echo '</section>';
+    }
+    ?>
     <?php
 
     /*
@@ -114,7 +147,7 @@ if (!isset($_SESSION)) {
             <?php
             echo $guidelinesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#2" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
         </div>
@@ -124,7 +157,7 @@ if (!isset($_SESSION)) {
 
             echo $formContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#3" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
 
@@ -135,7 +168,7 @@ if (!isset($_SESSION)) {
 
             echo $titlesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#4" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
         </div>
@@ -146,7 +179,7 @@ if (!isset($_SESSION)) {
 
             echo $quotesContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#5" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
         </div>
@@ -155,7 +188,7 @@ if (!isset($_SESSION)) {
 
             echo $refContent;
             if (isset($_SESSION['user'])) {
-                echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+                echo '<p><a href="dashboard_send_script.php#6" class="edit" target="_blank">Redigera</a></p>';
             }
             ?>
         </div>
@@ -170,13 +203,12 @@ if (!isset($_SESSION)) {
         $scriptRevTitle = $scriptRevRow['title'];
         $scriptRevContent = $scriptRevRow['content'];
 
-        echo '<h1 class="script-reviewers-main-title">' . $scriptRevTitle . '</h1>';
+        echo '<h2 class="script-reviewers-main-title">' . $scriptRevTitle . '</h2>';
         echo '<p>' . $scriptRevContent . '</p>';
 
         if (isset($_SESSION['user'])) {
-            //echo '<p><a href="script_reviewers_edit.php?id=' . $scriptRevId . '">Redigera</a></p>';
 
-            echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php#7" class="edit" target="_blank">Redigera</a></p>';
 
         }
         echo '</section>';
@@ -192,12 +224,11 @@ if (!isset($_SESSION)) {
         $scriptExaminerTitle = $scriptExaminerRow['title'];
         $scriptExaminerContent = $scriptExaminerRow['content'];
 
-        echo '<h1 class="script-examiner-main-title">' . $scriptExaminerTitle . '</h1>';
+        echo '<h2 class="script-examiner-main-title">' . $scriptExaminerTitle . '</h2>';
         echo '<p>' . nl2br($scriptExaminerContent) . '</p>';
 
         if (isset($_SESSION['user'])) {
-            //echo '<p><a href="script_examiner_edit.php?id=' . $scriptExaminerId . '">Redigera</a></p>';
-            echo '<p><a href="dashboard_send_script.php" class="edit" target="_blank">Redigera</a></p>';
+            echo '<p><a href="dashboard_send_script.php#8" class="edit" target="_blank">Redigera</a></p>';
         }
 
         echo '</section>';
@@ -207,9 +238,9 @@ if (!isset($_SESSION)) {
 
 <section class="script-form-wrapper">
     <div id="script-form-inner-wrapper">
-        <h1 class="send-script-main-title">Skicka in manus</h1>
-        <p class="send-script-info">För att skicka in ditt manus kan du enkelt göra det via formuläret nedan. Du kan
-            också skicka in det till <a href="mailto:tegeve@oru.se">tegeve@oru.se</a>. </p>
+        <h2 class="send-script-main-title">Skicka in manus</h2>
+        <p class="send-script-info">Ditt manus kan du enkelt skicka in via formuläret nedan. Du kan även skicka in det
+            till <a href="mailto:tegeve@oru.se">tegeve@oru.se</a>.</p>
         <form enctype="multipart/form-data" action="send_script_process.php" method="post" class="script-form">
             <ul class="script-form-ul">
                 <li class="script-form-li">
@@ -249,5 +280,4 @@ if (!isset($_SESSION)) {
 <?php include('includes/footer.inc') ?>
 <script src="js/send_script_tabs.js"></script>
 </body>
-<script src="js/menu_toggle.js"></script>
 </html>
