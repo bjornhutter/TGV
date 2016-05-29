@@ -262,7 +262,7 @@ if (!isset($_SESSION)) {
                     <input type="text" name="topic" title="Ämne" class="script-form-input" required>
                 </li>
                 <li class="script-form-li">
-                    <input type="file" name="attachFile" class="scripts-form-input-attach">
+                    <input type="file" name="attachFile" class="scripts-form-input-attach" required>
                 </li>
                 <li class="script-form-li">
                     <p>Meddelande: </p>
