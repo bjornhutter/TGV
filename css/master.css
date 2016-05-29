@@ -28,6 +28,7 @@ header {
 
 .header-homepage {
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../img/header_homepage.jpg);
+    background-image: url(../img/header_homepage.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
