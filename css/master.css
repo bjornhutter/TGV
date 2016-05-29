@@ -701,6 +701,49 @@ footer a:hover {
 
 /*** ================= PRENUMERERA END =================== ***/
 
+/*** ================= TIDIGARE NUMMER START =================== ***/
+
+.old-articles-wrapper {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.old-articles-info {
+    width: 50%;
+    display: block;
+    padding: 40px 25% 40px 25%;
+}
+
+.old-articles-main-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+.old-articles-link {
+    background: #E07929;
+    text-decoration: none;
+    color: #fff !important;
+    padding: 5px 10px;
+    padding-right: 14px;
+    margin: 10px 0;
+    display: inline-block;
+    width: 70px;
+    position: relative;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+}
+
+.old-articles-link:hover {
+    color: #000 !important;
+}
+
+/*** ================= TIDIGARE NUMMER END =================== ***/
+
 /*** ================= SKICKA MANUS START =================== ***/
 .script-wrapper {
     width: 100%;
@@ -1081,7 +1124,7 @@ ol {
         padding-top: 40px;
     }
 
-    .script-reviewers, .script-examiner {
+    .script-reviewers, .script-examiner, .old-articles-info {
         width: 45%;
         padding: 40px 27.5% 40px 27.5%;
     }
@@ -1117,7 +1160,7 @@ ol {
 }
 
 @media screen and (max-width: 1366px) and (min-width: 1201px) {
-    .subscription-info, .subscription-price, .script-info, .script-examiner, .script-reviewers {
+    .subscription-info, .subscription-price, .script-info, .script-examiner, .script-reviewers, .old-articles-info {
         width: 55%;
         padding: 40px 22.5% 40px 22.5%;
     }
@@ -1158,7 +1201,7 @@ ol {
         width: 60%;
     }
 
-    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers, .old-articles-info {
         width: 60%;
         padding: 40px 20% 40px 20%;
     }
@@ -1284,7 +1327,7 @@ ol {
         padding: 0 5% 40px 0;
     }
 
-    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers, .old-articles-info {
         width: 71%;
         padding: 40px 14.5% 40px 14.5%;
     }
@@ -1418,7 +1461,7 @@ ol {
         display: block;
     }
 
-    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers, .old-articles-info {
         width: 88%;
         padding: 40px 6% 40px 6%;
     }
@@ -1592,7 +1635,7 @@ ol {
         display: block;
     }
 
-    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers {
+    .subscription-price, .subscription-info, .script-info, .script-examiner, .script-reviewers, .old-articles-info {
         width: 88%;
         padding: 20px 6% 20px 6%;
     }
