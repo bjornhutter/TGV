@@ -28,6 +28,7 @@ if (!isset($_SESSION)) {
 <header class="header-homepage">
     <div class="header-logo">
         <img src="img/tgv_logo.png" class="logo">
+        <h1 class="site-main-title">Tidskrift för genusvetenskap</h1>
     </div>
     <div class="header-welcome">
         <h2 class="header-welcome-text">Välkommen till Nordens största referee-granskade tidskrift för aktuell
@@ -38,10 +39,8 @@ if (!isset($_SESSION)) {
 
 <main class="index-main">
     <ul class="recent-article-wrapper">
-
-        <!--        Fixa något med diven under, nu finns den för att man ska kunna länka tillbaka från läsmer-->
         <div id="recent"></div>
-        <h1 class="recent-article-main-title">Senaste nummer</h1>
+        <h2 class="recent-article-main-title">Senaste nummer</h2>
         <?php
         include('includes/db_connect.inc');
         $result = mysqli_query($link, "SELECT * FROM tgv_recent_articles ORDER BY date DESC LIMIT 3") or die(mysqli_error($link));
@@ -54,7 +53,7 @@ if (!isset($_SESSION)) {
 
             echo '<li class="recent-article">';
             echo '<img src="uploads/' . $imgName . '" class="recent-article-img">';
-            echo '<h1 class="recent-article-title">' . $title . '</h1>';
+            echo '<h3 class="recent-article-title">' . $title . '</h3>';
 
             if (strlen($content) < 220) {
                 echo '<p class="recent-article-content">' . $content . ' </p>';
@@ -88,7 +87,7 @@ if (!isset($_SESSION)) {
     $cfpTitle = $cfpRow['title'];
     $cfpContent = $cfpRow['content'];
 
-    echo '<h1 class="cfp-main-title">' . $cfpTitle . '</h1>';
+    echo '<h2 class="cfp-main-title">' . $cfpTitle . '</h2>';
     echo '<p>' . $cfpContent . '</p>';
 
     if (isset($_SESSION['user'])) {
@@ -98,7 +97,7 @@ if (!isset($_SESSION)) {
 
     ?>
     <section class="news-feed">
-        <h1 class="news-main-title">Nyheter</h1>
+        <h2 class="news-main-title">Nyheter</h2>
         <div class="news-post-container">
 
             <?php
@@ -114,7 +113,7 @@ if (!isset($_SESSION)) {
                 $id = $row ['id'];
 
                 echo '<div class="news-post">';
-                echo '<h2 class="news-title">' . $title . '</h2>';
+                echo '<h3 class="news-title">' . $title . '</h3>';
                 echo '<p class="news-date">' . $date . '</p>';
                 echo '<p class="news-content">' . nl2br($content) . '</p>';
 

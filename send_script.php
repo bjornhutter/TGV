@@ -128,19 +128,19 @@ if (!isset($_SESSION)) {
     <section id="tabs">
         <ul>
             <li>
-                <a href="#tabs-1"><?php echo $guidelinesTitle; ?></a>
+                <h3><a href="#tabs-1"><?php echo $guidelinesTitle; ?></a></h3>
             </li>
             <li>
-                <a href="#tabs-2"><?php echo $formTitle; ?></a>
+                <h3><a href="#tabs-2"><?php echo $formTitle; ?></a></h3>
             </li>
             <li>
-                <a href="#tabs-3"><?php echo $titlesTitle; ?></a>
+                <h3><a href="#tabs-3"><?php echo $titlesTitle; ?></a></h3>
             </li>
             <li>
-                <a href="#tabs-4"><?php echo $quotesTitle; ?></a>
+                <h3><a href="#tabs-4"><?php echo $quotesTitle; ?></a></h3>
             </li>
             <li>
-                <a href="#tabs-5"><?php echo $refTitle; ?></a>
+                <h3><a href="#tabs-5"><?php echo $refTitle; ?></a></h3>
             </li>
         </ul>
         <div id="tabs-1">
@@ -238,7 +238,7 @@ if (!isset($_SESSION)) {
 
 <section class="script-form-wrapper">
     <div id="script-form-inner-wrapper">
-        <h2 class="send-script-main-title">Skicka in manus</h2>
+        <h1 class="send-script-main-title">Skicka in manus</h1>
         <p class="send-script-info">Ditt manus kan du enkelt skicka in via formuläret nedan. Du kan även skicka in det
             till <a href="mailto:tegeve@oru.se">tegeve@oru.se</a>.</p>
         <form enctype="multipart/form-data" action="send_script_process.php" method="post" class="script-form">

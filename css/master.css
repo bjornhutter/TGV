@@ -50,6 +50,10 @@ header {
     width: 100%;
 }
 
+.site-main-title {
+    display: none;
+}
+
 .header-welcome {
     width: 34%;
     margin-top: 11%;
