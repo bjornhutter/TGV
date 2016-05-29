@@ -175,4 +175,4 @@ if (isset($_POST['submit'])) {
 
 
 
-//header('Location:send_script_complete . php');
+header('Location:send_script_complete . php');
