@@ -1,6 +1,8 @@
 <?php
 //require('includes/auth.php');
-
+if (!isset($_SESSION)) {
+    session_start();
+}
 if (!isset($_GET['id'])) {
     header("Location: index.php");
 }
@@ -14,7 +16,8 @@ if (!isset($_GET['id'])) {
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <title>Tidskrift för genusvetenskap</title>
     <link rel="icon" href="img/tgv_favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,600italic' rel='stylesheet'
+          type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -44,17 +47,17 @@ if (!isset($_GET['id'])) {
         echo '<img src="uploads/' . $imgName . '" class="read-more-img">';
         echo '<h2 class="read-more-featured-title">I detta nummer</h2>';
         echo '<p class="recent-article-featured">' . $featured . '</p>';
-        //if (isset($_SESSION['user'])) {
-        echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
-        //}
+        if (isset($_SESSION['user'])) {
+            echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
+        }
         echo '</div>';
         echo '<div class="read-more-content">';
         echo '<a class="article-more-back" href="index.php#recent">Tillbaka</a>';
         echo '<h1 class="recent-article-more-title">' . $title . '</h1>';
         echo '<p class="recent-article-content">' . $content . '</p>';
-        //if (isset($_SESSION['user'])) {
-        echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
-        //}
+        if (isset($_SESSION['user'])) {
+            echo '<p><a href="recent_articles_edit.php?id=' . $id . '" class="edit" target="_blank">Redigera</a></p>';
+        }
         echo '</div>';
         ?>
     </section>
