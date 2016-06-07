@@ -34,10 +34,11 @@ $newsContent = $row['content'];
     <script>
         tinymce.init({
             selector: 'textarea',
-            toolbar: 'undo redo | bold italic | bullist numlist | link code',
+            toolbar: 'undo redo paste | bold italic | bullist numlist | link code',
             menubar: 'file edit view insert tools',
-            plugins: 'link code',
-            content_css : 'css/tinymce.css'
+            plugins: 'link code paste',
+            content_css: 'css/tinymce.css',
+            paste_as_text: true
         });
     </script>
     <script src="js/active_dashnav.js"></script>
