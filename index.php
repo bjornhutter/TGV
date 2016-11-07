@@ -27,12 +27,12 @@ if (!isset($_SESSION)) {
 
 <header class="header-homepage">
     <div class="header-logo">
-        <a href="index.php"><img src="img/tgv_logo.png" class="logo" alt="Headerbild för Tidsskrift för genusvetenskap"></a>
+        <a href="/"><img src="img/tgv_logo.png" class="logo" alt="Headerbild för Tidsskrift för genusvetenskap"></a>
         <h1 class="site-main-title">Tidskrift för genusvetenskap</h1>
     </div>
-    <div class="header-welcome">
-        <h2 class="header-welcome-text">Välkommen till Tidskrift för genusvetenskap! Vi presenterar ny forskning, teorier och begrepp samt bjuder in forskare, feminister m.fl. att skriva om genusrelevanta frågor.</h2>
-    </div>
+<!--    <div class="header-welcome">-->
+<!--        <h2 class="header-welcome-text">Välkommen till Tidskrift för genusvetenskap! Vi presenterar ny forskning, teorier och begrepp samt bjuder in forskare, feminister m.fl. att skriva om genusrelevanta frågor.</h2>-->
+<!--    </div>-->
 </header>
 <?php include('includes/navigation.inc') ?>
 

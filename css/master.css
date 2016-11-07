@@ -27,16 +27,17 @@ header {
 }
 
 .header-homepage {
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../img/header_homepage.jpg);
-    background-image: url(../img/header_homepage.jpg);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../img/startbild_2016.jpg);
+    background-image: url(../img/startbild_2016.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+    height: 300px;
 }
 
 .header-other {
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../img/header_homepage.jpg);
-    background-image: url(../img/header_homepage.jpg);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../img/startbild_2016.jpg);
+    background-image: url(../img/startbild_2016.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -1116,7 +1117,7 @@ ol {
 
 @media screen and (min-width: 1367px) {
     header {
-        height: 650px;
+        height: 300px;
     }
 
     .header-welcome {
@@ -1547,6 +1548,7 @@ ol {
 
     .header-homepage {
         margin: 56px 0 0 0;
+        height: 200px;
     }
 
     .header-other {

@@ -2,7 +2,7 @@
         <a id="menyButton">Meny</a>
         <ul id="mobile_ul">
                 <li>
-                    <a href="index.php">Hem</a>
+                    <a href="/">Hem</a>
                 </li>
                 <li>
                     <a href="subscription.php">Prenumerera</a>
