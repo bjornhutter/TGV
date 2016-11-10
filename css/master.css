@@ -58,18 +58,24 @@ header {
 }
 
 .header-welcome {
-    width: 35%;
-    margin-top: 11%;
+    /*width: 35%;*/
+    width: 20%;
+    margin-top: 8%;
     position: absolute;
     padding: 0.5% 1.5%;
+    background-color: #e07929;
+    opacity: 1;
 }
 
 .header-welcome-text {
     color: #FFF;
     font-family: 'open sans', sans-serif;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
+    font-size: 1em;
     line-height: 1.5;
     letter-spacing: 0.2px;
+    opacity: 1;
+
 }
 
 /*** ================= HEADER END =================== ***/
@@ -1120,9 +1126,20 @@ ol {
         height: 300px;
     }
 
+    .header-logo {
+        margin-top: 5.5%;
+    }
+
     .header-welcome {
-        margin-top: 10%;
-        width: 28%;
+        margin-top: 9.5%;
+        /*width: 28%;*/
+        width: calc(482px - 2%);
+        opacity: 1;
+        padding: 0.5% 1%;
+    }
+
+    .header-welcome-text {
+        opacity: 1;
     }
 
     .recent-article-main-title {
@@ -1204,6 +1221,16 @@ ol {
         padding-left: 4%;
     }
 
+    .header-welcome {
+        width: calc(482px - 3%);
+        margin-top: 12%;
+        opacity: 1;
+    }
+
+    .header-welcome-text {
+        opacity: 1;
+    }
+
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1001px) {
@@ -1212,12 +1239,17 @@ ol {
     }
 
     .header-logo {
-        margin-top: 11%;
+        margin-top: 8%;
     }
 
     .header-welcome {
-        width: 43%;
-        margin-top: 17%;
+        width: calc(482px - 3%);
+        margin-top: 15%;
+        opacity: 1;
+    }
+
+    .header-welcome-text {
+        opacity: 1;
     }
 
     .contact-info {
@@ -1273,9 +1305,16 @@ ol {
     }
 
     .header-welcome {
-        width: 50%;
-        margin-top: 17%;
+        width: calc(415px - 4%);
+        margin-top: 18%;
         padding: 0.5% 2%;
+        opacity: 1;
+
+    }
+
+    .header-welcome-text {
+        font-size: 0.9em;
+        opacity: 1;
     }
 
     .index-main {
@@ -1392,13 +1431,20 @@ ol {
     }
 
     .header-welcome {
-        margin: 23.5% 0 0 0;
-        width: 440px;
+        /*margin: 23.5% 0 0 0;*/
+        /*width: 440px;*/
         padding: 0.5% 2.5%;
+
+        width: calc(415px - 5%);
+        margin-top: 23%;
+        /*padding: 0.5% 3%;*/
+        background-color: #e07929;
+        opacity: 1;
     }
 
     .header-welcome-text {
-        font-size: 1em;
+        font-size: 0.9em;
+        opacity: 1;
     }
 
     .index-main {
@@ -1565,13 +1611,16 @@ ol {
     }
 
     .header-welcome {
-        width: 87%;
-        margin-top: 25%;
+        width: 84%;
+        margin-top: 27%;
         padding: 0.5% 3%;
+        background-color: #e07929;
+        opacity: 1;
     }
 
     .header-welcome-text {
         font-size: 0.9em;
+        opacity: 1;
     }
 
     .index-main {
